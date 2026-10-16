@@ -11,6 +11,7 @@ interface GlowingButtonProps {
   size?: "sm" | "md" | "lg";
   variant?:
     | "gold"
+    | "navy"
     | "rosegold"
     | "champagne"
     | "bronze"
@@ -34,26 +35,28 @@ export default function GlowingButton({
     lg: "px-7 py-4 text-xs tracking-[0.14em]",
   }[size];
 
-  // Refined metallic bronze, warm copper and deep obsidian styling for Tomaz Henrique Advocacia
+  // Refined metallic imperial gold and deep prussian navy styling for Patrícia Ferreira Advocacia
   const variantClasses = {
     gold:
-      "border border-[#fae0c8]/40 bg-gradient-to-r from-[#8f4d22] via-[#c97f48] to-[#8f4d22] text-white font-bold shadow-md shadow-[#090706]/50 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-bronze",
+      "border border-[#f6e5be]/50 bg-gradient-to-r from-[#a67520] via-[#cb902b] to-[#a67520] text-[#040914] font-extrabold shadow-md shadow-[#040914]/60 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
     rosegold:
-      "border border-[#fae0c8]/40 bg-gradient-to-r from-[#a86131] via-[#d48c52] to-[#a86131] text-white font-bold shadow-md shadow-[#090706]/50 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-bronze",
+      "border border-[#f6e5be]/40 bg-gradient-to-r from-[#8a5e14] via-[#cb902b] to-[#8a5e14] text-white font-bold shadow-md shadow-[#040914]/50 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
     champagne:
-      "border border-[#e5a26c]/60 bg-gradient-to-r from-[#fdf6ee] via-[#fae0c8] to-[#fdf6ee] text-[#241308] font-bold shadow-sm hover:-translate-y-0.5 hover:shadow-bronze hover:brightness-105",
+      "border border-[#e5c368]/60 bg-gradient-to-r from-[#fdf8ee] via-[#f6e5be] to-[#fdf8ee] text-[#07101e] font-bold shadow-sm hover:-translate-y-0.5 hover:shadow-gold hover:brightness-105",
+    navy:
+      "border border-[#cb902b]/40 bg-gradient-to-r from-[#040914] via-[#0c182e] to-[#040914] text-white font-bold shadow-md shadow-[#040914]/60 hover:-translate-y-0.5 hover:border-[#e5c368] hover:shadow-navy",
     bronze:
-      "border border-[#c97f48]/50 bg-gradient-to-r from-[#54280c] via-[#8f4d22] to-[#54280c] text-white font-bold shadow-md shadow-[#090706]/50 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-bronze",
+      "border border-[#cb902b]/40 bg-gradient-to-r from-[#523507] via-[#8a5e14] to-[#523507] text-white font-bold shadow-md shadow-[#040914]/50 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold",
     dark:
-      "border border-[#c97f48]/35 bg-[#120e0b] text-[#fae0c8] shadow-sm shadow-[#090706]/50 hover:-translate-y-0.5 hover:border-[#e5a26c] hover:bg-[#1f1610] hover:text-white hover:shadow-bronze",
+      "border border-[#cb902b]/35 bg-[#07101e] text-[#f6e5be] shadow-sm shadow-[#040914]/60 hover:-translate-y-0.5 hover:border-[#e5c368] hover:bg-[#0c182e] hover:text-white hover:shadow-gold",
     outline:
-      "border border-[#c97f48]/60 bg-transparent text-[#e5a26c] hover:-translate-y-0.5 hover:border-[#fae0c8] hover:bg-[#c97f48]/15 hover:text-white",
+      "border border-[#cb902b]/60 bg-transparent text-[#e5c368] hover:-translate-y-0.5 hover:border-[#f6e5be] hover:bg-[#cb902b]/15 hover:text-white",
     white:
-      "border border-[#c97f48]/40 bg-white text-[#1a110a] shadow-sm hover:-translate-y-0.5 hover:bg-[#fdf6ee] hover:text-[#090706] hover:shadow-md",
+      "border border-[#cb902b]/40 bg-white text-[#040914] shadow-sm hover:-translate-y-0.5 hover:bg-[#fdf8ee] hover:text-[#040914] hover:shadow-md",
   }[variant];
 
   const classes =
-    "inline-flex items-center justify-center gap-2 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#c97f48] select-none text-center cursor-pointer " +
+    "inline-flex items-center justify-center gap-2 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#cb902b] select-none text-center cursor-pointer " +
     sizeClasses +
     " " +
     variantClasses +

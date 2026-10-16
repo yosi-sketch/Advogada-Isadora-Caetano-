@@ -36,34 +36,33 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#090706",
+  themeColor: "#040914",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.tomazhenrique.adv.br"),
+  metadataBase: new URL("https://www.advpatriciaferreira.com.br"),
   title:
-    "Tomaz Henrique — Advogado Especializado | Trabalhista & Previdenciário em Itaúna - MG",
+    "Patrícia Ferreira Advocacia & Consultoria | Família, Cível e Criminal em Ribeirão das Neves - MG",
   description:
-    "Advocacia especializada em Direito do Trabalho e Direito Previdenciário (INSS) com o Dr. Tomaz Henrique. Atendimento atencioso, combate técnico incisivo e foco em resultados em Itaúna e região. Nota máxima 5,0 ★ no Google.",
+    "Proteção jurídica para mulheres e homens em momentos críticos. Decisões jurídicas exigem estratégia, não impulso. Defesa acolhedora e combativa com a Dra. Patrícia Pinto Ferreira. Atendimento 24h em Ribeirão das Neves e Grande BH. Avaliação 4,9 ★ no Google.",
   keywords: [
-    "Tomaz Henrique Advogado",
-    "Tomaz Henrique Advogado Especializado",
-    "Advogado em Itaúna",
-    "Advogado Trabalhista em Itaúna",
-    "Advogado Previdenciário Itaúna",
-    "Escritório de Advocacia Itaúna MG",
-    "Dr Tomaz Henrique",
-    "Aposentadoria INSS Itaúna",
-    "Auxílio Doença INSS Itaúna",
-    "BPC LOAS Itaúna",
-    "Cálculo Trabalhista e Rescisão",
-    "Horas Extras e Direitos do Trabalhador",
-    "Pensão por Morte Itaúna",
-    "Advocacia Itaúna Minas Gerais",
+    "Patrícia Ferreira Advogada",
+    "Patrícia Pinto Ferreira",
+    "Patrícia Ferreira Advocacia & Consultoria",
+    "Patrícia Ferreira Advogados",
+    "Advogado de Família Ribeirão das Neves",
+    "Advogado Ribeirão das Neves",
+    "Guarda de Filhos e Pensão Alimentícia",
+    "Divórcio Consensual e Litigioso",
+    "Defesa dos Direitos das Crianças",
+    "Alienação Parental e Medidas Protetivas",
+    "Advogada Criminalista Ribeirão das Neves",
+    "Plantão Jurídico 24 Horas",
+    "Escritório de Advocacia Ribeirão das Neves MG",
   ],
-  authors: [{ name: "Dr. Tomaz Henrique" }],
-  creator: "Tomaz Henrique — Escritório de Advocacia",
-  publisher: "Tomaz Henrique — Escritório de Advocacia",
+  authors: [{ name: "Dra. Patrícia Pinto Ferreira" }],
+  creator: "Patrícia Ferreira — Advocacia & Consultoria",
+  publisher: "Patrícia Ferreira — Advocacia & Consultoria",
   formatDetection: {
     telephone: true,
     address: true,
@@ -80,18 +79,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.tomazhenrique.adv.br",
+    url: "https://www.advpatriciaferreira.com.br",
     title:
-      "Tomaz Henrique — Advogado Especializado | Trabalhista & Previdenciário em Itaúna - MG",
+      "Patrícia Ferreira Advocacia & Consultoria | Família, Cível e Criminal",
     description:
-      "Atendimento jurídico de excelência, humanizado e focado em resultados reais. Referência em Direito do Trabalho e Previdenciário em Itaúna e região. Nota 5,0 ★ no Google.",
-    siteName: "Tomaz Henrique — Escritório de Advocacia",
+      "Proteção jurídica para mulheres e homens em momentos críticos. Decisões jurídicas exigem estratégia, não impulso. Atendimento humanizado 24 horas. Nota 4,9 ★ no Google.",
+    siteName: "Patrícia Ferreira — Advocacia & Consultoria",
     images: [
       {
         url: "/logo-seal.png",
-        width: 660,
-        height: 652,
-        alt: "Tomaz Henrique — Escritório de Advocacia",
+        width: 600,
+        height: 600,
+        alt: "Patrícia Ferreira — Advocacia & Consultoria",
       },
     ],
   },
@@ -105,43 +104,37 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Tomaz Henrique — Escritório de Advocacia",
-    alternateName: "Tomaz Henrique Advogado Especializado",
+    name: "Patrícia Ferreira — Advocacia & Consultoria",
+    alternateName: "Patrícia Ferreira Advogados",
     founder: [
       {
         "@type": "Person",
-        name: "Dr. Tomaz Henrique",
-        jobTitle: "Advogado Especialista em Direito Trabalhista e Previdenciário",
+        name: "Dra. Patrícia Pinto Ferreira",
+        jobTitle:
+          "Advogada Especialista em Direito de Família, Cível e Criminal",
       },
     ],
-    telephone: "+55-37-99841-2455",
-    url: "https://www.tomazhenrique.adv.br",
-    image: "https://www.tomazhenrique.adv.br/logo-seal.png",
+    telephone: "+55-31-98819-9907",
+    url: "https://www.advpatriciaferreira.com.br",
+    image: "https://www.advpatriciaferreira.com.br/logo-seal.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress:
-        "Rua Godofredo Gonçalves, 159, Centro (Próximo à Clinaus)",
-      addressLocality: "Itaúna",
+      addressLocality: "Ribeirão das Neves",
       addressRegion: "MG",
-      postalCode: "35680-047",
       addressCountry: "BR",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: -20.0754,
-      longitude: -44.5764,
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: "37",
+      ratingValue: "4.9",
+      reviewCount: "33",
     },
     areaServed: [
-      "Itaúna",
-      "Pará de Minas",
-      "Divinópolis",
-      "Mateus Leme",
+      "Ribeirão das Neves",
+      "Justinópolis",
+      "Belo Horizonte",
+      "Contagem",
+      "Betim",
       "Minas Gerais",
       "Brasil",
     ],
@@ -154,14 +147,16 @@ export default function RootLayout({
           "Wednesday",
           "Thursday",
           "Friday",
+          "Saturday",
+          "Sunday",
         ],
-        opens: "08:30",
-        closes: "18:00",
+        opens: "00:00",
+        closes: "23:59",
       },
     ],
     sameAs: [
-      "https://www.instagram.com/advogado.tomaz/",
-      "https://wa.me/5537998412455",
+      "https://www.instagram.com/advpatriciaferreira/",
+      "https://wa.me/5531988199907",
     ],
   };
 
@@ -179,7 +174,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#090706] font-sans text-stone-100 antialiased selection:bg-[#c97f48] selection:text-[#090706]">
+      <body className="min-h-screen overflow-x-clip bg-[#040914] font-sans text-stone-100 antialiased selection:bg-[#cb902b] selection:text-[#040914]">
         {children}
       </body>
     </html>

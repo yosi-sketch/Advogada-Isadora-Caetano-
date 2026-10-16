@@ -2,53 +2,53 @@
 
 :root {
   color-scheme: dark;
-  --brand-bronze-light: #fdf6ee;
-  --brand-bronze-highlight: #fae0c8;
-  --brand-bronze-accent: #e5a26c;
-  --brand-bronze: #c97f48;
-  --brand-bronze-dark: #a86131;
-  --brand-bronze-deep: #80441c;
-  --brand-bronze-shadow: #54280c;
-  --brand-obsidian: #090706;
-  --brand-charcoal: #120e0b;
-  --brand-surface: #1a1410;
-  --brand-surface-elevated: #231b15;
-  --brand-ink: #fcfbfa;
-  --brand-ink-soft: #dfd6cb;
-  --brand-pearl: #090706;
-  --brand-paper: #120e0b;
+  --brand-gold-light: #fdf8ee;
+  --brand-gold-highlight: #f6e5be;
+  --brand-gold-accent: #e5c368;
+  --brand-gold: #cb902b;
+  --brand-gold-dark: #a67520;
+  --brand-gold-deep: #7e5611;
+  --brand-gold-shadow: #4d3306;
+  --brand-obsidian: #040914;
+  --brand-charcoal: #07101e;
+  --brand-surface: #0c182e;
+  --brand-surface-elevated: #11223f;
+  --brand-ink: #fcfaf7;
+  --brand-ink-soft: #c7d5e8;
+  --brand-pearl: #040914;
+  --brand-paper: #07101e;
 }
 
 @theme inline {
   --font-serif: var(--font-serif), var(--font-display), "Playfair Display", "Cormorant Garamond", serif;
   --font-cinzel: var(--font-cinzel), "Cinzel", "Trajan Pro", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  --color-ink: #fcfbfa;
-  --color-ink-soft: #dfd6cb;
-  --color-pearl: #090706;
-  --color-brand-50: #0e0a08;
-  --color-brand-100: #17110c;
-  --color-brand-200: #211812;
-  --color-brand-300: #2d2119;
-  --color-brand-400: #c97f48;
-  --color-brand-500: #a86131;
-  --color-brand-600: #8f4d22;
-  --color-brand-700: #743c18;
-  --color-brand-800: #54280c;
-  --color-brand-900: #361705;
-  --color-brand-950: #090706;
-  --color-gold-100: #fdf6ee;
-  --color-gold-200: #fae0c8;
-  --color-gold-300: #f4cba4;
-  --color-gold-400: #e5a26c;
-  --color-gold-500: #c97f48;
-  --color-gold-600: #a86131;
-  --color-gold-700: #80441c;
-  --shadow-card: 0 18px 48px rgba(0, 0, 0, 0.76);
-  --shadow-gold: 0 10px 30px rgba(201, 127, 72, 0.28);
-  --shadow-bronze: 0 10px 30px rgba(201, 127, 72, 0.32);
-  --shadow-obsidian: 0 16px 45px rgba(0, 0, 0, 0.88);
-  --shadow-glow: 0 0 35px rgba(229, 162, 108, 0.28);
+  --color-ink: #fcfaf7;
+  --color-ink-soft: #c7d5e8;
+  --color-pearl: #040914;
+  --color-brand-50: #040812;
+  --color-brand-100: #07101e;
+  --color-brand-200: #0c182e;
+  --color-brand-300: #11223f;
+  --color-brand-400: #cb902b;
+  --color-brand-500: #a67520;
+  --color-brand-600: #8a5e14;
+  --color-brand-700: #6e490d;
+  --color-brand-800: #523507;
+  --color-brand-900: #362203;
+  --color-brand-950: #040914;
+  --color-gold-100: #fdf8ee;
+  --color-gold-200: #f6e5be;
+  --color-gold-300: #eed38c;
+  --color-gold-400: #e5c368;
+  --color-gold-500: #cb902b;
+  --color-gold-600: #a67520;
+  --color-gold-700: #7e5611;
+  --shadow-card: 0 18px 48px rgba(0, 0, 0, 0.78);
+  --shadow-gold: 0 10px 30px rgba(203, 144, 43, 0.28);
+  --shadow-navy: 0 10px 30px rgba(7, 16, 30, 0.55);
+  --shadow-obsidian: 0 16px 45px rgba(0, 0, 0, 0.92);
+  --shadow-glow: 0 0 35px rgba(229, 195, 104, 0.28);
 }
 
 html {
@@ -57,15 +57,15 @@ html {
 }
 
 body {
-  background: #090706;
-  color: #fcfbfa;
+  background: #040914;
+  color: #fcfaf7;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #c97f48;
+  caret-color: #cb902b;
 }
 
 ::selection {
-  background: #c97f48;
-  color: #090706;
+  background: #cb902b;
+  color: #040914;
 }
 
 .font-cinzel {
@@ -85,11 +85,11 @@ body {
 }
 
 .eyebrow {
-  color: #d48c52;
+  color: #e5c368;
 }
 
 .eyebrow-light {
-  color: #8f4d22;
+  color: #7e5611;
 }
 
 .eyebrow::before,
@@ -104,7 +104,7 @@ body {
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #dfd6cb;
+  color: #c7d5e8;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -118,7 +118,7 @@ body {
   bottom: 0;
   left: 0;
   height: 1px;
-  background: #c97f48;
+  background: #cb902b;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -146,17 +146,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #090706;
+  background: #040914;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #090706;
+  border: 2px solid #040914;
   border-radius: 999px;
-  background: #54280c;
+  background: #11223f;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #c97f48;
+  background: #cb902b;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,34 +1,33 @@
-# TOMAZ HENRIQUE ADVOCACIA
-## Advogado Especializado em Direito Trabalhista e Previdenciário · Dr. Tomaz Henrique · Itaúna - MG
+# PATRÍCIA FERREIRA ADVOCACIA & CONSULTORIA
+## Advogada Especializada em Direito de Família, Cível e Criminal · Dra. Patrícia Pinto Ferreira · Ribeirão das Neves - MG
 
 ## Plataforma
 Site institucional e landing page responsiva de altíssimo padrão desenvolvida em Next.js 16 (App Router) e Tailwind CSS v4, projetada para transmitir autoridade jurídica, sofisticação clássica, transparência e acolhimento humanizado, com navegação fluida, modais interativos para detalhamento das especialidades e integração direta com WhatsApp.
 
 ## Público
-Trabalhadores da indústria, comércio e serviços, segurados do INSS, aposentados, pensionistas, beneficiários do BPC/LOAS, além de cidadãos e empresas que necessitam de assessoria consultiva e contenciosa nas áreas trabalhista, previdenciária e cível em Itaúna, Pará de Minas, Divinópolis e em toda a região de Minas Gerais.
+Mulheres, homens e famílias que necessitam de amparo jurídico em momentos críticos — disputas de guarda de filhos, fixação e execução de pensão alimentícia, divórcio e partilha patrimonial, combate à alienação parental, causas cíveis e indenizatórias, além de assistência penal emergencial 24 horas em delegacias e tribunais em Ribeirão das Neves, Justinópolis, Belo Horizonte, Contagem, Betim e em todo o Brasil.
 
 ## Objetivo
-Apresentar a advocacia de excelência liderada pelo Dr. Tomaz Henrique, destacando a expressiva nota máxima de 5,0 estrelas com 37 avaliações autênticas no Google Meu Negócio, e viabilizando o contato direto e humanizado via WhatsApp (37) 99841-2455 e atendimento presencial no Centro de Itaúna - MG.
+Apresentar a advocacia de excelência liderada pela Dra. Patrícia Pinto Ferreira, destacando a expressiva nota de 4,9 estrelas com 33 avaliações autênticas no Google Meu Negócio, e viabilizando o contato direto e humanizado via WhatsApp (31) 98819-9907 com disponibilidade contínua 24 horas.
 
-## Identidade Visual
-- Marca: Tomaz Henrique Advocacia / Tomaz Henrique Advogado Especializado
-- Logotipo: Selo circular clássico com o pórtico romano de 4 colunas em relevo de bronze metálico e cobre nobre escovado, com a inscrição arqueada "TOMAZ HENRIQUE" no arco superior e "ESCRITÓRIO DE ADVOCACIA" no arco inferior (`public/logo-seal.png`, `public/logo.png`).
-- Paleta extraída diretamente do novo logo oficial:
-  - Bronze Metálico Nobre Primário (`#C97F48`, `#D48C52`, `#E5A26C`, `#A86131`)
-  - Realce em Cobre Quente e Champanhe (`#FDF6EE`, `#FAE0C8`, `#F4CBA4`)
-  - Bronze Profundo & Sombra Densa (`#80441C`, `#54280C`, `#361705`)
-  - Velvet Bronze Obsidian de Alta Autoridade (`#090706`, `#120E0B`, `#1A1410`, `#231B15`)
-  - Mármore Alabastro / Marfim Nobre para contraste claro no Sobre (`#FAF7F2`, `#E8DECB`)
-- Tipografia: Cinzel (`--font-cinzel`) para a marca monumental romana e Playfair Display / Cormorant Garamond nos títulos editoriais (perfeita harmonia com a tipografia do selo clássico), combinados com Plus Jakarta Sans para leitura confortável e límpida no corpo de texto.
-- Tom de voz: Empático, ético, atencioso aos detalhes, combativo, transparente e resolutivo.
+## Identidade Visual & Cores (Baseada no Logo Oficial)
+- Marca: Patrícia Ferreira Advocacia & Consultoria / Patrícia Ferreira Advogados
+- Logotipo & Escudo: Escudo clássico beveled dividido entre Marfim/Alabastro e Azul Marinho Prussiano, com a Balança da Justiça central em ouro polido tridimensional (`public/logo.png`, `public/logo-shield.png`, `public/logo-seal.png`, `public/logo-white.png`).
+- Paleta extraída diretamente do logo oficial:
+  - Azul Marinho Prussiano Profundo Primário (`#040914`, `#07101E`, `#0C182E`, `#11223F`)
+  - Ouro Imperial Nobre (`#CB902B`, `#D4AF37`, `#E5C368`, `#F6E5BE`)
+  - Marfim / Alabastro Nobre para contraste no Sobre (`#FAF8F3`, `#FCFAF7`)
+  - Ouro Realce & Brilho Dourado (`#FDF8EE`, `#F6E5BE`, `#E5C368`)
+- Tipografia: Cinzel (`--font-cinzel`) para a marca monumental romana e Playfair Display / Cormorant Garamond nos títulos editoriais, combinados com Plus Jakarta Sans para leitura confortável e límpida no corpo de texto.
+- Tom de voz: Empático, leal, firme, acolhedor, estratégico, transparente e focado na verdade. "Decisões jurídicas exigem estratégia, não impulso."
 
 ## Conteúdo e Mídia
-- Logotipo e selo oficial em alta definição (`public/logo-seal.png`, `public/logo.png`).
-- Foto hero: Dr. Tomaz Henrique em terno azul com gravata verde e sobreposição do widget de autoridade (`public/tomaz-henrique-hero.jpg`).
-- Foto sobre: Apresentação institucional com Dr. Tomaz sorridente em sua mesa com Vade Mecum e crucifixo (`public/tomaz-henrique-apresentacao.png`).
-- Telefone / WhatsApp: (37) 99841-2455.
-- E-mail: contato@tomazhenrique.adv.br.
-- Redes Sociais: Instagram @advogado.tomaz (https://www.instagram.com/advogado.tomaz/).
-- Endereço da Sede: Rua Godofredo Gonçalves, 159, (Próximo à Clinaus) - Centro, Itaúna - MG, 35680-047, Brasil.
-- Horário de funcionamento: Segunda a Sexta das 08:30 às 18:00 (atendimento presencial com hora marcada e online).
-- Prova social: Nota máxima de 5,0 estrelas com 37 avaliações autênticas no Google Meu Negócio.
+- Logotipo oficial e escudo em alta definição (`public/logo.png`, `public/logo-shield.png`, `public/logo-seal.png`, `public/logo-white.png`).
+- Foto hero: Dra. Patrícia com blazer tweed preto/branco e iluminação quente de estúdio (`public/patricia-ferreira-hero.png`, `public/patricia-ferreira-tweed.png`).
+- Foto sobre: Apresentação acolhedora da Dra. Patrícia em blazer framboesa/magenta com laptop e sorriso aberto (`public/patricia-ferreira-apresentacao.png`, `public/patricia-ferreira-blazer.png`).
+- Telefone / WhatsApp: (31) 98819-9907.
+- E-mail: contato@advpatriciaferreira.com.br.
+- Redes Sociais: Instagram @advpatriciaferreira (+7.100 seguidores, 871 posts).
+- Localização: Ribeirão das Neves - MG e proximidades (atendimento presencial na Região Metropolitana de BH e online em todo o Brasil).
+- Horário de funcionamento: Aberto 24 horas (Plantão Jurídico Emergencial e Atendimento Humanizado).
+- Prova social: Nota de 4,9 estrelas com 33 avaliações autênticas no Google Meu Negócio.
