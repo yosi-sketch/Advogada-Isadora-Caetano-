@@ -1,33 +1,37 @@
-# PATRÍCIA FERREIRA ADVOCACIA & CONSULTORIA
-## Advogada Especializada em Direito de Família, Cível e Criminal · Dra. Patrícia Pinto Ferreira · Ribeirão das Neves - MG
+# RAFAELA SOUZA | ADVOGADA
+## Especialista em Direito das Famílias e Sucessões · Dra. Rafaela Souza · OAB/MG 165340 · Piumhi - MG
 
 ## Plataforma
-Site institucional e landing page responsiva de altíssimo padrão desenvolvida em Next.js 16 (App Router) e Tailwind CSS v4, projetada para transmitir autoridade jurídica, sofisticação clássica, transparência e acolhimento humanizado, com navegação fluida, modais interativos para detalhamento das especialidades e integração direta com WhatsApp.
+Landing page institucional de altíssimo padrão desenvolvida em Next.js 16 (App Router) e Tailwind CSS v4, projetada para transmitir autoridade jurídica, sofisticação contemporânea, transparência e acolhimento humanizado, com navegação fluida, modais interativos para detalhamento das especialidades e integração direta com WhatsApp.
 
 ## Público
-Mulheres, homens e famílias que necessitam de amparo jurídico em momentos críticos — disputas de guarda de filhos, fixação e execução de pensão alimentícia, divórcio e partilha patrimonial, combate à alienação parental, causas cíveis e indenizatórias, além de assistência penal emergencial 24 horas em delegacias e tribunais em Ribeirão das Neves, Justinópolis, Belo Horizonte, Contagem, Betim e em todo o Brasil.
+Mulheres, homens e famílias que buscam amparo jurídico de alto nível para resolução de questões delicadas: divórcio consensual ou litigioso, proteção patrimonial e partilha de bens, combate à alienação parental, guarda dos filhos e pensão alimentícia, inventários extrajudiciais e judiciais, testamentos, bem como causas cíveis e consultoria preventiva em Piumhi, Passos, Capitólio, Formiga e em todo o Brasil (via atendimento online).
 
 ## Objetivo
-Apresentar a advocacia de excelência liderada pela Dra. Patrícia Pinto Ferreira, destacando a expressiva nota de 4,9 estrelas com 33 avaliações autênticas no Google Meu Negócio, e viabilizando o contato direto e humanizado via WhatsApp (31) 98819-9907 com disponibilidade contínua 24 horas.
+Apresentar a advocacia de excelência liderada pela Dra. Rafaela Souza (OAB/MG 165340), destacando seus mais de 11 anos de experiência consolidada e a nota máxima de 5,0 estrelas com 14 avaliações unânimes no Google Meu Negócio, viabilizando o contato direto e humanizado via WhatsApp (37) 99811-8053.
 
-## Identidade Visual & Cores (Baseada no Logo Oficial)
-- Marca: Patrícia Ferreira Advocacia & Consultoria / Patrícia Ferreira Advogados
-- Logotipo & Escudo: Escudo clássico beveled dividido entre Marfim/Alabastro e Azul Marinho Prussiano, com a Balança da Justiça central em ouro polido tridimensional (`public/logo.png`, `public/logo-shield.png`, `public/logo-seal.png`, `public/logo-white.png`).
-- Paleta extraída diretamente do logo oficial:
-  - Azul Marinho Prussiano Profundo Primário (`#040914`, `#07101E`, `#0C182E`, `#11223F`)
-  - Ouro Imperial Nobre (`#CB902B`, `#D4AF37`, `#E5C368`, `#F6E5BE`)
-  - Marfim / Alabastro Nobre para contraste no Sobre (`#FAF8F3`, `#FCFAF7`)
-  - Ouro Realce & Brilho Dourado (`#FDF8EE`, `#F6E5BE`, `#E5C368`)
-- Tipografia: Cinzel (`--font-cinzel`) para a marca monumental romana e Playfair Display / Cormorant Garamond nos títulos editoriais, combinados com Plus Jakarta Sans para leitura confortável e límpida no corpo de texto.
-- Tom de voz: Empático, leal, firme, acolhedor, estratégico, transparente e focado na verdade. "Decisões jurídicas exigem estratégia, não impulso."
+## Identidade Visual & Cores (Inspirada no Studio Editorial da Dra. Rafaela Souza)
+- Marca: Rafaela Souza | Advogada (OAB/MG 165340)
+- Estilo: Editorial Studio Luxury — Iluminado, acolhedor, sofisticado e humanizado, com alto contraste e clareza.
+- Paleta extraída diretamente do feed e imagem oficial da Dra. Rafaela Souza:
+  - **Fundo Principal (Marfim Studio / Warm Alabaster):** `#F8F6F2`, `#FAF8F5`, `#F3EFEA` (trazendo leveza, ar contemporâneo e acolhimento).
+  - **Azul Noite Prussiano Profundo (Tipografia e Tags de Autoridade):** `#070A1C` / `#0C182A` (a cor exata do logo e das caixas de destaque).
+  - **Cards & Superfícies (Branco Puro & Bordas Neutras):** `#FFFFFF` com bordas sutis em `#E6DFD5`.
+  - **Acentos em Ouro Champanhe & Caramelo:** `#C59D64`, `#DAB280`, `#8C673B` (inspirados nos reflexos dourados e detalhes finos).
+  - **Seções de Contraste e Fechamento:** Faixas em `#070A1C` para autoridade e quebra rítmica.
+- Tipografia:
+  - Cormorant Garamond / Playfair Display para títulos editoriais e marca clássica de alto requinte
+  - Cinzel para detalhes heráldicos e numerações solenes
+  - Plus Jakarta Sans para leitura confortável, límpida e moderna no corpo de texto
+- Tom de voz: Empático, seguro, ético, leal, ágil, humano e resolutivo. "Uma defensora leal, humana e incansável ao seu lado."
 
 ## Conteúdo e Mídia
-- Logotipo oficial e escudo em alta definição (`public/logo.png`, `public/logo-shield.png`, `public/logo-seal.png`, `public/logo-white.png`).
-- Foto hero: Dra. Patrícia com blazer tweed preto/branco e iluminação quente de estúdio (`public/patricia-ferreira-hero.png`, `public/patricia-ferreira-tweed.png`).
-- Foto sobre: Apresentação acolhedora da Dra. Patrícia em blazer framboesa/magenta com laptop e sorriso aberto (`public/patricia-ferreira-apresentacao.png`, `public/patricia-ferreira-blazer.png`).
-- Telefone / WhatsApp: (31) 98819-9907.
-- E-mail: contato@advpatriciaferreira.com.br.
-- Redes Sociais: Instagram @advpatriciaferreira (+7.100 seguidores, 871 posts).
-- Localização: Ribeirão das Neves - MG e proximidades (atendimento presencial na Região Metropolitana de BH e online em todo o Brasil).
-- Horário de funcionamento: Aberto 24 horas (Plantão Jurídico Emergencial e Atendimento Humanizado).
-- Prova social: Nota de 4,9 estrelas com 33 avaliações autênticas no Google Meu Negócio.
+- Logotipo oficial, monograma e selos (`public/logo.png`, `public/logo-white.png`, `public/logo-gold.png`, `public/logo-monogram.png`, `public/logo-seal.png`).
+- Foto hero: Dra. Rafaela Souza em pé no escritório com blazer capa marfim e cinto dourado (`public/rafaela-souza-hero.png`, `public/hero.png`).
+- Foto sobre: Dra. Rafaela Souza na biblioteca/escritório consultando o tratado de Alienação Parental (`public/rafaela-souza-sobre.png`, `public/about.png`).
+- Telefone / WhatsApp: (37) 99811-8053 (`5537998118053`).
+- E-mail: contato@rafaelasouza.adv.br.
+- Redes Sociais: Instagram @rafaela_souza_adv (`https://www.instagram.com/rafaela_souza_adv/`).
+- Localização: R. Benedito Valadares, 224 - Centro, Piumhi - MG, 37925-000 (atendimento presencial e online em todo o Brasil).
+- Horário de funcionamento: Segunda a Sexta das 09:00 às 18:00 (consultoria presencial sob agendamento e consultoria online).
+- Prova social: 5,0 estrelas com 14 avaliações autênticas no Google Meu Negócio (100% 5 estrelas).

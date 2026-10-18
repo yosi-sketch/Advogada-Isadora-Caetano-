@@ -36,33 +36,33 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#040914",
+  themeColor: "#f8f6f2",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.advpatriciaferreira.com.br"),
+  metadataBase: new URL("https://www.rafaelasouza.adv.br"),
   title:
-    "Patrícia Ferreira Advocacia & Consultoria | Família, Cível e Criminal em Ribeirão das Neves - MG",
+    "Rafaela Souza | Advogada · Especialista em Família e Sucessões em Piumhi - MG",
   description:
-    "Proteção jurídica para mulheres e homens em momentos críticos. Decisões jurídicas exigem estratégia, não impulso. Defesa acolhedora e combativa com a Dra. Patrícia Pinto Ferreira. Atendimento 24h em Ribeirão das Neves e Grande BH. Avaliação 4,9 ★ no Google.",
+    "Dra. Rafaela Souza (OAB/MG 165340). Mais de 11 anos de atuação na advocacia com nota máxima 5,0 ★ no Google. Defesa especializada em Direito de Família, Divórcio, Guarda, Pensão Alimentícia, Alienação Parental e Inventários em Piumhi e todo o Brasil.",
   keywords: [
-    "Patrícia Ferreira Advogada",
-    "Patrícia Pinto Ferreira",
-    "Patrícia Ferreira Advocacia & Consultoria",
-    "Patrícia Ferreira Advogados",
-    "Advogado de Família Ribeirão das Neves",
-    "Advogado Ribeirão das Neves",
+    "Rafaela Souza Advogada",
+    "Dra. Rafaela Souza",
+    "Rafaela Souza Piumhi",
+    "OAB MG 165340",
+    "Advogada em Piumhi",
+    "Advogada Piumhi MG",
+    "Advogada de Família Piumhi",
+    "Divórcio Consensual e Litigioso Piumhi",
     "Guarda de Filhos e Pensão Alimentícia",
-    "Divórcio Consensual e Litigioso",
-    "Defesa dos Direitos das Crianças",
-    "Alienação Parental e Medidas Protetivas",
-    "Advogada Criminalista Ribeirão das Neves",
-    "Plantão Jurídico 24 Horas",
-    "Escritório de Advocacia Ribeirão das Neves MG",
+    "Combate à Alienação Parental",
+    "Inventário e Sucessões Piumhi",
+    "Escritório de Advocacia Piumhi",
+    "Direito de Família Minas Gerais",
   ],
-  authors: [{ name: "Dra. Patrícia Pinto Ferreira" }],
-  creator: "Patrícia Ferreira — Advocacia & Consultoria",
-  publisher: "Patrícia Ferreira — Advocacia & Consultoria",
+  authors: [{ name: "Dra. Rafaela Souza" }],
+  creator: "Rafaela Souza | Advogada",
+  publisher: "Rafaela Souza | Advogada",
   formatDetection: {
     telephone: true,
     address: true,
@@ -79,18 +79,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.advpatriciaferreira.com.br",
+    url: "https://www.rafaelasouza.adv.br",
     title:
-      "Patrícia Ferreira Advocacia & Consultoria | Família, Cível e Criminal",
+      "Rafaela Souza | Advogada · Especialista em Família e Sucessões",
     description:
-      "Proteção jurídica para mulheres e homens em momentos críticos. Decisões jurídicas exigem estratégia, não impulso. Atendimento humanizado 24 horas. Nota 4,9 ★ no Google.",
-    siteName: "Patrícia Ferreira — Advocacia & Consultoria",
+      "Advocacia de excelência com mais de 11 anos de experiência e nota máxima 5,0 ★ no Google. Sede no Centro de Piumhi - MG e consultoria online em todo o Brasil.",
+    siteName: "Rafaela Souza | Advogada",
     images: [
       {
         url: "/logo-seal.png",
         width: 600,
         height: 600,
-        alt: "Patrícia Ferreira — Advocacia & Consultoria",
+        alt: "Rafaela Souza | Advogada",
       },
     ],
   },
@@ -104,37 +104,38 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Patrícia Ferreira — Advocacia & Consultoria",
-    alternateName: "Patrícia Ferreira Advogados",
+    name: "Rafaela Souza | Advogada",
+    alternateName: "Dra. Rafaela Souza Advocacia",
     founder: [
       {
         "@type": "Person",
-        name: "Dra. Patrícia Pinto Ferreira",
+        name: "Dra. Rafaela Souza",
         jobTitle:
-          "Advogada Especialista em Direito de Família, Cível e Criminal",
+          "Advogada Especialista em Direito de Famílias e Sucessões (OAB/MG 165340)",
       },
     ],
-    telephone: "+55-31-98819-9907",
-    url: "https://www.advpatriciaferreira.com.br",
-    image: "https://www.advpatriciaferreira.com.br/logo-seal.png",
+    telephone: "+55-37-99811-8053",
+    url: "https://www.rafaelasouza.adv.br",
+    image: "https://www.rafaelasouza.adv.br/logo-seal.png",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Ribeirão das Neves",
+      streetAddress: "R. Benedito Valadares, 224 - Centro",
+      addressLocality: "Piumhi",
       addressRegion: "MG",
+      postalCode: "37925-000",
       addressCountry: "BR",
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "33",
+      ratingValue: "5.0",
+      reviewCount: "14",
     },
     areaServed: [
-      "Ribeirão das Neves",
-      "Justinópolis",
-      "Belo Horizonte",
-      "Contagem",
-      "Betim",
+      "Piumhi",
+      "Capitólio",
+      "Passos",
+      "Formiga",
       "Minas Gerais",
       "Brasil",
     ],
@@ -147,16 +148,14 @@ export default function RootLayout({
           "Wednesday",
           "Thursday",
           "Friday",
-          "Saturday",
-          "Sunday",
         ],
-        opens: "00:00",
-        closes: "23:59",
+        opens: "09:00",
+        closes: "18:00",
       },
     ],
     sameAs: [
-      "https://www.instagram.com/advpatriciaferreira/",
-      "https://wa.me/5531988199907",
+      "https://www.instagram.com/rafaela_souza_adv/",
+      "https://wa.me/5537998118053",
     ],
   };
 
@@ -174,7 +173,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#040914] font-sans text-stone-100 antialiased selection:bg-[#cb902b] selection:text-[#040914]">
+      <body className="min-h-screen overflow-x-clip bg-[#f8f6f2] font-sans text-[#070a1c] antialiased selection:bg-[#c59d64] selection:text-[#ffffff]">
         {children}
       </body>
     </html>

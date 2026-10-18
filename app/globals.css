@@ -1,79 +1,62 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: dark;
-  --brand-gold-light: #fdf8ee;
-  --brand-gold-highlight: #f6e5be;
-  --brand-gold-accent: #e5c368;
-  --brand-gold: #cb902b;
-  --brand-gold-dark: #a67520;
-  --brand-gold-deep: #7e5611;
-  --brand-gold-shadow: #4d3306;
-  --brand-obsidian: #040914;
-  --brand-charcoal: #07101e;
-  --brand-surface: #0c182e;
-  --brand-surface-elevated: #11223f;
-  --brand-ink: #fcfaf7;
-  --brand-ink-soft: #c7d5e8;
-  --brand-pearl: #040914;
-  --brand-paper: #07101e;
+  color-scheme: light;
+  --brand-bg: #f8f6f2;
+  --brand-bg-alt: #f3efea;
+  --brand-surface: #ffffff;
+  --brand-navy: #070a1c;
+  --brand-navy-light: #0d162a;
+  --brand-navy-surface: #12203d;
+  --brand-gold: #c59d64;
+  --brand-gold-accent: #dab280;
+  --brand-gold-light: #fbf6ee;
+  --brand-gold-highlight: #f5e6cf;
+  --brand-gold-dark: #8c673b;
+  --brand-gold-deep: #684b25;
+  --brand-ink: #070a1c;
+  --brand-ink-soft: #4a586d;
+  --brand-ink-muted: #6b7a90;
+  --brand-border: #e6dfd5;
 }
 
 @theme inline {
   --font-serif: var(--font-serif), var(--font-display), "Playfair Display", "Cormorant Garamond", serif;
   --font-cinzel: var(--font-cinzel), "Cinzel", "Trajan Pro", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  --color-ink: #fcfaf7;
-  --color-ink-soft: #c7d5e8;
-  --color-pearl: #040914;
-  --color-brand-50: #040812;
-  --color-brand-100: #07101e;
-  --color-brand-200: #0c182e;
-  --color-brand-300: #11223f;
-  --color-brand-400: #cb902b;
-  --color-brand-500: #a67520;
-  --color-brand-600: #8a5e14;
-  --color-brand-700: #6e490d;
-  --color-brand-800: #523507;
-  --color-brand-900: #362203;
-  --color-brand-950: #040914;
-  --color-gold-100: #fdf8ee;
-  --color-gold-200: #f6e5be;
-  --color-gold-300: #eed38c;
-  --color-gold-400: #e5c368;
-  --color-gold-500: #cb902b;
-  --color-gold-600: #a67520;
-  --color-gold-700: #7e5611;
-  --shadow-card: 0 18px 48px rgba(0, 0, 0, 0.78);
-  --shadow-gold: 0 10px 30px rgba(203, 144, 43, 0.28);
-  --shadow-navy: 0 10px 30px rgba(7, 16, 30, 0.55);
-  --shadow-obsidian: 0 16px 45px rgba(0, 0, 0, 0.92);
-  --shadow-glow: 0 0 35px rgba(229, 195, 104, 0.28);
+  --color-brand-bg: #f8f6f2;
+  --color-brand-alt: #f3efea;
+  --color-brand-navy: #070a1c;
+  --color-brand-gold: #c59d64;
+  --color-brand-gold-accent: #dab280;
+  --shadow-card: 0 10px 32px rgba(7, 10, 28, 0.06);
+  --shadow-card-hover: 0 16px 40px rgba(7, 10, 28, 0.12);
+  --shadow-gold: 0 8px 24px rgba(197, 157, 100, 0.25);
+  --shadow-navy: 0 12px 36px rgba(7, 10, 28, 0.35);
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5.5rem;
+  scroll-padding-top: 6rem;
 }
 
 body {
-  background: #040914;
-  color: #fcfaf7;
+  background: #f8f6f2;
+  color: #070a1c;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #cb902b;
+  caret-color: #c59d64;
 }
 
 ::selection {
-  background: #cb902b;
-  color: #040914;
+  background: #c59d64;
+  color: #ffffff;
 }
 
 .font-cinzel {
   font-family: var(--font-cinzel), "Cinzel", "Playfair Display", serif;
 }
 
-.eyebrow,
-.eyebrow-light {
+.eyebrow {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -82,18 +65,23 @@ body {
   line-height: 1.4;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  color: #8c673b;
 }
 
-.eyebrow {
-  color: #e5c368;
-}
-
-.eyebrow-light {
-  color: #7e5611;
+.eyebrow-dark {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #dab280;
 }
 
 .eyebrow::before,
-.eyebrow-light::before {
+.eyebrow-dark::before {
   width: 1.75rem;
   height: 1px;
   flex: none;
@@ -104,7 +92,7 @@ body {
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #c7d5e8;
+  color: #4a586d;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -117,8 +105,8 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  height: 1px;
-  background: #cb902b;
+  height: 1.5px;
+  background: #c59d64;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -126,7 +114,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #ffffff;
+  color: #070a1c;
 }
 
 .nav-link:hover::after {
@@ -146,17 +134,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #040914;
+  background: #f8f6f2;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #040914;
+  border: 2px solid #f8f6f2;
   border-radius: 999px;
-  background: #11223f;
+  background: #d8d0c4;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #cb902b;
+  background: #c59d64;
 }
 
 @media (prefers-reduced-motion: reduce) {
