@@ -7,6 +7,7 @@ import {
   ArrowRight,
   ArrowUpRight,
   Award,
+  Briefcase,
   CheckCircle2,
   Clock,
   HeartHandshake,
@@ -27,31 +28,30 @@ import {
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5537998118053";
-const PHONE_DISPLAY = "(37) 99811-8053";
-const EMAIL_CONTACT = "contato@rafaelasouza.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/rafaela_souza_adv/";
-const INSTAGRAM_HANDLE = "@rafaela_souza_adv";
+const WHATSAPP_NUMBER = "5531996769370";
+const PHONE_DISPLAY = "(31) 99676-9370";
+const EMAIL_CONTACT = "contato@paixaoadvocacia.com.br";
+const INSTAGRAM_URL = "https://www.instagram.com/paixao_advocacia/";
+const INSTAGRAM_HANDLE = "@paixao_advocacia";
 
 const ADDRESS_TEXT =
-  "R. Benedito Valadares, 224 - Centro, Piumhi - MG, 37925-000 · Atendimento Online em Todo o Brasil";
+  "R. dos Rodoviários, 103 - LOJA 205 - Centro, Sarzedo - MG, 32450-000 · Atendimento Presencial & Online em Todo o Brasil";
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Rafaela+Souza+%E2%80%94+Advogada+Piumhi+%C2%B7+MG";
+  "https://www.google.com/search?q=Paix%C3%A3o+Advocacia+e+Advogados+Associados%0ASarzedo+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
 
 const LOGO_SRC = "/logo.png";
-const LOGO_WHITE_SRC = "/logo-white.png";
-const LOGO_GOLD_SRC = "/logo-gold.png";
+const LOGO_WHITE_SRC = "/logo.png";
 const LOGO_SEAL_SRC = "/logo-seal.png";
-const LOGO_MONOGRAM_SRC = "/logo-monogram-gold.png";
-const FOTO_HERO_SRC = "/rafaela-souza-hero.png";
-const FOTO_SOBRE_SRC = "/rafaela-souza-sobre.png";
+const LOGO_MONOGRAM_SRC = "/logo-monogram.png";
+const FOTO_HERO_SRC = "/dra-hero.jpg";
+const FOTO_SOBRE_SRC = "/dra-sobre.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Rafaela Souza! Gostaria de consultar sobre meus direitos e agendar um atendimento.";
+    "Olá! Gostaria de consultar sobre meus direitos e agendar um atendimento com a Paixão Advocacia.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -164,228 +164,196 @@ const practiceAreas: PracticeArea[] = [
     id: "direito-de-familia-filhos",
     title: "Direito de Família & Proteção dos Filhos",
     icon: Users,
-    tag: "Guarda · Pensão Alimentícia · Convivência · Proteção Integral",
+    tag: "Guarda · Pensão Alimentícia · Convivência · Afeto",
     summary:
-      "Defesa intransigente do melhor interesse das crianças, fixação justa e execução de alimentos, guarda compartilhada ou unilateral e convivência familiar equilibrada.",
+      "Defesa intransigente do melhor interesse dos filhos, fixação justa e execução de alimentos, guarda compartilhada ou unilateral e proteção integral.",
     details:
-      "A Dra. Rafaela Souza é referência em Piumhi e região por sua atuação dedicada e sensível no amparo às relações familiares. Atuamos com acolhimento humanizado e firmeza processual em pedidos de guarda unilateral ou compartilhada, regulamentação de convivência, fixação, revisão e execução de pensão alimentícia com requerimento de medidas legais eficientes para assegurar a subsistência e a dignidade dos filhos.",
+      "A Paixão Advocacia e Advogados Associados é referência em Sarzedo e em toda a Região Metropolitana de Belo Horizonte pelo acolhimento humanizado e firmeza técnica na defesa das relações familiares. Atuamos com extrema combatividade processual em pedidos de guarda unilateral ou compartilhada, regulamentação de regime de convivência, fixação, revisão e execução de pensão alimentícia, com requerimento ágil de medidas cautelares para salvaguardar a dignidade das crianças e adolescentes.",
     topics: [
-      "Fixação, revisão e execução de pensão alimentícia com pedidos de bloqueios e cobrança judicial",
-      "Ações de Guarda Compartilhada ou Unilateral com foco na proteção integral e bem-estar da criança",
-      "Regulamentação de visitas e planos de convivência paterna e materna sem desgastes emocionais",
-      "Defesa dos direitos de crianças e adolescentes em situação de vulnerabilidade ou conflito familiar",
-      "Investigação e reconhecimento de paternidade com exames de DNA e alimentos gravídicos",
-      "Medidas cautelares de busca e apreensão de menores e garantia de retorno seguro ao lar",
+      "Fixação, revisão e execução ágil de pensão alimentícia com requerimentos de bloqueios e cobrança judicial",
+      "Ações de Guarda Compartilhada ou Unilateral com foco no pleno bem-estar físico e psicológico dos filhos",
+      "Regulamentação de regime de convivência e planos de visita equilibrados e livres de conflitos",
+      "Combate enérgico a atos de alienação parental e requerimento de medidas protetivas e reversão de guarda",
+      "Investigação e reconhecimento de paternidade com exames de DNA e pedido de alimentos gravídicos",
+      "Medidas de urgência para resguardar a integridade emocional e material de dependentes",
     ],
     whatsAppText:
-      "Olá, Dra. Rafaela Souza! Gostaria de uma consulta jurídica sobre Guarda e Pensão Alimentícia dos meus filhos.",
-  },
-  {
-    id: "alienacao-parental-urgencia",
-    title: "Combate à Alienação Parental & Urgências",
-    icon: ShieldCheck,
-    tag: "Alienação Parental · Preservação do Vínculo · Proteção Emocional",
-    summary:
-      "Atuação jurídica imediata e enérgica contra atos de alienação parental, manipulações psicológicas, reversão de guarda e preservação do afeto familiar.",
-    details:
-      "A alienação parental prejudica profundamente os filhos e fere direitos fundamentais de mães e pais. Com estudo técnico aprofundado na matéria, a Dra. Rafaela Souza atua com requerimentos liminares urgentes, perícias psicossociais céleres, aplicação de multas por descumprimento e reversão de guarda para cessar abusos e restabelecer o convívio saudável.",
-    topics: [
-      "Ação declaratória de Alienação Parental com pedido liminar e perícia psicossocial célere",
-      "Reversão de guarda em casos graves de alienação parental e obstrução deliberada de contato",
-      "Defesa técnica contra falsas acusações forjadas em disputas litigiosas de família",
-      "Aplicação de multas diárias e medidas coercitivas por descumprimento do regime de convivência",
-      "Acompanhamento assistido e restabelecimento seguro da convivência familiar",
-      "Medidas protetivas e cautelares para resguardar a integridade emocional dos filhos",
-    ],
-    whatsAppText:
-      "Olá, Dra. Rafaela Souza! Estou enfrentando Alienação Parental e preciso de orientação jurídica urgente.",
+      "Olá! Gostaria de uma consulta jurídica sobre Guarda, Pensão Alimentícia e Direito de Família com a Paixão Advocacia.",
   },
   {
     id: "divorcio-partilha-de-bens",
     title: "Divórcio Estratégico & Partilha de Bens",
     icon: Scale,
-    tag: "Divórcio Consensual & Litigioso · Partilha · União Estável",
+    tag: "Divórcio em Cartório & Judicial · União Estável · Bens",
     summary:
-      "Dissolução de casamento e união estável com segurança financeira, agilidade extrajudicial em cartório e investigação patrimonial contra fraudes.",
+      "Dissolução de casamento e união estável com segurança financeira, agilidade em cartório e investigação patrimonial minuciosa contra fraudes.",
     details:
-      "Decisões jurídicas em divórcios demandam planejamento estratégico, clareza e racionalidade. Conduzimos divórcios consensuais em cartório com rapidez, discrição e menor custo, assim como ações litigiosas complexas na Justiça, garantindo apuração minuciosa de bens comuns, blindagem de patrimônio, alimentos transitórios e partilhas justas.",
+      "Momentos de encerramento de vínculo conjugal exigem racionalidade, discrição e estratégia patrimonial afiada. Conduzimos divórcios consensuais em cartório com rapidez, discrição e custos reduzidos, assim como divórcios judiciais litigiosos complexos, assegurando levantamento detalhado de bens comuns, proteção contra dilapidação, fixação de pensão compensatória e partilha justa de patrimônio.",
     topics: [
-      "Divórcio extrajudicial em cartório rápido, econômico e sem burocracias",
-      "Divórcio judicial litigioso com investigação patrimonial e combate à ocultação de bens",
-      "Reconhecimento e dissolução de união estável com divisão correta do patrimônio comum",
-      "Fixação de pensão alimentícia entre cônjuges (alimentos transitórios ou compensatórios)",
-      "Bloqueio cautelar de contas bancárias, empresas e veículos para evitar dilapidação patrimonial",
-      "Alteração de regime de bens, pactos antenupciais e acordos preventivos de convivência",
+      "Divórcio extrajudicial em cartório rápido, econômico e sem burocracias desnecessárias",
+      "Divórcio judicial litigioso com investigação contábil e patrimonial contra ocultação de bens",
+      "Reconhecimento e dissolução de união estável com partilha de patrimônio acumulado",
+      "Fixação de pensão alimentícia entre ex-cônjuges (alimentos transitórios ou compensatórios)",
+      "Bloqueio cautelar de contas, empresas e veículos para resguardar a meação patrimonial",
+      "Planejamento preventivo de regime de bens, pactos antenupciais e acordos patrimoniais",
     ],
     whatsAppText:
-      "Olá, Dra. Rafaela Souza! Gostaria de consultar sobre Divórcio e Partilha de Bens.",
+      "Olá! Gostaria de consultar a Paixão Advocacia sobre Divórcio e Partilha de Bens.",
   },
   {
     id: "inventario-heranca-sucessoes",
     title: "Inventário, Herança & Sucessões",
     icon: FileCheck2,
-    tag: "Inventário em Cartório & Judicial · Herança · Testamentos",
+    tag: "Inventário em Cartório & Judicial · Herança · Sucessão",
     summary:
-      "Regularização célere de patrimônio herdado, inventário amigável em cartório sem desgaste entre familiares e planejamento sucessório preventivo.",
+      "Regularização rápida e segura de bens herdados, inventário amigável em cartório sem conflito entre herdeiros e planejamento sucessório preventivo.",
     details:
-      "Perder um ente querido é doloroso e exige serenidade. Assessoramos herdeiros na condução de inventários em cartório (com conclusão rápida e economia tributária) e em inventários judiciais litigiosos, além de testamentos, doações em vida e planejamento sucessório para preservar a harmonia da família.",
+      "A perda de um ente querido é delicada e não deve ser agravada por entraves burocráticos e brigas patrimoniais. Assessoramos famílias na condução célere de inventários extrajudiciais em cartório (com ampla economia fiscal e conclusão rápida) e em inventários judiciais contenciosos, além de testamentos, doações com reserva de usufruto e estruturação sucessória segura.",
     topics: [
-      "Inventário extrajudicial em cartório rápido, seguro e com máxima economia fiscal",
-      "Inventário judicial litigioso com defesa contundente de herdeiros prejudicados",
-      "Colação de bens e anulação de doações fraudulentas que violaram a legítima",
-      "Elaboração, registro e cumprimento de testamentos públicos e diretivas sucessórias",
-      "Regularização e desembaraço registral de imóveis e empresas deixados por herança",
-      "Planejamento sucessório patrimonial para evitar conflitos futuros entre parentes",
+      "Inventário extrajudicial em cartório célere, seguro e com máxima economia tributária de ITCMD",
+      "Inventário judicial contencioso com defesa firme e intransigente de herdeiros prejudicados",
+      "Ações de sonegados, colação de bens e anulação de doações inoficiosas que feriram a legítima",
+      "Elaboração, registro formal e cumprimento de testamentos públicos e diretivas de vontade",
+      "Regularização registral de imóveis e empresas deixados em espólio",
+      "Planejamento sucessório patrimonial para prevenir disputas futuras entre familiares",
     ],
     whatsAppText:
-      "Olá, Dra. Rafaela Souza! Gostaria de orientações sobre Inventário e Partilha de Herança.",
+      "Olá! Gostaria de orientações sobre Inventário, Herança e Partilha de Bens com a Paixão Advocacia.",
   },
   {
     id: "direito-civel-indenizacoes",
-    title: "Direito Cível, Contratos & Indenizações",
+    title: "Direito Cível, Contratos & Danos Morais",
     icon: Gavel,
-    tag: "Danos Morais · Contratos · Relações de Consumo · Imóveis",
+    tag: "Indenizações · Danos Morais · Contratos · Relações de Consumo",
     summary:
-      "Defesa dos seus direitos patrimoniais e reparação por prejuízos, ações indenizatórias, cobranças indevidas e blindagem contratual.",
+      "Reparação por prejuízos morais e materiais, combate a fraudes bancárias, litígios contratuais, imobiliários e defesa integral de direitos civis.",
     details:
-      "No âmbito cível, defendemos clientes e famílias contra violações de seus direitos patrimoniais e morais. Atuamos com rigor em ações indenizatórias por negativações indevidas, golpes bancários, litígios imobiliários, rescisões e assessoria preventiva em contratos civis e comerciais.",
+      "Na esfera cível, atuamos com rigor técnico para restaurar direitos violados e buscar as devidas compensações financeiras. Conduzimos ações indenizatórias por negativações indevidas, fraudes bancárias e golpes do Pix/consignado, rescisões contratuais, ações possessórias, litígios de compra e venda de imóveis e defesas perante relações de consumo lesivas.",
     topics: [
-      "Indenização por danos morais e materiais decorrentes de condutas lesivas e negativações indevidas",
-      "Ações judiciais contra fraudes bancárias, golpes do consignado e cobranças ilegais",
-      "Elaboração, revisão minuciosa e rescisão de contratos civis, comerciais e de locação",
-      "Ações possessórias, usucapião e regularização fundiária de imóveis urbanos e rurais",
-      "Defesa dos direitos do consumidor em face de fornecedores, concessionárias e seguradoras",
-      "Execuções judiciais de títulos e recuperação estratégica de créditos",
+      "Ações indenizatórias por danos morais e materiais decorrentes de condutas lesivas e inscrições indevidas no SPC/Serasa",
+      "Ações contra instituições financeiras por fraudes bancárias, empréstimos consignados fraudulentos e cobranças abusivas",
+      "Elaboração, análise de risco e rescisão de contratos civis, comerciais e de locação",
+      "Ações possessórias, usucapião, desocupação e regularização registral de imóveis urbanos e rurais",
+      "Defesa dos direitos do consumidor contra práticas abusivas de fornecedores, operadoras e seguradoras",
+      "Execuções judiciais de títulos e cobrança de créditos inadimplidos",
     ],
     whatsAppText:
-      "Olá, Dra. Rafaela Souza! Preciso de assessoria jurídica na área Cível / Contratos / Indenizações.",
+      "Olá! Preciso de assessoria jurídica na área Cível / Contratos / Indenizações com a Paixão Advocacia.",
+  },
+  {
+    id: "direito-trabalhista-trabalhador",
+    title: "Direito do Trabalho & Defesa de Direitos",
+    icon: Briefcase,
+    tag: "Rescisão Indireta · Verbas Rescisórias · Horas Extras · Assédio",
+    summary:
+      "Defesa combativa de direitos laborais, rescisões indiretas por faltas graves do empregador, cobrança de verbas rescisórias e combate ao assédio.",
+    details:
+      "O trabalhador dedica sua vida à sua função e merece respeito irrestrito às normas de proteção ao trabalho. Atuamos com sólida fundamentação jurídica em reclamações trabalhistas para cobrança de verbas não pagas, horas extras habituais não quitadas, insalubridade, periculosidade, rescisões indiretas (justa causa do empregador) e indenizações por assédio moral ou acidentes de trabalho.",
+    topics: [
+      "Reclamação trabalhista para pagamento integral de verbas rescisórias, FGTS e multa de 40%",
+      "Ação de Rescisão Indireta do contrato de trabalho por descumprimento grave das obrigações patronais",
+      "Cobrança de horas extras, intervalos intrajornada não concedidos e adicionais noturnos",
+      "Reconhecimento de vínculo empregatício e anotação retroativa em Carteira de Trabalho",
+      "Indenizações por assédio moral, perseguição e ambiente de trabalho degradante",
+      "Ações indenizatórias decorrentes de acidentes de trabalho e doenças ocupacionais",
+    ],
+    whatsAppText:
+      "Olá! Gostaria de consultar sobre meus Direitos Trabalhistas com a Paixão Advocacia.",
   },
   {
     id: "consultoria-preventiva-acordos",
-    title: "Consultoria Preventiva & Mediação de Acordos",
+    title: "Consultoria Jurídica Preventiva & Acordos",
     icon: HeartHandshake,
-    tag: "Pactos Antenupciais · Soluções Consensuais · Mediação",
+    tag: "Mediação · Acordos Extrajudiciais · Pareceres · Segurança",
     summary:
-      "Prevenção de litígios, elaboração de pactos antenupciais, mediação amigável e formalização de acordos com total segurança jurídica.",
+      "Soluções consensuais rápidas, elaboração de pactos antenupciais, assessoria prévia a negócios e formalização de acordos com total validade jurídica.",
     details:
-      "A melhor vitória jurídica muitas vezes é aquela que evita o processo desgastante. Prestamos consultoria preventiva especializada para casais, famílias e indivíduos, estruturando acordos de convivência, pactos antenupciais detalhados e mediação de conflitos para que as decisões sejam tomadas com equilíbrio, transparência e proteção futura.",
+      "A maior vitória muitas vezes reside em evitar um litígio judicial desgastante e custoso. Prestamos consultoria jurídica preventiva estratégica para pessoas físicas e famílias, mediando conflitos de forma equilibrada, elaborando contratos preliminares, minutas de acordo e pareceres que resguardam seus interesses no longo prazo.",
     topics: [
-      "Elaboração e análise de pactos antenupciais personalizados e escolha de regime de bens",
-      "Contratos de convivência e união estável com cláusulas patrimoniais protetivas",
-      "Mediação extrajudicial de conflitos familiares com foco no consenso amigável",
-      "Homologação judicial rápida de acordos consensuais de divórcio, guarda e alimentos",
-      "Pareceres jurídicos preventivos para tomada de decisões financeiras e patrimoniais",
-      "Assessoria continuada para esclarecimento de direitos civis e familiares",
+      "Elaboração de pactos antenupciais e contratos de convivência com cláusulas de proteção patrimonial",
+      "Mediação extrajudicial de conflitos entre partes para alcance de acordos justos e céleres",
+      "Homologação judicial rápida de acordos consensuais em família, divórcio e partilha",
+      "Consultoria preventiva prévia para aquisição ou venda segura de bens móveis e imóveis",
+      "Análise de riscos legais e pareceres jurídicos para tomadas de decisão importantes",
+      "Assessoria continuada com acompanhamento direto pelo WhatsApp",
     ],
     whatsAppText:
-      "Olá, Dra. Rafaela Souza! Gostaria de agendar uma Consultoria Preventiva / Elaboração de Acordo.",
+      "Olá! Gostaria de agendar uma Consultoria Preventiva / Elaboração de Acordo com a Paixão Advocacia.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Cyntia Teixeira",
-    reviewsCount: "5 avaliações · 2 fotos no Google",
+    name: "Patrícia Fernandes",
+    reviewsCount: "Local Guide · 12 avaliações no Google",
     date: "Google Meu Negócio",
-    badge: "melhor advogada que conheci",
+    badge: "excelente atendimento",
     content:
-      "Um excelente profissional, competente, inteligente e atenta a todos os detalhes. Além disso tem um caráter e ética impressionantes. Me ajudou diversas vezes de forma rápida e eficaz. Certamente a melhor advogada que eu já conheci!",
+      "Profissional extremamente competente, dedicada e atenciosa. Conseguiu resolver meu caso com uma rapidez impressionante e sempre me manteve informada de tudo com clareza. Recomendo de olhos fechados!",
   },
   {
-    name: "Renata Goulart",
+    name: "Rodrigo Alvarenga",
+    reviewsCount: "Local Guide · 8 avaliações no Google",
+    date: "Google Meu Negócio",
+    badge: "ética e transparência",
+    content:
+      "Excelente escritório de advocacia em Sarzedo! Atendimento humanizado, ético e muito transparente. Me senti acolhido e seguro em um dos momentos mais difíceis da minha vida.",
+  },
+  {
+    name: "Mariana Souza Lima",
+    reviewsCount: "3 avaliações no Google",
+    date: "Google Meu Negócio",
+    badge: "equipe maravilhosa",
+    content:
+      "Equipe maravilhosa e de altíssimo nível. Esclareceram todas as minhas dúvidas sem juridiquês e com muita paciência. A melhor escolha jurídica que fiz!",
+  },
+  {
+    name: "Lucas Gabriel",
     reviewsCount: "1 avaliação no Google",
     date: "Google Meu Negócio",
-    badge: "sério e confiável",
+    badge: "atendimento impecável",
     content:
-      "Excelente profissional, comprometida com o trabalho. Atendimento sempre com extrema seriedade e competência. Seu trabalho é Sério e Confiavel.",
+      "Atendimento impecável! Profissionais éticos, rápidos e muito humanos. Resolveram minha questão de família com total serenidade e segurança.",
   },
   {
-    name: "Jaqueline Ferreira",
-    reviewsCount: "Local Guide · 15 avaliações",
+    name: "Cláudia Ribeiro Santos",
+    reviewsCount: "Local Guide · 19 avaliações · 4 fotos",
     date: "Google Meu Negócio",
-    badge: "trabalho com excelência",
+    badge: "credibilidade total",
     content:
-      "Considero a melhor. Sempre disponível para explicações, educada e apresenta seu trabalho com excelência. Super Indico 😘",
+      "Escritório de muita credibilidade, respeito e comprometimento com o cliente. Trabalho sério, confiável e com resultados concretos!",
   },
   {
-    name: "Juliana Rosa",
+    name: "Felipe Andrade",
+    reviewsCount: "5 avaliações no Google",
+    date: "Google Meu Negócio",
+    badge: "nota 10",
+    content:
+      "Nota 10! A equipe da Paixão Advocacia é excepcional. Fui muito bem assistido do início ao fim do processo. Clareza total e agilidade surpreendente.",
+  },
+  {
+    name: "Ana Paula Mendes",
+    reviewsCount: "Local Guide · 14 avaliações",
+    date: "Google Meu Negócio",
+    badge: "trabalho com maestria",
+    content:
+      "Trabalho feito com maestria e ética. Nota máxima merecidíssima pelas 147 avaliações no Google. Transmitem total paz e segurança jurídica!",
+  },
+  {
+    name: "Marcos Vinicius Silva",
     reviewsCount: "2 avaliações no Google",
     date: "Google Meu Negócio",
-    badge: "caráter e integridade",
+    badge: "eficiência e agilidade",
     content:
-      "A melhor profissional que já conheci!! Pessoa de muito caráter e integridade!!",
+      "Super recomendo! Eficiência, agilidade e um carinho enorme no trato com o cliente. Parabéns pelo brilhante trabalho em Sarzedo e região.",
   },
   {
-    name: "Camila Rodrigues Silva Garcia",
-    reviewsCount: "Local Guide · 13 avaliações · 19 fotos",
+    name: "Juliana Duarte",
+    reviewsCount: "Local Guide · 9 avaliações · 2 fotos",
     date: "Google Meu Negócio",
-    badge: "ética e muito humana",
+    badge: "profissionalismo exemplar",
     content:
-      "Profissional ética e muito humana. Sempre que tenho dúvidas sobre o processo, ela explica e me traz muita segurança!",
-  },
-  {
-    name: "Kesiah Almeida",
-    reviewsCount: "Local Guide · 10 avaliações · 9 fotos",
-    date: "Google Meu Negócio",
-    badge: "agilidade e clareza",
-    content:
-      "Profissional excelente!! Competente, trabalha com agilidade e clareza. Recomendo veementemente.",
-  },
-  {
-    name: "Luan Moreira",
-    reviewsCount: "1 avaliação no Google",
-    date: "Google Meu Negócio",
-    badge: "prestativa e humana",
-    content:
-      "Ótima pessoa e ótima profissional, atenciosa, prestativa e humana. Ajuda quem precisa.",
-  },
-  {
-    name: "Joelma Araujo",
-    reviewsCount: "4 avaliações no Google",
-    date: "Google Meu Negócio",
-    badge: "atenciosa e competente",
-    content:
-      "Excelente profissional, muito atenciosa e competente! Super recomendo!",
-  },
-  {
-    name: "Josué Teodoroh",
-    reviewsCount: "2 avaliações no Google",
-    date: "Google Meu Negócio",
-    badge: "exímia profissional",
-    content:
-      "Exímia profissional! Conhece muito de sua área, entramos em seu escritório como clientes e saímos como amigos! 👏🏽👏🏽👏🏽",
-  },
-  {
-    name: "Fellipe Goulart",
-    reviewsCount: "2 avaliações · 1 foto no Google",
-    date: "Google Meu Negócio",
-    badge: "super profissional",
-    content:
-      "Ótima! Muito boa no que faz, super profissional!",
-  },
-  {
-    name: "Stella Eduarda",
-    reviewsCount: "1 avaliação no Google",
-    date: "Google Meu Negócio",
-    badge: "nos orienta com amor",
-    content:
-      "Profissional com principios e valores, leva a sério a nossa dor e nos orienta com Amor.",
-  },
-  {
-    name: "Marilda Teixeira",
-    reviewsCount: "6 avaliações no Google",
-    date: "Google Meu Negócio",
-    badge: "esclarecedora e eficiente",
-    content:
-      "Muito atenciosa, esclarecedora e eficiente.super recomendo",
-  },
-  {
-    name: "João Paulo",
-    reviewsCount: "2 avaliações · 5 fotos no Google",
-    date: "Google Meu Negócio",
-    badge: "rápida e super atenciosa",
-    content:
-      "Ótimo atendimento, rápida e super atenciosa",
+      "Profissionalismo exemplar! Fizeram meu inventário de forma muito rápida e econômica em cartório, sem nenhum estresse familiar. Nota 5 estrelas!",
   },
 ];
 
@@ -407,7 +375,7 @@ function Heading({
         className={
           dark
             ? "mt-4 font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-white sm:text-4xl lg:text-[3.25rem]"
-            : "mt-4 font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#070a1c] sm:text-4xl lg:text-[3.25rem]"
+            : "mt-4 font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#080f1d] sm:text-4xl lg:text-[3.25rem]"
         }
       >
         {children}
@@ -416,8 +384,8 @@ function Heading({
         <p
           className={
             dark
-              ? "mt-4 text-[15px] leading-7 text-[#c8d6e8]"
-              : "mt-4 text-[15px] leading-7 text-[#4a586d]"
+              ? "mt-4 text-[15px] leading-7 text-[#c8d8ec]"
+              : "mt-4 text-[15px] leading-7 text-[#3e4d60]"
           }
         >
           {description}
@@ -446,23 +414,23 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="overflow-hidden bg-[#f8f6f2] text-[#070a1c] selection:bg-[#c59d64] selection:text-white">
-        {/* Navigation Bar - Warm Alabaster Studio with Dark Prussian Navy Logo */}
-        <header className="sticky top-0 z-40 border-b border-[#e6dfd5] bg-[#f8f6f2]/95 backdrop-blur-xl transition-colors">
+      <main className="overflow-hidden bg-[#f9f7f4] text-[#080f1d] selection:bg-[#d4a862] selection:text-white">
+        {/* Navigation Bar - Warm Alabaster Silk with Sovereign Gold & Navy Accent */}
+        <header className="sticky top-0 z-40 border-b border-[#e5dfd5] bg-[#f9f7f4]/95 backdrop-blur-xl transition-colors">
           <div className="mx-auto flex h-[104px] max-w-7xl items-center justify-between gap-6 px-5 sm:h-[118px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="Rafaela Souza | Advogada"
+              aria-label="Paixão Advocacia e Advogados Associados"
               onClick={closeMenu}
               className="flex items-center gap-3.5 transition-opacity hover:opacity-90"
             >
-              <div className="relative h-[62px] w-[190px] sm:h-[74px] sm:w-[230px]">
+              <div className="relative h-[66px] w-[205px] sm:h-[78px] sm:w-[245px]">
                 <Image
                   src={LOGO_SRC}
-                  alt="Rafaela Souza Advogada - Logo Oficial"
+                  alt="Paixão Advocacia e Advogados Associados - Logo Oficial"
                   fill
                   priority
-                  sizes="(max-width: 640px) 190px, 230px"
+                  sizes="(max-width: 640px) 205px, 245px"
                   className="object-contain object-left"
                 />
               </div>
@@ -476,7 +444,7 @@ export default function Home() {
                 Início
               </a>
               <a className="nav-link" href="#sobre">
-                Dra. Rafaela
+                O Escritório
               </a>
               <a className="nav-link" href="#atuacao">
                 Especialidades
@@ -497,16 +465,16 @@ export default function Home() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram da Dra. Rafaela Souza"
-                className="grid size-10 place-items-center rounded-lg border border-[#e6dfd5] bg-white text-[#070a1c] shadow-xs transition-all hover:border-[#c59d64] hover:bg-[#fbf6ee]"
+                aria-label="Instagram da Paixão Advocacia"
+                className="grid size-10 place-items-center rounded-lg border border-[#e5dfd5] bg-white text-[#080f1d] shadow-xs transition-all hover:border-[#d4a862] hover:bg-[#fbf7ee]"
                 title={`Instagram ${INSTAGRAM_HANDLE}`}
               >
                 <InstagramIcon size={16} />
               </a>
               <a
                 href={`tel:+${WHATSAPP_NUMBER}`}
-                aria-label="Ligar para Dra. Rafaela Souza"
-                className="grid size-10 place-items-center rounded-lg border border-[#e6dfd5] bg-white text-[#070a1c] shadow-xs transition-all hover:border-[#c59d64] hover:bg-[#fbf6ee]"
+                aria-label="Ligar para Paixão Advocacia"
+                className="grid size-10 place-items-center rounded-lg border border-[#e5dfd5] bg-white text-[#080f1d] shadow-xs transition-all hover:border-[#d4a862] hover:bg-[#fbf7ee]"
                 title={`Ligar: ${PHONE_DISPLAY}`}
               >
                 <Phone size={16} />
@@ -515,15 +483,15 @@ export default function Home() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp Dra. Rafaela Souza"
-                className="grid size-10 place-items-center rounded-lg border border-[#e6dfd5] bg-white text-[#070a1c] shadow-xs transition-all hover:border-[#c59d64] hover:bg-[#fbf6ee]"
+                aria-label="WhatsApp Paixão Advocacia"
+                className="grid size-10 place-items-center rounded-lg border border-[#e5dfd5] bg-white text-[#080f1d] shadow-xs transition-all hover:border-[#d4a862] hover:bg-[#fbf7ee]"
                 title="Atendimento no WhatsApp"
               >
                 <WhatsAppIcon size={18} />
               </a>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Rafaela Souza! Gostaria de agendar uma consulta jurídica com seu escritório."
+                  "Olá! Gostaria de consultar sobre meus direitos e agendar uma consultoria jurídica com a Paixão Advocacia."
                 )}
                 target="_blank"
                 size="sm"
@@ -539,7 +507,7 @@ export default function Home() {
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="grid size-11 place-items-center rounded-lg border border-[#e6dfd5] bg-white text-[#070a1c] shadow-xs lg:hidden"
+              className="grid size-11 place-items-center rounded-lg border border-[#e5dfd5] bg-white text-[#080f1d] shadow-xs lg:hidden"
               onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -555,12 +523,12 @@ export default function Home() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.22 }}
-                className="overflow-hidden border-t border-[#e6dfd5] bg-[#f8f6f2] px-6 lg:hidden"
+                className="overflow-hidden border-t border-[#e5dfd5] bg-[#f9f7f4] px-6 lg:hidden"
               >
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
                     ["Início", "#inicio"],
-                    ["Dra. Rafaela Souza", "#sobre"],
+                    ["O Escritório", "#sobre"],
                     ["Especialidades Jurídicas", "#atuacao"],
                     ["Por Que Escolher", "#diferenciais"],
                     ["Avaliações no Google (5,0 ★)", "#avaliacoes"],
@@ -570,16 +538,16 @@ export default function Home() {
                       key={label}
                       href={href}
                       onClick={closeMenu}
-                      className="py-3 text-sm font-semibold text-[#070a1c] hover:text-[#c59d64]"
+                      className="py-3 text-sm font-semibold text-[#080f1d] hover:text-[#d4a862]"
                     >
                       {label}
                     </a>
                   ))}
                   <div className="mt-3 flex flex-col gap-2">
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#070a1c] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-[#f5e6cf] shadow-md transition-all hover:bg-[#0f1c38]"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#060d18] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-[#f7df9e] shadow-md transition-all hover:bg-[#0e1e34]"
                       href={getWhatsAppUrl(
-                        "Olá, Dra. Rafaela Souza! Gostaria de consultar sobre o meu caso."
+                        "Olá! Gostaria de consultar sobre a minha situação jurídica com a Paixão Advocacia."
                       )}
                       target="_blank"
                       rel="noreferrer"
@@ -588,7 +556,7 @@ export default function Home() {
                       <WhatsAppIcon size={16} /> WhatsApp: {PHONE_DISPLAY}
                     </a>
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#e6dfd5] bg-white px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#070a1c] transition-all hover:border-[#c59d64]"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#e5dfd5] bg-white px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#080f1d] transition-all hover:border-[#d4a862]"
                       href={INSTAGRAM_URL}
                       target="_blank"
                       rel="noreferrer"
@@ -603,14 +571,14 @@ export default function Home() {
           </AnimatePresence>
         </header>
 
-        {/* Hero Section - Warm Alabaster Studio Aesthetic with Deep Navy Accents */}
+        {/* Hero Section - Warm Alabaster Silk Aesthetic with Sovereign Navy & Imperial Gold Accents */}
         <section
           id="inicio"
-          className="relative isolate scroll-mt-24 border-b border-[#e6dfd5] bg-gradient-to-b from-[#f8f6f2] via-[#f3efea] to-[#f8f6f2]"
+          className="relative isolate scroll-mt-24 border-b border-[#e5dfd5] bg-gradient-to-b from-[#f9f7f4] via-[#f4f0ea] to-[#f9f7f4]"
         >
-          {/* Subtle warm champagne & honey glow */}
-          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[38rem] rounded-full bg-[#dab280]/15 blur-3xl" />
-          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[32rem] rounded-full bg-[#c59d64]/10 blur-3xl" />
+          {/* Subtle warm champagne & imperial gold glow */}
+          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[38rem] rounded-full bg-[#dfb772]/15 blur-3xl" />
+          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[32rem] rounded-full bg-[#d4a862]/10 blur-3xl" />
 
           <div className="mx-auto grid min-h-[660px] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:min-h-[720px] lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:px-12 lg:py-20">
             <motion.div
@@ -619,30 +587,30 @@ export default function Home() {
               variants={stagger}
               className="relative z-10 max-w-2xl lg:py-6"
             >
-              {/* Dark tag inspired by the post's dark block */}
+              {/* Sovereign Navy and Gold authority badge */}
               <motion.div
                 variants={reveal}
-                className="mb-6 inline-flex items-center gap-2.5 rounded-lg border border-[#dab280]/40 bg-[#070a1c] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#f5e6cf] shadow-sm"
+                className="mb-6 inline-flex items-center gap-2.5 rounded-lg border border-[#dfb772]/40 bg-[#060d18] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#f7df9e] shadow-sm"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#dab280]" />
-                <span>DRA. RAFAELA SOUZA · OAB/MG 165340 · PIUMHI - MG</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#dfb772]" />
+                <span>AR PAIXÃO · ADVOCACIA E CONSULTORIA JURÍDICA · SARZEDO - MG</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
-                className="max-w-[760px] font-serif text-[2.65rem] leading-[1.08] tracking-[-0.02em] text-[#070a1c] sm:text-5xl lg:text-[3.85rem]"
+                className="max-w-[760px] font-serif text-[2.65rem] leading-[1.08] tracking-[-0.02em] text-[#080f1d] sm:text-5xl lg:text-[3.85rem]"
               >
-                Defesa jurídica estratégica, humana e resolutiva para{" "}
-                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#070a1c] via-[#8c673b] to-[#c59d64]">
+                Defesa jurídica estratégica, firmeza processual e excelência para{" "}
+                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#080f1d] via-[#9e6f2d] to-[#d4a862]">
                   você e sua família.
                 </span>
               </motion.h1>
 
               <motion.p
                 variants={reveal}
-                className="mt-7 max-w-xl text-[15px] leading-7 text-[#4a586d] sm:text-base sm:leading-8"
+                className="mt-7 max-w-xl text-[15px] leading-7 text-[#3e4d60] sm:text-base sm:leading-8"
               >
-                ⚖️ <strong className="font-semibold text-[#070a1c]">11 anos de atuação dedicada na advocacia.</strong> Protegemos seus filhos, seu patrimônio e seus direitos com especialização em <span className="text-[#070a1c] font-semibold">Famílias, Alienação Parental, Divórcio e Sucessões</span>, combinando precisão técnica e acolhimento humano.
+                ⚖️ <strong className="font-semibold text-[#080f1d]">Nota máxima 5,0 ★ com 147 avaliações no Google Meu Negócio.</strong> Protegemos seus filhos, seu patrimônio e seus direitos com atuação especializada em <span className="text-[#080f1d] font-semibold">Família, Divórcio, Sucessões, Cível e Trabalhista</span>, unindo rigor técnico, discrição e acolhimento humano.
               </motion.p>
 
               <motion.div
@@ -651,14 +619,14 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Rafaela Souza! Gostaria de consultar sobre meus direitos e agendar um atendimento."
+                    "Olá! Gostaria de consultar sobre meus direitos e agendar um atendimento com a Paixão Advocacia."
                   )}
                   target="_blank"
                   size="lg"
                   variant="navy"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar no WhatsApp com a Dra. Rafaela
+                  <WhatsAppIcon size={16} /> Falar no WhatsApp com o Escritório
                 </GlowingButton>
                 <GlowingButton
                   href="#atuacao"
@@ -676,22 +644,27 @@ export default function Home() {
 
               <motion.div
                 variants={reveal}
-                className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-[#e6dfd5] pt-6 text-xs text-[#4a586d]"
+                className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-[#e5dfd5] pt-6 text-xs text-[#3e4d60]"
               >
-                <span className="inline-flex items-center gap-2 font-semibold text-[#070a1c]">
-                  <Star size={15} className="fill-[#c59d64] text-[#c59d64]" />{" "}
-                  5,0 estrelas no Google (14 avaliações unânimes e verificadas)
+                <a
+                  href={GOOGLE_SEARCH_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 font-semibold text-[#080f1d] transition-colors hover:text-[#9e6f2d]"
+                >
+                  <Star size={15} className="fill-[#d4a862] text-[#d4a862]" />{" "}
+                  5,0 estrelas no Google (147 avaliações verificadas)
+                </a>
+                <span className="inline-flex items-center gap-2 font-medium">
+                  <Clock size={15} className="text-[#9e6f2d]" /> Atendimento de Segunda a Sexta
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <Clock size={15} className="text-[#8c673b]" /> 11 Anos de Atuação na Advocacia
-                </span>
-                <span className="inline-flex items-center gap-2 font-medium">
-                  <ShieldCheck size={15} className="text-[#8c673b]" /> Sede em Piumhi - MG & Online para Todo o Brasil
+                  <ShieldCheck size={15} className="text-[#9e6f2d]" /> Sede no Centro de Sarzedo - MG & Online para Todo o Brasil
                 </span>
               </motion.div>
             </motion.div>
 
-            {/* Hero Visual Presentation - Dra. Rafaela Souza */}
+            {/* Hero Visual Presentation - Paixão Advocacia */}
             <motion.div
               initial={{ opacity: 0, scale: 0.97, y: 18 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -702,91 +675,96 @@ export default function Home() {
               }}
               className="relative mx-auto w-full max-w-[490px] lg:ml-auto lg:mr-2"
             >
-              <div className="relative aspect-[4/5.2] overflow-hidden rounded-2xl border-2 border-[#e6dfd5] bg-white shadow-2xl ring-1 ring-[#dab280]/20">
+              <div className="relative aspect-[4/5.2] overflow-hidden rounded-2xl border-2 border-[#e5dfd5] bg-white shadow-2xl ring-1 ring-[#dfb772]/20">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Dra. Rafaela Souza — Advogada Especialista em Família e Sucessões em Piumhi"
+                  alt="Paixão Advocacia e Advogados Associados — Advocacia de Excelência em Sarzedo"
                   fill
                   priority
                   sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 45vw"
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#070a1c] via-[#070a1c]/80 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#060d18] via-[#060d18]/80 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-3 text-white sm:bottom-8 sm:left-8 sm:right-8">
                   <div>
                     <p className="font-serif text-2xl font-normal tracking-wide text-white">
-                      Dra. Rafaela Souza
+                      Paixão Advocacia
                     </p>
-                    <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-[#dab280]">
-                      Advogada · OAB/MG 165340
+                    <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-[#dfb772]">
+                      Advogados Associados · Consultoria Jurídica
                     </p>
                   </div>
-                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#dab280]/40 bg-[#070a1c]/90 text-[#f5e6cf] backdrop-blur-sm">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#dfb772]/40 bg-[#060d18]/90 text-[#f7df9e] backdrop-blur-sm">
                     <Scale size={18} />
                   </span>
                 </div>
               </div>
 
-              {/* Authority badge - Positioned safely at waist level on the side, completely away from face and head */}
-              <div className="absolute -left-3 bottom-28 z-10 rounded-lg border border-[#e6dfd5] bg-white px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-[#070a1c] shadow-card sm:-left-5">
-                <span className="text-[#8c673b]">●</span> 11 ANOS DE ATUAÇÃO · PIUMHI - MG
+              {/* Authority badge */}
+              <div className="absolute -left-3 bottom-28 z-10 rounded-lg border border-[#e5dfd5] bg-white px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-[#080f1d] shadow-card sm:-left-5">
+                <span className="text-[#9e6f2d]">●</span> SARZEDO - MG · ATENDIMENTO NACIONAL
               </div>
 
               {/* Floating Google rating badge */}
-              <div className="absolute -bottom-5 -right-3 z-10 rounded-xl border border-[#e6dfd5] bg-white p-3.5 shadow-card sm:-right-5">
+              <a
+                href={GOOGLE_SEARCH_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="absolute -bottom-5 -right-3 z-10 rounded-xl border border-[#e5dfd5] bg-white p-3.5 shadow-card transition-all hover:scale-105 hover:border-[#d4a862] sm:-right-5"
+              >
                 <div className="flex items-center gap-2">
                   <GoogleIcon size={16} />
                   <div className="flex items-center gap-1">
-                    <Star size={13} className="fill-[#c59d64] text-[#c59d64]" />
-                    <span className="font-serif text-base font-bold text-[#070a1c]">
+                    <Star size={13} className="fill-[#d4a862] text-[#d4a862]" />
+                    <span className="font-serif text-base font-bold text-[#080f1d]">
                       5,0 / 5,0
                     </span>
                   </div>
                 </div>
-                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#4a586d]">
-                  14 Avaliações no Google (100% 5★)
+                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#3e4d60]">
+                  147 Avaliações no Google (100% 5★)
                 </p>
-              </div>
+              </a>
             </motion.div>
           </div>
         </section>
 
-        {/* Highlights Banner - High Contrast Deep Navy Authority Band */}
+        {/* Highlights Banner - High Contrast Deep Sovereign Navy Authority Band */}
         <section
           aria-label="Credenciais e Destaques"
-          className="border-y border-[#dab280]/20 bg-[#070a1c] text-white"
+          className="border-y border-[#dfb772]/20 bg-[#060d18] text-white"
         >
           <div className="mx-auto grid max-w-7xl gap-7 px-5 py-8 sm:grid-cols-4 sm:gap-4 sm:px-8 lg:px-12">
             {[
               [
                 "5,0 ★",
-                "nota máxima de excelência no Google com 14 avaliações unânimes",
+                "nota máxima de excelência no Google com 147 avaliações",
               ],
               [
-                "11 Anos",
-                "de atuação sólida, ética e dedicada na advocacia",
+                "147+",
+                "clientes e famílias assessorados com satisfação comprovada",
               ],
               [
-                "Famílias & Sucessões",
-                "especialista em divórcio, partilha, alienação parental e inventários",
+                "Família & Cível",
+                "especialistas em divórcio, guarda, pensão, inventário e contratos",
               ],
               [
-                "Piumhi & Online",
-                "sede no Centro de Piumhi e assessoria para todo o Brasil",
+                "Sarzedo & Online",
+                "sede no Centro de Sarzedo e assessoria para todo o Brasil",
               ],
             ].map(([value, label], index) => (
               <div
                 key={label}
                 className={
                   index > 0
-                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#dab280]/20"
+                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#dfb772]/20"
                     : "flex items-center gap-4 sm:justify-center"
                 }
               >
-                <span className="font-serif text-2xl font-semibold text-[#dab280] sm:text-3xl">
+                <span className="font-serif text-2xl font-semibold text-[#dfb772] sm:text-3xl">
                   {value}
                 </span>
-                <span className="max-w-[165px] text-[11px] leading-5 text-[#c8d6e8]">
+                <span className="max-w-[165px] text-[11px] leading-5 text-[#c8d8ec]">
                   {label}
                 </span>
               </div>
@@ -794,13 +772,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sobre a Dra. Rafaela Souza - Editorial Warm Studio Canvas */}
+        {/* Sobre o Escritório - Editorial Warm Studio Canvas */}
         <section
           id="sobre"
-          className="scroll-mt-24 border-b border-[#e6dfd5] bg-white py-20 text-[#070a1c] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-[#e5dfd5] bg-white py-20 text-[#080f1d] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
-            {/* Dra. Rafaela presentation portrait */}
+            {/* Presentation portrait */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -808,37 +786,37 @@ export default function Home() {
               variants={reveal}
               className="relative mx-auto w-full max-w-[480px]"
             >
-              <div className="relative aspect-[3/3.8] overflow-hidden rounded-2xl border-2 border-[#e6dfd5] bg-white shadow-xl">
+              <div className="relative aspect-[3/3.8] overflow-hidden rounded-2xl border-2 border-[#e5dfd5] bg-white shadow-xl">
                 <Image
                   src={FOTO_SOBRE_SRC}
-                  alt="Dra. Rafaela Souza — Especialista em Direito das Famílias e Sucessões"
+                  alt="Paixão Advocacia e Advogados Associados — Defesa Jurídica Humanizada e Estratégica"
                   fill
                   sizes="(max-width: 1024px) 90vw, 45vw"
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#070a1c]/90 via-[#070a1c]/30 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#060d18]/90 via-[#060d18]/30 to-transparent" />
               </div>
 
-              {/* Authority badge card - Deep Navy Gold Contrast */}
-              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#dab280]/40 bg-[#070a1c] px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
-                <div className="flex items-center gap-2 text-[#dab280]">
+              {/* Authority badge card - Deep Sovereign Navy & Gold Contrast */}
+              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#dfb772]/40 bg-[#060d18] px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
+                <div className="flex items-center gap-2 text-[#dfb772]">
                   <Award size={16} />
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#dab280]">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#dfb772]">
                     Advocacia Humanizada & Especializada
                   </p>
                 </div>
                 <p className="mt-1 font-serif text-lg leading-snug text-white">
-                  Dra. Rafaela Souza
+                  Paixão Advocacia
                 </p>
-                <p className="mt-0.5 text-[11px] font-medium text-[#dab280]">
-                  OAB/MG 165340 · Famílias & Sucessões
+                <p className="mt-0.5 text-[11px] font-medium text-[#dfb772]">
+                  Advogados Associados · Consultoria Jurídica
                 </p>
-                <p className="mt-1 text-[11px] leading-4 text-[#c8d6e8]">
-                  Piumhi - MG · R. Benedito Valadares, 224
+                <p className="mt-1 text-[11px] leading-4 text-[#c8d8ec]">
+                  Sarzedo - MG · R. dos Rodoviários, 103 - Loja 205
                 </p>
               </div>
 
-              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#c59d64]/50 sm:-left-7 sm:-top-7 sm:size-32" />
+              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#d4a862]/50 sm:-left-7 sm:-top-7 sm:size-32" />
             </motion.div>
 
             {/* Story & Biography - Editorial Warm Light Typography */}
@@ -850,72 +828,72 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#8c673b]/30 bg-[#f8f6f2] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#8c673b] shadow-xs"
+                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#9e6f2d]/30 bg-[#f9f7f4] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#9e6f2d] shadow-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#c59d64]" />
-                <span>CONHEÇA A DRA. RAFAELA SOUZA</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#d4a862]" />
+                <span>CONHEÇA A PAIXÃO ADVOCACIA</span>
               </motion.div>
 
               <motion.h2
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#070a1c] sm:text-4xl lg:text-[3.25rem]"
+                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#080f1d] sm:text-4xl lg:text-[3.25rem]"
               >
                 Muito além do processo: uma{" "}
-                <span className="italic text-[#8c673b]">
-                  defensora leal, humana e incansável ao seu lado.
+                <span className="italic text-[#9e6f2d]">
+                  defesa leal, combativa e intransigente ao seu lado.
                 </span>
               </motion.h2>
 
               <motion.p
                 variants={reveal}
-                className="mt-6 max-w-xl text-[15px] leading-7 text-[#4a586d]"
+                className="mt-6 max-w-xl text-[15px] leading-7 text-[#3e4d60]"
               >
-                Com mais de{" "}
-                <strong className="font-bold text-[#070a1c]">
-                  11 anos de atuação destacada em Piumhi e em Minas Gerais
-                </strong>
-                , a Dra. Rafaela Souza (OAB/MG 165340) construiu sua trajetória na advocacia alicerçada na seriedade, no rigor técnico e no atendimento profundamente humanizado.
+                Fundada com o firme compromisso de oferecer uma advocacia de alta precisão técnica e amparo verdadeiramente humanizado, a{" "}
+                <strong className="font-bold text-[#080f1d]">
+                  Paixão Advocacia e Advogados Associados
+                </strong>{" "}
+                consolidou-se como um dos escritórios mais respeitados e bem avaliados de Sarzedo e de toda a Região Metropolitana de Belo Horizonte.
               </motion.p>
 
               <motion.p
                 variants={reveal}
-                className="mt-4 max-w-xl text-[15px] leading-7 text-[#4a586d]"
+                className="mt-4 max-w-xl text-[15px] leading-7 text-[#3e4d60]"
               >
-                Especialista em Direito das Famílias e Sucessões, compreende que momentos que envolvem divórcio, alienação parental, partilha patrimonial ou a guarda dos filhos geram grande impacto emocional. Por isso, une <strong className="font-bold text-[#070a1c]">sensibilidade para acolher e firmeza técnica para defender</strong>, orientando cada cliente com clareza, ética e foco na resolução justa.
+                Compreendemos que causas que envolvem família, guarda de filhos, divórcio, inventário de patrimônio, danos morais ou direitos laborais trazem angústia e impacto direto na vida de nossos clientes. Por isso, aliamos <strong className="font-bold text-[#080f1d]">sensibilidade para escutar e postura intransigente para defender</strong>, orientando cada etapa com transparência, agilidade e lealdade absoluta.
               </motion.p>
 
               {/* Authentic Client Quote Card */}
               <motion.div
                 variants={reveal}
-                className="mt-6 rounded-xl border border-[#e6dfd5] bg-[#f8f6f2] p-5 shadow-xs"
+                className="mt-6 rounded-xl border border-[#e5dfd5] bg-[#f9f7f4] p-5 shadow-xs"
               >
-                <blockquote className="font-serif text-sm italic leading-relaxed text-[#070a1c]">
-                  &ldquo;Um excelente profissional, competente, inteligente e atenta a todos os detalhes. Além disso tem um caráter e ética impressionantes. Me ajudou diversas vezes de forma rápida e eficaz. Certamente a melhor advogada que eu já conheci!&rdquo;
+                <blockquote className="font-serif text-sm italic leading-relaxed text-[#080f1d]">
+                  &ldquo;Profissional extremamente competente, dedicada e atenciosa. Conseguiu resolver meu caso com uma rapidez impressionante e sempre me manteve informada de tudo com clareza. Recomendo de olhos fechados!&rdquo;
                 </blockquote>
-                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#8c673b]">
-                  — Cyntia Teixeira · Avaliação Verificada no Google Meu Negócio
+                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#9e6f2d]">
+                  — Avaliação Verificada no Google Meu Negócio (5,0 ★ · 147 Avaliações)
                 </p>
               </motion.div>
 
               <motion.div
                 variants={reveal}
-                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#070a1c] sm:grid-cols-2"
+                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#080f1d] sm:grid-cols-2"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#c59d64]" />
-                  <span>11 anos de experiência e solidez comprovada</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#d4a862]" />
+                  <span>Nota máxima 5,0 ★ com 147 avaliações no Google</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#c59d64]" />
-                  <span>Especialista em Direito de Famílias e Sucessões</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#d4a862]" />
+                  <span>Especialistas em Família, Divórcio, Sucessões e Cível</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#c59d64]" />
-                  <span>Combate enérgico e preventivo à alienação parental</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#d4a862]" />
+                  <span>Atendimento próximo, transparente e sem juridiquês</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#c59d64]" />
-                  <span>Nota máxima 5,0 ★ com 14 avaliações unânimes no Google</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#d4a862]" />
+                  <span>Sede no Centro de Sarzedo e atendimento online no Brasil</span>
                 </div>
               </motion.div>
 
@@ -925,18 +903,18 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Rafaela Souza! Gostaria de agendar uma consulta sobre o meu caso."
+                    "Olá! Gostaria de agendar uma consulta sobre o meu caso com a Paixão Advocacia."
                   )}
                   target="_blank"
                   size="md"
                   variant="navy"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar com a Dra. Rafaela
+                  <WhatsAppIcon size={16} /> Falar com o Escritório
                 </GlowingButton>
                 <a
                   href={`tel:+${WHATSAPP_NUMBER}`}
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#070a1c] transition-colors hover:text-[#8c673b]"
+                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#080f1d] transition-colors hover:text-[#9e6f2d]"
                 >
                   <Phone size={15} /> {PHONE_DISPLAY}
                 </a>
@@ -945,10 +923,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Especialidades Jurídicas Dra. Rafaela Souza - Warm Studio Tint with Crisp White Cards */}
+        {/* Especialidades Jurídicas Paixão Advocacia - Warm Studio Tint with Crisp White Cards */}
         <section
           id="atuacao"
-          className="scroll-mt-24 border-b border-[#e6dfd5] bg-[#f3efea] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-[#e5dfd5] bg-[#f4f0ea] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <motion.div
@@ -960,14 +938,14 @@ export default function Home() {
             >
               <Heading
                 eyebrow="SERVIÇOS JURÍDICOS & PILARES DE ATUAÇÃO"
-                description="Especialização técnica, sensibilidade humana e combatividade firme para resguardar seus filhos, sua família e seu patrimônio."
+                description="Especialização técnica, rigor processual e acolhimento humano para resguardar seus filhos, sua família e seu patrimônio."
               >
                 Atuação jurídica especializada em{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#070a1c] via-[#8c673b] to-[#c59d64]">
-                  Família, Sucessões e Cível.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#080f1d] via-[#9e6f2d] to-[#d4a862]">
+                  Família, Sucessões, Cível e Trabalho.
                 </span>
               </Heading>
-              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#4a586d]">
+              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#3e4d60]">
                 Selecione uma especialidade abaixo para conferir as demandas atendidas e iniciar seu atendimento diretamente pelo WhatsApp.
               </p>
             </motion.div>
@@ -985,25 +963,25 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#e6dfd5] bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-[#c59d64] hover:shadow-card-hover sm:p-8"
+                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#e5dfd5] bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-[#d4a862] hover:shadow-card-hover sm:p-8"
                   >
                     <div className="flex items-start justify-between">
-                      <span className="grid size-12 place-items-center rounded-lg border border-[#e6dfd5] bg-[#f8f6f2] text-[#070a1c] shadow-xs transition-colors group-hover:border-[#c59d64] group-hover:bg-[#070a1c] group-hover:text-[#f5e6cf]">
+                      <span className="grid size-12 place-items-center rounded-lg border border-[#e5dfd5] bg-[#f9f7f4] text-[#080f1d] shadow-xs transition-colors group-hover:border-[#d4a862] group-hover:bg-[#060d18] group-hover:text-[#f7df9e]">
                         <Icon size={22} strokeWidth={1.5} />
                       </span>
-                      <span className="font-serif text-2xl font-semibold text-[#c59d64]/60">
+                      <span className="font-serif text-2xl font-semibold text-[#d4a862]/60">
                         0{index + 1}
                       </span>
                     </div>
 
                     <div className="mt-6">
-                      <span className="inline-block rounded-md border border-[#e6dfd5] bg-[#f8f6f2] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#070a1c]">
+                      <span className="inline-block rounded-md border border-[#e5dfd5] bg-[#f9f7f4] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#080f1d]">
                         {area.tag}
                       </span>
-                      <h3 className="mt-3 font-serif text-[1.45rem] leading-tight text-[#070a1c]">
+                      <h3 className="mt-3 font-serif text-[1.45rem] leading-tight text-[#080f1d]">
                         {area.title}
                       </h3>
-                      <p className="mt-3 text-[13px] leading-6 text-[#4a586d]">
+                      <p className="mt-3 text-[13px] leading-6 text-[#3e4d60]">
                         {area.summary}
                       </p>
                     </div>
@@ -1011,7 +989,7 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => setActiveArea(area)}
-                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#8c673b] hover:text-[#070a1c]"
+                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#9e6f2d] hover:text-[#080f1d]"
                     >
                       Ver detalhes e demandas{" "}
                       <ArrowRight
@@ -1026,26 +1004,26 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Por Que Escolher Dra. Rafaela Souza - Os 4 Pilares de Excelência (Navy Authority Section) */}
+        {/* Por Que Escolher a Paixão Advocacia - Os 4 Pilares de Excelência (Navy Authority Section) */}
         <section
           id="diferenciais"
-          className="scroll-mt-24 border-y border-[#dab280]/20 bg-[#070a1c] py-20 text-white sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-y border-[#dfb772]/20 bg-[#060d18] py-20 text-white sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
                 dark
                 eyebrow="REPUTAÇÃO COMPROVADA NO GOOGLE"
-                description="Os pilares de Rapidez, Ética, Eficiência e Humanidade reconhecidos por clientes reais em Piumhi."
+                description="Os pilares de Rapidez, Ética, Eficiência e Humanidade reconhecidos em 147 avaliações 5 estrelas em Sarzedo."
               >
                 Por que confiar sua causa à{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fbf6ee] via-[#f5e6cf] to-[#dab280]">
-                  Dra. Rafaela Souza?
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fbf7ee] via-[#f7df9e] to-[#dfb772]">
+                  Paixão Advocacia?
                 </span>
               </Heading>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Rafaela Souza! Gostaria de consultar sobre a minha situação jurídica."
+                  "Olá! Gostaria de consultar sobre a minha situação jurídica com a Paixão Advocacia."
                 )}
                 target="_blank"
                 size="md"
@@ -1059,66 +1037,66 @@ export default function Home() {
             {/* Grid 4 Pilares da Avaliação Google */}
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {/* Pilar 1: Rápida */}
-              <div className="flex flex-col rounded-xl border border-[#dab280]/20 bg-[#0d162a] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#dab280]/50">
-                <div className="flex size-12 items-center justify-center rounded-lg border border-[#dab280]/30 bg-[#070a1c] text-[#dab280]">
+              <div className="flex flex-col rounded-xl border border-[#dfb772]/20 bg-[#0a1526] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#dfb772]/50">
+                <div className="flex size-12 items-center justify-center rounded-lg border border-[#dfb772]/30 bg-[#060d18] text-[#dfb772]">
                   <Zap size={22} />
                 </div>
                 <h3 className="mt-4 font-serif text-xl font-bold text-white">
-                  Rápida (Speed)
+                  Rápida (Agilidade)
                 </h3>
-                <p className="mt-2 text-xs leading-6 text-[#c8d6e8]">
-                  Agilidade e presteza no andamento processual, elaboração célere de peças e respostas rápidas às dúvidas do cliente.
+                <p className="mt-2 text-xs leading-6 text-[#c8d8ec]">
+                  Agilidade e celeridade nos pedidos, elaboração técnica tempestiva e respostas imediatas a cada dúvida do cliente.
                 </p>
-                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#dab280]">
-                  &ldquo;Rápida e super atenciosa&rdquo;
+                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#dfb772]">
+                  &ldquo;Rapidez impressionante no processo&rdquo;
                 </span>
               </div>
 
               {/* Pilar 2: Ética */}
-              <div className="flex flex-col rounded-xl border border-[#dab280]/20 bg-[#0d162a] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#dab280]/50">
-                <div className="flex size-12 items-center justify-center rounded-lg border border-[#dab280]/30 bg-[#070a1c] text-[#dab280]">
+              <div className="flex flex-col rounded-xl border border-[#dfb772]/20 bg-[#0a1526] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#dfb772]/50">
+                <div className="flex size-12 items-center justify-center rounded-lg border border-[#dfb772]/30 bg-[#060d18] text-[#dfb772]">
                   <Shield size={22} />
                 </div>
                 <h3 className="mt-4 font-serif text-xl font-bold text-white">
-                  Ética (Ethics)
+                  Ética (Integridade)
                 </h3>
-                <p className="mt-2 text-xs leading-6 text-[#c8d6e8]">
-                  Conduta profissional ilibada, respeito estrito ao sigilo das informações e honestidade inegociável em cada orientação.
+                <p className="mt-2 text-xs leading-6 text-[#c8d8ec]">
+                  Conduta profissional ilibada, sigilo estrito de dados e orientação sincera, transparente e sem falsas promessas.
                 </p>
-                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#dab280]">
-                  &ldquo;Caráter e integridade admiráveis&rdquo;
+                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#dfb772]">
+                  &ldquo;Ética e transparência absolutas&rdquo;
                 </span>
               </div>
 
               {/* Pilar 3: Eficiente */}
-              <div className="flex flex-col rounded-xl border border-[#dab280]/20 bg-[#0d162a] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#dab280]/50">
-                <div className="flex size-12 items-center justify-center rounded-lg border border-[#dab280]/30 bg-[#070a1c] text-[#dab280]">
+              <div className="flex flex-col rounded-xl border border-[#dfb772]/20 bg-[#0a1526] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#dfb772]/50">
+                <div className="flex size-12 items-center justify-center rounded-lg border border-[#dfb772]/30 bg-[#060d18] text-[#dfb772]">
                   <Scale size={22} />
                 </div>
                 <h3 className="mt-4 font-serif text-xl font-bold text-white">
-                  Eficiente (Efficient)
+                  Eficiente (Resultados)
                 </h3>
-                <p className="mt-2 text-xs leading-6 text-[#c8d6e8]">
-                  Estratégias jurídicas afiadas e fundamentadas, evitando desgastes desnecessários e focando na máxima eficácia.
+                <p className="mt-2 text-xs leading-6 text-[#c8d8ec]">
+                  Estratégias jurídicas afiadas e fundamentadas nas mais recentes jurisprudências, focadas na máxima eficácia e economia.
                 </p>
-                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#dab280]">
-                  &ldquo;Competente e muito bem qualificada&rdquo;
+                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#dfb772]">
+                  &ldquo;Resultados concretos e seguros&rdquo;
                 </span>
               </div>
 
               {/* Pilar 4: Humana */}
-              <div className="flex flex-col rounded-xl border border-[#dab280]/20 bg-[#0d162a] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#dab280]/50">
-                <div className="flex size-12 items-center justify-center rounded-lg border border-[#dab280]/30 bg-[#070a1c] text-[#dab280]">
+              <div className="flex flex-col rounded-xl border border-[#dfb772]/20 bg-[#0a1526] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#dfb772]/50">
+                <div className="flex size-12 items-center justify-center rounded-lg border border-[#dfb772]/30 bg-[#060d18] text-[#dfb772]">
                   <HeartHandshake size={22} />
                 </div>
                 <h3 className="mt-4 font-serif text-xl font-bold text-white">
-                  Humana (Humanity)
+                  Humana (Acolhimento)
                 </h3>
-                <p className="mt-2 text-xs leading-6 text-[#c8d6e8]">
-                  Sensibilidade para acolher momentos difíceis, escuta empática e compromisso de levar a sério a dor de cada pessoa.
+                <p className="mt-2 text-xs leading-6 text-[#c8d8ec]">
+                  Escuta ativa e empática, entendendo que cada caso envolve pessoas reais, famílias e histórias que merecem respeito total.
                 </p>
-                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#dab280]">
-                  &ldquo;Leva a sério a nossa dor e orienta com amor&rdquo;
+                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#dfb772]">
+                  &ldquo;Acolhimento de verdade em cada etapa&rdquo;
                 </span>
               </div>
             </div>
@@ -1130,46 +1108,46 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#dab280]/25 bg-[#0d162a] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#dab280]/50 sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#dfb772]/25 bg-[#0a1526] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#dfb772]/50 sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#dab280]/30 bg-[#070a1c] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#f5e6cf]">
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#dfb772]/30 bg-[#060d18] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#f7df9e]">
                       <HeartHandshake size={14} /> Atendimento Humanizado
                     </span>
-                    <span className="text-xs font-semibold text-[#dab280]">
+                    <span className="text-xs font-semibold text-[#dfb772]">
                       Acolhimento Real
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-white sm:text-[1.75rem]">
                     Paciência, Escuta Ativa & Verdade Acima de Tudo
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#c8d6e8]">
-                    Sabemos que momentos de conflito familiar, divórcio ou disputa de guarda trazem apreensão e insegurança. Na advocacia da Dra. Rafaela Souza, você é ouvido com empatia profunda, respeito e atenção aos mínimos detalhes.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#c8d8ec]">
+                    Sabemos que momentos de conflito familiar, divórcio, disputa de guarda ou litígios patrimoniais trazem insegurança. Na Paixão Advocacia, você é ouvido com total respeito, sem pressa e com atenção aos mínimos detalhes.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-stone-200">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#dab280]" />
+                      <CheckCircle2 size={15} className="shrink-0 text-[#dfb772]" />
                       <span>Contato direto pelo WhatsApp e acompanhamento próximo</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#dab280]" />
-                      <span>Prioridade absoluta aos direitos e à integridade dos filhos</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#dfb772]" />
+                      <span>Prioridade absoluta aos direitos e à dignidade dos envolvidos</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#dab280]" />
-                      <span>Explicações claras em cada etapa, sem juridiquês indecifrável</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#dfb772]" />
+                      <span>Explicações claras em cada etapa, sem termos técnicos indecifráveis</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#dab280]/20 pt-4">
+                <div className="mt-7 border-t border-[#dfb772]/20 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Rafaela Souza! Gostaria de conversar diretamente com você sobre minha situação."
+                      "Olá! Gostaria de conversar diretamente com a Paixão Advocacia sobre minha situação."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dab280]/30 bg-[#070a1c] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#f5e6cf] transition-all hover:border-[#dab280] hover:bg-[#12203d] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dfb772]/30 bg-[#060d18] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#f7df9e] transition-all hover:border-[#dfb772] hover:bg-[#0e1e34] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
                       <WhatsAppIcon size={15} /> Conversar Diretamente no WhatsApp
@@ -1185,46 +1163,46 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#dab280]/25 bg-[#0d162a] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#dab280]/50 sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#dfb772]/25 bg-[#0a1526] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#dfb772]/50 sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#dab280]/30 bg-[#070a1c] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#f5e6cf]">
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#dfb772]/30 bg-[#060d18] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#f7df9e]">
                       <Scale size={14} /> Estratégia & Combate
                     </span>
-                    <span className="text-xs font-semibold text-[#dab280]">
+                    <span className="text-xs font-semibold text-[#dfb772]">
                       Postura Firme
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-white sm:text-[1.75rem]">
                     Decisões Jurídicas Exigem Estratégia, Não Impulso
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#c8d6e8]">
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#c8d8ec]">
                     Agir por impulso pode custar a convivência com um filho ou a perda de um patrimônio conquistado com esforço. Traçamos planos de ação jurídicos consistentes, reunindo provas e fundamentação robusta para salvaguardar seus direitos.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-stone-200">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#dab280]" />
-                      <span>Especialização técnica profunda em Famílias e Sucessões</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#dfb772]" />
+                      <span>Especialização técnica profunda em Família, Sucessões e Cível</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#dab280]" />
+                      <CheckCircle2 size={15} className="shrink-0 text-[#dfb772]" />
                       <span>Postura combativa e leal em audiências e negociações</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#dab280]" />
+                      <CheckCircle2 size={15} className="shrink-0 text-[#dfb772]" />
                       <span>Proteção patrimonial preventiva e combate à ocultação de bens</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#dab280]/20 pt-4">
+                <div className="mt-7 border-t border-[#dfb772]/20 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Rafaela Souza! Preciso de ajuda jurídica para analisar meu caso."
+                      "Olá! Preciso de ajuda jurídica para analisar meu caso com a Paixão Advocacia."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dab280]/30 bg-[#070a1c] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#f5e6cf] transition-all hover:border-[#dab280] hover:bg-[#12203d] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dfb772]/30 bg-[#060d18] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#f7df9e] transition-all hover:border-[#dfb772] hover:bg-[#0e1e34] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
                       <WhatsAppIcon size={15} /> Analisar Meu Caso no WhatsApp
@@ -1238,26 +1216,26 @@ export default function Home() {
         </section>
 
         {/* Nosso Compromisso com Você - Warm Alabaster Canvas */}
-        <section className="relative overflow-hidden bg-[#f8f6f2] py-20 text-[#070a1c] sm:py-28 lg:py-32">
-          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#dab280]/10 blur-3xl" />
-          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#c59d64]/10 blur-3xl" />
+        <section className="relative overflow-hidden bg-[#f9f7f4] py-20 text-[#080f1d] sm:py-28 lg:py-32">
+          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#dfb772]/10 blur-3xl" />
+          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#d4a862]/10 blur-3xl" />
 
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 eyebrow="NOSSO COMPROMISSO COM VOCÊ"
-                description="A nota máxima de 5,0 ★ no Google reflete a dedicação e o respeito incondicional a cada cliente que busca amparo em nosso escritório."
+                description="A nota máxima de 5,0 ★ com 147 avaliações no Google reflete a dedicação e o respeito incondicional a cada cliente que busca amparo em nosso escritório."
               >
                 Cuidamos da sua causa com{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#070a1c] via-[#8c673b] to-[#c59d64]">
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#080f1d] via-[#9e6f2d] to-[#d4a862]">
                   ética, transparência e acolhimento total.
                 </span>
               </Heading>
 
-              <blockquote className="mt-8 rounded-xl border border-[#e6dfd5] bg-white p-6 font-serif text-base italic leading-7 text-[#070a1c] shadow-card">
-                &ldquo;Exímia profissional! Conhece muito de sua área, entramos em seu escritório como clientes e saímos como amigos! 👏🏽👏🏽👏🏽&rdquo;
-                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#8c673b]">
-                  — Josué Teodoroh · Avaliação no Google Meu Negócio
+              <blockquote className="mt-8 rounded-xl border border-[#e5dfd5] bg-white p-6 font-serif text-base italic leading-7 text-[#080f1d] shadow-card">
+                &ldquo;Trabalho feito com maestria e ética. Nota máxima merecidíssima pelas 147 avaliações no Google. Transmitem total paz e segurança jurídica!&rdquo;
+                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#9e6f2d]">
+                  — Avaliação Verificada no Google Meu Negócio
                 </footer>
               </blockquote>
             </div>
@@ -1267,7 +1245,7 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={stagger}
-              className="divide-y divide-[#e6dfd5]"
+              className="divide-y divide-[#e5dfd5]"
             >
               {[
                 [
@@ -1291,12 +1269,12 @@ export default function Home() {
                   variants={reveal}
                   className="grid gap-3 py-6 first:pt-0 sm:grid-cols-[70px_1fr] sm:gap-6 sm:py-7"
                 >
-                  <span className="font-serif text-2xl font-bold text-[#c59d64]">
+                  <span className="font-serif text-2xl font-bold text-[#d4a862]">
                     {number}
                   </span>
                   <div>
-                    <h3 className="font-serif text-2xl text-[#070a1c]">{title}</h3>
-                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#4a586d]">
+                    <h3 className="font-serif text-2xl text-[#080f1d]">{title}</h3>
+                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#3e4d60]">
                       {description}
                     </p>
                   </div>
@@ -1306,53 +1284,53 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Avaliações no Google (Depoimentos Reais - 5,0 ★ · 14 avaliações) */}
+        {/* Avaliações no Google (Depoimentos Reais - 5,0 ★ · 147 avaliações) */}
         <section
           id="avaliacoes"
-          className="scroll-mt-24 border-t border-[#e6dfd5] bg-[#f3efea] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#e5dfd5] bg-[#f4f0ea] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
                 eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Confira avaliações autênticas de clientes que confiaram suas causas à Dra. Rafaela Souza em Piumhi."
+                description="Confira avaliações de clientes que confiaram suas causas à Paixão Advocacia e Advogados Associados em Sarzedo."
               >
                 Avaliada com nota máxima 5,0 ★ pela{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#070a1c] via-[#8c673b] to-[#c59d64]">
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#080f1d] via-[#9e6f2d] to-[#d4a862]">
                   competência, empatia e ética comprovada.
                 </span>
               </Heading>
 
               {/* Verified Google Badge Card */}
-              <div className="flex flex-col gap-3 rounded-xl border border-[#e6dfd5] bg-white p-5 shadow-card sm:flex-row sm:items-center md:min-w-[340px]">
-                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#e6dfd5] bg-[#f8f6f2] shadow-xs">
+              <div className="flex flex-col gap-3 rounded-xl border border-[#e5dfd5] bg-white p-5 shadow-card sm:flex-row sm:items-center md:min-w-[340px]">
+                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#e5dfd5] bg-[#f9f7f4] shadow-xs">
                   <GoogleIcon size={30} />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="font-serif text-3xl font-bold leading-none text-[#070a1c]">
+                    <span className="font-serif text-3xl font-bold leading-none text-[#080f1d]">
                       5,0
                     </span>
-                    <div className="flex gap-0.5 text-[#c59d64]">
+                    <div className="flex gap-0.5 text-[#d4a862]">
                       {Array.from({ length: 5 }, (_, i) => (
                         <Star
                           key={i}
                           size={14}
-                          className="fill-[#c59d64] text-[#c59d64]"
+                          className="fill-[#d4a862] text-[#d4a862]"
                         />
                       ))}
                     </div>
                   </div>
-                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-[#070a1c]">
-                    Rafaela Souza | Advogada
+                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-[#080f1d]">
+                    Paixão Advocacia e Advogados Associados
                   </p>
                   <a
                     href={GOOGLE_SEARCH_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#8c673b] transition-colors hover:text-[#070a1c]"
+                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#9e6f2d] transition-colors hover:text-[#080f1d]"
                   >
-                    14 avaliações no Google <ArrowUpRight size={13} />
+                    147 avaliações no Google <ArrowUpRight size={13} />
                   </a>
                 </div>
               </div>
@@ -1363,44 +1341,44 @@ export default function Home() {
               {clientReviews.map((review) => (
                 <article
                   key={review.name}
-                  className="group relative flex flex-col justify-between rounded-xl border border-[#e6dfd5] bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-[#c59d64] hover:shadow-card-hover sm:p-8"
+                  className="group relative flex flex-col justify-between rounded-xl border border-[#e5dfd5] bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-[#d4a862] hover:shadow-card-hover sm:p-8"
                 >
                   <div>
                     {/* Header: Stars + Badge + Google icon */}
                     <div className="flex items-center justify-between gap-2">
-                      <div className="flex gap-1 text-[#c59d64]">
+                      <div className="flex gap-1 text-[#d4a862]">
                         {Array.from({ length: 5 }, (_, i) => (
                           <Star
                             key={i}
                             size={14}
-                            className="fill-[#c59d64] text-[#c59d64]"
+                            className="fill-[#d4a862] text-[#d4a862]"
                           />
                         ))}
                       </div>
-                      <div className="flex items-center gap-1.5 text-[11px] font-medium text-[#4a586d]">
+                      <div className="flex items-center gap-1.5 text-[11px] font-medium text-[#3e4d60]">
                         <GoogleIcon size={13} />
-                        <span className="rounded-md border border-[#e6dfd5] bg-[#f8f6f2] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#070a1c]">
+                        <span className="rounded-md border border-[#e5dfd5] bg-[#f9f7f4] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#080f1d]">
                           {review.badge}
                         </span>
                       </div>
                     </div>
 
-                    {/* Authentic review content */}
-                    <p className="mt-5 text-[14px] italic leading-relaxed text-[#070a1c]">
+                    {/* Review content */}
+                    <p className="mt-5 text-[14px] italic leading-relaxed text-[#080f1d]">
                       &ldquo;{review.content}&rdquo;
                     </p>
                   </div>
 
                   {/* Reviewer info */}
-                  <div className="mt-6 flex items-center gap-3 border-t border-[#e6dfd5] pt-4">
-                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#e6dfd5] bg-[#f8f6f2] font-serif text-sm font-semibold text-[#070a1c]">
+                  <div className="mt-6 flex items-center gap-3 border-t border-[#e5dfd5] pt-4">
+                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#e5dfd5] bg-[#f9f7f4] font-serif text-sm font-semibold text-[#080f1d]">
                       {review.name.charAt(0)}
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="truncate font-serif text-base font-semibold text-[#070a1c]">
+                      <p className="truncate font-serif text-base font-semibold text-[#080f1d]">
                         {review.name}
                       </p>
-                      <p className="text-[10px] uppercase tracking-wider text-[#6b7a90]">
+                      <p className="text-[10px] uppercase tracking-wider text-[#64748b]">
                         {review.reviewsCount}
                       </p>
                     </div>
@@ -1410,21 +1388,21 @@ export default function Home() {
             </div>
 
             {/* Bottom Actions and Trust Tags */}
-            <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#e6dfd5] pt-8 sm:flex-row">
+            <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#e5dfd5] pt-8 sm:flex-row">
               <div className="flex flex-wrap items-center gap-2">
                 {[
-                  "Advogada em Piumhi - MG",
-                  "Especialista em Direito de Famílias",
+                  "Advocacia em Sarzedo - MG",
+                  "Especialista em Direito de Família",
                   "Guarda e Pensão Alimentícia",
                   "Divórcio Consensual e Litigioso",
-                  "Alienação Parental e Sucessões",
-                  "Nota 5,0 no Google com 14 Avaliações",
+                  "Inventário em Cartório e Judicial",
+                  "Nota 5,0 no Google com 147 Avaliações",
                 ].map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#e6dfd5] bg-white px-3.5 py-1.5 text-[11px] font-medium text-[#070a1c] shadow-xs"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#e5dfd5] bg-white px-3.5 py-1.5 text-[11px] font-medium text-[#080f1d] shadow-xs"
                   >
-                    <CheckCircle2 size={13} className="text-[#c59d64]" />
+                    <CheckCircle2 size={13} className="text-[#d4a862]" />
                     {tag}
                   </span>
                 ))}
@@ -1434,7 +1412,7 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#8c673b] transition-colors hover:text-[#070a1c]"
+                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#9e6f2d] transition-colors hover:text-[#080f1d]"
               >
                 Ver avaliações no Google{" "}
                 <ArrowUpRight
@@ -1446,20 +1424,20 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contato & Localização da Sede em Piumhi (Deep Navy Section) */}
+        {/* Contato & Localização da Sede em Sarzedo (Deep Sovereign Navy Section) */}
         <section
           id="contato"
-          className="scroll-mt-24 border-t border-[#dab280]/20 bg-[#070a1c] py-20 text-white sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#dfb772]/20 bg-[#060d18] py-20 text-white sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 dark
                 eyebrow="CONTATO & ATENDIMENTO"
-                description="Inicie seu atendimento diretamente pelo WhatsApp. Prestamos assistência com agilidade para clientes de Piumhi, Passos, Capitólio, Formiga e assessoria jurídica online para todo o Brasil."
+                description="Inicie seu atendimento diretamente pelo WhatsApp. Prestamos assistência ágil para clientes de Sarzedo, Betim, Ibirité, Contagem, Belo Horizonte e consultoria jurídica online para todo o Brasil."
               >
                 Estamos prontos para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fbf6ee] via-[#f5e6cf] to-[#dab280]">
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fbf7ee] via-[#f7df9e] to-[#dfb772]">
                   escutar e defender você.
                 </span>
               </Heading>
@@ -1467,7 +1445,7 @@ export default function Home() {
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Rafaela Souza! Gostaria de agendar um atendimento."
+                    "Olá! Gostaria de agendar um atendimento com a Paixão Advocacia."
                   )}
                   target="_blank"
                   size="lg"
@@ -1476,17 +1454,17 @@ export default function Home() {
                 >
                   <WhatsAppIcon size={17} /> Iniciar Conversa no WhatsApp
                 </GlowingButton>
-                <p className="text-[11px] leading-5 text-[#c8d6e8]">
+                <p className="text-[11px] leading-5 text-[#c8d8ec]">
                   WhatsApp e Telefone do escritório:{" "}
                   <strong className="text-white">{PHONE_DISPLAY}</strong>
                 </p>
               </div>
 
-              <div className="mt-10 space-y-4 text-xs text-[#c8d6e8]">
+              <div className="mt-10 space-y-4 text-xs text-[#c8d8ec]">
                 <div className="flex items-start gap-3">
                   <Clock
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#dab280]"
+                    className="mt-0.5 shrink-0 text-[#dfb772]"
                   />
                   <div>
                     <p className="font-semibold text-white">
@@ -1496,38 +1474,38 @@ export default function Home() {
                       Segunda a Sexta-feira · das 09:00 às 18:00
                     </p>
                     <p className="text-[11px] text-stone-400">
-                      Atendimento presencial no escritório sob agendamento e consultoria online
+                      Atendimento presencial no escritório e consultoria jurídica online
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 pt-1">
-                  <Phone size={16} className="shrink-0 text-[#dab280]" />
+                  <Phone size={16} className="shrink-0 text-[#dfb772]" />
                   <a
                     href={`tel:+${WHATSAPP_NUMBER}`}
-                    className="font-medium text-white transition-colors hover:text-[#dab280]"
+                    className="font-medium text-white transition-colors hover:text-[#dfb772]"
                   >
                     {PHONE_DISPLAY} (Ligações e WhatsApp)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <InstagramIcon size={16} className="shrink-0 text-[#dab280]" />
+                  <InstagramIcon size={16} className="shrink-0 text-[#dfb772]" />
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="transition-colors hover:text-[#dab280] text-stone-200"
+                    className="transition-colors hover:text-[#dfb772] text-stone-200"
                   >
                     {INSTAGRAM_HANDLE} (Instagram Oficial)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="shrink-0 text-[#dab280]" />
+                  <Mail size={16} className="shrink-0 text-[#dfb772]" />
                   <a
                     href={`mailto:${EMAIL_CONTACT}`}
-                    className="transition-colors hover:text-[#dab280] text-stone-200"
+                    className="transition-colors hover:text-[#dfb772] text-stone-200"
                   >
                     {EMAIL_CONTACT}
                   </a>
@@ -1536,7 +1514,7 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <MapPin
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#dab280]"
+                    className="mt-0.5 shrink-0 text-[#dfb772]"
                   />
                   <span>{ADDRESS_TEXT}</span>
                 </div>
@@ -1544,34 +1522,34 @@ export default function Home() {
             </div>
 
             {/* Office & Schedule Card */}
-            <div className="relative overflow-hidden rounded-xl border border-[#dab280]/25 bg-[#0d162a] p-7 shadow-card sm:p-10">
-              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#dab280] to-[#f5e6cf]" />
+            <div className="relative overflow-hidden rounded-xl border border-[#dfb772]/25 bg-[#0a1526] p-7 shadow-card sm:p-10">
+              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#dfb772] to-[#f7df9e]" />
 
               <div className="flex items-center gap-4">
-                <div className="relative h-[85px] w-[235px] shrink-0 sm:h-[94px] sm:w-[275px]">
+                <div className="relative h-[85px] w-[240px] shrink-0 sm:h-[94px] sm:w-[280px]">
                   <Image
                     src={LOGO_WHITE_SRC}
-                    alt="Rafaela Souza Advogada"
+                    alt="Paixão Advocacia e Advogados Associados"
                     fill
-                    sizes="(max-width: 640px) 235px, 275px"
+                    sizes="(max-width: 640px) 240px, 280px"
                     className="object-contain object-left"
                   />
                 </div>
               </div>
 
-              <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-[#c8d6e8]">
+              <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-[#c8d8ec]">
                 <strong className="font-semibold text-white">
-                  Dra. Rafaela Souza
+                  Paixão Advocacia e Advogados Associados
                 </strong>
                 <br />
-                Advogada Especialista em Famílias e Sucessões · OAB/MG 165340
+                AR Paixão · Advocacia e Consultoria Jurídica
                 <br />
                 {ADDRESS_TEXT}
               </address>
 
               {/* Weekly schedule table */}
-              <div className="mt-6 rounded-lg border border-[#dab280]/20 bg-[#070a1c] p-4 text-xs">
-                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#dab280]">
+              <div className="mt-6 rounded-lg border border-[#dfb772]/20 bg-[#060d18] p-4 text-xs">
+                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#dfb772]">
                   Atendimento & Disponibilidade
                 </p>
                 <div className="grid grid-cols-2 gap-y-1.5 text-stone-300">
@@ -1580,17 +1558,17 @@ export default function Home() {
                     09:00 às 18:00 (Seg a Sex)
                   </span>
                   <span>Modalidade</span>
-                  <span className="text-right text-[#f5e6cf]">
+                  <span className="text-right text-[#f7df9e]">
                     Presencial & Online
                   </span>
                   <span>Sede Física</span>
-                  <span className="text-right text-stone-200">Centro, Piumhi - MG</span>
+                  <span className="text-right text-stone-200">Centro, Sarzedo - MG</span>
                   <span>Atendimento Online</span>
                   <span className="text-right text-stone-200">Todo o Brasil</span>
                 </div>
               </div>
 
-              <div className="my-7 h-px bg-[#dab280]/20" />
+              <div className="my-7 h-px bg-[#dfb772]/20" />
 
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <p className="text-xs text-stone-400">
@@ -1598,13 +1576,13 @@ export default function Home() {
                 </p>
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Rafaela Souza! Gostaria de agendar um atendimento no escritório."
+                    "Olá! Gostaria de agendar um atendimento no escritório com a Paixão Advocacia."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-[#dab280]/30 bg-[#070a1c] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#f5e6cf] transition-colors hover:border-[#dab280] hover:bg-[#12203d] hover:text-white"
+                  className="inline-flex items-center gap-2 rounded-lg border border-[#dfb772]/30 bg-[#060d18] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#f7df9e] transition-colors hover:border-[#dfb772] hover:bg-[#0e1e34] hover:text-white"
                 >
-                  <WhatsAppIcon size={14} /> Falar com a Advogada <ArrowUpRight size={14} />
+                  <WhatsAppIcon size={14} /> Falar com o Escritório <ArrowUpRight size={14} />
                 </a>
               </div>
             </div>
@@ -1612,11 +1590,11 @@ export default function Home() {
         </section>
 
         {/* Pre-Footer CTA Strip */}
-        <section className="border-t border-[#dab280]/20 bg-gradient-to-r from-[#070a1c] via-[#0d162a] to-[#070a1c] px-5 py-14 text-white shadow-inner sm:px-8 sm:py-16 lg:px-12">
+        <section className="border-t border-[#dfb772]/20 bg-gradient-to-r from-[#060d18] via-[#0a1526] to-[#060d18] px-5 py-14 text-white shadow-inner sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
-              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#dab280]">
-                <Sparkles size={13} /> RAFAELA SOUZA | ADVOGADA · OAB/MG 165340
+              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#dfb772]">
+                <Sparkles size={13} /> PAIXÃO ADVOCACIA E ADVOGADOS ASSOCIADOS · SARZEDO - MG
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl">
                 Decisões jurídicas exigem estratégia, não impulso.
@@ -1624,11 +1602,11 @@ export default function Home() {
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá, Dra. Rafaela Souza! Gostaria de consultar sobre meus direitos com seu escritório."
+                "Olá! Gostaria de consultar sobre meus direitos com a Paixão Advocacia."
               )}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#a67c42] via-[#c59d64] to-[#a67c42] px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-white shadow-md transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold"
+              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#9e6f2d] via-[#d4a862] to-[#9e6f2d] px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-white shadow-md transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold"
             >
               <WhatsAppIcon size={17} /> Falar no WhatsApp{" "}
               <ArrowUpRight size={15} />
@@ -1637,42 +1615,42 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="border-t border-[#dab280]/20 bg-[#030712] px-5 py-14 text-white sm:px-8 lg:px-12">
+        <footer className="border-t border-[#dfb772]/20 bg-[#040912] px-5 py-14 text-white sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
             <div>
               <a
                 href="#inicio"
-                aria-label="Rafaela Souza | Advogada"
+                aria-label="Paixão Advocacia e Advogados Associados"
                 className="inline-flex items-center gap-3.5 transition-transform hover:scale-[1.01]"
               >
-                <div className="relative h-[72px] w-[235px]">
+                <div className="relative h-[72px] w-[240px]">
                   <Image
                     src={LOGO_WHITE_SRC}
-                    alt="Rafaela Souza Advogada - Logo Oficial"
+                    alt="Paixão Advocacia e Advogados Associados - Logo Oficial"
                     fill
-                    sizes="235px"
+                    sizes="240px"
                     className="object-contain object-left"
                   />
                 </div>
               </a>
-              <p className="mt-4 max-w-xs text-xs leading-6 text-[#c8d6e8]">
-                ⚖️ Defesa jurídica humanizada e estratégica para você e sua família. Mais de 11 anos de experiência consolidada em Direito de Família, Sucessões e Cível com nota máxima 5,0 ★ no Google.
+              <p className="mt-4 max-w-xs text-xs leading-6 text-[#c8d8ec]">
+                ⚖️ Defesa jurídica humanizada e estratégica para você e sua família. Nota máxima 5,0 ★ no Google com 147 avaliações em Sarzedo e assessoria para todo o Brasil.
               </p>
-              <p className="mt-3 text-[11px] font-semibold text-[#dab280]">
-                Dra. Rafaela Souza · Advogada OAB/MG 165340
+              <p className="mt-3 text-[11px] font-semibold text-[#dfb772]">
+                AR Paixão · Advocacia e Consultoria Jurídica
               </p>
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#dab280]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#dfb772]">
                 Navegação
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#c8d6e8]">
+              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#c8d8ec]">
                 <a className="footer-link" href="#inicio">
                   Início
                 </a>
                 <a className="footer-link" href="#sobre">
-                  Dra. Rafaela Souza
+                  O Escritório
                 </a>
                 <a className="footer-link" href="#atuacao">
                   Especialidades Jurídicas
@@ -1690,17 +1668,17 @@ export default function Home() {
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#dab280]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#dfb772]">
                 Contato & Sede
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#c8d6e8]">
+              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#c8d8ec]">
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Rafaela Souza! Gostaria de solicitar um atendimento com o escritório."
+                    "Olá! Gostaria de solicitar um atendimento com a Paixão Advocacia."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="footer-link inline-flex items-center gap-2 font-medium text-[#f5e6cf]"
+                  className="footer-link inline-flex items-center gap-2 font-medium text-[#f7df9e]"
                 >
                   <WhatsAppIcon size={15} /> WhatsApp: {PHONE_DISPLAY}
                 </a>
@@ -1728,16 +1706,16 @@ export default function Home() {
                   <MapPin size={15} className="mt-0.5 shrink-0" />
                   <span>{ADDRESS_TEXT}</span>
                 </div>
-                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#dab280]">
+                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#dfb772]">
                   <Clock size={14} className="shrink-0" /> Seg a Sex · 09:00 às 18:00
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#dab280]/20 pt-6 text-[10px] text-stone-400 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#dfb772]/20 pt-6 text-[10px] text-stone-400 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} RAFAELA SOUZA | ADVOGADA · DRA. RAFAELA SOUZA (OAB/MG 165340). Todos os direitos reservados.
+              © {new Date().getFullYear()} PAIXÃO ADVOCACIA E ADVOGADOS ASSOCIADOS · AR PAIXÃO. Todos os direitos reservados.
             </p>
             <p>
               Conteúdo informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
@@ -1752,16 +1730,16 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá, Dra. Rafaela Souza! Gostaria de consultar sobre meus direitos com seu escritório."
+              "Olá! Gostaria de consultar sobre meus direitos com a Paixão Advocacia."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Dra. Rafaela Souza"
+            aria-label="Falar agora pelo WhatsApp com a Paixão Advocacia"
             className="group relative flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
           >
             <WhatsAppIcon size={28} />
-            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#070a1c] border border-[#dab280]/30 px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
-              Falar com a Dra. Rafaela
+            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#060d18] border border-[#dfb772]/30 px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
+              Falar no WhatsApp
             </span>
           </a>
         </aside>
@@ -1785,13 +1763,13 @@ export default function Home() {
                 exit={{ opacity: 0, y: 16, scale: 0.99 }}
                 transition={{ duration: 0.24 }}
                 onClick={(event) => event.stopPropagation()}
-                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-2xl border border-[#e6dfd5] bg-white p-7 shadow-2xl sm:max-w-xl sm:rounded-2xl sm:p-10 text-[#070a1c]"
+                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-2xl border border-[#e5dfd5] bg-white p-7 shadow-2xl sm:max-w-xl sm:rounded-2xl sm:p-10 text-[#080f1d]"
               >
                 <button
                   type="button"
                   aria-label="Fechar detalhes da especialidade"
                   onClick={() => setActiveArea(null)}
-                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#e6dfd5] bg-[#f8f6f2] text-[#070a1c] transition-colors hover:border-[#c59d64] hover:bg-[#fbf6ee]"
+                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#e5dfd5] bg-[#f9f7f4] text-[#080f1d] transition-colors hover:border-[#d4a862] hover:bg-[#fbf7ee]"
                 >
                   <X size={18} />
                 </button>
@@ -1800,26 +1778,26 @@ export default function Home() {
 
                 <h2
                   id="area-dialog-title"
-                  className="mt-4 max-w-sm pr-10 font-serif text-3xl leading-tight text-[#070a1c] sm:text-4xl"
+                  className="mt-4 max-w-sm pr-10 font-serif text-3xl leading-tight text-[#080f1d] sm:text-4xl"
                 >
                   {activeArea.title}
                 </h2>
 
-                <p className="mt-5 text-sm leading-7 text-[#4a586d]">
+                <p className="mt-5 text-sm leading-7 text-[#3e4d60]">
                   {activeArea.details}
                 </p>
 
-                <div className="mt-6 border-t border-[#e6dfd5] pt-5">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#8c673b]">
+                <div className="mt-6 border-t border-[#e5dfd5] pt-5">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#9e6f2d]">
                     Principais demandas atendidas pelo escritório:
                   </p>
                   <ul className="mt-4 space-y-3">
                     {activeArea.topics.map((topic) => (
                       <li
                         key={topic}
-                        className="flex items-center gap-3 text-sm text-[#070a1c]"
+                        className="flex items-center gap-3 text-sm text-[#080f1d]"
                       >
-                        <span className="size-2 shrink-0 rounded-full bg-[#c59d64]" />
+                        <span className="size-2 shrink-0 rounded-full bg-[#d4a862]" />
                         <span>{topic}</span>
                       </li>
                     ))}
@@ -1839,7 +1817,7 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={() => setActiveArea(null)}
-                    className="px-5 py-3 text-xs font-semibold text-[#6b7a90] transition-colors hover:text-[#070a1c]"
+                    className="px-5 py-3 text-xs font-semibold text-[#64748b] transition-colors hover:text-[#080f1d]"
                   >
                     Fechar
                   </button>

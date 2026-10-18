@@ -36,33 +36,34 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#f8f6f2",
+  themeColor: "#060d18",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.rafaelasouza.adv.br"),
+  metadataBase: new URL("https://www.paixaoadvocacia.com.br"),
   title:
-    "Rafaela Souza | Advogada · Especialista em Família e Sucessões em Piumhi - MG",
+    "Paixão Advocacia e Advogados Associados · Consultoria Jurídica em Sarzedo - MG",
   description:
-    "Dra. Rafaela Souza (OAB/MG 165340). Mais de 11 anos de atuação na advocacia com nota máxima 5,0 ★ no Google. Defesa especializada em Direito de Família, Divórcio, Guarda, Pensão Alimentícia, Alienação Parental e Inventários em Piumhi e todo o Brasil.",
+    "Paixão Advocacia e Advogados Associados (AR Paixão). Nota máxima 5,0 ★ com 147 avaliações no Google. Atuação especializada em Direito de Família, Divórcio, Guarda, Pensão Alimentícia, Inventários, Cível e Trabalhista em Sarzedo - MG e online para todo o Brasil.",
   keywords: [
-    "Rafaela Souza Advogada",
-    "Dra. Rafaela Souza",
-    "Rafaela Souza Piumhi",
-    "OAB MG 165340",
-    "Advogada em Piumhi",
-    "Advogada Piumhi MG",
-    "Advogada de Família Piumhi",
-    "Divórcio Consensual e Litigioso Piumhi",
+    "Paixão Advocacia",
+    "Paixão Advocacia e Advogados Associados",
+    "AR Paixão Advocacia e Consultoria Jurídica",
+    "Advocacia em Sarzedo",
+    "Advogado em Sarzedo MG",
+    "Advogada Sarzedo",
+    "Advocacia Sarzedo Centro",
+    "Direito de Família Sarzedo",
+    "Divórcio Consensual e Litigioso Sarzedo",
     "Guarda de Filhos e Pensão Alimentícia",
-    "Combate à Alienação Parental",
-    "Inventário e Sucessões Piumhi",
-    "Escritório de Advocacia Piumhi",
-    "Direito de Família Minas Gerais",
+    "Inventário e Sucessões Sarzedo",
+    "Escritório de Advocacia Sarzedo MG",
+    "Advogado Betim Contagem Ibirité Grande BH",
+    "Consultoria Jurídica Sarzedo",
   ],
-  authors: [{ name: "Dra. Rafaela Souza" }],
-  creator: "Rafaela Souza | Advogada",
-  publisher: "Rafaela Souza | Advogada",
+  authors: [{ name: "Paixão Advocacia e Advogados Associados" }],
+  creator: "Paixão Advocacia e Advogados Associados",
+  publisher: "Paixão Advocacia e Advogados Associados",
   formatDetection: {
     telephone: true,
     address: true,
@@ -79,18 +80,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.rafaelasouza.adv.br",
+    url: "https://www.paixaoadvocacia.com.br",
     title:
-      "Rafaela Souza | Advogada · Especialista em Família e Sucessões",
+      "Paixão Advocacia e Advogados Associados · Consultoria Jurídica",
     description:
-      "Advocacia de excelência com mais de 11 anos de experiência e nota máxima 5,0 ★ no Google. Sede no Centro de Piumhi - MG e consultoria online em todo o Brasil.",
-    siteName: "Rafaela Souza | Advogada",
+      "Advocacia de alto padrão com nota máxima 5,0 ★ e 147 avaliações no Google. Sede no Centro de Sarzedo - MG e assessoria jurídica em todo o Brasil.",
+    siteName: "Paixão Advocacia e Advogados Associados",
     images: [
       {
         url: "/logo-seal.png",
         width: 600,
         height: 600,
-        alt: "Rafaela Souza | Advogada",
+        alt: "Paixão Advocacia e Advogados Associados",
       },
     ],
   },
@@ -104,38 +105,39 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Rafaela Souza | Advogada",
-    alternateName: "Dra. Rafaela Souza Advocacia",
+    name: "Paixão Advocacia e Advogados Associados",
+    alternateName: "AR Paixão — Advocacia e Consultoria Jurídica",
     founder: [
       {
         "@type": "Person",
-        name: "Dra. Rafaela Souza",
+        name: "Dra. Paixão",
         jobTitle:
-          "Advogada Especialista em Direito de Famílias e Sucessões (OAB/MG 165340)",
+          "Advogada e Sócia Titular · Paixão Advocacia",
       },
     ],
-    telephone: "+55-37-99811-8053",
-    url: "https://www.rafaelasouza.adv.br",
-    image: "https://www.rafaelasouza.adv.br/logo-seal.png",
+    telephone: "+55-31-99676-9370",
+    url: "https://www.paixaoadvocacia.com.br",
+    image: "https://www.paixaoadvocacia.com.br/logo-seal.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. Benedito Valadares, 224 - Centro",
-      addressLocality: "Piumhi",
+      streetAddress: "R. dos Rodoviários, 103 - LOJA 205 - Centro",
+      addressLocality: "Sarzedo",
       addressRegion: "MG",
-      postalCode: "37925-000",
+      postalCode: "32450-000",
       addressCountry: "BR",
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "14",
+      reviewCount: "147",
     },
     areaServed: [
-      "Piumhi",
-      "Capitólio",
-      "Passos",
-      "Formiga",
+      "Sarzedo",
+      "Betim",
+      "Ibirité",
+      "Contagem",
+      "Belo Horizonte",
       "Minas Gerais",
       "Brasil",
     ],
@@ -154,8 +156,9 @@ export default function RootLayout({
       },
     ],
     sameAs: [
-      "https://www.instagram.com/rafaela_souza_adv/",
-      "https://wa.me/5537998118053",
+      "https://www.instagram.com/paixao_advocacia/",
+      "https://wa.me/5531996769370",
+      "https://www.google.com/search?q=Paix%C3%A3o+Advocacia+e+Advogados+Associados%0ASarzedo+%C2%B7+MG",
     ],
   };
 
@@ -173,7 +176,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#f8f6f2] font-sans text-[#070a1c] antialiased selection:bg-[#c59d64] selection:text-[#ffffff]">
+      <body className="min-h-screen overflow-x-clip bg-[#f9f7f4] font-sans text-[#080f1d] antialiased selection:bg-[#d4a862] selection:text-[#ffffff]">
         {children}
       </body>
     </html>

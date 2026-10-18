@@ -1,15 +1,15 @@
-# RAFAELA SOUZA | ADVOGADA
-## Especialista em Direito das Famílias e Sucessões · Dra. Rafaela Souza · OAB/MG 165340 · Piumhi - MG
+# PAIXÃO ADVOCACIA E ADVOGADOS ASSOCIADOS
+## AR Paixão · Advocacia e Consultoria Jurídica · Sarzedo - MG
 
-Site institucional e landing page responsiva de altíssimo padrão da **Dra. Rafaela Souza**, advogada com mais de 11 anos de atuação consolidada e nota máxima de 5,0 estrelas no Google Meu Negócio, com atuação de destaque em Direito das Famílias e Sucessões (divórcio consensual e litigioso, partilha de bens, combate à alienação parental, guarda, pensão alimentícia e inventários), Direito Cível e consultoria preventiva.
+Site institucional e landing page responsiva de altíssimo padrão da **Paixão Advocacia e Advogados Associados** (AR Paixão), escritório com nota máxima de 5,0 estrelas e 147 avaliações no Google Meu Negócio, com atuação de destaque em Direito de Família, Sucessões, Direito Civil, Contratos, Indenizações, Direito do Trabalho e Consultoria Preventiva em Sarzedo, Região Metropolitana de Belo Horizonte e em todo o Brasil (via atendimento online).
 
 ## Destaques
-- **Identidade Visual Nobre em Marfim Studio & Azul Noite Prussiano:** Paleta inspirada diretamente na identidade visual e fotografia editorial da Dra. Rafaela Souza (`#F8F6F2`, `#FAF8F5`, `#070A1C`, `#C59D64`, `#DAB280`), equilibrando leveza contemporânea com máxima autoridade e acolhimento.
-- **Tipografia Nobre e Equilibrada:** Tipografia serifada de alta classe (Cormorant Garamond e Playfair Display) nos títulos da marca e editoriais, com Cinzel nos destaques e Plus Jakarta Sans para leitura confortável, límpida e moderna no corpo de texto.
-- **Prova Social Impecável no Google Meu Negócio:** Avaliação máxima de 5,0 estrelas com 14 avaliações unânimes no Google Meu Negócio em Piumhi - MG, ressaltando os pilares de Rapidez, Ética, Eficiência e Humanidade.
-- **Contato Ágil e Humanizado:** WhatsApp (37) 99811-8053 com mensagens contextualizadas por especialidade e botão flutuante para contato imediato.
-- **Atendimento Presencial e Online:** Sede própria no Centro de Piumhi (R. Benedito Valadares, 224) e consultoria online para todo o Brasil.
-- **Instagram:** [@rafaela_souza_adv](https://www.instagram.com/rafaela_souza_adv/).
+- **Identidade Visual Nobre em Ouro Imperial & Azul Soberano:** Paleta extraída diretamente do novo monograma AR e da fotografia oficial (`#060D18`, `#0A1526`, `#D4A862`, `#DFB772`, `#F9F7F4`), equilibrando imponência, sofisticação e acolhimento humano.
+- **Tipografia Nobre e Equilibrada:** Títulos majestosos com Cinzel e Playfair Display, complementados por Plus Jakarta Sans no corpo de texto para legibilidade impecável e modernidade.
+- **Prova Social Impecável no Google Meu Negócio:** Nota máxima de 5,0 estrelas com 147 avaliações no Google Meu Negócio em Sarzedo - MG, demonstrando a autoridade e a satisfação absoluta de clientes.
+- **Contato Ágil e Humanizado:** WhatsApp (31) 99676-9370 com mensagens contextualizadas por especialidade e botão flutuante para contato imediato.
+- **Atendimento Presencial e Online:** Sede no Centro de Sarzedo (R. dos Rodoviários, 103 - Loja 205) e consultoria jurídica online para todo o Brasil.
+- **Instagram:** [@paixao_advocacia](https://www.instagram.com/paixao_advocacia/).
 
 ## Tecnologias
 - Next.js 16 (App Router)

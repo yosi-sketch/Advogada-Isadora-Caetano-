@@ -2,37 +2,37 @@
 
 :root {
   color-scheme: light;
-  --brand-bg: #f8f6f2;
-  --brand-bg-alt: #f3efea;
+  --brand-bg: #f9f7f4;
+  --brand-bg-alt: #f4f0ea;
   --brand-surface: #ffffff;
-  --brand-navy: #070a1c;
-  --brand-navy-light: #0d162a;
-  --brand-navy-surface: #12203d;
-  --brand-gold: #c59d64;
-  --brand-gold-accent: #dab280;
-  --brand-gold-light: #fbf6ee;
-  --brand-gold-highlight: #f5e6cf;
-  --brand-gold-dark: #8c673b;
-  --brand-gold-deep: #684b25;
-  --brand-ink: #070a1c;
-  --brand-ink-soft: #4a586d;
-  --brand-ink-muted: #6b7a90;
-  --brand-border: #e6dfd5;
+  --brand-navy: #060d18;
+  --brand-navy-light: #0a1526;
+  --brand-navy-surface: #0e1e34;
+  --brand-gold: #d4a862;
+  --brand-gold-accent: #dfb772;
+  --brand-gold-light: #fbf7ee;
+  --brand-gold-highlight: #f7df9e;
+  --brand-gold-dark: #9e6f2d;
+  --brand-gold-deep: #734b16;
+  --brand-ink: #080f1d;
+  --brand-ink-soft: #3e4d60;
+  --brand-ink-muted: #64748b;
+  --brand-border: #e5dfd5;
 }
 
 @theme inline {
   --font-serif: var(--font-serif), var(--font-display), "Playfair Display", "Cormorant Garamond", serif;
   --font-cinzel: var(--font-cinzel), "Cinzel", "Trajan Pro", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  --color-brand-bg: #f8f6f2;
-  --color-brand-alt: #f3efea;
-  --color-brand-navy: #070a1c;
-  --color-brand-gold: #c59d64;
-  --color-brand-gold-accent: #dab280;
-  --shadow-card: 0 10px 32px rgba(7, 10, 28, 0.06);
-  --shadow-card-hover: 0 16px 40px rgba(7, 10, 28, 0.12);
-  --shadow-gold: 0 8px 24px rgba(197, 157, 100, 0.25);
-  --shadow-navy: 0 12px 36px rgba(7, 10, 28, 0.35);
+  --color-brand-bg: #f9f7f4;
+  --color-brand-alt: #f4f0ea;
+  --color-brand-navy: #060d18;
+  --color-brand-gold: #d4a862;
+  --color-brand-gold-accent: #dfb772;
+  --shadow-card: 0 10px 32px rgba(6, 13, 24, 0.06);
+  --shadow-card-hover: 0 16px 40px rgba(6, 13, 24, 0.12);
+  --shadow-gold: 0 8px 24px rgba(212, 168, 98, 0.28);
+  --shadow-navy: 0 12px 36px rgba(6, 13, 24, 0.45);
 }
 
 html {
@@ -41,14 +41,14 @@ html {
 }
 
 body {
-  background: #f8f6f2;
-  color: #070a1c;
+  background: #f9f7f4;
+  color: #080f1d;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #c59d64;
+  caret-color: #d4a862;
 }
 
 ::selection {
-  background: #c59d64;
+  background: #d4a862;
   color: #ffffff;
 }
 
@@ -65,7 +65,7 @@ body {
   line-height: 1.4;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #8c673b;
+  color: #9e6f2d;
 }
 
 .eyebrow-dark {
@@ -77,7 +77,7 @@ body {
   line-height: 1.4;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #dab280;
+  color: #dfb772;
 }
 
 .eyebrow::before,
@@ -92,7 +92,7 @@ body {
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #4a586d;
+  color: #3e4d60;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -106,7 +106,7 @@ body {
   bottom: 0;
   left: 0;
   height: 1.5px;
-  background: #c59d64;
+  background: #d4a862;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -114,7 +114,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #070a1c;
+  color: #080f1d;
 }
 
 .nav-link:hover::after {
@@ -134,17 +134,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f8f6f2;
+  background: #f9f7f4;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #f8f6f2;
+  border: 2px solid #f9f7f4;
   border-radius: 999px;
   background: #d8d0c4;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #c59d64;
+  background: #d4a862;
 }
 
 @media (prefers-reduced-motion: reduce) {
