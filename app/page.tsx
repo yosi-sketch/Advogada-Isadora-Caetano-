@@ -1,57 +1,55 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import { AnimatePresence, motion, type Variants, MotionConfig } from "framer-motion";
+import { motion, AnimatePresence, Variants, MotionConfig } from "framer-motion";
 import {
-  ArrowRight,
-  ArrowUpRight,
-  Award,
-  Briefcase,
-  CheckCircle2,
-  Clock,
-  HeartHandshake,
+  Phone,
   Mail,
   MapPin,
-  Menu,
-  Phone,
+  Clock,
+  CheckCircle2,
   Scale,
+  Award,
   Shield,
-  ShieldCheck,
-  Sparkles,
+  HeartHandshake,
+  ArrowRight,
+  ArrowUpRight,
   Star,
-  Users,
+  Menu,
   X,
+  Sparkles,
+  ShieldCheck,
+  HeartPulse,
+  Activity,
   FileCheck2,
-  Gavel,
-  Zap,
+  CalendarCheck,
+  Stethoscope,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5533988845617";
-const PHONE_DISPLAY = "(33) 98884-5617";
-const EMAIL_CONTACT = "contato@marquesiniadvocacia.com.br";
-const INSTAGRAM_URL = "https://www.instagram.com/chmarquesini/";
-const INSTAGRAM_HANDLE = "@chmarquesini";
+const WHATSAPP_NUMBER = "5531992938746";
+const PHONE_DISPLAY = "(31) 99293-8746";
+const EMAIL_CONTACT = "contato@ingridmarquesadvocacia.com.br";
+const INSTAGRAM_URL = "https://www.instagram.com/draingridmarques/";
+const INSTAGRAM_HANDLE = "@draingridmarques";
 
 const ADDRESS_TEXT =
-  "R. Pres. Tancredo Neves, 494 - Centro, Mantena - MG, 35290-065 · Atendimento Presencial & Online em Todo o Brasil";
+  "R. Seis, 147 - Alta de Gaya, Nova Lima - MG, 34012-856 · Atendimento Presencial & Online em Todo o Brasil";
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Dr.+Chaiane+Marquesini+%E2%80%94+Advogado%0AMantena+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=Ingrid+Marques+Advocacia+Previdenci%C3%A1ria%0ANova+Lima+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
 
 const LOGO_SRC = "/logo.png";
-const LOGO_WHITE_SRC = "/logo.png";
-const LOGO_SEAL_SRC = "/logo-seal.png";
-const LOGO_MONOGRAM_SRC = "/logo-seal.png";
-const FOTO_HERO_SRC = "/dr-chaiane-hero.png";
-const FOTO_SOBRE_SRC = "/dr-chaiane-about.png";
+const FOTO_HERO_SRC = "/dra-ingrid-marques.jpg";
+const FOTO_SOBRE_SRC = "/dra-ingrid-office.jpg";
+const FOTO_EDITORIAL_SRC = "/dra-ingrid-portrait-bw.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dr. Chaiane Marquesini! Gostaria de consultar sobre a minha situação jurídica e agendar um atendimento com a Marquesini Advocacia.";
+    "Olá, Dra. Ingrid Marques! Gostaria de consultar sobre meu benefício previdenciário e agendar um atendimento.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -161,199 +159,226 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "direito-civel-indenizacoes",
-    title: "Direito Cível, Indenizações & Litígios",
-    icon: Gavel,
-    tag: "Indenizações · Danos Morais · Contratos · Possessórias",
+    id: "planejamento-aposentadorias",
+    title: "Planejamento Previdenciário & Aposentadorias",
+    icon: CalendarCheck,
+    tag: "Aposentadoria Integral · 13º Salário · Regras de Transição",
     summary:
-      "Reparação por prejuízos materiais e morais, recuperação de processos mal conduzidos ou arquivados, litígios contratuais, possessórios e defesa patrimonial.",
+      "Planejamento do momento exato e da regra mais vantajosa para você receber o maior valor de aposentadoria possível, com direito integral a 13º salário e retroativos.",
     details:
-      "O Dr. Chaiane Marquesini e a Marquesini Advocacia são amplamente reconhecidos em Mantena e região pela combatividade na defesa dos interesses de seus clientes. Atuamos com extrema firmeza em ações indenizatórias, reparações por danos morais, disputas imobiliárias e contratos, além de assumir e reverter causas complexas com estratégias processuais vitoriosas.",
+      "A Dra. Ingrid Marques realiza uma auditoria detalhada de todo o seu histórico contributivo (CNIS, carteiras antigas, tempo rural e especial), corrigindo falhas do INSS e evitando armadilhas que reduzem seu benefício. Nossa atuação garante a conquista da aposentadoria integral, orientando se o segurado se enquadra em regras definitivas ou de transição da Reforma.",
     topics: [
-      "Ações indenizatórias por danos morais e materiais decorrentes de condutas lesivas e inscrições indevidas",
-      "Assunção estratégica de processos paralisados, arquivados ou mal conduzidos com histórico comprovado de reversão",
-      "Elaboração, revisão e rescisão de contratos civis, rurais, comerciais e imobiliários",
-      "Ações possessórias, usucapião, reintegração de posse e regularização registral de imóveis",
-      "Execuções judiciais de títulos de crédito e recuperação célere de haveres",
-      "Defesa processual contenciosa em todas as instâncias judiciais",
+      "Planejamento Previdenciário personalizado com simulação de cenários e cálculo de valor futuro",
+      "Aposentadoria por Idade Urbana e Rural com cômputo de períodos não registrados",
+      "Aposentadoria por Tempo de Contribuição e aplicação das melhores regras de transição",
+      "Aposentadoria Especial para trabalhadores expostos a agentes insalubres ou periculosos (PPP/LTCAT)",
+      "Retificação e averbação de vínculos no CNIS, tempo de serviço militar e atividade rural",
+      "Cobrança integral de valores retroativos devidos desde o primeiro requerimento no INSS",
     ],
     whatsAppText:
-      "Olá, Dr. Chaiane Marquesini! Preciso de assessoria jurídica na área Cível / Indenizações com a Marquesini Advocacia.",
+      "Olá, Dra. Ingrid Marques! Gostaria de fazer o meu Planejamento Previdenciário e consultar minha aposentadoria.",
   },
   {
-    id: "direito-de-familia-sucessoes",
-    title: "Direito de Família, Divórcio & Sucessões",
-    icon: Users,
-    tag: "Divórcio · Guarda · Pensão · Inventário · Partilha",
+    id: "incapacidade-permanente-invalidez",
+    title: "Aposentadoria por Incapacidade Permanente (Invalidez)",
+    icon: HeartPulse,
+    tag: "Reversão de Pente-Fino · Laudos Médicos · Causas Complexas",
     summary:
-      "Divórcios ágeis em cartório e judiciais, proteção do interesse dos filhos, partilha justa de bens e inventários sem burocracias desnecessárias.",
+      "Restabelecimento e concessão judicial de aposentadoria por invalidez para segurados com doenças ou limitações definitivas, inclusive revertendo cortes indevidos do INSS.",
     details:
-      "Causas que envolvem relações familiares e herança exigem sensibilidade humana e precisão estratégica. Prestamos assessoria completa em divórcios consensuais e litigiosos, fixação e revisão de alimentos, guarda e regime de convivência, além de inventários extrajudiciais e judiciais para regularização rápida do patrimônio herdado.",
+      "Muitos trabalhadores aposentados por invalidez há anos têm seus benefícios cortados arbitrariamente pelo 'pente-fino' do INSS sob a alegação infundada de que estão aptos. A Dra. Ingrid Marques possui histórico de êxito em casos complexos de reversão, preparando provas periciais consistentes e impugnando laudos médicos desfavoráveis na Justiça.",
     topics: [
-      "Divórcio extrajudicial em cartório rápido e econômico, e divórcio judicial litigioso",
-      "Partilha de bens e blindagem patrimonial contra ocultação de ativos",
-      "Ações de fixação, revisão, exoneração e execução coercitiva de pensão alimentícia",
-      "Regulamentação de guarda unilateral ou compartilhada e convivência familiar",
-      "Inventário em cartório e judicial célere com otimização tributária de ITCMD",
-      "Reconhecimento e dissolução de união estável com partilha justa de patrimônio",
+      "Ação de concessão e restabelecimento de Aposentadoria por Incapacidade Permanente",
+      "Reversão judicial de cancelamentos e cortes indevidos em pente-finos do INSS",
+      "Elaboração de quesitos periciais estratégicos e impugnação minuciosa de laudos desfavoráveis",
+      "Adicional de 25% para o aposentado por invalidez que necessita de assistência permanente de terceiros",
+      "Conversão de auxílio-doença em aposentadoria por invalidez definitiva",
+      "Defesa de segurados portadores de doenças graves, ortopédicas, cardíacas e psiquiátricas",
     ],
     whatsAppText:
-      "Olá, Dr. Chaiane Marquesini! Gostaria de consultar sobre Família, Divórcio ou Inventário com a Marquesini Advocacia.",
+      "Olá, Dra. Ingrid Marques! Preciso de ajuda urgente para restabelecer ou solicitar minha Aposentadoria por Invalidez.",
   },
   {
-    id: "direito-previdenciario-inss",
-    title: "Direito Previdenciário & Benefícios do INSS",
-    icon: Scale,
-    tag: "Aposentadorias · Auxílio-Doença · BPC/LOAS · Pensão",
+    id: "auxilio-acidente-sequelas",
+    title: "Auxílio-Acidente & Indenizações do INSS",
+    icon: Activity,
+    tag: "Sequela Permanente · Acidente de Moto / Trabalho · Benefício Vitalício",
     summary:
-      "Concessão e restabelecimento de aposentadorias urbanas e rurais, auxílio por incapacidade temporária, BPC/LOAS e revisões previdenciárias.",
+      "Benefício mensal indenizatório pago pelo INSS para quem sofreu acidente de qualquer natureza (trânsito, moto, trabalho) que resultou em sequela permanente ou limitação motora.",
     details:
-      "Garantimos que trabalhadores rurais e urbanos tenham seus direitos previdenciários plenamente respeitados frente ao INSS. Atuamos na esfera administrativa e judicial para destravar benefícios negados, com montagem documental minuciosa e celeridade nos pedidos de tutela de urgência.",
+      "Poucos segurados sabem que têm direito ao Auxílio-Acidente mesmo voltando a trabalhar com carteira assinada. Esse benefício possui caráter indenizatório, não impede o trabalho formal e é pago até a aposentadoria para quem teve redução da capacidade de trabalho (como encurtamento de membro, fraturas ou lesões consolidadas).",
     topics: [
-      "Aposentadoria por idade e tempo de contribuição (urbana e segurado especial rural)",
-      "Aposentadoria especial para atividades insalubres ou perigosas",
-      "Auxílio por incapacidade temporária (auxílio-doença) e aposentadoria por incapacidade permanente",
-      "Benefício de Prestação Continuada (BPC/LOAS) para idosos e pessoas com deficiência",
-      "Pensão por morte e auxílio-reclusão para dependentes previdenciários",
-      "Ações judiciais para restabelecimento imediato de benefícios indevidamente cessados pelo INSS",
+      "Concessão do Auxílio-Acidente decorrente de acidentes de moto, trânsito ou esportivos",
+      "Auxílio-Acidente por acidentes de trabalho típicos e doenças ocupacionais",
+      "Benefício que não impede o retorno ao trabalho e pode ser acumulado com o salário",
+      "Comprovação técnica de sequelas motoras permanentes e encurtamento de membros",
+      "Cobrança de parcelas retroativas desde a cessação do auxílio-doença original",
+      "Atuação contenciosa contra a recusa arbitrária da perícia médica do INSS",
     ],
     whatsAppText:
-      "Olá, Dr. Chaiane Marquesini! Gostaria de uma análise sobre meu benefício do INSS / Aposentadoria com a Marquesini Advocacia.",
+      "Olá, Dra. Ingrid Marques! Gostaria de consultar se tenho direito ao Auxílio-Acidente por sequela de acidente.",
   },
   {
-    id: "direito-trabalhista-trabalhador",
-    title: "Direito do Trabalho & Defesa dos Trabalhadores",
-    icon: Briefcase,
-    tag: "Rescisão Indireta · Verbas · Horas Extras · Insalubridade",
+    id: "auxilio-incapacidade-temporaria",
+    title: "Auxílio por Incapacidade Temporária (Auxílio-Doença)",
+    icon: Stethoscope,
+    tag: "Perícia Médica · Benefício Negado · Prorrogação Urgente",
     summary:
-      "Defesa combativa de direitos laborais, rescisão indireta por faltas patronais, cobrança de verbas rescisórias integrais e combate a abusos no trabalho.",
+      "Garantia rápida do pagamento do benefício para quem está impossibilitado de exercer sua atividade habitual por motivo de doença, acidente ou cirurgia.",
     details:
-      "Compreendemos o valor do trabalho e a necessidade de receber cada centavo devido pela lei. Representamos trabalhadores em reclamações trabalhistas contundentes para recebimento de verbas não pagas, horas extras habituais, adicionais legais e reparações por acidentes de trabalho.",
+      "Se o médico perito do INSS indeferiu o seu pedido de auxílio-doença ou determinou uma 'alta programada' antes de sua recuperação real, ingressamos com recurso e ação judicial imediata para restabelecer o seu sustento enquanto você realiza seu tratamento de saúde.",
     topics: [
-      "Cobrança de rescisão integral: saldo de salário, aviso prévio, férias, 13º e multa de 40% do FGTS",
-      "Rescisão Indireta do contrato de trabalho decorrente de descumprimentos graves do empregador",
-      "Horas extras habituais não quitadas e supressão de intervalos intrajornada",
-      "Adicionais de insalubridade e periculosidade devidos e não pagos",
-      "Reconhecimento de vínculo empregatício sem carteira assinada e direitos retroativos",
-      "Indenizações por acidentes de trabalho, doenças ocupacionais e assédio moral",
+      "Pedido urgente de concessão judicial com pedido de liminar para restabelecimento imediato",
+      "Reversão de altas programadas injustas e indeferimentos por 'ausência de incapacidade'",
+      "Reconhecimento da qualidade de segurado e cômputo correto do período de carência",
+      "Reunir relatórios médicos, exames de imagem e atestados conclusivos com quesitação direcionada",
+      "Auxílio-doença comum (B31) versus auxílio-doença acidentário (B91) com estabilidade provisória",
+      "Acompanhamento direto pelo WhatsApp até o primeiro pagamento em conta",
     ],
     whatsAppText:
-      "Olá, Dr. Chaiane Marquesini! Gostaria de consultar sobre meus Direitos Trabalhistas com a Marquesini Advocacia.",
+      "Olá, Dra. Ingrid Marques! Meu auxílio-doença foi indeferido pelo INSS e preciso de ajuda para reverter.",
   },
   {
-    id: "direito-do-consumidor-bancario",
-    title: "Direito do Consumidor & Defesa contra Bancos",
-    icon: ShieldCheck,
-    tag: "Fraudes Bancárias · Juros Abusivos · SPC/Serasa · Golpes Pix",
-    summary:
-      "Defesa enérgica contra instituições bancárias, cancelamento de empréstimos fraudulentos, combate a juros extorsivos e exclusão de cadastros indevidos.",
-    details:
-      "Abusos bancários e falhas de segurança exigem resposta jurídica imediata. Atuamos com rigor contra descontos indevidos em aposentadorias e folhas de pagamento, contratos com taxas de juros fora do padrão legal, fraudes no Pix e inscrições ilegais no SPC e Serasa com pedido de indenização.",
-    topics: [
-      "Ações contra empréstimos consignados não contratados e descontos indevidos em benefícios",
-      "Recuperação de perdas e responsabilização de instituições financeiras por golpes e fraudes bancárias",
-      "Revisão de cláusulas contratuais e repetição de indébito de cobranças abusivas",
-      "Exclusão liminar de apontamentos negativos indevidos no SPC, Serasa e órgãos de proteção",
-      "Ações indenizatórias por danos morais decorrentes de cobranças vexatórias",
-      "Defesa perante concessionárias de serviços públicos, telefonia e seguradoras",
-    ],
-    whatsAppText:
-      "Olá, Dr. Chaiane Marquesini! Preciso de ajuda com cobranças indevidas / problemas bancários com a Marquesini Advocacia.",
-  },
-  {
-    id: "consultoria-preventiva-acordos",
-    title: "Consultoria Preventiva, Contratos & Acordos",
+    id: "bpc-loas-beneficio-assistencial",
+    title: "BPC / LOAS & Benefício Assistencial",
     icon: HeartHandshake,
-    tag: "Segurança Contratual · Mediação · Pareceres · Negociação",
+    tag: "Idosos 65+ · Pessoa com Deficiência · Triagem de Direitos",
     summary:
-      "Prevenção de litígios desgastantes, assessoria em negociações patrimoniais e formalização de acordos judiciais e extrajudiciais com validade irrestrita.",
+      "Concessão de um salário mínimo mensal para idosos com 65 anos ou mais e pessoas com deficiência ou enfermidade incapacitante em situação de vulnerabilidade social.",
     details:
-      "Uma consultoria jurídica preventiva estratégica evita prejuízos vultosos e anos de desgastes nos tribunais. Assessoramos pessoas físicas, produtores rurais e famílias em negócios jurídicos seguros, elaboração de minutas contratuais e mediação consensual de disputas.",
+      "O BPC/LOAS é um direito garantido por lei, mas exige extremo rigor no CadÚnico e nos critérios socioeconômicos. A Dra. Ingrid Marques realiza uma triagem honesta e detalhada para verificar se o segurado não possui direito a uma aposentadoria integral (com 13º salário) antes de requerer o LOAS, atuando com máxima transparência.",
     topics: [
-      "Assessoria jurídica preventiva para compra e venda segura de imóveis urbanos e propriedades rurais",
-      "Elaboração de pactos pré-nupciais, minutas de acordo e contratos patrimoniais",
-      "Mediação extrajudicial e homologação rápida de termos de composição em juízo",
-      "Análise de riscos contratuais e emissão de pareceres jurídicos conclusivos",
-      "Renegociação equilibrada de dívidas com respaldo legal e proteção de bens",
-      "Acompanhamento direto e consultoria continuada pelo WhatsApp",
+      "BPC do Idoso (a partir de 65 anos) que nunca contribuiu ou contribuiu pouco para o INSS",
+      "BPC para Pessoa com Deficiência (PcD) física, sensorial, intelectual ou mental de qualquer idade",
+      "Enquadramento de doenças crônicas ou incapacitantes (câncer, cardiopatias, TEA, ortopédicas)",
+      "Avaliação socioeconômica e comprovação da vulnerabilidade familiar com dedução de despesas médicas",
+      "Análise preliminar para verificar se não há possibilidade de concessão de aposentadoria com 13º",
+      "Ação judicial célere após indeferimento indevido na agência do INSS",
     ],
     whatsAppText:
-      "Olá, Dr. Chaiane Marquesini! Gostaria de agendar uma Consultoria Preventiva / Elaboração de Contrato com a Marquesini Advocacia.",
+      "Olá, Dra. Ingrid Marques! Gostaria de consultar sobre a concessão do BPC / LOAS para minha família.",
+  },
+  {
+    id: "revisoes-destravamento-inss",
+    title: "Revisões, Destravamento de Processos & Retroativos",
+    icon: FileCheck2,
+    tag: "Processos Travados · Mandado de Segurança · Valores Atrasados",
+    summary:
+      "Destravar pedidos parados no INSS há meses, recorrer de decisões erradas no judiciário e receber boladas de atrasados acumulados corrigidos monetariamente.",
+    details:
+      "Muitos segurados enfrentam esperas abusivas de 6 meses, 1 ano ou mais sem nenhuma resposta do INSS. Entramos com Mandado de Segurança para forçar a agência a decidir seu processo com urgência, além de pleitear revisões de valor e cobrar todos os atrasados com juros e correção monetária.",
+    topics: [
+      "Mandado de Segurança para cumprimento imediato de prazos legais pelo INSS",
+      "Desbloqueio de requerimentos paralisados ou esquecidos na fila administrativa",
+      "Revisão da vida toda, revisão das melhores contribuições e revisão do teto",
+      "Cobrança judicial de precatórios e RPVs (Requisições de Pequeno Valor) de parcelas atrasadas",
+      "Impugnação de descontos indevidos e fraudes em folha de pagamento de aposentados",
+      "Recursos em instâncias superiores contra decisões judiciais desfavoráveis",
+    ],
+    whatsAppText:
+      "Olá, Dra. Ingrid Marques! Meu processo está travado no INSS e gostaria de assistência jurídica.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Weverton Moreira",
-    reviewsCount: "Local Guide · 6 avaliações · 7 fotos no Google",
-    date: "Google Meu Negócio",
-    badge: "ganhou o processo",
-    content:
-      "Melhor advogado que conheço, já passei por outro advogado que me deixou na mão, e o processo foi arquivado, mas com Dr. Chaiane Marquesini foi totalmente diferente, ele assumiu o caso e ainda ganhou o processo, e tantos outros casos que passei pra ele, e ele sempre ganhou, super recomendo, pra mim e pra muitas outras pessoas tenho certeza que é o melhor advogado da Região. Só tenho a agradecer.",
-  },
-  {
-    name: "Silvia Alves Nogueira",
+    name: "Camila Gonçalves",
     reviewsCount: "1 avaliação no Google",
-    date: "Google Meu Negócio",
-    badge: "receptividade & qualidade",
+    date: "Avaliação Verificada no Google Meu Negócio",
+    badge: "Aposentadoria Integral com 13º",
     content:
-      "Excelente profissional, amigo, muito bem informado, educado, muito atencioso em prestar o seu melhor atendimento para o cliente. Super recomendo os serviços Marquesini Advocacia!! Receptividade, Qualidade, Profissionalismo, Valor.",
+      "Fui até Ingrid através de uma indicação de uma amiga que conseguiu se aposentar com ela. Minha sogra estava tentando se aposentar, procurou um profissional de BH que sugeriu omitir coisas para tentar pelo LOAS. Mas como tudo que começa errado dá errado, não conseguiram. Sugeri procurar o profissional certo, que atue com honestidade e falei de Ingrid: foi o certo a fazer! Ingrid é competente ao extremo, super honesta, e se não me engano conseguiu a aposentadoria da minha sogra em menos de 2 meses. E aposentadoria integral sem ser pelo Loas, com direito a décimo terceiro! Indico de olhos fechados. Que Deus te abençoe Ingrid, minha sogra que já estava sem esperança de se aposentar está feliz demais graças a você.",
+    reply:
+      "Agradeço muito seu feedback e a confiança no meu trabalho. Deus abençoe!",
   },
   {
-    name: "Fabio Souza",
+    name: "Karina Nogueira",
     reviewsCount: "1 avaliação no Google",
-    date: "Google Meu Negócio",
-    badge: "altamente recomendado",
+    date: "Avaliação Verificada no Google Meu Negócio",
+    badge: "Invalidez Revertida Após Corte de 2019",
     content:
-      "Altamente recomendado posso dizer com toda a certeza que Doutor Chaiane é excelente profissional da área da advocacia, ele é extremamente competente e atencioso para com seus clientes e suas causas, digo e afirmo isso por minha própria experiência com seus serviços.",
+      "A Ingrid resolveu o caso do meu pai, que parecia impossível! Ele era aposentado por invalidez desde 2006, mas com a reforma da previdência em 2019 cortaram a aposentadoria, dizendo que ele não se encaixava mais como inválido. Já tínhamos tentado de tudo... Dra. Ingrid acolheu e reverteu a decisão. Uma bênção!",
+    reply:
+      "Atender seu pai foi um presente pra mim. Um dos casos mais complexos que eu já tive. Foi uma sensação inexplicável poder dar a notícia que ele tanto queria. Me lembro bem do primeiro atendimento, ele sem a menor esperança... quando veio a notícia foi uma bênção!",
   },
   {
-    name: "Juliana Jv",
-    reviewsCount: "Local Guide · 2 avaliações no Google",
-    date: "Google Meu Negócio",
-    badge: "atendeu super bem",
+    name: "Jéssika Marina",
+    reviewsCount: "4 avaliações no Google",
+    date: "Avaliação Verificada no Google Meu Negócio",
+    badge: "Auxílio-Acidente Concedido",
     content:
-      "Excelente profissional, atendeu minha mãe super bem, resolveu tudo pra gente! Muito atencioso... Recomendo demais seu trabalho.",
+      "Há cerca de um ano, procurei a Ingrid Marques Advocacia Previdenciária para dar início ao processo de solicitação de auxílio-acidente, após um acidente de moto que resultou em uma sequela permanente, com encurtamento de um dos meus membros. Trabalho de excelência e dedicação do início ao fim!",
+    reply:
+      "Muito obrigada pelo seu depoimento. Ficamos muito felizes em contribuir com esse momento tão importante na sua vida!",
   },
   {
-    name: "Jesus Costa",
+    name: "Vanessa Ribeiro",
     reviewsCount: "1 avaliação no Google",
-    date: "Google Meu Negócio",
-    badge: "eficiência & sucesso",
+    date: "Avaliação Verificada no Google Meu Negócio",
+    badge: "Acolhimento & Justiça",
     content:
-      "Foi muito bom o atendimento. Muito eficiente. E tivemos sucesso no serviço. Eu recomendo o Dr. Chaiane Marquesini.",
+      "Hoje deixo aqui minha gratidão à advogada Ingrid. Quando cheguei até ela, já estava sem esperança e acreditando que minha situação não tinha mais solução. Mesmo assim, ela acolheu meu caso com profissionalismo, dedicação e muita competência. Fez justiça por mim!",
+    reply:
+      "Eu fico até emocionada. Muito obrigada pelo seu feedback, ele é muito importante pra mim. Fiquei imensamente feliz em poder fazer justiça por você!",
   },
   {
-    name: "Dulcylena Gonçalves",
+    name: "Marlene Teixeira",
     reviewsCount: "1 avaliação no Google",
-    date: "Google Meu Negócio",
-    badge: "amor e dedicação",
+    date: "Avaliação Verificada no Google Meu Negócio",
+    badge: "Aposentadoria Garantida",
     content:
-      "Dr Chaiane Ótimo profissional, super recomendo trabalho com confiança amor e dedicação no que faz.",
+      "Só tenho que agradecer a Deus e à advogada Ingrid. Consegui resolver meu caso, uma excelente advogada. Vencemos a guerra das perícias e hoje minha aposentadoria tá garantida!",
+    reply:
+      "Obrigada Marlene, por confiar no nosso trabalho, mesmo com as demoras das impugnações de laudos médicos e as mazelas do judiciário. Agora sim, aposentadoria garantida e sua hora enfim chegou!",
   },
   {
-    name: "Eva Candida",
-    reviewsCount: "1 avaliação no Google",
-    date: "Google Meu Negócio",
-    badge: "competência em 1º lugar",
+    name: "Luciene Santos",
+    reviewsCount: "5 avaliações no Google",
+    date: "Avaliação Verificada no Google Meu Negócio",
+    badge: "Dedicação & Educação",
     content:
-      "Muito bom, competência em primeiro lugar por isso. Eu indico todos que eu saber que precisa do seu trabalho.",
+      "Só tenho a agradecer à Dra. Ingrid pelo trabalho maravilhoso que ela prestou para meu pai. Toda dedicação, nunca deixou de atender, muita educação. E excelência no trabalho. Parabéns e gratidão Dra. Ingrid pelo excelente trabalho!",
+    reply:
+      "Fico feliz em ter feito parte desse processo que foi tão difícil pra nós, mas deu certo!",
   },
   {
-    name: "Abgail Rebuli",
-    reviewsCount: "1 avaliação no Google",
-    date: "Google Meu Negócio",
-    badge: "correto e justo",
+    name: "Emmanuelle Crispim",
+    reviewsCount: "2 avaliações no Google",
+    date: "Avaliação Verificada no Google Meu Negócio",
+    badge: "Causa Conduzida à Vitória",
     content:
-      "Ótimo profissional correto e justo ficamos muito satisfeitos com o atendimento e o profissionalismo.",
+      "Dra., quero expressar minha imensa gratidão pelo excelente trabalho realizado e pela dedicação em conduzir minha causa até a vitória. Sua competência, comprometimento e profissionalismo fizeram toda a diferença nesse processo.",
+    reply:
+      "Muito obrigada querida. Fico imensamente feliz com esse resultado!",
   },
   {
-    name: "Gedivaldo Vaz Sousa",
+    name: "Lucimar Ramos",
     reviewsCount: "1 avaliação no Google",
-    date: "Google Meu Negócio",
-    badge: "pode confiar",
+    date: "Avaliação Verificada no Google Meu Negócio",
+    badge: "Sonho Realizado",
     content:
-      "Bom atendimento ótimo preço boa qualidade de trabalho muito prestativo, e o mais importante pode confiar no seu trabalho...",
+      "Quero agradecer à Dra. Ingrid pelo excelente trabalho. Em momento nenhum quis desistir do meu caso, mesmo sendo muito desafiador, e sempre muito prestativa. Enfim ela conseguiu realizar o meu grande sonho!",
+    reply:
+      "Ah que fofa. Eu que agradeço a confiança no meu trabalho! Seu caso era realmente muito difícil, mas conseguimos desembaraçar tudo. Grata por fazer parte desse momento!",
+  },
+  {
+    name: "Leandro Freitas",
+    reviewsCount: "3 avaliações · 1 foto no Google",
+    date: "Avaliação Verificada no Google Meu Negócio",
+    badge: "Clareza nos Processos",
+    content:
+      "Excelente recepção e um trabalho com muita dedicação. Excelente esclarecimento nos atos dos processos... esclareceu muito bem todas as minhas dúvidas!",
+    reply:
+      "Muito obrigada pela confiança depositada no nosso trabalho desde o primeiro contato!",
+  },
+  {
+    name: "Leidriene Alves",
+    reviewsCount: "1 avaliação no Google",
+    date: "Avaliação Verificada no Google Meu Negócio",
+    badge: "Agilidade & Atenção",
+    content:
+      "Super atenciosos, resolveu bem rápido o que a gente achou que ia demorar muito!",
+    reply: "Ficamos muito felizes em poder ajudar com rapidez e segurança!",
   },
 ];
 
@@ -369,13 +394,13 @@ function Heading({
   dark?: boolean;
 }) {
   return (
-    <div>
-      <p className="eyebrow">{eyebrow}</p>
-      <h2 className="mt-4 font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-white sm:text-4xl lg:text-[3.25rem]">
+    <div className="max-w-2xl">
+      <p className={dark ? "eyebrow-dark" : "eyebrow"}>{eyebrow}</p>
+      <h2 className="mt-3.5 font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-white sm:text-4xl lg:text-[2.75rem]">
         {children}
       </h2>
       {description && (
-        <p className="mt-4 text-[15px] leading-7 text-[#a1a1aa]">
+        <p className="mt-4 text-[15px] leading-7 text-[#9eb1a3]">
           {description}
         </p>
       )}
@@ -402,37 +427,67 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="overflow-hidden bg-[#09090b] text-white selection:bg-[#deb26a] selection:text-[#09090b]">
-        {/* Navigation Bar - Pure Obsidian & Gold Executive Aesthetic */}
-        <header className="sticky top-0 z-40 border-b border-[#27272e] bg-[#09090b]/95 backdrop-blur-xl transition-colors">
-          <div className="mx-auto flex h-[104px] max-w-7xl items-center justify-between gap-6 px-5 sm:h-[118px] sm:px-8 lg:px-12">
+      <main className="relative min-h-screen overflow-hidden bg-[#0a110c] text-white">
+        {/* Top Header / Announcement Bar */}
+        <header className="sticky top-0 z-40 border-b border-[#233427] bg-[#0a110c]/95 backdrop-blur-md">
+          {/* Top Info Bar */}
+          <div className="border-b border-[#1b2b1e] bg-[#0d1610] px-4 py-2 text-[11px] text-[#9eb1a3]">
+            <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 sm:px-6">
+              <div className="flex items-center gap-4">
+                <span className="inline-flex items-center gap-1.5 font-semibold text-white">
+                  <Star size={13} className="fill-[#deb26a] text-[#deb26a]" />
+                  5,0 ★ no Google (39 avaliações)
+                </span>
+                <span className="hidden sm:inline text-[#233427]">|</span>
+                <span className="hidden sm:inline">
+                  Nova Lima - MG · Atendimento Presencial & Online em Todo o Brasil
+                </span>
+              </div>
+              <div className="flex items-center gap-4">
+                <a
+                  href={`tel:+${WHATSAPP_NUMBER}`}
+                  className="hidden md:inline-flex items-center gap-1.5 transition-colors hover:text-[#deb26a]"
+                >
+                  <Phone size={12} /> {PHONE_DISPLAY}
+                </a>
+                <a
+                  href={getWhatsAppUrl()}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 font-bold text-[#deb26a] transition-colors hover:text-[#f5dfad]"
+                >
+                  <WhatsAppIcon size={13} /> Plantão Previdenciário WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Main Navigation */}
+          <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 sm:px-8">
             <a
               href="#inicio"
-              aria-label="Dr. Chaiane Marquesini — Marquesini Advocacia"
-              onClick={closeMenu}
-              className="flex items-center gap-3.5 transition-opacity hover:opacity-90"
+              className="inline-flex items-center gap-3 transition-transform hover:scale-[1.01]"
+              aria-label="Ingrid Marques Advocacia Previdenciária"
             >
-              <div className="relative h-[68px] w-[240px] sm:h-[82px] sm:w-[290px] md:h-[88px] md:w-[310px]">
+              <div className="relative h-[65px] w-[230px] sm:h-[75px] sm:w-[280px]">
                 <Image
                   src={LOGO_SRC}
-                  alt="Dr. Chaiane Marquesini — Marquesini Advocacia - Logo Oficial"
+                  alt="Ingrid Marques Advocacia Previdenciária - Logo Oficial"
                   fill
                   priority
-                  sizes="(max-width: 640px) 240px, (max-width: 768px) 290px, 310px"
-                  className="object-contain object-left drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
+                  sizes="(max-width: 640px) 230px, 280px"
+                  className="object-contain object-left drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]"
                 />
               </div>
             </a>
 
-            <nav
-              aria-label="Navegação principal"
-              className="hidden items-center gap-7 lg:flex"
-            >
+            {/* Desktop Navigation Links */}
+            <nav className="hidden items-center gap-7 lg:flex">
               <a className="nav-link" href="#inicio">
                 Início
               </a>
               <a className="nav-link" href="#sobre">
-                O Advogado
+                A Advogada
               </a>
               <a className="nav-link" href="#atuacao">
                 Especialidades
@@ -444,161 +499,122 @@ export default function Home() {
                 Avaliações (5,0 ★)
               </a>
               <a className="nav-link" href="#contato">
-                Contato
+                Contato & Sede
               </a>
             </nav>
 
             <div className="hidden items-center gap-3 lg:flex">
-              <a
-                href={INSTAGRAM_URL}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Instagram do Dr. Chaiane Marquesini"
-                className="grid size-10 place-items-center rounded-lg border border-[#27272e] bg-[#18181c] text-[#d4d4d8] shadow-xs transition-all hover:border-[#deb26a] hover:bg-[#202026] hover:text-[#deb26a]"
-                title={`Instagram ${INSTAGRAM_HANDLE}`}
-              >
-                <InstagramIcon size={16} />
-              </a>
-              <a
-                href={`tel:+${WHATSAPP_NUMBER}`}
-                aria-label="Ligar para Marquesini Advocacia"
-                className="grid size-10 place-items-center rounded-lg border border-[#27272e] bg-[#18181c] text-[#d4d4d8] shadow-xs transition-all hover:border-[#deb26a] hover:bg-[#202026] hover:text-[#deb26a]"
-                title={`Ligar: ${PHONE_DISPLAY}`}
-              >
-                <Phone size={16} />
-              </a>
-              <a
-                href={getWhatsAppUrl()}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="WhatsApp Marquesini Advocacia"
-                className="grid size-10 place-items-center rounded-lg border border-[#27272e] bg-[#18181c] text-[#d4d4d8] shadow-xs transition-all hover:border-[#deb26a] hover:bg-[#202026] hover:text-[#deb26a]"
-                title="Atendimento no WhatsApp"
-              >
-                <WhatsAppIcon size={18} />
-              </a>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dr. Chaiane! Gostaria de uma consultoria jurídica sobre meus direitos com a Marquesini Advocacia."
+                  "Olá, Dra. Ingrid Marques! Gostaria de uma consultoria sobre meu benefício no INSS."
                 )}
                 target="_blank"
                 size="sm"
                 variant="gold"
                 className="rounded-lg shadow-sm"
               >
-                Consultar Direitos <ArrowUpRight size={14} />
+                <WhatsAppIcon size={14} /> Falar no WhatsApp
               </GlowingButton>
             </div>
 
+            {/* Mobile Menu Trigger */}
             <button
               type="button"
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="grid size-11 place-items-center rounded-lg border border-[#233427] bg-[#142017] text-white lg:hidden"
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
-              aria-expanded={menuOpen}
-              aria-controls="mobile-navigation"
-              className="grid size-11 place-items-center rounded-lg border border-[#27272e] bg-[#18181c] text-white shadow-xs lg:hidden"
-              onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
 
+          {/* Mobile Menu Dropdown */}
           <AnimatePresence>
             {menuOpen && (
-              <motion.nav
-                id="mobile-navigation"
-                aria-label="Navegação móvel"
+              <motion.div
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.22 }}
-                className="overflow-hidden border-t border-[#27272e] bg-[#121215] px-6 lg:hidden"
+                className="border-b border-[#233427] bg-[#0d1610] px-5 py-6 lg:hidden"
               >
-                <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
-                  {[
-                    ["Início", "#inicio"],
-                    ["O Advogado", "#sobre"],
-                    ["Especialidades Jurídicas", "#atuacao"],
-                    ["Por Que Escolher", "#diferenciais"],
-                    ["Avaliações no Google (5,0 ★)", "#avaliacoes"],
-                    ["Contato & Sede", "#contato"],
-                  ].map(([label, href]) => (
-                    <a
-                      key={label}
-                      href={href}
-                      onClick={closeMenu}
-                      className="py-3 text-sm font-semibold text-[#d4d4d8] hover:text-[#deb26a]"
-                    >
-                      {label}
-                    </a>
-                  ))}
-                  <div className="mt-3 flex flex-col gap-2">
-                    <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#deb26a] via-[#f5dfad] to-[#deb26a] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-[#09090b] shadow-md transition-all hover:brightness-110"
+                <div className="flex flex-col gap-4 text-sm font-semibold uppercase tracking-wider text-[#9eb1a3]">
+                  <a onClick={closeMenu} className="hover:text-white" href="#inicio">
+                    Início
+                  </a>
+                  <a onClick={closeMenu} className="hover:text-white" href="#sobre">
+                    A Advogada
+                  </a>
+                  <a onClick={closeMenu} className="hover:text-white" href="#atuacao">
+                    Especialidades Previdenciárias
+                  </a>
+                  <a onClick={closeMenu} className="hover:text-white" href="#diferenciais">
+                    Por Que Escolher
+                  </a>
+                  <a onClick={closeMenu} className="hover:text-white" href="#avaliacoes">
+                    Avaliações Google (5,0 ★)
+                  </a>
+                  <a onClick={closeMenu} className="hover:text-white" href="#contato">
+                    Contato & Sede
+                  </a>
+                  <div className="pt-2">
+                    <GlowingButton
                       href={getWhatsAppUrl(
-                        "Olá, Dr. Chaiane! Gostaria de consultar sobre a minha situação jurídica com a Marquesini Advocacia."
+                        "Olá, Dra. Ingrid Marques! Gostaria de agendar uma consulta previdenciária."
                       )}
                       target="_blank"
-                      rel="noreferrer"
-                      onClick={closeMenu}
+                      size="md"
+                      variant="gold"
+                      className="w-full justify-center rounded-lg"
                     >
-                      <WhatsAppIcon size={16} /> WhatsApp: {PHONE_DISPLAY}
-                    </a>
-                    <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#27272e] bg-[#18181c] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-white transition-all hover:border-[#deb26a]"
-                      href={INSTAGRAM_URL}
-                      target="_blank"
-                      rel="noreferrer"
-                      onClick={closeMenu}
-                    >
-                      <InstagramIcon size={15} /> Instagram: {INSTAGRAM_HANDLE}
-                    </a>
+                      <WhatsAppIcon size={15} /> Falar no WhatsApp
+                    </GlowingButton>
                   </div>
                 </div>
-              </motion.nav>
+              </motion.div>
             )}
           </AnimatePresence>
         </header>
 
-        {/* Hero Section - Executive Carbon & Sovereign Gold Aesthetic */}
+        {/* Hero Section - Deep Emerald Green #222F25 Gradient & Polished Gold */}
         <section
           id="inicio"
-          className="relative isolate scroll-mt-24 border-b border-[#27272e] bg-gradient-to-b from-[#09090b] via-[#121215] to-[#09090b]"
+          className="relative isolate scroll-mt-24 border-b border-[#233427] bg-gradient-to-b from-[#0a110c] via-[#142017] to-[#0a110c]"
         >
-          {/* Subtle warm amber & metallic gold glow */}
-          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[38rem] rounded-full bg-[#c69a4c]/8 blur-3xl" />
-          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[32rem] rounded-full bg-[#deb26a]/8 blur-3xl" />
+          {/* Subtle Ambient Forest Green & Gold Glow Spheres */}
+          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[42rem] rounded-full bg-[#222f25]/40 blur-3xl" />
+          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[36rem] rounded-full bg-[#deb26a]/10 blur-3xl" />
 
-          <div className="mx-auto grid min-h-[660px] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:min-h-[720px] lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:px-12 lg:py-20">
+          <div className="mx-auto grid min-h-[660px] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:min-h-[720px] lg:grid-cols-[1.1fr_0.9fr] lg:gap-14 lg:px-12 lg:py-20">
             <motion.div
               initial="hidden"
               animate="visible"
               variants={stagger}
-              className="relative z-10 max-w-2xl lg:py-6"
+              className="relative z-10 max-w-2xl lg:py-4"
             >
-              {/* Sovereign Carbon and Gold authority badge */}
+              {/* Authority badge */}
               <motion.div
                 variants={reveal}
-                className="mb-6 inline-flex items-center gap-2.5 rounded-lg border border-[#deb26a]/40 bg-[#18181c] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#deb26a] shadow-sm"
+                className="mb-6 inline-flex items-center gap-2.5 rounded-lg border border-[#deb26a]/40 bg-[#142017] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#deb26a] shadow-sm"
               >
                 <span className="size-2 shrink-0 rounded-full bg-[#deb26a] shadow-[0_0_8px_#deb26a]" />
-                <span>DR. CHAIANE MARQUESINI · MARQUESINI ADVOCACIA · MANTENA - MG</span>
+                <span>DRA. INGRID MARQUES · ADVOCACIA PREVIDENCIÁRIA · NOVA LIMA - MG</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
                 className="max-w-[760px] font-serif text-[2.65rem] leading-[1.08] tracking-[-0.02em] text-white sm:text-5xl lg:text-[3.85rem]"
               >
-                Defesa jurídica estratégica, firmeza processual e excelência para{" "}
+                Defesa previdenciária de excelência para conquistar o benefício que é{" "}
                 <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f5dfad] to-[#deb26a]">
-                  você e sua causa.
+                  seu por direito.
                 </span>
               </motion.h1>
 
               <motion.p
                 variants={reveal}
-                className="mt-7 max-w-xl text-[15px] leading-7 text-[#a1a1aa] sm:text-base sm:leading-8"
+                className="mt-7 max-w-xl text-[15px] leading-7 text-[#9eb1a3] sm:text-base sm:leading-8"
               >
-                ⚖️ <strong className="font-semibold text-white">Nota máxima 5,0 ★ com 56 avaliações no Google Meu Negócio.</strong> Advocacia combativa e de alto padrão liderada pelo <span className="font-semibold text-white">Dr. Chaiane Marquesini</span>. Atuação resolutiva com foco em vitórias processuais, reversão de causas complexas e proteção integral dos seus direitos em <span className="text-[#deb26a] font-semibold">Cível, Família, Sucessões, Previdenciário (INSS), Consumidor e Trabalhista</span>.
+                ⚖️ <strong className="font-semibold text-white">Nota máxima 5,0 ★ com 39 avaliações no Google Meu Negócio.</strong> Atuação especializada liderada pela <span className="font-semibold text-white">Dra. Ingrid Marques</span>. Combate técnico para destravar pedidos no INSS, reverter cortes indevidos, impugnar laudos periciais e garantir <span className="text-[#deb26a] font-semibold">aposentadorias integrais com 13º, auxílio-acidente por sequelas, auxílio-doença e BPC/LOAS</span>.
               </motion.p>
 
               <motion.div
@@ -607,22 +623,22 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dr. Chaiane Marquesini! Gostaria de consultar sobre meus direitos e agendar um atendimento com a Marquesini Advocacia."
+                    "Olá, Dra. Ingrid Marques! Gostaria de consultar sobre meus direitos previdenciários e agendar um atendimento."
                   )}
                   target="_blank"
                   size="lg"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar no WhatsApp com o Dr. Chaiane
+                  <WhatsAppIcon size={16} /> Falar no WhatsApp com a Dra. Ingrid
                 </GlowingButton>
                 <GlowingButton
                   href="#atuacao"
                   size="lg"
-                  variant="navy"
+                  variant="forest"
                   className="rounded-lg shadow-xs"
                 >
-                  Especialidades Jurídicas{" "}
+                  Especialidades Previdenciárias{" "}
                   <ArrowRight
                     size={14}
                     className="transition-transform group-hover:translate-x-1"
@@ -632,7 +648,7 @@ export default function Home() {
 
               <motion.div
                 variants={reveal}
-                className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-[#27272e] pt-6 text-xs text-[#a1a1aa]"
+                className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-[#233427] pt-6 text-xs text-[#9eb1a3]"
               >
                 <a
                   href={GOOGLE_SEARCH_URL}
@@ -641,18 +657,18 @@ export default function Home() {
                   className="inline-flex items-center gap-2 font-semibold text-white transition-colors hover:text-[#deb26a]"
                 >
                   <Star size={15} className="fill-[#deb26a] text-[#deb26a]" />{" "}
-                  5,0 estrelas no Google (56 avaliações verificadas)
+                  5,0 estrelas no Google (39 avaliações verificadas)
                 </a>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <Clock size={15} className="text-[#deb26a]" /> Seg. a Sex. das 08:00 às 18:00
+                  <Clock size={15} className="text-[#deb26a]" /> Seg. a Sex. a partir das 09:00
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <ShieldCheck size={15} className="text-[#deb26a]" /> Sede no Centro de Mantena - MG & Online para Todo o Brasil
+                  <ShieldCheck size={15} className="text-[#deb26a]" /> Nova Lima - MG & Atendimento em Todo o Brasil
                 </span>
               </motion.div>
             </motion.div>
 
-            {/* Hero Visual Presentation - Dr. Chaiane Marquesini */}
+            {/* Hero Visual Presentation - Dra. Ingrid Marques */}
             <motion.div
               initial={{ opacity: 0, scale: 0.97, y: 18 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -663,34 +679,34 @@ export default function Home() {
               }}
               className="relative mx-auto w-full max-w-[490px] lg:ml-auto lg:mr-2"
             >
-              <div className="relative aspect-[4/5.2] overflow-hidden rounded-2xl border-2 border-[#27272e] bg-[#121215] shadow-2xl ring-1 ring-[#deb26a]/30">
+              <div className="relative aspect-[4/5.2] overflow-hidden rounded-2xl border-2 border-[#233427] bg-[#142017] shadow-2xl ring-1 ring-[#deb26a]/30">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Dr. Chaiane Marquesini — Advogado · Marquesini Advocacia em Mantena - MG"
+                  alt="Dra. Ingrid Marques — Advogada Previdenciária em Nova Lima - MG"
                   fill
                   priority
                   sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 45vw"
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#09090b] via-[#09090b]/80 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0a110c] via-[#0a110c]/80 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-3 text-white sm:bottom-8 sm:left-8 sm:right-8">
                   <div>
                     <p className="font-serif text-2xl font-normal tracking-wide text-white">
-                      Dr. Chaiane Marquesini
+                      Dra. Ingrid Marques
                     </p>
                     <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-[#deb26a]">
-                      Advogado Titular · Marquesini Advocacia
+                      Advogada Previdenciária Titular
                     </p>
                   </div>
-                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#deb26a]/40 bg-[#18181c]/90 text-[#deb26a] backdrop-blur-sm">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#deb26a]/40 bg-[#142017]/90 text-[#deb26a] backdrop-blur-sm">
                     <Scale size={18} />
                   </span>
                 </div>
               </div>
 
               {/* Authority badge */}
-              <div className="absolute -left-3 bottom-28 z-10 rounded-lg border border-[#27272e] bg-[#18181c]/95 backdrop-blur-md px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-white shadow-card sm:-left-5">
-                <span className="text-[#deb26a]">●</span> MANTENA - MG · ATENDIMENTO NACIONAL
+              <div className="absolute -left-3 bottom-28 z-10 rounded-lg border border-[#233427] bg-[#142017]/95 backdrop-blur-md px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-white shadow-card sm:-left-5">
+                <span className="text-[#deb26a]">●</span> NOVA LIMA - MG · ATENDIMENTO BRASIL
               </div>
 
               {/* Floating Google rating badge */}
@@ -698,7 +714,7 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="absolute -bottom-5 -right-3 z-10 rounded-xl border border-[#27272e] bg-[#18181c]/95 backdrop-blur-md p-3.5 shadow-card transition-all hover:scale-105 hover:border-[#deb26a] sm:-right-5"
+                className="absolute -bottom-5 -right-3 z-10 rounded-xl border border-[#233427] bg-[#142017]/95 backdrop-blur-md p-3.5 shadow-card transition-all hover:scale-105 hover:border-[#deb26a] sm:-right-5"
               >
                 <div className="flex items-center gap-2">
                   <GoogleIcon size={16} />
@@ -709,50 +725,50 @@ export default function Home() {
                     </span>
                   </div>
                 </div>
-                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#a1a1aa]">
-                  56 Avaliações no Google (100% 5★)
+                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#9eb1a3]">
+                  39 Avaliações no Google (100% 5★)
                 </p>
               </a>
             </motion.div>
           </div>
         </section>
 
-        {/* Highlights Banner - High Contrast Deep Carbon Authority Band */}
+        {/* Highlights Banner - High Contrast Deep Forest Band */}
         <section
           aria-label="Credenciais e Destaques"
-          className="border-y border-[#27272e] bg-[#121215] text-white"
+          className="border-y border-[#233427] bg-[#0e1711] text-white"
         >
           <div className="mx-auto grid max-w-7xl gap-7 px-5 py-8 sm:grid-cols-4 sm:gap-4 sm:px-8 lg:px-12">
             {[
               [
                 "5,0 ★",
-                "nota máxima de excelência no Google com 56 avaliações",
+                "nota máxima de excelência no Google com 39 avaliações",
               ],
               [
                 "100% 5★",
-                "reconhecimento unânime por vitórias e dedicação às causas",
+                "reconhecimento por reverter causas complexas e dedicação",
               ],
               [
-                "Atuação Ampla",
-                "Cível, Família, INSS, Consumidor, Trabalho e Contratos",
+                "Direito Previdenciário",
+                "especialização integral em INSS, aposentadorias, auxílios e BPC",
               ],
               [
-                "Mantena & Online",
-                "sede no Centro de Mantena - MG e assessoria em todo o Brasil",
+                "Nova Lima & Brasil",
+                "sede no Alta de Gaya e atendimento digital humanizado para todo o país",
               ],
             ].map(([value, label], index) => (
               <div
                 key={label}
                 className={
                   index > 0
-                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#27272e]"
+                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#233427]"
                     : "flex items-center gap-4 sm:justify-center"
                 }
               >
                 <span className="font-serif text-2xl font-semibold text-[#deb26a] sm:text-3xl">
                   {value}
                 </span>
-                <span className="max-w-[165px] text-[11px] leading-5 text-[#a1a1aa]">
+                <span className="max-w-[165px] text-[11px] leading-5 text-[#9eb1a3]">
                   {label}
                 </span>
               </div>
@@ -760,13 +776,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sobre o Advogado - Executive Carbon Studio Canvas */}
+        {/* Sobre a Advogada - Executive Forest & Amber Gold Canvas */}
         <section
           id="sobre"
-          className="scroll-mt-24 border-b border-[#27272e] bg-[#121215] py-20 text-white sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-[#233427] bg-[#0d1610] py-20 text-white sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
-            {/* Presentation portrait */}
+            {/* Presentation portrait - Real Office Photo */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -774,40 +790,40 @@ export default function Home() {
               variants={reveal}
               className="relative mx-auto w-full max-w-[480px]"
             >
-              <div className="relative aspect-[3/3.8] overflow-hidden rounded-2xl border-2 border-[#27272e] bg-[#121215] shadow-xl">
+              <div className="relative aspect-[3/3.8] overflow-hidden rounded-2xl border-2 border-[#233427] bg-[#142017] shadow-xl">
                 <Image
                   src={FOTO_SOBRE_SRC}
-                  alt="Dr. Chaiane Marquesini — Advogado Titular da Marquesini Advocacia"
+                  alt="Dra. Ingrid Marques em seu escritório de Advocacia Previdenciária"
                   fill
                   sizes="(max-width: 1024px) 90vw, 45vw"
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#09090b]/90 via-[#09090b]/30 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0a110c]/90 via-[#0a110c]/30 to-transparent" />
               </div>
 
-              {/* Authority badge card - Deep Carbon & Gold Contrast */}
-              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#deb26a]/40 bg-[#18181c] px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
+              {/* Authority badge card - Deep Forest & Gold Contrast */}
+              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#deb26a]/40 bg-[#142017] px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
                 <div className="flex items-center gap-2 text-[#deb26a]">
                   <Award size={16} />
                   <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#deb26a]">
-                    Advocacia Combativa & Estratégica
+                    Advocacia Previdenciária de Alto Padrão
                   </p>
                 </div>
                 <p className="mt-1 font-serif text-lg leading-snug text-white">
-                  Dr. Chaiane Marquesini
+                  Dra. Ingrid Marques
                 </p>
                 <p className="mt-0.5 text-[11px] font-medium text-[#deb26a]">
-                  Advogado Titular · Marquesini Advocacia
+                  Especialista em Benefícios Previdenciários
                 </p>
-                <p className="mt-1 text-[11px] leading-4 text-[#a1a1aa]">
-                  Mantena - MG · R. Pres. Tancredo Neves, 494 - Centro
+                <p className="mt-1 text-[11px] leading-4 text-[#9eb1a3]">
+                  Nova Lima - MG · R. Seis, 147 - Alta de Gaya
                 </p>
               </div>
 
               <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#deb26a]/50 sm:-left-7 sm:-top-7 sm:size-32" />
             </motion.div>
 
-            {/* Story & Biography - Executive Carbon Typography */}
+            {/* Story & Biography - Refined Typography */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -816,46 +832,46 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#deb26a]/30 bg-[#18181c] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#deb26a] shadow-xs"
+                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#deb26a]/30 bg-[#142017] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#deb26a] shadow-xs"
               >
                 <span className="size-2 shrink-0 rounded-full bg-[#deb26a]" />
-                <span>CONHEÇA O DR. CHAIANE MARQUESINI</span>
+                <span>CONHEÇA A DRA. INGRID MARQUES</span>
               </motion.div>
 
               <motion.h2
                 variants={reveal}
                 className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-white sm:text-4xl lg:text-[3.25rem]"
               >
-                Muito além do processo: uma{" "}
+                Mais do que um processo: o{" "}
                 <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f5dfad] to-[#deb26a]">
-                  defesa leal, combativa e intransigente ao seu lado.
+                  sustento, a dignidade e o futuro de quem trabalhou a vida toda.
                 </span>
               </motion.h2>
 
               <motion.p
                 variants={reveal}
-                className="mt-6 max-w-xl text-[15px] leading-7 text-[#a1a1aa]"
+                className="mt-6 max-w-xl text-[15px] leading-7 text-[#9eb1a3]"
               >
-                Comandado pelo <strong className="font-bold text-white">Dr. Chaiane Marquesini</strong>, o escritório <strong className="font-bold text-white">Marquesini Advocacia</strong> consolidou-se como referência de credibilidade, dedicação e vitórias processuais em Mantena, em todo o Leste Mineiro, no Noroeste Capixaba e em nível nacional por meio do atendimento jurídico digital.
+                Liderada pela <strong className="font-bold text-white">Dra. Ingrid Marques</strong>, a <strong className="font-bold text-white">Ingrid Marques Advocacia Previdenciária</strong> consolidou-se em Nova Lima, na Região Metropolitana de Belo Horizonte e em todo o Brasil como uma das principais referências em defesa combativa dos direitos dos segurados perante o INSS.
               </motion.p>
 
               <motion.p
                 variants={reveal}
-                className="mt-4 max-w-xl text-[15px] leading-7 text-[#a1a1aa]"
+                className="mt-4 max-w-xl text-[15px] leading-7 text-[#9eb1a3]"
               >
-                Reconhecido pela capacidade de assumir causas desafiadoras — inclusive processos arquivados ou negligenciados — e conduzi-las com rigor técnico até o êxito, o Dr. Chaiane une <strong className="font-bold text-white">atendimento humanizado, clareza na comunicação e combatividade incansável</strong> na defesa de cada cliente.
+                Reconhecida pela capacidade de assumir e reverter causas consideradas &ldquo;impossíveis&rdquo; ou desacreditadas por outros profissionais — como cortes injustos de aposentadorias por invalidez, negativas de perícias médicas e benefícios travados há anos —, a Dra. Ingrid alia <strong className="font-bold text-white">acolhimento humanizado, transparência cristalina e combate incansável até a decisão vitoriosa</strong>.
               </motion.p>
 
               {/* Authentic Client Quote Card */}
               <motion.div
                 variants={reveal}
-                className="mt-6 rounded-xl border border-[#deb26a]/30 bg-[#18181c] p-5 shadow-xs"
+                className="mt-6 rounded-xl border border-[#deb26a]/30 bg-[#142017] p-5 shadow-xs"
               >
                 <blockquote className="font-serif text-sm italic leading-relaxed text-[#f4f4f5]">
-                  &ldquo;Melhor advogado que conheço, já passei por outro advogado que me deixou na mão, e o processo foi arquivado, mas com Dr. Chaiane Marquesini foi totalmente diferente, ele assumiu o caso e ainda ganhou o processo... super recomendo, pra mim e pra muitas outras pessoas tenho certeza que é o melhor advogado da Região.&rdquo;
+                  &ldquo;Ingrid é competente ao extremo, super honesta. Conseguiu a aposentadoria da minha sogra em menos de 2 meses, integral e com direito a 13º salário, quando outro profissional havia sugerido o caminho errado. Indico de olhos fechados!&rdquo;
                 </blockquote>
                 <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#deb26a]">
-                  — Weverton Moreira · Avaliação Verificada no Google (5,0 ★ · 56 Avaliações)
+                  — Camila Gonçalves · Avaliação Verificada no Google (5,0 ★ · 39 Avaliações)
                 </p>
               </motion.div>
 
@@ -865,19 +881,19 @@ export default function Home() {
               >
                 <div className="flex items-center gap-2">
                   <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
-                  <span>Nota máxima 5,0 ★ com 56 avaliações no Google</span>
+                  <span>Nota máxima 5,0 ★ com 39 avaliações no Google</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
-                  <span>Especialista em Cível, Família, INSS, Trabalho e Consumidor</span>
+                  <span>Especialista em Aposentadorias, Invalidez, Auxílios e BPC</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
-                  <span>Atendimento próximo, transparente e sem juridiquês</span>
+                  <span>Atendimento acolhedor, transparente e sem juridiquês</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
-                  <span>Sede no Centro de Mantena e atendimento online no Brasil</span>
+                  <span>Sede no Alta de Gaya (Nova Lima - MG) & Online para todo o Brasil</span>
                 </div>
               </motion.div>
 
@@ -887,14 +903,14 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dr. Chaiane! Gostaria de agendar uma consulta sobre o meu caso com a Marquesini Advocacia."
+                    "Olá, Dra. Ingrid! Gostaria de agendar uma consulta sobre o meu benefício com seu escritório."
                   )}
                   target="_blank"
                   size="md"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar com o Dr. Chaiane
+                  <WhatsAppIcon size={16} /> Falar com a Dra. Ingrid
                 </GlowingButton>
                 <a
                   href={`tel:+${WHATSAPP_NUMBER}`}
@@ -907,10 +923,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Especialidades Jurídicas Marquesini Advocacia - Deep Obsidian with Executive Carbon Cards */}
+        {/* Especialidades Previdenciárias - Deep Forest Canvas with Executive Cards */}
         <section
           id="atuacao"
-          className="scroll-mt-24 border-b border-[#27272e] bg-[#09090b] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-[#233427] bg-[#0a110c] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <motion.div
@@ -921,16 +937,16 @@ export default function Home() {
               className="flex flex-col justify-between gap-6 md:flex-row md:items-end"
             >
               <Heading
-                eyebrow="SERVIÇOS JURÍDICOS & PILARES DE ATUAÇÃO"
-                description="Especialização técnica, rigor processual e postura combativa para resguardar seus direitos, sua família e seu patrimônio."
+                eyebrow="SERVIÇOS PREVIDENCIÁRIOS & PILARES DE ATUAÇÃO"
+                description="Especialização técnica profunda e combate rigoroso contra o INSS para resguardar sua renda, sua tranquilidade e seu direito legítimo."
               >
                 Atuação jurídica especializada em{" "}
                 <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f5dfad] to-[#deb26a]">
-                  Cível, Família, INSS, Trabalho e Consumidor.
+                  INSS, Aposentadorias, Auxílios e BPC.
                 </span>
               </Heading>
-              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#a1a1aa]">
-                Selecione uma especialidade abaixo para conferir as demandas atendidas e iniciar seu atendimento diretamente pelo WhatsApp.
+              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#9eb1a3]">
+                Clique em uma especialidade abaixo para conferir os detalhes e iniciar sua consulta diretamente pelo WhatsApp.
               </p>
             </motion.div>
 
@@ -947,10 +963,10 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#27272e] bg-[#18181c] p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-[#deb26a]/60 hover:shadow-card-hover sm:p-8"
+                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#233427] bg-[#142017] p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-[#deb26a]/60 hover:shadow-card-hover sm:p-8"
                   >
                     <div className="flex items-start justify-between">
-                      <span className="grid size-12 place-items-center rounded-lg border border-[#27272e] bg-[#121215] text-[#deb26a] shadow-xs transition-colors group-hover:border-[#deb26a] group-hover:bg-[#deb26a] group-hover:text-[#09090b]">
+                      <span className="grid size-12 place-items-center rounded-lg border border-[#233427] bg-[#0d1610] text-[#deb26a] shadow-xs transition-colors group-hover:border-[#deb26a] group-hover:bg-[#deb26a] group-hover:text-[#0a110c]">
                         <Icon size={22} strokeWidth={1.5} />
                       </span>
                       <span className="font-serif text-2xl font-semibold text-[#deb26a]/40 transition-colors group-hover:text-[#deb26a]">
@@ -959,13 +975,13 @@ export default function Home() {
                     </div>
 
                     <div className="mt-6">
-                      <span className="inline-block rounded-md border border-[#27272e] bg-[#121215] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#deb26a]">
+                      <span className="inline-block rounded-md border border-[#233427] bg-[#0d1610] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#deb26a]">
                         {area.tag}
                       </span>
                       <h3 className="mt-3 font-serif text-[1.45rem] leading-tight text-white">
                         {area.title}
                       </h3>
-                      <p className="mt-3 text-[13px] leading-6 text-[#a1a1aa]">
+                      <p className="mt-3 text-[13px] leading-6 text-[#9eb1a3]">
                         {area.summary}
                       </p>
                     </div>
@@ -988,26 +1004,26 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Por Que Escolher a Marquesini Advocacia - Os 4 Pilares de Excelência (Carbon Authority Section) */}
+        {/* Por Que Escolher a Ingrid Marques Advocacia - 4 Pilares de Excelência */}
         <section
           id="diferenciais"
-          className="scroll-mt-24 border-y border-[#27272e] bg-[#09090b] py-20 text-white sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-y border-[#233427] bg-[#0d1610] py-20 text-white sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
                 dark
-                eyebrow="REPUTAÇÃO COMPROVADA NO GOOGLE"
-                description="Os pilares de Vitórias Processuais, Eficiência, Atendimento Dedicado e Confiança reconhecidos em 56 avaliações 5 estrelas no Google."
+                eyebrow="REPUTAÇÃO NOTA MÁXIMA NO GOOGLE"
+                description="Os pilares de Vitórias em Causas Complexas, Acolhimento Humano, Agilidade e Honestidade Extrema reconhecidos em 39 avaliações 5 estrelas no Google."
               >
-                Por que confiar sua causa à{" "}
+                Por que confiar seu benefício à{" "}
                 <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f5dfad] to-[#deb26a]">
-                  Marquesini Advocacia?
+                  Ingrid Marques Advocacia?
                 </span>
               </Heading>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dr. Chaiane! Gostaria de consultar sobre a minha situação jurídica com a Marquesini Advocacia."
+                  "Olá, Dra. Ingrid! Gostaria de consultar sobre a minha situação previdenciária com seu escritório."
                 )}
                 target="_blank"
                 size="md"
@@ -1018,69 +1034,69 @@ export default function Home() {
               </GlowingButton>
             </div>
 
-            {/* Grid 4 Pilares da Avaliação Google */}
+            {/* Grid 4 Pilares */}
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {/* Pilar 1: Vitórias Processuais */}
-              <div className="flex flex-col rounded-xl border border-[#27272e] bg-[#18181c] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#deb26a]/50">
-                <div className="flex size-12 items-center justify-center rounded-lg border border-[#27272e] bg-[#121215] text-[#deb26a]">
+              {/* Pilar 1: Vitórias em Casos Complexos */}
+              <div className="flex flex-col rounded-xl border border-[#233427] bg-[#142017] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#deb26a]/50">
+                <div className="flex size-12 items-center justify-center rounded-lg border border-[#233427] bg-[#0a110c] text-[#deb26a]">
                   <Award size={22} />
                 </div>
                 <h3 className="mt-4 font-serif text-xl font-bold text-white">
-                  Vitórias Processuais
+                  Causas Complexas
                 </h3>
-                <p className="mt-2 text-xs leading-6 text-[#a1a1aa]">
-                  Histórico comprovado de causas ganhas, assunção de processos arquivados e dedicação intransigente até a decisão favorável.
+                <p className="mt-2 text-xs leading-6 text-[#9eb1a3]">
+                  Histórico comprovado de reverter cortes de aposentadorias por invalidez, negativas médicas e destravar processos esquecidos pelo INSS.
                 </p>
                 <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#deb26a]">
-                  &ldquo;Assumiu o caso e ainda ganhou o processo&rdquo;
+                  &ldquo;Resolveu o caso do meu pai que parecia impossível&rdquo;
                 </span>
               </div>
 
-              {/* Pilar 2: Atendimento Dedicado */}
-              <div className="flex flex-col rounded-xl border border-[#27272e] bg-[#18181c] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#deb26a]/50">
-                <div className="flex size-12 items-center justify-center rounded-lg border border-[#27272e] bg-[#121215] text-[#deb26a]">
+              {/* Pilar 2: Acolhimento & Empatia */}
+              <div className="flex flex-col rounded-xl border border-[#233427] bg-[#142017] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#deb26a]/50">
+                <div className="flex size-12 items-center justify-center rounded-lg border border-[#233427] bg-[#0a110c] text-[#deb26a]">
                   <HeartHandshake size={22} />
                 </div>
                 <h3 className="mt-4 font-serif text-xl font-bold text-white">
-                  Atendimento Dedicado
+                  Acolhimento Humano
                 </h3>
-                <p className="mt-2 text-xs leading-6 text-[#a1a1aa]">
-                  Escuta atenciosa, cordialidade e acompanhamento direto pelo WhatsApp, explicando cada etapa com clareza e sem rodeios.
+                <p className="mt-2 text-xs leading-6 text-[#9eb1a3]">
+                  Escuta atenciosa, respeito incondicional e acolhimento de segurados que chegam desacreditados ou sem esperança de solução.
                 </p>
                 <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#deb26a]">
-                  &ldquo;Atendeu super bem, educado e atencioso&rdquo;
+                  &ldquo;Estava sem esperança e ela acolheu meu caso com dedicação&rdquo;
                 </span>
               </div>
 
-              {/* Pilar 3: Eficiência & Competência */}
-              <div className="flex flex-col rounded-xl border border-[#27272e] bg-[#18181c] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#deb26a]/50">
-                <div className="flex size-12 items-center justify-center rounded-lg border border-[#27272e] bg-[#121215] text-[#deb26a]">
-                  <Zap size={22} />
+              {/* Pilar 3: Agilidade & Eficiência */}
+              <div className="flex flex-col rounded-xl border border-[#233427] bg-[#142017] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#deb26a]/50">
+                <div className="flex size-12 items-center justify-center rounded-lg border border-[#233427] bg-[#0a110c] text-[#deb26a]">
+                  <Sparkles size={22} />
                 </div>
                 <h3 className="mt-4 font-serif text-xl font-bold text-white">
-                  Eficiência & Competência
+                  Agilidade com Êxito
                 </h3>
-                <p className="mt-2 text-xs leading-6 text-[#a1a1aa]">
-                  Respostas rápidas, cumprimento rigoroso de prazos e fundamentação jurídica sólida para a máxima agilidade da sua demanda.
+                <p className="mt-2 text-xs leading-6 text-[#9eb1a3]">
+                  Concessão de aposentadorias integrais em tempo recorde, esclarecendo cada ato processual de forma transparente e clara.
                 </p>
                 <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#deb26a]">
-                  &ldquo;Muito eficiente e sucesso no serviço&rdquo;
+                  &ldquo;Aposentadoria integral em menos de 2 meses&rdquo;
                 </span>
               </div>
 
-              {/* Pilar 4: Confiança & Justiça */}
-              <div className="flex flex-col rounded-xl border border-[#27272e] bg-[#18181c] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#deb26a]/50">
-                <div className="flex size-12 items-center justify-center rounded-lg border border-[#27272e] bg-[#121215] text-[#deb26a]">
+              {/* Pilar 4: Honestidade & Ética */}
+              <div className="flex flex-col rounded-xl border border-[#233427] bg-[#142017] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#deb26a]/50">
+                <div className="flex size-12 items-center justify-center rounded-lg border border-[#233427] bg-[#0a110c] text-[#deb26a]">
                   <Shield size={22} />
                 </div>
                 <h3 className="mt-4 font-serif text-xl font-bold text-white">
-                  Confiança & Justiça
+                  Honestidade Extrema
                 </h3>
-                <p className="mt-2 text-xs leading-6 text-[#a1a1aa]">
-                  Conduta correta, justa e ética, cobrando honorários justos e trabalhando com verdadeiro amor e dedicação à profissão.
+                <p className="mt-2 text-xs leading-6 text-[#9eb1a3]">
+                  Orientação honesta para que você não perca direitos (como 13º salário) aceitando benefícios menores por caminhos errados.
                 </p>
                 <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#deb26a]">
-                  &ldquo;Correto e justo, pode confiar no trabalho&rdquo;
+                  &ldquo;Competente ao extremo e super honesta&rdquo;
                 </span>
               </div>
             </div>
@@ -1092,11 +1108,11 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#27272e] bg-[#18181c] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#deb26a]/50 sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#233427] bg-[#142017] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#deb26a]/50 sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#27272e] bg-[#121215] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#f5dfad]">
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#233427] bg-[#0a110c] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#f5dfad]">
                       <HeartHandshake size={14} /> Atendimento Humanizado
                     </span>
                     <span className="text-xs font-semibold text-[#deb26a]">
@@ -1104,19 +1120,19 @@ export default function Home() {
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-white sm:text-[1.75rem]">
-                    Paciência, Escuta Ativa & Transparência Total
+                    Paciência, Atenção & Clareza em Cada Detalhe
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#a1a1aa]">
-                    Sabemos que momentos de litígio cível, divórcio, disputa previdenciária com o INSS ou cobranças indevidas trazem aflição. Na Marquesini Advocacia, você é ouvido com total respeito, atenção e orientações claras sobre cada passo a tomar.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#9eb1a3]">
+                    Sabemos a angústia de enfrentar filas no INSS, ter laudos recusados ou ficar meses sem salário após um acidente ou enfermidade. Na Ingrid Marques Advocacia, você é tratado com carinho, respeito e orientações claras sobre cada passo do seu benefício.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-stone-200">
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
-                      <span>Contato direto pelo WhatsApp e atualizações constantes</span>
+                      <span>Contato direto pelo WhatsApp e atualizações periódicas</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
-                      <span>Prioridade absoluta aos seus direitos e à dignidade da sua família</span>
+                      <span>Prioridade absoluta ao sustento e à dignidade da sua família</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
@@ -1124,17 +1140,17 @@ export default function Home() {
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#27272e] pt-4">
+                <div className="mt-7 border-t border-[#233427] pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dr. Chaiane! Gostaria de conversar diretamente sobre minha situação com a Marquesini Advocacia."
+                      "Olá, Dra. Ingrid! Gostaria de conversar diretamente sobre meu benefício do INSS."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#27272e] bg-[#121215] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#f5dfad] transition-all hover:border-[#deb26a] hover:bg-[#202026] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#233427] bg-[#0d1610] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#f5dfad] transition-all hover:border-[#deb26a] hover:bg-[#1a281f] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Conversar Diretamente no WhatsApp
+                      <WhatsAppIcon size={15} /> Conversar com a Dra. Ingrid no WhatsApp
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
@@ -1147,46 +1163,46 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#27272e] bg-[#18181c] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#deb26a]/50 sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#233427] bg-[#142017] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#deb26a]/50 sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#27272e] bg-[#121215] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#f5dfad]">
-                      <Scale size={14} /> Estratégia & Combate
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#233427] bg-[#0a110c] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#f5dfad]">
+                      <Scale size={14} /> Estratégia Previdenciária
                     </span>
                     <span className="text-xs font-semibold text-[#deb26a]">
-                      Postura Firme
+                      Rigor Técnico
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-white sm:text-[1.75rem]">
-                    Decisões Jurídicas Exigem Estratégia, Não Impulso
+                    Benefícios Previdenciários Exigem Estratégia, Não Improviso
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#a1a1aa]">
-                    Um processo mal conduzido pode resultar em perda de bens ou no arquivamento de direitos legítimos. O Dr. Chaiane constrói estratégias processuais consistentes, unindo provas irrefutáveis e jurisprudência sólida para buscar a vitória.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#9eb1a3]">
+                    Um pedido mal formulado pode condenar você a anos sem receber ou a aceitar um benefício assistencial que não dá direito a 13º salário nem pensão por morte. A Dra. Ingrid Marques constrói teses processuais sólidas com provas periciais fundamentadas para assegurar a melhor concessão.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-stone-200">
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
-                      <span>Especialização técnica profunda e acompanhamento minucioso</span>
+                      <span>Auditoria técnica do CNIS, vínculos e documentos médicos</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
-                      <span>Postura combativa, segura e respeitada em audiências e tribunais</span>
+                      <span>Postura firme em impugnações de laudos e perícias na Justiça</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
-                      <span>Capacidade comprovada de reverter processos complexos e arquivados</span>
+                      <span>Capacidade comprovada de reverter indeferimentos e processos travados</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#27272e] pt-4">
+                <div className="mt-7 border-t border-[#233427] pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dr. Chaiane! Preciso de ajuda jurídica para analisar meu caso com a Marquesini Advocacia."
+                      "Olá, Dra. Ingrid! Preciso de ajuda jurídica para analisar minha situação no INSS."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#27272e] bg-[#121215] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#f5dfad] transition-all hover:border-[#deb26a] hover:bg-[#202026] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#233427] bg-[#0d1610] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#f5dfad] transition-all hover:border-[#deb26a] hover:bg-[#1a281f] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
                       <WhatsAppIcon size={15} /> Analisar Meu Caso no WhatsApp
@@ -1199,29 +1215,42 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Nosso Compromisso com Você - Executive Carbon Canvas */}
-        <section className="relative overflow-hidden border-b border-[#27272e] bg-[#121215] py-20 text-white sm:py-28 lg:py-32">
-          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#c69a4c]/8 blur-3xl" />
-          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#deb26a]/8 blur-3xl" />
+        {/* Citação em Destaque & Compromisso Real - Gradient #222F25 */}
+        <section className="relative overflow-hidden border-b border-[#233427] bg-gradient-to-r from-[#0a110c] via-[#222f25] to-[#0a110c] py-20 text-white sm:py-28 lg:py-32">
+          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#c69a4c]/10 blur-3xl" />
+          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#deb26a]/10 blur-3xl" />
 
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 eyebrow="NOSSO COMPROMISSO COM VOCÊ"
-                description="A nota máxima de 5,0 ★ com 56 avaliações no Google reflete a dedicação diária e o respeito incondicional a cada cliente que confia sua causa ao Dr. Chaiane Marquesini."
+                description="A nota máxima de 5,0 ★ com 39 avaliações no Google reflete a dedicação diária e o respeito incondicional a cada cliente que confia seu sustento à Dra. Ingrid Marques."
               >
-                Cuidamos da sua causa com{" "}
+                Cuidamos do seu benefício com{" "}
                 <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f5dfad] to-[#deb26a]">
-                  ética, combatividade e dedicação total.
+                  ética, empatia e combatividade total.
                 </span>
               </Heading>
 
-              <blockquote className="mt-8 rounded-xl border border-[#27272e] bg-[#18181c] p-6 font-serif text-base italic leading-7 text-white shadow-card">
-                &ldquo;Altamente recomendado! Posso dizer com toda a certeza que o Doutor Chaiane é excelente profissional da área da advocacia, ele é extremamente competente e atencioso para com seus clientes e suas causas.&rdquo;
-                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#deb26a]">
-                  — Fabio Souza · Avaliação Verificada no Google Meu Negócio
-                </footer>
-              </blockquote>
+              <div className="mt-8 flex flex-col gap-4 rounded-xl border border-[#233427] bg-[#142017] p-6 shadow-card sm:flex-row sm:items-start">
+                <div className="relative size-16 shrink-0 overflow-hidden rounded-full border-2 border-[#deb26a]/40 shadow-sm">
+                  <Image
+                    src={FOTO_EDITORIAL_SRC}
+                    alt="Dra. Ingrid Marques — Advocacia Previdenciária"
+                    fill
+                    sizes="64px"
+                    className="object-cover object-top"
+                  />
+                </div>
+                <div>
+                  <blockquote className="font-serif text-base italic leading-7 text-white">
+                    &ldquo;A Ingrid resolveu o caso do meu pai, que parecia impossível. Ele era aposentado por invalidez desde 2006, mas com a reforma cortaram o benefício. Dra. Ingrid acolheu o caso e garantiu a aposentadoria de volta. Foi uma bênção na nossa vida!&rdquo;
+                  </blockquote>
+                  <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#deb26a]">
+                    — Karina Nogueira · Avaliação Verificada no Google Meu Negócio
+                  </footer>
+                </div>
+              </div>
             </div>
 
             <motion.div
@@ -1229,23 +1258,23 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={stagger}
-              className="divide-y divide-[#27272e]"
+              className="divide-y divide-[#233427]"
             >
               {[
                 [
                   "01",
                   "Acolhimento Humanizado & Empatia",
-                  "Você é ouvido com atenção e sem julgamentos. Analisamos cada detalhe da sua história para traçar a melhor rota jurídica.",
+                  "Você é ouvido com atenção e acolhimento. Entendemos a realidade da sua saúde, da sua família e do seu trabalho para traçar o caminho jurídico mais seguro.",
                 ],
                 [
                   "02",
                   "Transparência & Comunicação Clara",
-                  "Você nunca fica sem respostas. Mantemos você informado de cada passo do seu processo em linguagem acessível e transparente.",
+                  "Você nunca fica sem respostas. Mantemos você informado de cada andamento do seu processo no INSS ou na Justiça em linguagem simples e acolhedora.",
                 ],
                 [
                   "03",
-                  "Segurança Técnica & Combatividade por Vitórias",
-                  "Lutamos incansavelmente pelo melhor resultado possível, resguardando seus direitos, sua tranquilidade e seu patrimônio.",
+                  "Combate Incansável por Resultados",
+                  "Lutamos até a última instância, impugnando laudos médicos desfavoráveis e cobrando cada centavo de retroativos que o INSS lhe deve.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1258,7 +1287,7 @@ export default function Home() {
                   </span>
                   <div>
                     <h3 className="font-serif text-2xl text-white">{title}</h3>
-                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#a1a1aa]">
+                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#9eb1a3]">
                       {description}
                     </p>
                   </div>
@@ -1268,70 +1297,47 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Avaliações no Google (Depoimentos Reais - 5,0 ★ · 56 avaliações) */}
+        {/* Avaliações no Google (Depoimentos Reais - 5,0 ★ · 39 avaliações) */}
         <section
           id="avaliacoes"
-          className="scroll-mt-24 border-t border-[#27272e] bg-[#09090b] py-20 text-white sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#233427] bg-[#0a110c] py-20 text-white sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-            <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+            <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
-                eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Confira avaliações reais de clientes que confiaram suas causas ao Dr. Chaiane Marquesini — Marquesini Advocacia em Mantena e região."
+                dark
+                eyebrow="DEPOIMENTOS REAIS NO GOOGLE"
+                description="Nota máxima de 5,0 ★ com 39 avaliações verificadas. Histórias reais de quem teve sua aposentadoria garantida e seus direitos resguardados."
               >
-                Avaliada com nota máxima 5,0 ★ pela{" "}
+                O que dizem os clientes da{" "}
                 <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f5dfad] to-[#deb26a]">
-                  competência, vitórias e dedicação comprovada.
+                  Dra. Ingrid Marques
                 </span>
               </Heading>
 
-              {/* Verified Google Badge Card */}
-              <div className="flex flex-col gap-3 rounded-xl border border-[#27272e] bg-[#18181c] p-5 shadow-card sm:flex-row sm:items-center md:min-w-[340px]">
-                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#27272e] bg-[#121215] shadow-xs">
-                  <GoogleIcon size={30} />
-                </div>
-                <div>
-                  <div className="flex items-center gap-2">
-                    <span className="font-serif text-3xl font-bold leading-none text-white">
-                      5,0
-                    </span>
-                    <div className="flex gap-0.5 text-[#deb26a]">
-                      {Array.from({ length: 5 }, (_, i) => (
-                        <Star
-                          key={i}
-                          size={14}
-                          className="fill-[#deb26a] text-[#deb26a]"
-                        />
-                      ))}
-                    </div>
-                  </div>
-                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-white">
-                    Dr. Chaiane Marquesini — Advogado
-                  </p>
-                  <a
-                    href={GOOGLE_SEARCH_URL}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#deb26a] transition-colors hover:text-white"
-                  >
-                    56 avaliações no Google <ArrowUpRight size={13} />
-                  </a>
-                </div>
-              </div>
+              <a
+                href={GOOGLE_SEARCH_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-3 rounded-xl border border-[#233427] bg-[#142017] px-5 py-3 text-xs font-semibold text-white transition-all hover:border-[#deb26a] hover:bg-[#1a281f]"
+              >
+                <GoogleIcon size={18} />
+                <span>Ver todas as 39 avaliações no Google</span>
+                <ArrowUpRight size={15} className="text-[#deb26a]" />
+              </a>
             </div>
 
-            {/* Authentic Google Reviews Grid */}
-            <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {/* Grid of Real Reviews */}
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {clientReviews.map((review) => (
                 <article
                   key={review.name}
-                  className="group relative flex flex-col justify-between rounded-xl border border-[#27272e] bg-[#18181c] p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-[#deb26a]/60 hover:shadow-card-hover sm:p-8"
+                  className="flex flex-col justify-between rounded-xl border border-[#233427] bg-[#142017] p-6 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#deb26a]/60"
                 >
                   <div>
-                    {/* Header: Stars + Badge + Google icon */}
-                    <div className="flex items-center justify-between gap-2">
-                      <div className="flex gap-1 text-[#deb26a]">
-                        {Array.from({ length: 5 }, (_, i) => (
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-1 text-[#deb26a]">
+                        {[...Array(5)].map((_, i) => (
                           <Star
                             key={i}
                             size={14}
@@ -1339,97 +1345,59 @@ export default function Home() {
                           />
                         ))}
                       </div>
-                      <div className="flex items-center gap-1.5 text-[11px] font-medium text-[#a1a1aa]">
-                        <GoogleIcon size={13} />
-                        <span className="rounded-md border border-[#27272e] bg-[#121215] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#deb26a]">
-                          {review.badge}
-                        </span>
-                      </div>
+                      <span className="rounded-md border border-[#233427] bg-[#0d1610] px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-[#deb26a]">
+                        {review.badge}
+                      </span>
                     </div>
 
-                    {/* Review content */}
-                    <p className="mt-5 text-[14px] italic leading-relaxed text-[#d4d4d8]">
+                    <p className="mt-4 text-[13px] leading-6 text-stone-200">
                       &ldquo;{review.content}&rdquo;
                     </p>
+
+                    {review.reply && (
+                      <div className="mt-4 rounded-lg border border-[#233427] bg-[#0d1610]/70 p-3 text-[11px] leading-5 text-[#9eb1a3]">
+                        <span className="font-semibold text-[#deb26a]">
+                          Resposta da Dra. Ingrid:{" "}
+                        </span>
+                        {review.reply}
+                      </div>
+                    )}
                   </div>
 
-                  {/* Reviewer info */}
-                  <div className="mt-6 flex items-center gap-3 border-t border-[#27272e] pt-4">
-                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#27272e] bg-[#121215] font-serif text-sm font-semibold text-[#deb26a]">
-                      {review.name.charAt(0)}
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <p className="truncate font-serif text-base font-semibold text-white">
-                        {review.name}
-                      </p>
-                      <p className="text-[10px] uppercase tracking-wider text-[#a1a1aa]">
-                        {review.reviewsCount}
-                      </p>
-                    </div>
+                  <div className="mt-6 border-t border-[#233427] pt-4">
+                    <p className="font-serif text-sm font-semibold text-white">
+                      {review.name}
+                    </p>
+                    <p className="text-[10px] text-[#9eb1a3]">{review.date}</p>
                   </div>
                 </article>
               ))}
             </div>
-
-            {/* Bottom Actions and Trust Tags */}
-            <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#27272e] pt-8 sm:flex-row">
-              <div className="flex flex-wrap items-center gap-2">
-                {[
-                  "Advocacia em Mantena - MG",
-                  "Especialista em Direito Cível e Litígios",
-                  "Direito de Família, Divórcio e Inventário",
-                  "Previdenciário e Benefícios do INSS",
-                  "Direito Trabalhista e Consumidor",
-                  "Nota 5,0 no Google com 56 Avaliações",
-                ].map((tag) => (
-                  <span
-                    key={tag}
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#27272e] bg-[#18181c] px-3.5 py-1.5 text-[11px] font-medium text-[#d4d4d8] shadow-xs"
-                  >
-                    <CheckCircle2 size={13} className="text-[#deb26a]" />
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
-              <a
-                href={GOOGLE_SEARCH_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#deb26a] transition-colors hover:text-white"
-              >
-                Ver avaliações no Google{" "}
-                <ArrowUpRight
-                  size={15}
-                  className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                />
-              </a>
-            </div>
           </div>
         </section>
 
-        {/* Contato & Localização da Sede em Mantena (Executive Carbon Section) */}
+        {/* Contato & Localização da Sede em Nova Lima - MG */}
         <section
           id="contato"
-          className="scroll-mt-24 border-t border-[#27272e] bg-[#09090b] py-20 text-white sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#233427] bg-[#0d1610] py-20 text-white sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 dark
-                eyebrow="CONTATO & ATENDIMENTO"
-                description="Inicie seu atendimento diretamente pelo WhatsApp. Prestamos assistência ágil e resolutiva para clientes de Mantena, Barra de São Francisco, Leste de Minas Gerais, Noroeste Capixaba e consultoria jurídica online para todo o Brasil."
+                eyebrow="CONTATO & ATENDIMENTO PREVIDENCIÁRIO"
+                description="Inicie seu atendimento diretamente pelo WhatsApp. Prestamos assistência ágil e resolutiva para clientes de Nova Lima, Belo Horizonte, Região Metropolitana e consultoria previdenciária online para todo o Brasil."
               >
                 Estamos prontos para{" "}
                 <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f5dfad] to-[#deb26a]">
-                  escutar e defender você.
+                  escutar sua história e lutar pelo seu benefício.
                 </span>
               </Heading>
 
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dr. Chaiane! Gostaria de agendar um atendimento com a Marquesini Advocacia."
+                    "Olá, Dra. Ingrid! Gostaria de agendar um atendimento previdenciário com seu escritório."
                   )}
                   target="_blank"
                   size="lg"
@@ -1438,13 +1406,13 @@ export default function Home() {
                 >
                   <WhatsAppIcon size={17} /> Iniciar Conversa no WhatsApp
                 </GlowingButton>
-                <p className="text-[11px] leading-5 text-[#a1a1aa]">
+                <p className="text-[11px] leading-5 text-[#9eb1a3]">
                   WhatsApp e Telefone do escritório:{" "}
                   <strong className="text-white">{PHONE_DISPLAY}</strong>
                 </p>
               </div>
 
-              <div className="mt-10 space-y-4 text-xs text-[#a1a1aa]">
+              <div className="mt-10 space-y-4 text-xs text-[#9eb1a3]">
                 <div className="flex items-start gap-3">
                   <Clock
                     size={16}
@@ -1455,10 +1423,10 @@ export default function Home() {
                       Horário de Funcionamento
                     </p>
                     <p className="mt-0.5 text-stone-200">
-                      Segunda a Sexta-feira · das 08:00 às 18:00
+                      Segunda a Sexta-feira · a partir das 09:00 até as 18:00
                     </p>
                     <p className="text-[11px] text-stone-400">
-                      Atendimento presencial no escritório e consultoria jurídica online
+                      Atendimento presencial com hora marcada e consultoria online em todo o Brasil
                     </p>
                   </div>
                 </div>
@@ -1506,14 +1474,14 @@ export default function Home() {
             </div>
 
             {/* Office & Schedule Card */}
-            <div className="relative overflow-hidden rounded-xl border border-[#27272e] bg-[#18181c] p-7 shadow-card sm:p-10">
+            <div className="relative overflow-hidden rounded-xl border border-[#233427] bg-[#142017] p-7 shadow-card sm:p-10">
               <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#deb26a] to-[#f5dfad]" />
 
               <div className="flex items-center gap-4">
                 <div className="relative h-[88px] w-[280px] shrink-0 sm:h-[100px] sm:w-[330px]">
                   <Image
-                    src={LOGO_WHITE_SRC}
-                    alt="Dr. Chaiane Marquesini — Marquesini Advocacia"
+                    src={LOGO_SRC}
+                    alt="Ingrid Marques Advocacia Previdenciária"
                     fill
                     sizes="(max-width: 640px) 280px, 330px"
                     className="object-contain object-left drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
@@ -1521,76 +1489,76 @@ export default function Home() {
                 </div>
               </div>
 
-              <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-[#a1a1aa]">
+              <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-[#9eb1a3]">
                 <strong className="font-semibold text-white">
-                  Dr. Chaiane Marquesini — Advogado
+                  Ingrid Marques Advocacia Previdenciária
                 </strong>
                 <br />
-                Marquesini Advocacia
+                Dra. Ingrid Marques — Advogada Titular
                 <br />
                 {ADDRESS_TEXT}
               </address>
 
               {/* Weekly schedule table */}
-              <div className="mt-6 rounded-lg border border-[#27272e] bg-[#121215] p-4 text-xs">
+              <div className="mt-6 rounded-lg border border-[#233427] bg-[#0d1610] p-4 text-xs">
                 <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#deb26a]">
                   Atendimento & Disponibilidade
                 </p>
                 <div className="grid grid-cols-2 gap-y-1.5 text-stone-300">
-                  <span>Horário Comercial</span>
+                  <span>Horário de Funcionamento</span>
                   <span className="text-right font-semibold text-white">
-                    08:00 às 18:00 (Seg a Sex)
+                    Abre às 09:00 (Seg a Sex)
                   </span>
                   <span>Modalidade</span>
                   <span className="text-right text-[#f5dfad]">
                     Presencial & Online
                   </span>
                   <span>Sede Física</span>
-                  <span className="text-right text-stone-200">Centro, Mantena - MG</span>
+                  <span className="text-right text-stone-200">Alta de Gaya, Nova Lima - MG</span>
                   <span>Atendimento Online</span>
                   <span className="text-right text-stone-200">Todo o Brasil</span>
                 </div>
               </div>
 
-              <div className="my-7 h-px bg-[#27272e]" />
+              <div className="my-7 h-px bg-[#233427]" />
 
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <p className="text-xs text-stone-400">
-                  Atendimento resolutivo, combativo e leal
+                  Atendimento dedicado, ético e combativo
                 </p>
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dr. Chaiane! Gostaria de agendar um atendimento presencial ou online com a Marquesini Advocacia."
+                    "Olá, Dra. Ingrid! Gostaria de agendar um atendimento presencial ou online com a Ingrid Marques Advocacia."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-[#27272e] bg-[#121215] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#f5dfad] transition-colors hover:border-[#deb26a] hover:bg-[#202026] hover:text-white"
+                  className="inline-flex items-center gap-2 rounded-lg border border-[#233427] bg-[#0d1610] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#f5dfad] transition-colors hover:border-[#deb26a] hover:bg-[#1a281f] hover:text-white"
                 >
-                  <WhatsAppIcon size={14} /> Falar com o Dr. Chaiane <ArrowUpRight size={14} />
+                  <WhatsAppIcon size={14} /> Falar com a Dra. Ingrid <ArrowUpRight size={14} />
                 </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Pre-Footer CTA Strip */}
-        <section className="border-t border-[#27272e] bg-gradient-to-r from-[#09090b] via-[#18181c] to-[#09090b] px-5 py-14 text-white shadow-inner sm:px-8 sm:py-16 lg:px-12">
+        {/* Pre-Footer CTA Strip - Rich Forest Gradient #222F25 */}
+        <section className="border-t border-[#233427] bg-gradient-to-r from-[#0a110c] via-[#222f25] to-[#0a110c] px-5 py-14 text-white shadow-inner sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
               <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#deb26a]">
-                <Sparkles size={13} /> DR. CHAIANE MARQUESINI · MARQUESINI ADVOCACIA · MANTENA - MG
+                <Sparkles size={13} /> DRA. INGRID MARQUES · INGRID MARQUES ADVOCACIA PREVIDENCIÁRIA
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl">
-                Decisões jurídicas exigem estratégia, combatividade e resultados.
+                Não deixe seus direitos nas mãos do INSS. Garanta a consultoria certa.
               </h2>
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá, Dr. Chaiane! Gostaria de consultar sobre meus direitos com a Marquesini Advocacia."
+                "Olá, Dra. Ingrid! Gostaria de consultar sobre meus direitos com a Ingrid Marques Advocacia."
               )}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#c69a4c] via-[#deb26a] to-[#c69a4c] px-7 py-4 text-[11px] font-extrabold uppercase tracking-[0.14em] text-[#09090b] shadow-md transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold"
+              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#c69a4c] via-[#deb26a] to-[#c69a4c] px-7 py-4 text-[11px] font-extrabold uppercase tracking-[0.14em] text-[#0a110c] shadow-md transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold"
             >
               <WhatsAppIcon size={17} /> Falar no WhatsApp{" "}
               <ArrowUpRight size={15} />
@@ -1599,29 +1567,29 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="border-t border-[#27272e] bg-[#09090b] px-5 py-14 text-white sm:px-8 lg:px-12">
+        <footer className="border-t border-[#233427] bg-[#0a110c] px-5 py-14 text-white sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
             <div>
               <a
                 href="#inicio"
-                aria-label="Dr. Chaiane Marquesini — Marquesini Advocacia"
+                aria-label="Ingrid Marques Advocacia Previdenciária"
                 className="inline-flex items-center gap-3.5 transition-transform hover:scale-[1.01]"
               >
                 <div className="relative h-[78px] w-[275px] sm:h-[88px] sm:w-[310px]">
                   <Image
-                    src={LOGO_WHITE_SRC}
-                    alt="Dr. Chaiane Marquesini — Marquesini Advocacia - Logo Oficial"
+                    src={LOGO_SRC}
+                    alt="Ingrid Marques Advocacia Previdenciária - Logo Oficial"
                     fill
                     sizes="(max-width: 640px) 275px, 310px"
                     className="object-contain object-left drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
                   />
                 </div>
               </a>
-              <p className="mt-4 max-w-xs text-xs leading-6 text-[#a1a1aa]">
-                ⚖️ Advocacia combativa, estratégica e de excelência. Nota máxima 5,0 ★ no Google com 56 avaliações em Mantena - MG e assessoria jurídica para todo o Brasil.
+              <p className="mt-4 max-w-xs text-xs leading-6 text-[#9eb1a3]">
+                ⚖️ Advocacia Previdenciária combativa, acolhedora e de excelência. Nota máxima 5,0 ★ no Google com 39 avaliações em Nova Lima - MG e assessoria jurídica para todo o Brasil.
               </p>
               <p className="mt-3 text-[11px] font-semibold text-[#deb26a]">
-                Marquesini Advocacia · OAB/MG
+                Ingrid Marques Advocacia Previdenciária · OAB/MG
               </p>
             </div>
 
@@ -1629,15 +1597,15 @@ export default function Home() {
               <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#deb26a]">
                 Navegação
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#a1a1aa]">
+              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#9eb1a3]">
                 <a className="footer-link" href="#inicio">
                   Início
                 </a>
                 <a className="footer-link" href="#sobre">
-                  O Advogado
+                  A Advogada
                 </a>
                 <a className="footer-link" href="#atuacao">
-                  Especialidades Jurídicas
+                  Especialidades Previdenciárias
                 </a>
                 <a className="footer-link" href="#diferenciais">
                   Por Que Escolher
@@ -1655,10 +1623,10 @@ export default function Home() {
               <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#deb26a]">
                 Contato & Sede
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#a1a1aa]">
+              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#9eb1a3]">
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dr. Chaiane! Gostaria de solicitar um atendimento com a Marquesini Advocacia."
+                    "Olá, Dra. Ingrid! Gostaria de solicitar um atendimento com a Ingrid Marques Advocacia."
                   )}
                   target="_blank"
                   rel="noreferrer"
@@ -1691,15 +1659,15 @@ export default function Home() {
                   <span>{ADDRESS_TEXT}</span>
                 </div>
                 <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#deb26a]">
-                  <Clock size={14} className="shrink-0" /> Seg a Sex · 08:00 às 18:00
+                  <Clock size={14} className="shrink-0" /> Seg a Sex · Abre às 09:00
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#27272e] pt-6 text-[10px] text-stone-400 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#233427] pt-6 text-[10px] text-stone-400 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} DR. CHAIANE MARQUESINI · MARQUESINI ADVOCACIA. Todos os direitos reservados.
+              © {new Date().getFullYear()} DRA. INGRID MARQUES · INGRID MARQUES ADVOCACIA PREVIDENCIÁRIA. Todos os direitos reservados.
             </p>
             <p>
               Conteúdo informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
@@ -1714,25 +1682,25 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá, Dr. Chaiane! Gostaria de consultar sobre meus direitos com a Marquesini Advocacia."
+              "Olá, Dra. Ingrid! Gostaria de consultar sobre meus direitos previdenciários."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com o Dr. Chaiane Marquesini"
+            aria-label="Falar agora pelo WhatsApp com a Dra. Ingrid Marques"
             className="group relative flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
           >
             <WhatsAppIcon size={28} />
-            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#18181c] border border-[#27272e] px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
-              Falar no WhatsApp
+            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#142017] border border-[#233427] px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
+              Falar com a Dra. Ingrid
             </span>
           </a>
         </aside>
 
-        {/* Modal de Detalhes da Área de Atuação */}
+        {/* Modal de Detalhes da Especialidade Previdenciária */}
         <AnimatePresence>
           {activeArea && (
             <motion.div
-              className="fixed inset-0 z-50 flex items-end justify-center bg-black/75 p-0 backdrop-blur-md sm:items-center sm:p-6"
+              className="fixed inset-0 z-50 flex items-end justify-center bg-black/80 p-0 backdrop-blur-md sm:items-center sm:p-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -1747,18 +1715,18 @@ export default function Home() {
                 exit={{ opacity: 0, y: 16, scale: 0.99 }}
                 transition={{ duration: 0.24 }}
                 onClick={(event) => event.stopPropagation()}
-                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-2xl border border-[#27272e] bg-[#18181c] p-7 shadow-2xl sm:max-w-xl sm:rounded-2xl sm:p-10 text-white"
+                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-2xl border border-[#233427] bg-[#142017] p-7 shadow-2xl sm:max-w-xl sm:rounded-2xl sm:p-10 text-white"
               >
                 <button
                   type="button"
                   aria-label="Fechar detalhes da especialidade"
                   onClick={() => setActiveArea(null)}
-                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#27272e] bg-[#121215] text-[#d4d4d8] transition-colors hover:border-[#deb26a] hover:bg-[#202026] hover:text-[#deb26a]"
+                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#233427] bg-[#0d1610] text-[#d4d4d8] transition-colors hover:border-[#deb26a] hover:bg-[#1a281f] hover:text-[#deb26a]"
                 >
                   <X size={18} />
                 </button>
 
-                <p className="eyebrow">ESPECIALIDADE JURÍDICA</p>
+                <p className="eyebrow">ESPECIALIDADE PREVIDENCIÁRIA</p>
 
                 <h2
                   id="area-dialog-title"
@@ -1767,11 +1735,11 @@ export default function Home() {
                   {activeArea.title}
                 </h2>
 
-                <p className="mt-5 text-sm leading-7 text-[#a1a1aa]">
+                <p className="mt-5 text-sm leading-7 text-[#9eb1a3]">
                   {activeArea.details}
                 </p>
 
-                <div className="mt-6 border-t border-[#27272e] pt-5">
+                <div className="mt-6 border-t border-[#233427] pt-5">
                   <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#deb26a]">
                     Principais demandas atendidas pelo escritório:
                   </p>
@@ -1801,7 +1769,7 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={() => setActiveArea(null)}
-                    className="px-5 py-3 text-xs font-semibold text-[#a1a1aa] transition-colors hover:text-white"
+                    className="px-5 py-3 text-xs font-semibold text-[#9eb1a3] transition-colors hover:text-white"
                   >
                     Fechar
                   </button>

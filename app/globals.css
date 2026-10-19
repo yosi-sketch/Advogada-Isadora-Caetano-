@@ -2,11 +2,14 @@
 
 :root {
   color-scheme: dark;
-  --brand-bg: #09090b;
-  --brand-bg-alt: #121215;
-  --brand-surface: #18181c;
-  --brand-carbon: #18181c;
-  --brand-carbon-elevated: #202026;
+  --brand-bg: #0a110c;
+  --brand-bg-alt: #0f1912;
+  --brand-surface: #142017;
+  --brand-surface-elevated: #1a281f;
+  --brand-forest-dark: #121c15;
+  --brand-forest: #222f25;
+  --brand-forest-light: #2c3d30;
+  --brand-forest-accent: #374c3d;
   --brand-gold: #deb26a;
   --brand-gold-accent: #e5be7a;
   --brand-gold-light: #f5dfad;
@@ -14,24 +17,28 @@
   --brand-gold-dark: #a47e3b;
   --brand-gold-deep: #7d5b18;
   --brand-ink: #ffffff;
-  --brand-ink-soft: #a1a1aa;
-  --brand-ink-muted: #71717a;
-  --brand-border: #27272e;
+  --brand-ink-soft: #d8e2db;
+  --brand-ink-muted: #95a69a;
+  --brand-border: #233427;
+  --brand-border-elevated: #2d4232;
+  --brand-border-gold: rgba(222, 178, 106, 0.35);
 }
 
 @theme inline {
   --font-serif: var(--font-serif), var(--font-display), "Playfair Display", "Cormorant Garamond", serif;
   --font-cinzel: var(--font-cinzel), "Cinzel", "Trajan Pro", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  --color-brand-bg: #09090b;
-  --color-brand-alt: #121215;
-  --color-brand-surface: #18181c;
+  --color-brand-bg: #0a110c;
+  --color-brand-alt: #0f1912;
+  --color-brand-surface: #142017;
+  --color-brand-forest: #222f25;
+  --color-brand-forest-light: #2c3d30;
   --color-brand-gold: #deb26a;
   --color-brand-gold-accent: #e5be7a;
-  --shadow-card: 0 10px 32px rgba(0, 0, 0, 0.6);
-  --shadow-card-hover: 0 16px 40px rgba(0, 0, 0, 0.85);
+  --shadow-card: 0 10px 32px rgba(0, 0, 0, 0.65);
+  --shadow-card-hover: 0 18px 44px rgba(0, 0, 0, 0.85);
   --shadow-gold: 0 8px 24px rgba(222, 178, 106, 0.28);
-  --shadow-carbon: 0 12px 36px rgba(0, 0, 0, 0.9);
+  --shadow-forest: 0 12px 36px rgba(10, 17, 12, 0.95);
 }
 
 html {
@@ -40,15 +47,15 @@ html {
 }
 
 body {
-  background: #09090b;
+  background: #0a110c;
   color: #ffffff;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   caret-color: #deb26a;
 }
 
 ::selection {
-  background: #deb26a;
-  color: #09090b;
+  background: #222f25;
+  color: #f5dfad;
 }
 
 .font-cinzel {
@@ -91,7 +98,7 @@ body {
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #a1a1aa;
+  color: #a3b5a8;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -133,13 +140,13 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #09090b;
+  background: #0a110c;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #09090b;
+  border: 2px solid #0a110c;
   border-radius: 999px;
-  background: #27272e;
+  background: #233427;
 }
 
 ::-webkit-scrollbar-thumb:hover {

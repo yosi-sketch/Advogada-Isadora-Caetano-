@@ -36,35 +36,34 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#09090b",
+  themeColor: "#0a110c",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.marquesiniadvocacia.com.br"),
+  metadataBase: new URL("https://www.ingridmarquesadvocacia.com.br"),
   title:
-    "Dr. Chaiane Marquesini — Advogado · Marquesini Advocacia em Mantena - MG",
+    "Dra. Ingrid Marques — Advocacia Previdenciária · Nova Lima - MG",
   description:
-    "Dr. Chaiane Marquesini — Advogado (Marquesini Advocacia). Nota máxima 5,0 ★ com 56 avaliações no Google. Atuação jurídica combativa e de excelência em Direito Civil, Família, Sucessões, Previdenciário, Trabalhista e do Consumidor em Mantena - MG e online para todo o Brasil.",
+    "Dra. Ingrid Marques — Advocacia Previdenciária. Nota máxima 5,0 ★ com 39 avaliações no Google. Atuação jurídica especializada e combativa em Aposentadorias, Auxílio-Acidente, Auxílio-Doença, BPC/LOAS, Planejamento e Reversão de Negativas do INSS em Nova Lima - MG e online para todo o Brasil.",
   keywords: [
-    "Dr. Chaiane Marquesini",
-    "Dr. Chaiane Marquesini Advogado",
-    "Marquesini Advocacia",
-    "Chaiane Marquesini",
-    "Advogado em Mantena",
-    "Advogado Mantena MG",
-    "Escritório de Advocacia Mantena",
-    "Advocacia Mantena Centro",
-    "Advogado Barra de São Francisco",
-    "Direito de Família Mantena",
-    "Divórcio e Inventário Mantena",
-    "Advogado Previdenciário Mantena",
-    "Advogado Trabalhista Mantena",
-    "Ações Cíveis e Indenizações",
-    "Consultoria Jurídica Mantena MG",
+    "Dra. Ingrid Marques",
+    "Ingrid Marques Advocacia Previdenciária",
+    "Dra. Ingrid Marques Advogada",
+    "Advocacia Previdenciária Nova Lima",
+    "Advogado INSS Nova Lima MG",
+    "Aposentadoria Especial Nova Lima",
+    "Aposentadoria por Invalidez INSS",
+    "Auxílio Acidente Nova Lima MG",
+    "Auxílio Doença INSS Indeferido",
+    "BPC LOAS Nova Lima",
+    "Planejamento Previdenciário MG",
+    "Reversão Negativa INSS",
+    "Advogada Previdenciária Belo Horizonte e Região",
+    "Consultoria Previdenciária Nova Lima",
   ],
-  authors: [{ name: "Dr. Chaiane Marquesini — Advogado" }],
-  creator: "Dr. Chaiane Marquesini — Advogado",
-  publisher: "Marquesini Advocacia",
+  authors: [{ name: "Dra. Ingrid Marques — Advocacia Previdenciária" }],
+  creator: "Dra. Ingrid Marques — Advocacia Previdenciária",
+  publisher: "Ingrid Marques Advocacia Previdenciária",
   formatDetection: {
     telephone: true,
     address: true,
@@ -81,18 +80,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.marquesiniadvocacia.com.br",
+    url: "https://www.ingridmarquesadvocacia.com.br",
     title:
-      "Dr. Chaiane Marquesini — Advogado · Marquesini Advocacia",
+      "Dra. Ingrid Marques — Advocacia Previdenciária · Nova Lima - MG",
     description:
-      "Advocacia de excelência com nota máxima 5,0 ★ e 56 avaliações no Google. Sede no Centro de Mantena - MG e atendimento jurídico em todo o Brasil.",
-    siteName: "Marquesini Advocacia",
+      "Advocacia Previdenciária de excelência com nota máxima 5,0 ★ e 39 avaliações no Google. Sede no Alta de Gaya, Nova Lima - MG e atendimento jurídico em todo o Brasil.",
+    siteName: "Ingrid Marques Advocacia Previdenciária",
     images: [
       {
         url: "/logo.png",
         width: 1024,
         height: 341,
-        alt: "Marquesini Advocacia — Dr. Chaiane Marquesini",
+        alt: "Ingrid Marques Advocacia Previdenciária — Dra. Ingrid Marques",
       },
     ],
   },
@@ -106,41 +105,40 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Dr. Chaiane Marquesini — Advogado",
-    alternateName: "Marquesini Advocacia",
+    name: "Ingrid Marques Advocacia Previdenciária",
+    alternateName: "Dra. Ingrid Marques — Advogada Previdenciária",
     founder: [
       {
         "@type": "Person",
-        name: "Dr. Chaiane Marquesini",
-        jobTitle: "Advogado Titular · Marquesini Advocacia",
+        name: "Dra. Ingrid Marques",
+        jobTitle: "Advogada Titular · Ingrid Marques Advocacia Previdenciária",
       },
     ],
-    telephone: "+55-33-98884-5617",
-    url: "https://www.marquesiniadvocacia.com.br",
-    image: "https://www.marquesiniadvocacia.com.br/logo.png",
+    telephone: "+55-31-99293-8746",
+    url: "https://www.ingridmarquesadvocacia.com.br",
+    image: "https://www.ingridmarquesadvocacia.com.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. Pres. Tancredo Neves, 494 - Centro",
-      addressLocality: "Mantena",
+      streetAddress: "R. Seis, 147 - Alta de Gaya",
+      addressLocality: "Nova Lima",
       addressRegion: "MG",
-      postalCode: "35290-065",
+      postalCode: "34012-856",
       addressCountry: "BR",
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "56",
+      reviewCount: "39",
     },
     areaServed: [
-      "Mantena",
-      "Barra de São Francisco",
-      "Nova Belém",
-      "Mendes Pimentel",
-      "Itabirinha",
-      "São João do Manteninha",
+      "Nova Lima",
+      "Belo Horizonte",
+      "Contagem",
+      "Betim",
+      "Ribeirão das Neves",
+      "Sabará",
       "Minas Gerais",
-      "Espírito Santo",
       "Brasil",
     ],
     openingHoursSpecification: [
@@ -153,14 +151,13 @@ export default function RootLayout({
           "Thursday",
           "Friday",
         ],
-        opens: "08:00",
+        opens: "09:00",
         closes: "18:00",
       },
     ],
     sameAs: [
-      "https://www.instagram.com/chmarquesini/",
-      "https://wa.me/5533988845617",
-      "https://www.google.com/search?q=Dr.+Chaiane+Marquesini+%E2%80%94+Advogado%0AMantena+%C2%B7+MG",
+      "https://wa.me/5531992938746",
+      "https://www.google.com/search?q=Ingrid+Marques+Advocacia+Previdenci%C3%A1ria%0ANova+Lima+%C2%B7+MG&sourceid=chrome&ie=UTF-8#",
     ],
   };
 
@@ -178,7 +175,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#09090b] font-sans text-white antialiased selection:bg-[#deb26a] selection:text-[#09090b]">
+      <body className="min-h-screen overflow-x-clip bg-[#0a110c] font-sans text-white antialiased selection:bg-[#222f25] selection:text-[#f5dfad]">
         {children}
       </body>
     </html>
