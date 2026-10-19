@@ -36,34 +36,35 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#060d18",
+  themeColor: "#09090b",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.paixaoadvocacia.com.br"),
+  metadataBase: new URL("https://www.marquesiniadvocacia.com.br"),
   title:
-    "Paixão Advocacia e Advogados Associados · Consultoria Jurídica em Sarzedo - MG",
+    "Dr. Chaiane Marquesini — Advogado · Marquesini Advocacia em Mantena - MG",
   description:
-    "Paixão Advocacia e Advogados Associados (AR Paixão). Nota máxima 5,0 ★ com 147 avaliações no Google. Atuação especializada em Direito de Família, Divórcio, Guarda, Pensão Alimentícia, Inventários, Cível e Trabalhista em Sarzedo - MG e online para todo o Brasil.",
+    "Dr. Chaiane Marquesini — Advogado (Marquesini Advocacia). Nota máxima 5,0 ★ com 56 avaliações no Google. Atuação jurídica combativa e de excelência em Direito Civil, Família, Sucessões, Previdenciário, Trabalhista e do Consumidor em Mantena - MG e online para todo o Brasil.",
   keywords: [
-    "Paixão Advocacia",
-    "Paixão Advocacia e Advogados Associados",
-    "AR Paixão Advocacia e Consultoria Jurídica",
-    "Advocacia em Sarzedo",
-    "Advogado em Sarzedo MG",
-    "Advogada Sarzedo",
-    "Advocacia Sarzedo Centro",
-    "Direito de Família Sarzedo",
-    "Divórcio Consensual e Litigioso Sarzedo",
-    "Guarda de Filhos e Pensão Alimentícia",
-    "Inventário e Sucessões Sarzedo",
-    "Escritório de Advocacia Sarzedo MG",
-    "Advogado Betim Contagem Ibirité Grande BH",
-    "Consultoria Jurídica Sarzedo",
+    "Dr. Chaiane Marquesini",
+    "Dr. Chaiane Marquesini Advogado",
+    "Marquesini Advocacia",
+    "Chaiane Marquesini",
+    "Advogado em Mantena",
+    "Advogado Mantena MG",
+    "Escritório de Advocacia Mantena",
+    "Advocacia Mantena Centro",
+    "Advogado Barra de São Francisco",
+    "Direito de Família Mantena",
+    "Divórcio e Inventário Mantena",
+    "Advogado Previdenciário Mantena",
+    "Advogado Trabalhista Mantena",
+    "Ações Cíveis e Indenizações",
+    "Consultoria Jurídica Mantena MG",
   ],
-  authors: [{ name: "Paixão Advocacia e Advogados Associados" }],
-  creator: "Paixão Advocacia e Advogados Associados",
-  publisher: "Paixão Advocacia e Advogados Associados",
+  authors: [{ name: "Dr. Chaiane Marquesini — Advogado" }],
+  creator: "Dr. Chaiane Marquesini — Advogado",
+  publisher: "Marquesini Advocacia",
   formatDetection: {
     telephone: true,
     address: true,
@@ -80,18 +81,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.paixaoadvocacia.com.br",
+    url: "https://www.marquesiniadvocacia.com.br",
     title:
-      "Paixão Advocacia e Advogados Associados · Consultoria Jurídica",
+      "Dr. Chaiane Marquesini — Advogado · Marquesini Advocacia",
     description:
-      "Advocacia de alto padrão com nota máxima 5,0 ★ e 147 avaliações no Google. Sede no Centro de Sarzedo - MG e assessoria jurídica em todo o Brasil.",
-    siteName: "Paixão Advocacia e Advogados Associados",
+      "Advocacia de excelência com nota máxima 5,0 ★ e 56 avaliações no Google. Sede no Centro de Mantena - MG e atendimento jurídico em todo o Brasil.",
+    siteName: "Marquesini Advocacia",
     images: [
       {
-        url: "/logo-seal.png",
-        width: 600,
-        height: 600,
-        alt: "Paixão Advocacia e Advogados Associados",
+        url: "/logo.png",
+        width: 1024,
+        height: 341,
+        alt: "Marquesini Advocacia — Dr. Chaiane Marquesini",
       },
     ],
   },
@@ -105,40 +106,41 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Paixão Advocacia e Advogados Associados",
-    alternateName: "AR Paixão — Advocacia e Consultoria Jurídica",
+    name: "Dr. Chaiane Marquesini — Advogado",
+    alternateName: "Marquesini Advocacia",
     founder: [
       {
         "@type": "Person",
-        name: "Dra. Paixão",
-        jobTitle:
-          "Advogada e Sócia Titular · Paixão Advocacia",
+        name: "Dr. Chaiane Marquesini",
+        jobTitle: "Advogado Titular · Marquesini Advocacia",
       },
     ],
-    telephone: "+55-31-99676-9370",
-    url: "https://www.paixaoadvocacia.com.br",
-    image: "https://www.paixaoadvocacia.com.br/logo-seal.png",
+    telephone: "+55-33-98884-5617",
+    url: "https://www.marquesiniadvocacia.com.br",
+    image: "https://www.marquesiniadvocacia.com.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. dos Rodoviários, 103 - LOJA 205 - Centro",
-      addressLocality: "Sarzedo",
+      streetAddress: "R. Pres. Tancredo Neves, 494 - Centro",
+      addressLocality: "Mantena",
       addressRegion: "MG",
-      postalCode: "32450-000",
+      postalCode: "35290-065",
       addressCountry: "BR",
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "147",
+      reviewCount: "56",
     },
     areaServed: [
-      "Sarzedo",
-      "Betim",
-      "Ibirité",
-      "Contagem",
-      "Belo Horizonte",
+      "Mantena",
+      "Barra de São Francisco",
+      "Nova Belém",
+      "Mendes Pimentel",
+      "Itabirinha",
+      "São João do Manteninha",
       "Minas Gerais",
+      "Espírito Santo",
       "Brasil",
     ],
     openingHoursSpecification: [
@@ -151,14 +153,14 @@ export default function RootLayout({
           "Thursday",
           "Friday",
         ],
-        opens: "09:00",
+        opens: "08:00",
         closes: "18:00",
       },
     ],
     sameAs: [
-      "https://www.instagram.com/paixao_advocacia/",
-      "https://wa.me/5531996769370",
-      "https://www.google.com/search?q=Paix%C3%A3o+Advocacia+e+Advogados+Associados%0ASarzedo+%C2%B7+MG",
+      "https://www.instagram.com/chmarquesini/",
+      "https://wa.me/5533988845617",
+      "https://www.google.com/search?q=Dr.+Chaiane+Marquesini+%E2%80%94+Advogado%0AMantena+%C2%B7+MG",
     ],
   };
 
@@ -176,7 +178,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#f9f7f4] font-sans text-[#080f1d] antialiased selection:bg-[#d4a862] selection:text-[#ffffff]">
+      <body className="min-h-screen overflow-x-clip bg-[#09090b] font-sans text-white antialiased selection:bg-[#deb26a] selection:text-[#09090b]">
         {children}
       </body>
     </html>

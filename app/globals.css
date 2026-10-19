@@ -1,38 +1,37 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: light;
-  --brand-bg: #f9f7f4;
-  --brand-bg-alt: #f4f0ea;
-  --brand-surface: #ffffff;
-  --brand-navy: #060d18;
-  --brand-navy-light: #0a1526;
-  --brand-navy-surface: #0e1e34;
-  --brand-gold: #d4a862;
-  --brand-gold-accent: #dfb772;
-  --brand-gold-light: #fbf7ee;
-  --brand-gold-highlight: #f7df9e;
-  --brand-gold-dark: #9e6f2d;
-  --brand-gold-deep: #734b16;
-  --brand-ink: #080f1d;
-  --brand-ink-soft: #3e4d60;
-  --brand-ink-muted: #64748b;
-  --brand-border: #e5dfd5;
+  color-scheme: dark;
+  --brand-bg: #09090b;
+  --brand-bg-alt: #121215;
+  --brand-surface: #18181c;
+  --brand-carbon: #18181c;
+  --brand-carbon-elevated: #202026;
+  --brand-gold: #deb26a;
+  --brand-gold-accent: #e5be7a;
+  --brand-gold-light: #f5dfad;
+  --brand-gold-highlight: #f8e5b9;
+  --brand-gold-dark: #a47e3b;
+  --brand-gold-deep: #7d5b18;
+  --brand-ink: #ffffff;
+  --brand-ink-soft: #a1a1aa;
+  --brand-ink-muted: #71717a;
+  --brand-border: #27272e;
 }
 
 @theme inline {
   --font-serif: var(--font-serif), var(--font-display), "Playfair Display", "Cormorant Garamond", serif;
   --font-cinzel: var(--font-cinzel), "Cinzel", "Trajan Pro", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  --color-brand-bg: #f9f7f4;
-  --color-brand-alt: #f4f0ea;
-  --color-brand-navy: #060d18;
-  --color-brand-gold: #d4a862;
-  --color-brand-gold-accent: #dfb772;
-  --shadow-card: 0 10px 32px rgba(6, 13, 24, 0.06);
-  --shadow-card-hover: 0 16px 40px rgba(6, 13, 24, 0.12);
-  --shadow-gold: 0 8px 24px rgba(212, 168, 98, 0.28);
-  --shadow-navy: 0 12px 36px rgba(6, 13, 24, 0.45);
+  --color-brand-bg: #09090b;
+  --color-brand-alt: #121215;
+  --color-brand-surface: #18181c;
+  --color-brand-gold: #deb26a;
+  --color-brand-gold-accent: #e5be7a;
+  --shadow-card: 0 10px 32px rgba(0, 0, 0, 0.6);
+  --shadow-card-hover: 0 16px 40px rgba(0, 0, 0, 0.85);
+  --shadow-gold: 0 8px 24px rgba(222, 178, 106, 0.28);
+  --shadow-carbon: 0 12px 36px rgba(0, 0, 0, 0.9);
 }
 
 html {
@@ -41,15 +40,15 @@ html {
 }
 
 body {
-  background: #f9f7f4;
-  color: #080f1d;
+  background: #09090b;
+  color: #ffffff;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #d4a862;
+  caret-color: #deb26a;
 }
 
 ::selection {
-  background: #d4a862;
-  color: #ffffff;
+  background: #deb26a;
+  color: #09090b;
 }
 
 .font-cinzel {
@@ -65,7 +64,7 @@ body {
   line-height: 1.4;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #9e6f2d;
+  color: #deb26a;
 }
 
 .eyebrow-dark {
@@ -77,7 +76,7 @@ body {
   line-height: 1.4;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #dfb772;
+  color: #deb26a;
 }
 
 .eyebrow::before,
@@ -92,7 +91,7 @@ body {
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #3e4d60;
+  color: #a1a1aa;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -106,7 +105,7 @@ body {
   bottom: 0;
   left: 0;
   height: 1.5px;
-  background: #d4a862;
+  background: #deb26a;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -114,7 +113,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #080f1d;
+  color: #ffffff;
 }
 
 .nav-link:hover::after {
@@ -134,17 +133,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f9f7f4;
+  background: #09090b;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #f9f7f4;
+  border: 2px solid #09090b;
   border-radius: 999px;
-  background: #d8d0c4;
+  background: #27272e;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #d4a862;
+  background: #deb26a;
 }
 
 @media (prefers-reduced-motion: reduce) {

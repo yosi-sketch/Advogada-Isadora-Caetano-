@@ -1,36 +1,37 @@
-# PAIXÃO ADVOCACIA E ADVOGADOS ASSOCIADOS
-## AR Paixão · Advocacia e Consultoria Jurídica · Sarzedo - MG
+# DR. CHAIANE MARQUESINI — ADVOGADO
+## Marquesini Advocacia · Mantena - MG
 
 ## Plataforma
-Landing page institucional de altíssimo padrão desenvolvida em Next.js 16 (App Router) e Tailwind CSS v4, projetada para transmitir prestígio jurídico, sobriedade, transparência e alta resolutividade, com navegação fluida, modais interativos para detalhamento das especialidades e integração direta com WhatsApp.
+Landing page institucional de altíssimo padrão desenvolvida em Next.js 16 (App Router) e Tailwind CSS v4, projetada para transmitir autoridade jurídica, combatividade, solidez técnica e transparência, com navegação fluida, modais interativos para detalhamento das especialidades e integração direta com WhatsApp.
 
 ## Público
-Famílias, pessoas físicas, trabalhadores e empresas que buscam segurança jurídica de alto padrão: divórcio consensual ou litigioso, guarda de filhos e pensão alimentícia, inventários e partilhas sucessórias, contratos, ações indenizatórias, direitos trabalhistas e consultoria preventiva em Sarzedo, Betim, Ibirité, Contagem, Belo Horizonte e em todo o Brasil (via atendimento online).
+Pessoas físicas, famílias, trabalhadores, segurados do INSS e empresas que buscam defesa jurídica combativa e de excelência: Direito Cível e Indenizações, Direito de Família e Divórcio, Sucessões e Inventário, Benefícios do INSS e Aposentadorias, Direito Trabalhista e Defesa do Consumidor contra abusos bancários em Mantena, no Leste de Minas Gerais, Noroeste Capixaba (Barra de São Francisco e região) e em todo o Brasil (via atendimento online).
 
 ## Objetivo
-Apresentar a advocacia de excelência liderada pela Paixão Advocacia e Advogados Associados, destacando a nota máxima de **5,0 estrelas com 147 avaliações no Google Meu Negócio**, viabilizando o contato direto e humanizado via WhatsApp (31) 99676-9370.
+Apresentar a advocacia de alto impacto liderada pelo Dr. Chaiane Marquesini, destacando a nota máxima de **5,0 estrelas com 56 avaliações no Google Meu Negócio** (100% 5 estrelas), histórico comprovado de vitórias processuais e reversão de causas complexas, viabilizando o contato direto via WhatsApp (33) 98884-5617.
 
 ## Identidade Visual & Cores (Extraída Diretamente do Novo Logo)
-- **Marca:** AR Paixão · Advocacia e Consultoria Jurídica / Paixão Advocacia e Advogados Associados
-- **Estilo:** Imperial Luxury & Sovereign Authority — Monograma heraldico AR em ouro 3D metálico com lapidação chanfrada e preenchimento interno azul-marinho prussiano profundo; tipografia serifada de alto contraste e acabamento editorial.
+- **Marca:** Dr. Chaiane Marquesini — Advogado / Marquesini Advocacia
+- **Estilo:** Imperial Luxury & Forensic Authority — Medalhão circular clássico em ouro 3D metálico com Balança da Justiça chanfrada sobre fundo azul-marinho profundo/obsidiana; tipografia serifada de alto contraste romano com divisor de estrela dourada de quatro pontas.
 - **Paleta de Cores:**
-  - **Azul-Marinho Soberano / Prussian Sapphire (Base de Autoridade):** `#060D18`, `#0A1526`, `#0E1E34`, `#132640` (extraído do preenchimento e profundidade do monograma e do estúdio da foto oficial).
-  - **Ouro Imperial Metálico (Acentos, Monograma e Detalhes):** `#D4A862`, `#DFB772`, `#F7DF9E`, `#9E6F2D`, `#734B16` (extraído diretamente do brilho e bevel do logo).
-  - **Fundo Principal (Alabastro Silk & Warm Alabaster):** `#F9F7F4`, `#F4F0EA`, `#FFFFFF`.
-  - **Bordas & Delimitadores:** `#E5DFD5` em superfícies claras e `rgba(212, 168, 98, 0.22)` em superfícies escuras.
+  - **Preto Obsidiana / Midnight Navy (Base de Autoridade):** `#070B14`, `#0D1424`, `#131C30` (extraído do fundo do medalhão do logo e da iluminação de estúdio do Dr. Chaiane).
+  - **Ouro Imperial / Champagne Gold (Acentos, Balança e Bevel do Logo):** `#DEB26A`, `#E5BE7A`, `#F5DFAD`, `#A47E3B`, `#7D5B18` (extraído diretamente do brilho metálico do logo).
+  - **Azul Royal Alfaiataria (Acento de Destaque):** `#1A3B6B` (extraído do terno de alfaiataria do Dr. Chaiane).
+  - **Fundo Principal (Alabastro Silk & Warm Canvas):** `#FAF8F4`, `#F3EFE6`, `#FFFFFF`.
+  - **Bordas & Delimitadores:** `#E6E0D5` em superfícies claras e `rgba(222, 178, 106, 0.22)` em superfícies escuras.
 - **Tipografia:**
-  - Cinzel / Playfair Display para títulos nobres e marca clássica
+  - Cinzel / Playfair Display para títulos nobres e marca clássica alinhada ao logotipo
   - Cormorant Garamond para elegância editorial
   - Plus Jakarta Sans para leitura confortável, limpa e moderna no corpo de texto
-- **Tom de voz:** Firme, seguro, transparente, ético, leal, ágil, humano e resolutivo.
+- **Tom de voz:** Combativo, estratégico, firme, seguro, ético, justo, leal, ágil, humano e resolutivo.
 
 ## Conteúdo e Mídia
-- Logotipo oficial, monograma e selos (`public/logo.png`, `public/logo-monogram.png`, `public/logo-seal.png`).
-- Foto hero: Advogada em traje clássico contemporâneo e portal escultural em azul marinho e dourado (`public/dra-hero.jpg`, `public/hero.jpg`).
-- Foto sobre: Enquadramento focado na sócia-titular (`public/dra-sobre.jpg`, `public/about.jpg`).
-- Telefone / WhatsApp: (31) 99676-9370 (`5531996769370`).
-- E-mail: contato@paixaoadvocacia.com.br.
-- Redes Sociais: Instagram @paixao_advocacia (`https://www.instagram.com/paixao_advocacia/`).
-- Localização: R. dos Rodoviários, 103 - LOJA 205 - Centro, Sarzedo - MG, 32450-000 (atendimento presencial e online em todo o Brasil).
-- Horário de funcionamento: Segunda a Sexta das 09:00 às 18:00 (Abre seg. às 09:00).
-- Prova social: 5,0 estrelas com 147 avaliações no Google Meu Negócio.
+- Logotipo oficial, selo e medalhão (`public/logo.png`, `public/logo-marquesini.png`, `public/logo-seal.png`).
+- Foto hero: Dr. Chaiane Marquesini em poltrona de couro e terno azul royal (`public/dr-chaiane-hero.png`, `public/hero.png`).
+- Foto sobre: Dr. Chaiane Marquesini em pose institucional de alfaiataria (`public/dr-chaiane-about.png`, `public/about.png`).
+- Telefone / WhatsApp: (33) 98884-5617 (`5533988845617`).
+- E-mail: contato@marquesiniadvocacia.com.br.
+- Redes Sociais: Instagram @chmarquesini (`https://www.instagram.com/chmarquesini/`).
+- Localização: R. Pres. Tancredo Neves, 494 - Centro, Mantena - MG, 35290-065 (atendimento presencial e online em todo o Brasil).
+- Horário de funcionamento: Segunda a Sexta das 08:00 às 18:00 (Abre seg. às 08:00).
+- Prova social: 5,0 estrelas com 56 avaliações no Google Meu Negócio (100% 5★).

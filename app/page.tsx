@@ -28,30 +28,30 @@ import {
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5531996769370";
-const PHONE_DISPLAY = "(31) 99676-9370";
-const EMAIL_CONTACT = "contato@paixaoadvocacia.com.br";
-const INSTAGRAM_URL = "https://www.instagram.com/paixao_advocacia/";
-const INSTAGRAM_HANDLE = "@paixao_advocacia";
+const WHATSAPP_NUMBER = "5533988845617";
+const PHONE_DISPLAY = "(33) 98884-5617";
+const EMAIL_CONTACT = "contato@marquesiniadvocacia.com.br";
+const INSTAGRAM_URL = "https://www.instagram.com/chmarquesini/";
+const INSTAGRAM_HANDLE = "@chmarquesini";
 
 const ADDRESS_TEXT =
-  "R. dos Rodoviários, 103 - LOJA 205 - Centro, Sarzedo - MG, 32450-000 · Atendimento Presencial & Online em Todo o Brasil";
+  "R. Pres. Tancredo Neves, 494 - Centro, Mantena - MG, 35290-065 · Atendimento Presencial & Online em Todo o Brasil";
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Paix%C3%A3o+Advocacia+e+Advogados+Associados%0ASarzedo+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=Dr.+Chaiane+Marquesini+%E2%80%94+Advogado%0AMantena+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
 
 const LOGO_SRC = "/logo.png";
 const LOGO_WHITE_SRC = "/logo.png";
 const LOGO_SEAL_SRC = "/logo-seal.png";
-const LOGO_MONOGRAM_SRC = "/logo-monogram.png";
-const FOTO_HERO_SRC = "/dra-hero.jpg";
-const FOTO_SOBRE_SRC = "/dra-sobre.jpg";
+const LOGO_MONOGRAM_SRC = "/logo-seal.png";
+const FOTO_HERO_SRC = "/dr-chaiane-hero.png";
+const FOTO_SOBRE_SRC = "/dr-chaiane-about.png";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá! Gostaria de consultar sobre meus direitos e agendar um atendimento com a Paixão Advocacia.";
+    "Olá, Dr. Chaiane Marquesini! Gostaria de consultar sobre a minha situação jurídica e agendar um atendimento com a Marquesini Advocacia.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -161,199 +161,199 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "direito-de-familia-filhos",
-    title: "Direito de Família & Proteção dos Filhos",
-    icon: Users,
-    tag: "Guarda · Pensão Alimentícia · Convivência · Afeto",
-    summary:
-      "Defesa intransigente do melhor interesse dos filhos, fixação justa e execução de alimentos, guarda compartilhada ou unilateral e proteção integral.",
-    details:
-      "A Paixão Advocacia e Advogados Associados é referência em Sarzedo e em toda a Região Metropolitana de Belo Horizonte pelo acolhimento humanizado e firmeza técnica na defesa das relações familiares. Atuamos com extrema combatividade processual em pedidos de guarda unilateral ou compartilhada, regulamentação de regime de convivência, fixação, revisão e execução de pensão alimentícia, com requerimento ágil de medidas cautelares para salvaguardar a dignidade das crianças e adolescentes.",
-    topics: [
-      "Fixação, revisão e execução ágil de pensão alimentícia com requerimentos de bloqueios e cobrança judicial",
-      "Ações de Guarda Compartilhada ou Unilateral com foco no pleno bem-estar físico e psicológico dos filhos",
-      "Regulamentação de regime de convivência e planos de visita equilibrados e livres de conflitos",
-      "Combate enérgico a atos de alienação parental e requerimento de medidas protetivas e reversão de guarda",
-      "Investigação e reconhecimento de paternidade com exames de DNA e pedido de alimentos gravídicos",
-      "Medidas de urgência para resguardar a integridade emocional e material de dependentes",
-    ],
-    whatsAppText:
-      "Olá! Gostaria de uma consulta jurídica sobre Guarda, Pensão Alimentícia e Direito de Família com a Paixão Advocacia.",
-  },
-  {
-    id: "divorcio-partilha-de-bens",
-    title: "Divórcio Estratégico & Partilha de Bens",
-    icon: Scale,
-    tag: "Divórcio em Cartório & Judicial · União Estável · Bens",
-    summary:
-      "Dissolução de casamento e união estável com segurança financeira, agilidade em cartório e investigação patrimonial minuciosa contra fraudes.",
-    details:
-      "Momentos de encerramento de vínculo conjugal exigem racionalidade, discrição e estratégia patrimonial afiada. Conduzimos divórcios consensuais em cartório com rapidez, discrição e custos reduzidos, assim como divórcios judiciais litigiosos complexos, assegurando levantamento detalhado de bens comuns, proteção contra dilapidação, fixação de pensão compensatória e partilha justa de patrimônio.",
-    topics: [
-      "Divórcio extrajudicial em cartório rápido, econômico e sem burocracias desnecessárias",
-      "Divórcio judicial litigioso com investigação contábil e patrimonial contra ocultação de bens",
-      "Reconhecimento e dissolução de união estável com partilha de patrimônio acumulado",
-      "Fixação de pensão alimentícia entre ex-cônjuges (alimentos transitórios ou compensatórios)",
-      "Bloqueio cautelar de contas, empresas e veículos para resguardar a meação patrimonial",
-      "Planejamento preventivo de regime de bens, pactos antenupciais e acordos patrimoniais",
-    ],
-    whatsAppText:
-      "Olá! Gostaria de consultar a Paixão Advocacia sobre Divórcio e Partilha de Bens.",
-  },
-  {
-    id: "inventario-heranca-sucessoes",
-    title: "Inventário, Herança & Sucessões",
-    icon: FileCheck2,
-    tag: "Inventário em Cartório & Judicial · Herança · Sucessão",
-    summary:
-      "Regularização rápida e segura de bens herdados, inventário amigável em cartório sem conflito entre herdeiros e planejamento sucessório preventivo.",
-    details:
-      "A perda de um ente querido é delicada e não deve ser agravada por entraves burocráticos e brigas patrimoniais. Assessoramos famílias na condução célere de inventários extrajudiciais em cartório (com ampla economia fiscal e conclusão rápida) e em inventários judiciais contenciosos, além de testamentos, doações com reserva de usufruto e estruturação sucessória segura.",
-    topics: [
-      "Inventário extrajudicial em cartório célere, seguro e com máxima economia tributária de ITCMD",
-      "Inventário judicial contencioso com defesa firme e intransigente de herdeiros prejudicados",
-      "Ações de sonegados, colação de bens e anulação de doações inoficiosas que feriram a legítima",
-      "Elaboração, registro formal e cumprimento de testamentos públicos e diretivas de vontade",
-      "Regularização registral de imóveis e empresas deixados em espólio",
-      "Planejamento sucessório patrimonial para prevenir disputas futuras entre familiares",
-    ],
-    whatsAppText:
-      "Olá! Gostaria de orientações sobre Inventário, Herança e Partilha de Bens com a Paixão Advocacia.",
-  },
-  {
     id: "direito-civel-indenizacoes",
-    title: "Direito Cível, Contratos & Danos Morais",
+    title: "Direito Cível, Indenizações & Litígios",
     icon: Gavel,
-    tag: "Indenizações · Danos Morais · Contratos · Relações de Consumo",
+    tag: "Indenizações · Danos Morais · Contratos · Possessórias",
     summary:
-      "Reparação por prejuízos morais e materiais, combate a fraudes bancárias, litígios contratuais, imobiliários e defesa integral de direitos civis.",
+      "Reparação por prejuízos materiais e morais, recuperação de processos mal conduzidos ou arquivados, litígios contratuais, possessórios e defesa patrimonial.",
     details:
-      "Na esfera cível, atuamos com rigor técnico para restaurar direitos violados e buscar as devidas compensações financeiras. Conduzimos ações indenizatórias por negativações indevidas, fraudes bancárias e golpes do Pix/consignado, rescisões contratuais, ações possessórias, litígios de compra e venda de imóveis e defesas perante relações de consumo lesivas.",
+      "O Dr. Chaiane Marquesini e a Marquesini Advocacia são amplamente reconhecidos em Mantena e região pela combatividade na defesa dos interesses de seus clientes. Atuamos com extrema firmeza em ações indenizatórias, reparações por danos morais, disputas imobiliárias e contratos, além de assumir e reverter causas complexas com estratégias processuais vitoriosas.",
     topics: [
-      "Ações indenizatórias por danos morais e materiais decorrentes de condutas lesivas e inscrições indevidas no SPC/Serasa",
-      "Ações contra instituições financeiras por fraudes bancárias, empréstimos consignados fraudulentos e cobranças abusivas",
-      "Elaboração, análise de risco e rescisão de contratos civis, comerciais e de locação",
-      "Ações possessórias, usucapião, desocupação e regularização registral de imóveis urbanos e rurais",
-      "Defesa dos direitos do consumidor contra práticas abusivas de fornecedores, operadoras e seguradoras",
-      "Execuções judiciais de títulos e cobrança de créditos inadimplidos",
+      "Ações indenizatórias por danos morais e materiais decorrentes de condutas lesivas e inscrições indevidas",
+      "Assunção estratégica de processos paralisados, arquivados ou mal conduzidos com histórico comprovado de reversão",
+      "Elaboração, revisão e rescisão de contratos civis, rurais, comerciais e imobiliários",
+      "Ações possessórias, usucapião, reintegração de posse e regularização registral de imóveis",
+      "Execuções judiciais de títulos de crédito e recuperação célere de haveres",
+      "Defesa processual contenciosa em todas as instâncias judiciais",
     ],
     whatsAppText:
-      "Olá! Preciso de assessoria jurídica na área Cível / Contratos / Indenizações com a Paixão Advocacia.",
+      "Olá, Dr. Chaiane Marquesini! Preciso de assessoria jurídica na área Cível / Indenizações com a Marquesini Advocacia.",
+  },
+  {
+    id: "direito-de-familia-sucessoes",
+    title: "Direito de Família, Divórcio & Sucessões",
+    icon: Users,
+    tag: "Divórcio · Guarda · Pensão · Inventário · Partilha",
+    summary:
+      "Divórcios ágeis em cartório e judiciais, proteção do interesse dos filhos, partilha justa de bens e inventários sem burocracias desnecessárias.",
+    details:
+      "Causas que envolvem relações familiares e herança exigem sensibilidade humana e precisão estratégica. Prestamos assessoria completa em divórcios consensuais e litigiosos, fixação e revisão de alimentos, guarda e regime de convivência, além de inventários extrajudiciais e judiciais para regularização rápida do patrimônio herdado.",
+    topics: [
+      "Divórcio extrajudicial em cartório rápido e econômico, e divórcio judicial litigioso",
+      "Partilha de bens e blindagem patrimonial contra ocultação de ativos",
+      "Ações de fixação, revisão, exoneração e execução coercitiva de pensão alimentícia",
+      "Regulamentação de guarda unilateral ou compartilhada e convivência familiar",
+      "Inventário em cartório e judicial célere com otimização tributária de ITCMD",
+      "Reconhecimento e dissolução de união estável com partilha justa de patrimônio",
+    ],
+    whatsAppText:
+      "Olá, Dr. Chaiane Marquesini! Gostaria de consultar sobre Família, Divórcio ou Inventário com a Marquesini Advocacia.",
+  },
+  {
+    id: "direito-previdenciario-inss",
+    title: "Direito Previdenciário & Benefícios do INSS",
+    icon: Scale,
+    tag: "Aposentadorias · Auxílio-Doença · BPC/LOAS · Pensão",
+    summary:
+      "Concessão e restabelecimento de aposentadorias urbanas e rurais, auxílio por incapacidade temporária, BPC/LOAS e revisões previdenciárias.",
+    details:
+      "Garantimos que trabalhadores rurais e urbanos tenham seus direitos previdenciários plenamente respeitados frente ao INSS. Atuamos na esfera administrativa e judicial para destravar benefícios negados, com montagem documental minuciosa e celeridade nos pedidos de tutela de urgência.",
+    topics: [
+      "Aposentadoria por idade e tempo de contribuição (urbana e segurado especial rural)",
+      "Aposentadoria especial para atividades insalubres ou perigosas",
+      "Auxílio por incapacidade temporária (auxílio-doença) e aposentadoria por incapacidade permanente",
+      "Benefício de Prestação Continuada (BPC/LOAS) para idosos e pessoas com deficiência",
+      "Pensão por morte e auxílio-reclusão para dependentes previdenciários",
+      "Ações judiciais para restabelecimento imediato de benefícios indevidamente cessados pelo INSS",
+    ],
+    whatsAppText:
+      "Olá, Dr. Chaiane Marquesini! Gostaria de uma análise sobre meu benefício do INSS / Aposentadoria com a Marquesini Advocacia.",
   },
   {
     id: "direito-trabalhista-trabalhador",
-    title: "Direito do Trabalho & Defesa de Direitos",
+    title: "Direito do Trabalho & Defesa dos Trabalhadores",
     icon: Briefcase,
-    tag: "Rescisão Indireta · Verbas Rescisórias · Horas Extras · Assédio",
+    tag: "Rescisão Indireta · Verbas · Horas Extras · Insalubridade",
     summary:
-      "Defesa combativa de direitos laborais, rescisões indiretas por faltas graves do empregador, cobrança de verbas rescisórias e combate ao assédio.",
+      "Defesa combativa de direitos laborais, rescisão indireta por faltas patronais, cobrança de verbas rescisórias integrais e combate a abusos no trabalho.",
     details:
-      "O trabalhador dedica sua vida à sua função e merece respeito irrestrito às normas de proteção ao trabalho. Atuamos com sólida fundamentação jurídica em reclamações trabalhistas para cobrança de verbas não pagas, horas extras habituais não quitadas, insalubridade, periculosidade, rescisões indiretas (justa causa do empregador) e indenizações por assédio moral ou acidentes de trabalho.",
+      "Compreendemos o valor do trabalho e a necessidade de receber cada centavo devido pela lei. Representamos trabalhadores em reclamações trabalhistas contundentes para recebimento de verbas não pagas, horas extras habituais, adicionais legais e reparações por acidentes de trabalho.",
     topics: [
-      "Reclamação trabalhista para pagamento integral de verbas rescisórias, FGTS e multa de 40%",
-      "Ação de Rescisão Indireta do contrato de trabalho por descumprimento grave das obrigações patronais",
-      "Cobrança de horas extras, intervalos intrajornada não concedidos e adicionais noturnos",
-      "Reconhecimento de vínculo empregatício e anotação retroativa em Carteira de Trabalho",
-      "Indenizações por assédio moral, perseguição e ambiente de trabalho degradante",
-      "Ações indenizatórias decorrentes de acidentes de trabalho e doenças ocupacionais",
+      "Cobrança de rescisão integral: saldo de salário, aviso prévio, férias, 13º e multa de 40% do FGTS",
+      "Rescisão Indireta do contrato de trabalho decorrente de descumprimentos graves do empregador",
+      "Horas extras habituais não quitadas e supressão de intervalos intrajornada",
+      "Adicionais de insalubridade e periculosidade devidos e não pagos",
+      "Reconhecimento de vínculo empregatício sem carteira assinada e direitos retroativos",
+      "Indenizações por acidentes de trabalho, doenças ocupacionais e assédio moral",
     ],
     whatsAppText:
-      "Olá! Gostaria de consultar sobre meus Direitos Trabalhistas com a Paixão Advocacia.",
+      "Olá, Dr. Chaiane Marquesini! Gostaria de consultar sobre meus Direitos Trabalhistas com a Marquesini Advocacia.",
+  },
+  {
+    id: "direito-do-consumidor-bancario",
+    title: "Direito do Consumidor & Defesa contra Bancos",
+    icon: ShieldCheck,
+    tag: "Fraudes Bancárias · Juros Abusivos · SPC/Serasa · Golpes Pix",
+    summary:
+      "Defesa enérgica contra instituições bancárias, cancelamento de empréstimos fraudulentos, combate a juros extorsivos e exclusão de cadastros indevidos.",
+    details:
+      "Abusos bancários e falhas de segurança exigem resposta jurídica imediata. Atuamos com rigor contra descontos indevidos em aposentadorias e folhas de pagamento, contratos com taxas de juros fora do padrão legal, fraudes no Pix e inscrições ilegais no SPC e Serasa com pedido de indenização.",
+    topics: [
+      "Ações contra empréstimos consignados não contratados e descontos indevidos em benefícios",
+      "Recuperação de perdas e responsabilização de instituições financeiras por golpes e fraudes bancárias",
+      "Revisão de cláusulas contratuais e repetição de indébito de cobranças abusivas",
+      "Exclusão liminar de apontamentos negativos indevidos no SPC, Serasa e órgãos de proteção",
+      "Ações indenizatórias por danos morais decorrentes de cobranças vexatórias",
+      "Defesa perante concessionárias de serviços públicos, telefonia e seguradoras",
+    ],
+    whatsAppText:
+      "Olá, Dr. Chaiane Marquesini! Preciso de ajuda com cobranças indevidas / problemas bancários com a Marquesini Advocacia.",
   },
   {
     id: "consultoria-preventiva-acordos",
-    title: "Consultoria Jurídica Preventiva & Acordos",
+    title: "Consultoria Preventiva, Contratos & Acordos",
     icon: HeartHandshake,
-    tag: "Mediação · Acordos Extrajudiciais · Pareceres · Segurança",
+    tag: "Segurança Contratual · Mediação · Pareceres · Negociação",
     summary:
-      "Soluções consensuais rápidas, elaboração de pactos antenupciais, assessoria prévia a negócios e formalização de acordos com total validade jurídica.",
+      "Prevenção de litígios desgastantes, assessoria em negociações patrimoniais e formalização de acordos judiciais e extrajudiciais com validade irrestrita.",
     details:
-      "A maior vitória muitas vezes reside em evitar um litígio judicial desgastante e custoso. Prestamos consultoria jurídica preventiva estratégica para pessoas físicas e famílias, mediando conflitos de forma equilibrada, elaborando contratos preliminares, minutas de acordo e pareceres que resguardam seus interesses no longo prazo.",
+      "Uma consultoria jurídica preventiva estratégica evita prejuízos vultosos e anos de desgastes nos tribunais. Assessoramos pessoas físicas, produtores rurais e famílias em negócios jurídicos seguros, elaboração de minutas contratuais e mediação consensual de disputas.",
     topics: [
-      "Elaboração de pactos antenupciais e contratos de convivência com cláusulas de proteção patrimonial",
-      "Mediação extrajudicial de conflitos entre partes para alcance de acordos justos e céleres",
-      "Homologação judicial rápida de acordos consensuais em família, divórcio e partilha",
-      "Consultoria preventiva prévia para aquisição ou venda segura de bens móveis e imóveis",
-      "Análise de riscos legais e pareceres jurídicos para tomadas de decisão importantes",
-      "Assessoria continuada com acompanhamento direto pelo WhatsApp",
+      "Assessoria jurídica preventiva para compra e venda segura de imóveis urbanos e propriedades rurais",
+      "Elaboração de pactos pré-nupciais, minutas de acordo e contratos patrimoniais",
+      "Mediação extrajudicial e homologação rápida de termos de composição em juízo",
+      "Análise de riscos contratuais e emissão de pareceres jurídicos conclusivos",
+      "Renegociação equilibrada de dívidas com respaldo legal e proteção de bens",
+      "Acompanhamento direto e consultoria continuada pelo WhatsApp",
     ],
     whatsAppText:
-      "Olá! Gostaria de agendar uma Consultoria Preventiva / Elaboração de Acordo com a Paixão Advocacia.",
+      "Olá, Dr. Chaiane Marquesini! Gostaria de agendar uma Consultoria Preventiva / Elaboração de Contrato com a Marquesini Advocacia.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Patrícia Fernandes",
-    reviewsCount: "Local Guide · 12 avaliações no Google",
+    name: "Weverton Moreira",
+    reviewsCount: "Local Guide · 6 avaliações · 7 fotos no Google",
     date: "Google Meu Negócio",
-    badge: "excelente atendimento",
+    badge: "ganhou o processo",
     content:
-      "Profissional extremamente competente, dedicada e atenciosa. Conseguiu resolver meu caso com uma rapidez impressionante e sempre me manteve informada de tudo com clareza. Recomendo de olhos fechados!",
+      "Melhor advogado que conheço, já passei por outro advogado que me deixou na mão, e o processo foi arquivado, mas com Dr. Chaiane Marquesini foi totalmente diferente, ele assumiu o caso e ainda ganhou o processo, e tantos outros casos que passei pra ele, e ele sempre ganhou, super recomendo, pra mim e pra muitas outras pessoas tenho certeza que é o melhor advogado da Região. Só tenho a agradecer.",
   },
   {
-    name: "Rodrigo Alvarenga",
-    reviewsCount: "Local Guide · 8 avaliações no Google",
-    date: "Google Meu Negócio",
-    badge: "ética e transparência",
-    content:
-      "Excelente escritório de advocacia em Sarzedo! Atendimento humanizado, ético e muito transparente. Me senti acolhido e seguro em um dos momentos mais difíceis da minha vida.",
-  },
-  {
-    name: "Mariana Souza Lima",
-    reviewsCount: "3 avaliações no Google",
-    date: "Google Meu Negócio",
-    badge: "equipe maravilhosa",
-    content:
-      "Equipe maravilhosa e de altíssimo nível. Esclareceram todas as minhas dúvidas sem juridiquês e com muita paciência. A melhor escolha jurídica que fiz!",
-  },
-  {
-    name: "Lucas Gabriel",
+    name: "Silvia Alves Nogueira",
     reviewsCount: "1 avaliação no Google",
     date: "Google Meu Negócio",
-    badge: "atendimento impecável",
+    badge: "receptividade & qualidade",
     content:
-      "Atendimento impecável! Profissionais éticos, rápidos e muito humanos. Resolveram minha questão de família com total serenidade e segurança.",
+      "Excelente profissional, amigo, muito bem informado, educado, muito atencioso em prestar o seu melhor atendimento para o cliente. Super recomendo os serviços Marquesini Advocacia!! Receptividade, Qualidade, Profissionalismo, Valor.",
   },
   {
-    name: "Cláudia Ribeiro Santos",
-    reviewsCount: "Local Guide · 19 avaliações · 4 fotos",
+    name: "Fabio Souza",
+    reviewsCount: "1 avaliação no Google",
     date: "Google Meu Negócio",
-    badge: "credibilidade total",
+    badge: "altamente recomendado",
     content:
-      "Escritório de muita credibilidade, respeito e comprometimento com o cliente. Trabalho sério, confiável e com resultados concretos!",
+      "Altamente recomendado posso dizer com toda a certeza que Doutor Chaiane é excelente profissional da área da advocacia, ele é extremamente competente e atencioso para com seus clientes e suas causas, digo e afirmo isso por minha própria experiência com seus serviços.",
   },
   {
-    name: "Felipe Andrade",
-    reviewsCount: "5 avaliações no Google",
+    name: "Juliana Jv",
+    reviewsCount: "Local Guide · 2 avaliações no Google",
     date: "Google Meu Negócio",
-    badge: "nota 10",
+    badge: "atendeu super bem",
     content:
-      "Nota 10! A equipe da Paixão Advocacia é excepcional. Fui muito bem assistido do início ao fim do processo. Clareza total e agilidade surpreendente.",
+      "Excelente profissional, atendeu minha mãe super bem, resolveu tudo pra gente! Muito atencioso... Recomendo demais seu trabalho.",
   },
   {
-    name: "Ana Paula Mendes",
-    reviewsCount: "Local Guide · 14 avaliações",
+    name: "Jesus Costa",
+    reviewsCount: "1 avaliação no Google",
     date: "Google Meu Negócio",
-    badge: "trabalho com maestria",
+    badge: "eficiência & sucesso",
     content:
-      "Trabalho feito com maestria e ética. Nota máxima merecidíssima pelas 147 avaliações no Google. Transmitem total paz e segurança jurídica!",
+      "Foi muito bom o atendimento. Muito eficiente. E tivemos sucesso no serviço. Eu recomendo o Dr. Chaiane Marquesini.",
   },
   {
-    name: "Marcos Vinicius Silva",
-    reviewsCount: "2 avaliações no Google",
+    name: "Dulcylena Gonçalves",
+    reviewsCount: "1 avaliação no Google",
     date: "Google Meu Negócio",
-    badge: "eficiência e agilidade",
+    badge: "amor e dedicação",
     content:
-      "Super recomendo! Eficiência, agilidade e um carinho enorme no trato com o cliente. Parabéns pelo brilhante trabalho em Sarzedo e região.",
+      "Dr Chaiane Ótimo profissional, super recomendo trabalho com confiança amor e dedicação no que faz.",
   },
   {
-    name: "Juliana Duarte",
-    reviewsCount: "Local Guide · 9 avaliações · 2 fotos",
+    name: "Eva Candida",
+    reviewsCount: "1 avaliação no Google",
     date: "Google Meu Negócio",
-    badge: "profissionalismo exemplar",
+    badge: "competência em 1º lugar",
     content:
-      "Profissionalismo exemplar! Fizeram meu inventário de forma muito rápida e econômica em cartório, sem nenhum estresse familiar. Nota 5 estrelas!",
+      "Muito bom, competência em primeiro lugar por isso. Eu indico todos que eu saber que precisa do seu trabalho.",
+  },
+  {
+    name: "Abgail Rebuli",
+    reviewsCount: "1 avaliação no Google",
+    date: "Google Meu Negócio",
+    badge: "correto e justo",
+    content:
+      "Ótimo profissional correto e justo ficamos muito satisfeitos com o atendimento e o profissionalismo.",
+  },
+  {
+    name: "Gedivaldo Vaz Sousa",
+    reviewsCount: "1 avaliação no Google",
+    date: "Google Meu Negócio",
+    badge: "pode confiar",
+    content:
+      "Bom atendimento ótimo preço boa qualidade de trabalho muito prestativo, e o mais importante pode confiar no seu trabalho...",
   },
 ];
 
@@ -361,7 +361,7 @@ function Heading({
   eyebrow,
   children,
   description,
-  dark = false,
+  dark = true,
 }: {
   eyebrow: string;
   children: React.ReactNode;
@@ -370,24 +370,12 @@ function Heading({
 }) {
   return (
     <div>
-      <p className={dark ? "eyebrow-dark" : "eyebrow"}>{eyebrow}</p>
-      <h2
-        className={
-          dark
-            ? "mt-4 font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-white sm:text-4xl lg:text-[3.25rem]"
-            : "mt-4 font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#080f1d] sm:text-4xl lg:text-[3.25rem]"
-        }
-      >
+      <p className="eyebrow">{eyebrow}</p>
+      <h2 className="mt-4 font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-white sm:text-4xl lg:text-[3.25rem]">
         {children}
       </h2>
       {description && (
-        <p
-          className={
-            dark
-              ? "mt-4 text-[15px] leading-7 text-[#c8d8ec]"
-              : "mt-4 text-[15px] leading-7 text-[#3e4d60]"
-          }
-        >
+        <p className="mt-4 text-[15px] leading-7 text-[#a1a1aa]">
           {description}
         </p>
       )}
@@ -414,24 +402,24 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="overflow-hidden bg-[#f9f7f4] text-[#080f1d] selection:bg-[#d4a862] selection:text-white">
-        {/* Navigation Bar - Warm Alabaster Silk with Sovereign Gold & Navy Accent */}
-        <header className="sticky top-0 z-40 border-b border-[#e5dfd5] bg-[#f9f7f4]/95 backdrop-blur-xl transition-colors">
+      <main className="overflow-hidden bg-[#09090b] text-white selection:bg-[#deb26a] selection:text-[#09090b]">
+        {/* Navigation Bar - Pure Obsidian & Gold Executive Aesthetic */}
+        <header className="sticky top-0 z-40 border-b border-[#27272e] bg-[#09090b]/95 backdrop-blur-xl transition-colors">
           <div className="mx-auto flex h-[104px] max-w-7xl items-center justify-between gap-6 px-5 sm:h-[118px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="Paixão Advocacia e Advogados Associados"
+              aria-label="Dr. Chaiane Marquesini — Marquesini Advocacia"
               onClick={closeMenu}
               className="flex items-center gap-3.5 transition-opacity hover:opacity-90"
             >
-              <div className="relative h-[66px] w-[205px] sm:h-[78px] sm:w-[245px]">
+              <div className="relative h-[68px] w-[240px] sm:h-[82px] sm:w-[290px] md:h-[88px] md:w-[310px]">
                 <Image
                   src={LOGO_SRC}
-                  alt="Paixão Advocacia e Advogados Associados - Logo Oficial"
+                  alt="Dr. Chaiane Marquesini — Marquesini Advocacia - Logo Oficial"
                   fill
                   priority
-                  sizes="(max-width: 640px) 205px, 245px"
-                  className="object-contain object-left"
+                  sizes="(max-width: 640px) 240px, (max-width: 768px) 290px, 310px"
+                  className="object-contain object-left drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
                 />
               </div>
             </a>
@@ -444,7 +432,7 @@ export default function Home() {
                 Início
               </a>
               <a className="nav-link" href="#sobre">
-                O Escritório
+                O Advogado
               </a>
               <a className="nav-link" href="#atuacao">
                 Especialidades
@@ -465,16 +453,16 @@ export default function Home() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram da Paixão Advocacia"
-                className="grid size-10 place-items-center rounded-lg border border-[#e5dfd5] bg-white text-[#080f1d] shadow-xs transition-all hover:border-[#d4a862] hover:bg-[#fbf7ee]"
+                aria-label="Instagram do Dr. Chaiane Marquesini"
+                className="grid size-10 place-items-center rounded-lg border border-[#27272e] bg-[#18181c] text-[#d4d4d8] shadow-xs transition-all hover:border-[#deb26a] hover:bg-[#202026] hover:text-[#deb26a]"
                 title={`Instagram ${INSTAGRAM_HANDLE}`}
               >
                 <InstagramIcon size={16} />
               </a>
               <a
                 href={`tel:+${WHATSAPP_NUMBER}`}
-                aria-label="Ligar para Paixão Advocacia"
-                className="grid size-10 place-items-center rounded-lg border border-[#e5dfd5] bg-white text-[#080f1d] shadow-xs transition-all hover:border-[#d4a862] hover:bg-[#fbf7ee]"
+                aria-label="Ligar para Marquesini Advocacia"
+                className="grid size-10 place-items-center rounded-lg border border-[#27272e] bg-[#18181c] text-[#d4d4d8] shadow-xs transition-all hover:border-[#deb26a] hover:bg-[#202026] hover:text-[#deb26a]"
                 title={`Ligar: ${PHONE_DISPLAY}`}
               >
                 <Phone size={16} />
@@ -483,19 +471,19 @@ export default function Home() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp Paixão Advocacia"
-                className="grid size-10 place-items-center rounded-lg border border-[#e5dfd5] bg-white text-[#080f1d] shadow-xs transition-all hover:border-[#d4a862] hover:bg-[#fbf7ee]"
+                aria-label="WhatsApp Marquesini Advocacia"
+                className="grid size-10 place-items-center rounded-lg border border-[#27272e] bg-[#18181c] text-[#d4d4d8] shadow-xs transition-all hover:border-[#deb26a] hover:bg-[#202026] hover:text-[#deb26a]"
                 title="Atendimento no WhatsApp"
               >
                 <WhatsAppIcon size={18} />
               </a>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá! Gostaria de consultar sobre meus direitos e agendar uma consultoria jurídica com a Paixão Advocacia."
+                  "Olá, Dr. Chaiane! Gostaria de uma consultoria jurídica sobre meus direitos com a Marquesini Advocacia."
                 )}
                 target="_blank"
                 size="sm"
-                variant="navy"
+                variant="gold"
                 className="rounded-lg shadow-sm"
               >
                 Consultar Direitos <ArrowUpRight size={14} />
@@ -507,7 +495,7 @@ export default function Home() {
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="grid size-11 place-items-center rounded-lg border border-[#e5dfd5] bg-white text-[#080f1d] shadow-xs lg:hidden"
+              className="grid size-11 place-items-center rounded-lg border border-[#27272e] bg-[#18181c] text-white shadow-xs lg:hidden"
               onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -523,12 +511,12 @@ export default function Home() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.22 }}
-                className="overflow-hidden border-t border-[#e5dfd5] bg-[#f9f7f4] px-6 lg:hidden"
+                className="overflow-hidden border-t border-[#27272e] bg-[#121215] px-6 lg:hidden"
               >
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
                     ["Início", "#inicio"],
-                    ["O Escritório", "#sobre"],
+                    ["O Advogado", "#sobre"],
                     ["Especialidades Jurídicas", "#atuacao"],
                     ["Por Que Escolher", "#diferenciais"],
                     ["Avaliações no Google (5,0 ★)", "#avaliacoes"],
@@ -538,16 +526,16 @@ export default function Home() {
                       key={label}
                       href={href}
                       onClick={closeMenu}
-                      className="py-3 text-sm font-semibold text-[#080f1d] hover:text-[#d4a862]"
+                      className="py-3 text-sm font-semibold text-[#d4d4d8] hover:text-[#deb26a]"
                     >
                       {label}
                     </a>
                   ))}
                   <div className="mt-3 flex flex-col gap-2">
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#060d18] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-[#f7df9e] shadow-md transition-all hover:bg-[#0e1e34]"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#deb26a] via-[#f5dfad] to-[#deb26a] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.13em] text-[#09090b] shadow-md transition-all hover:brightness-110"
                       href={getWhatsAppUrl(
-                        "Olá! Gostaria de consultar sobre a minha situação jurídica com a Paixão Advocacia."
+                        "Olá, Dr. Chaiane! Gostaria de consultar sobre a minha situação jurídica com a Marquesini Advocacia."
                       )}
                       target="_blank"
                       rel="noreferrer"
@@ -556,7 +544,7 @@ export default function Home() {
                       <WhatsAppIcon size={16} /> WhatsApp: {PHONE_DISPLAY}
                     </a>
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#e5dfd5] bg-white px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#080f1d] transition-all hover:border-[#d4a862]"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#27272e] bg-[#18181c] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-white transition-all hover:border-[#deb26a]"
                       href={INSTAGRAM_URL}
                       target="_blank"
                       rel="noreferrer"
@@ -571,14 +559,14 @@ export default function Home() {
           </AnimatePresence>
         </header>
 
-        {/* Hero Section - Warm Alabaster Silk Aesthetic with Sovereign Navy & Imperial Gold Accents */}
+        {/* Hero Section - Executive Carbon & Sovereign Gold Aesthetic */}
         <section
           id="inicio"
-          className="relative isolate scroll-mt-24 border-b border-[#e5dfd5] bg-gradient-to-b from-[#f9f7f4] via-[#f4f0ea] to-[#f9f7f4]"
+          className="relative isolate scroll-mt-24 border-b border-[#27272e] bg-gradient-to-b from-[#09090b] via-[#121215] to-[#09090b]"
         >
-          {/* Subtle warm champagne & imperial gold glow */}
-          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[38rem] rounded-full bg-[#dfb772]/15 blur-3xl" />
-          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[32rem] rounded-full bg-[#d4a862]/10 blur-3xl" />
+          {/* Subtle warm amber & metallic gold glow */}
+          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[38rem] rounded-full bg-[#c69a4c]/8 blur-3xl" />
+          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[32rem] rounded-full bg-[#deb26a]/8 blur-3xl" />
 
           <div className="mx-auto grid min-h-[660px] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:min-h-[720px] lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:px-12 lg:py-20">
             <motion.div
@@ -587,30 +575,30 @@ export default function Home() {
               variants={stagger}
               className="relative z-10 max-w-2xl lg:py-6"
             >
-              {/* Sovereign Navy and Gold authority badge */}
+              {/* Sovereign Carbon and Gold authority badge */}
               <motion.div
                 variants={reveal}
-                className="mb-6 inline-flex items-center gap-2.5 rounded-lg border border-[#dfb772]/40 bg-[#060d18] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#f7df9e] shadow-sm"
+                className="mb-6 inline-flex items-center gap-2.5 rounded-lg border border-[#deb26a]/40 bg-[#18181c] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#deb26a] shadow-sm"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#dfb772]" />
-                <span>AR PAIXÃO · ADVOCACIA E CONSULTORIA JURÍDICA · SARZEDO - MG</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#deb26a] shadow-[0_0_8px_#deb26a]" />
+                <span>DR. CHAIANE MARQUESINI · MARQUESINI ADVOCACIA · MANTENA - MG</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
-                className="max-w-[760px] font-serif text-[2.65rem] leading-[1.08] tracking-[-0.02em] text-[#080f1d] sm:text-5xl lg:text-[3.85rem]"
+                className="max-w-[760px] font-serif text-[2.65rem] leading-[1.08] tracking-[-0.02em] text-white sm:text-5xl lg:text-[3.85rem]"
               >
                 Defesa jurídica estratégica, firmeza processual e excelência para{" "}
-                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#080f1d] via-[#9e6f2d] to-[#d4a862]">
-                  você e sua família.
+                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f5dfad] to-[#deb26a]">
+                  você e sua causa.
                 </span>
               </motion.h1>
 
               <motion.p
                 variants={reveal}
-                className="mt-7 max-w-xl text-[15px] leading-7 text-[#3e4d60] sm:text-base sm:leading-8"
+                className="mt-7 max-w-xl text-[15px] leading-7 text-[#a1a1aa] sm:text-base sm:leading-8"
               >
-                ⚖️ <strong className="font-semibold text-[#080f1d]">Nota máxima 5,0 ★ com 147 avaliações no Google Meu Negócio.</strong> Protegemos seus filhos, seu patrimônio e seus direitos com atuação especializada em <span className="text-[#080f1d] font-semibold">Família, Divórcio, Sucessões, Cível e Trabalhista</span>, unindo rigor técnico, discrição e acolhimento humano.
+                ⚖️ <strong className="font-semibold text-white">Nota máxima 5,0 ★ com 56 avaliações no Google Meu Negócio.</strong> Advocacia combativa e de alto padrão liderada pelo <span className="font-semibold text-white">Dr. Chaiane Marquesini</span>. Atuação resolutiva com foco em vitórias processuais, reversão de causas complexas e proteção integral dos seus direitos em <span className="text-[#deb26a] font-semibold">Cível, Família, Sucessões, Previdenciário (INSS), Consumidor e Trabalhista</span>.
               </motion.p>
 
               <motion.div
@@ -619,19 +607,19 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá! Gostaria de consultar sobre meus direitos e agendar um atendimento com a Paixão Advocacia."
+                    "Olá, Dr. Chaiane Marquesini! Gostaria de consultar sobre meus direitos e agendar um atendimento com a Marquesini Advocacia."
                   )}
                   target="_blank"
                   size="lg"
-                  variant="navy"
+                  variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar no WhatsApp com o Escritório
+                  <WhatsAppIcon size={16} /> Falar no WhatsApp com o Dr. Chaiane
                 </GlowingButton>
                 <GlowingButton
                   href="#atuacao"
                   size="lg"
-                  variant="white"
+                  variant="navy"
                   className="rounded-lg shadow-xs"
                 >
                   Especialidades Jurídicas{" "}
@@ -644,27 +632,27 @@ export default function Home() {
 
               <motion.div
                 variants={reveal}
-                className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-[#e5dfd5] pt-6 text-xs text-[#3e4d60]"
+                className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-[#27272e] pt-6 text-xs text-[#a1a1aa]"
               >
                 <a
                   href={GOOGLE_SEARCH_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 font-semibold text-[#080f1d] transition-colors hover:text-[#9e6f2d]"
+                  className="inline-flex items-center gap-2 font-semibold text-white transition-colors hover:text-[#deb26a]"
                 >
-                  <Star size={15} className="fill-[#d4a862] text-[#d4a862]" />{" "}
-                  5,0 estrelas no Google (147 avaliações verificadas)
+                  <Star size={15} className="fill-[#deb26a] text-[#deb26a]" />{" "}
+                  5,0 estrelas no Google (56 avaliações verificadas)
                 </a>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <Clock size={15} className="text-[#9e6f2d]" /> Atendimento de Segunda a Sexta
+                  <Clock size={15} className="text-[#deb26a]" /> Seg. a Sex. das 08:00 às 18:00
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <ShieldCheck size={15} className="text-[#9e6f2d]" /> Sede no Centro de Sarzedo - MG & Online para Todo o Brasil
+                  <ShieldCheck size={15} className="text-[#deb26a]" /> Sede no Centro de Mantena - MG & Online para Todo o Brasil
                 </span>
               </motion.div>
             </motion.div>
 
-            {/* Hero Visual Presentation - Paixão Advocacia */}
+            {/* Hero Visual Presentation - Dr. Chaiane Marquesini */}
             <motion.div
               initial={{ opacity: 0, scale: 0.97, y: 18 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -675,34 +663,34 @@ export default function Home() {
               }}
               className="relative mx-auto w-full max-w-[490px] lg:ml-auto lg:mr-2"
             >
-              <div className="relative aspect-[4/5.2] overflow-hidden rounded-2xl border-2 border-[#e5dfd5] bg-white shadow-2xl ring-1 ring-[#dfb772]/20">
+              <div className="relative aspect-[4/5.2] overflow-hidden rounded-2xl border-2 border-[#27272e] bg-[#121215] shadow-2xl ring-1 ring-[#deb26a]/30">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Paixão Advocacia e Advogados Associados — Advocacia de Excelência em Sarzedo"
+                  alt="Dr. Chaiane Marquesini — Advogado · Marquesini Advocacia em Mantena - MG"
                   fill
                   priority
                   sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 45vw"
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#060d18] via-[#060d18]/80 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#09090b] via-[#09090b]/80 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-3 text-white sm:bottom-8 sm:left-8 sm:right-8">
                   <div>
                     <p className="font-serif text-2xl font-normal tracking-wide text-white">
-                      Paixão Advocacia
+                      Dr. Chaiane Marquesini
                     </p>
-                    <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-[#dfb772]">
-                      Advogados Associados · Consultoria Jurídica
+                    <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-[#deb26a]">
+                      Advogado Titular · Marquesini Advocacia
                     </p>
                   </div>
-                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#dfb772]/40 bg-[#060d18]/90 text-[#f7df9e] backdrop-blur-sm">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#deb26a]/40 bg-[#18181c]/90 text-[#deb26a] backdrop-blur-sm">
                     <Scale size={18} />
                   </span>
                 </div>
               </div>
 
               {/* Authority badge */}
-              <div className="absolute -left-3 bottom-28 z-10 rounded-lg border border-[#e5dfd5] bg-white px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-[#080f1d] shadow-card sm:-left-5">
-                <span className="text-[#9e6f2d]">●</span> SARZEDO - MG · ATENDIMENTO NACIONAL
+              <div className="absolute -left-3 bottom-28 z-10 rounded-lg border border-[#27272e] bg-[#18181c]/95 backdrop-blur-md px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-white shadow-card sm:-left-5">
+                <span className="text-[#deb26a]">●</span> MANTENA - MG · ATENDIMENTO NACIONAL
               </div>
 
               {/* Floating Google rating badge */}
@@ -710,61 +698,61 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="absolute -bottom-5 -right-3 z-10 rounded-xl border border-[#e5dfd5] bg-white p-3.5 shadow-card transition-all hover:scale-105 hover:border-[#d4a862] sm:-right-5"
+                className="absolute -bottom-5 -right-3 z-10 rounded-xl border border-[#27272e] bg-[#18181c]/95 backdrop-blur-md p-3.5 shadow-card transition-all hover:scale-105 hover:border-[#deb26a] sm:-right-5"
               >
                 <div className="flex items-center gap-2">
                   <GoogleIcon size={16} />
                   <div className="flex items-center gap-1">
-                    <Star size={13} className="fill-[#d4a862] text-[#d4a862]" />
-                    <span className="font-serif text-base font-bold text-[#080f1d]">
+                    <Star size={13} className="fill-[#deb26a] text-[#deb26a]" />
+                    <span className="font-serif text-base font-bold text-white">
                       5,0 / 5,0
                     </span>
                   </div>
                 </div>
-                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#3e4d60]">
-                  147 Avaliações no Google (100% 5★)
+                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#a1a1aa]">
+                  56 Avaliações no Google (100% 5★)
                 </p>
               </a>
             </motion.div>
           </div>
         </section>
 
-        {/* Highlights Banner - High Contrast Deep Sovereign Navy Authority Band */}
+        {/* Highlights Banner - High Contrast Deep Carbon Authority Band */}
         <section
           aria-label="Credenciais e Destaques"
-          className="border-y border-[#dfb772]/20 bg-[#060d18] text-white"
+          className="border-y border-[#27272e] bg-[#121215] text-white"
         >
           <div className="mx-auto grid max-w-7xl gap-7 px-5 py-8 sm:grid-cols-4 sm:gap-4 sm:px-8 lg:px-12">
             {[
               [
                 "5,0 ★",
-                "nota máxima de excelência no Google com 147 avaliações",
+                "nota máxima de excelência no Google com 56 avaliações",
               ],
               [
-                "147+",
-                "clientes e famílias assessorados com satisfação comprovada",
+                "100% 5★",
+                "reconhecimento unânime por vitórias e dedicação às causas",
               ],
               [
-                "Família & Cível",
-                "especialistas em divórcio, guarda, pensão, inventário e contratos",
+                "Atuação Ampla",
+                "Cível, Família, INSS, Consumidor, Trabalho e Contratos",
               ],
               [
-                "Sarzedo & Online",
-                "sede no Centro de Sarzedo e assessoria para todo o Brasil",
+                "Mantena & Online",
+                "sede no Centro de Mantena - MG e assessoria em todo o Brasil",
               ],
             ].map(([value, label], index) => (
               <div
                 key={label}
                 className={
                   index > 0
-                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#dfb772]/20"
+                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#27272e]"
                     : "flex items-center gap-4 sm:justify-center"
                 }
               >
-                <span className="font-serif text-2xl font-semibold text-[#dfb772] sm:text-3xl">
+                <span className="font-serif text-2xl font-semibold text-[#deb26a] sm:text-3xl">
                   {value}
                 </span>
-                <span className="max-w-[165px] text-[11px] leading-5 text-[#c8d8ec]">
+                <span className="max-w-[165px] text-[11px] leading-5 text-[#a1a1aa]">
                   {label}
                 </span>
               </div>
@@ -772,10 +760,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sobre o Escritório - Editorial Warm Studio Canvas */}
+        {/* Sobre o Advogado - Executive Carbon Studio Canvas */}
         <section
           id="sobre"
-          className="scroll-mt-24 border-b border-[#e5dfd5] bg-white py-20 text-[#080f1d] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-[#27272e] bg-[#121215] py-20 text-white sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
             {/* Presentation portrait */}
@@ -786,40 +774,40 @@ export default function Home() {
               variants={reveal}
               className="relative mx-auto w-full max-w-[480px]"
             >
-              <div className="relative aspect-[3/3.8] overflow-hidden rounded-2xl border-2 border-[#e5dfd5] bg-white shadow-xl">
+              <div className="relative aspect-[3/3.8] overflow-hidden rounded-2xl border-2 border-[#27272e] bg-[#121215] shadow-xl">
                 <Image
                   src={FOTO_SOBRE_SRC}
-                  alt="Paixão Advocacia e Advogados Associados — Defesa Jurídica Humanizada e Estratégica"
+                  alt="Dr. Chaiane Marquesini — Advogado Titular da Marquesini Advocacia"
                   fill
                   sizes="(max-width: 1024px) 90vw, 45vw"
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#060d18]/90 via-[#060d18]/30 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#09090b]/90 via-[#09090b]/30 to-transparent" />
               </div>
 
-              {/* Authority badge card - Deep Sovereign Navy & Gold Contrast */}
-              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#dfb772]/40 bg-[#060d18] px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
-                <div className="flex items-center gap-2 text-[#dfb772]">
+              {/* Authority badge card - Deep Carbon & Gold Contrast */}
+              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#deb26a]/40 bg-[#18181c] px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
+                <div className="flex items-center gap-2 text-[#deb26a]">
                   <Award size={16} />
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#dfb772]">
-                    Advocacia Humanizada & Especializada
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#deb26a]">
+                    Advocacia Combativa & Estratégica
                   </p>
                 </div>
                 <p className="mt-1 font-serif text-lg leading-snug text-white">
-                  Paixão Advocacia
+                  Dr. Chaiane Marquesini
                 </p>
-                <p className="mt-0.5 text-[11px] font-medium text-[#dfb772]">
-                  Advogados Associados · Consultoria Jurídica
+                <p className="mt-0.5 text-[11px] font-medium text-[#deb26a]">
+                  Advogado Titular · Marquesini Advocacia
                 </p>
-                <p className="mt-1 text-[11px] leading-4 text-[#c8d8ec]">
-                  Sarzedo - MG · R. dos Rodoviários, 103 - Loja 205
+                <p className="mt-1 text-[11px] leading-4 text-[#a1a1aa]">
+                  Mantena - MG · R. Pres. Tancredo Neves, 494 - Centro
                 </p>
               </div>
 
-              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#d4a862]/50 sm:-left-7 sm:-top-7 sm:size-32" />
+              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#deb26a]/50 sm:-left-7 sm:-top-7 sm:size-32" />
             </motion.div>
 
-            {/* Story & Biography - Editorial Warm Light Typography */}
+            {/* Story & Biography - Executive Carbon Typography */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -828,72 +816,68 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#9e6f2d]/30 bg-[#f9f7f4] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#9e6f2d] shadow-xs"
+                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#deb26a]/30 bg-[#18181c] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#deb26a] shadow-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#d4a862]" />
-                <span>CONHEÇA A PAIXÃO ADVOCACIA</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#deb26a]" />
+                <span>CONHEÇA O DR. CHAIANE MARQUESINI</span>
               </motion.div>
 
               <motion.h2
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#080f1d] sm:text-4xl lg:text-[3.25rem]"
+                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-white sm:text-4xl lg:text-[3.25rem]"
               >
                 Muito além do processo: uma{" "}
-                <span className="italic text-[#9e6f2d]">
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f5dfad] to-[#deb26a]">
                   defesa leal, combativa e intransigente ao seu lado.
                 </span>
               </motion.h2>
 
               <motion.p
                 variants={reveal}
-                className="mt-6 max-w-xl text-[15px] leading-7 text-[#3e4d60]"
+                className="mt-6 max-w-xl text-[15px] leading-7 text-[#a1a1aa]"
               >
-                Fundada com o firme compromisso de oferecer uma advocacia de alta precisão técnica e amparo verdadeiramente humanizado, a{" "}
-                <strong className="font-bold text-[#080f1d]">
-                  Paixão Advocacia e Advogados Associados
-                </strong>{" "}
-                consolidou-se como um dos escritórios mais respeitados e bem avaliados de Sarzedo e de toda a Região Metropolitana de Belo Horizonte.
+                Comandado pelo <strong className="font-bold text-white">Dr. Chaiane Marquesini</strong>, o escritório <strong className="font-bold text-white">Marquesini Advocacia</strong> consolidou-se como referência de credibilidade, dedicação e vitórias processuais em Mantena, em todo o Leste Mineiro, no Noroeste Capixaba e em nível nacional por meio do atendimento jurídico digital.
               </motion.p>
 
               <motion.p
                 variants={reveal}
-                className="mt-4 max-w-xl text-[15px] leading-7 text-[#3e4d60]"
+                className="mt-4 max-w-xl text-[15px] leading-7 text-[#a1a1aa]"
               >
-                Compreendemos que causas que envolvem família, guarda de filhos, divórcio, inventário de patrimônio, danos morais ou direitos laborais trazem angústia e impacto direto na vida de nossos clientes. Por isso, aliamos <strong className="font-bold text-[#080f1d]">sensibilidade para escutar e postura intransigente para defender</strong>, orientando cada etapa com transparência, agilidade e lealdade absoluta.
+                Reconhecido pela capacidade de assumir causas desafiadoras — inclusive processos arquivados ou negligenciados — e conduzi-las com rigor técnico até o êxito, o Dr. Chaiane une <strong className="font-bold text-white">atendimento humanizado, clareza na comunicação e combatividade incansável</strong> na defesa de cada cliente.
               </motion.p>
 
               {/* Authentic Client Quote Card */}
               <motion.div
                 variants={reveal}
-                className="mt-6 rounded-xl border border-[#e5dfd5] bg-[#f9f7f4] p-5 shadow-xs"
+                className="mt-6 rounded-xl border border-[#deb26a]/30 bg-[#18181c] p-5 shadow-xs"
               >
-                <blockquote className="font-serif text-sm italic leading-relaxed text-[#080f1d]">
-                  &ldquo;Profissional extremamente competente, dedicada e atenciosa. Conseguiu resolver meu caso com uma rapidez impressionante e sempre me manteve informada de tudo com clareza. Recomendo de olhos fechados!&rdquo;
+                <blockquote className="font-serif text-sm italic leading-relaxed text-[#f4f4f5]">
+                  &ldquo;Melhor advogado que conheço, já passei por outro advogado que me deixou na mão, e o processo foi arquivado, mas com Dr. Chaiane Marquesini foi totalmente diferente, ele assumiu o caso e ainda ganhou o processo... super recomendo, pra mim e pra muitas outras pessoas tenho certeza que é o melhor advogado da Região.&rdquo;
                 </blockquote>
-                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#9e6f2d]">
-                  — Avaliação Verificada no Google Meu Negócio (5,0 ★ · 147 Avaliações)
+                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#deb26a]">
+                  — Weverton Moreira · Avaliação Verificada no Google (5,0 ★ · 56 Avaliações)
                 </p>
               </motion.div>
 
               <motion.div
                 variants={reveal}
-                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#080f1d] sm:grid-cols-2"
+                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-white sm:grid-cols-2"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#d4a862]" />
-                  <span>Nota máxima 5,0 ★ com 147 avaliações no Google</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
+                  <span>Nota máxima 5,0 ★ com 56 avaliações no Google</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#d4a862]" />
-                  <span>Especialistas em Família, Divórcio, Sucessões e Cível</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
+                  <span>Especialista em Cível, Família, INSS, Trabalho e Consumidor</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#d4a862]" />
+                  <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
                   <span>Atendimento próximo, transparente e sem juridiquês</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#d4a862]" />
-                  <span>Sede no Centro de Sarzedo e atendimento online no Brasil</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
+                  <span>Sede no Centro de Mantena e atendimento online no Brasil</span>
                 </div>
               </motion.div>
 
@@ -903,18 +887,18 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá! Gostaria de agendar uma consulta sobre o meu caso com a Paixão Advocacia."
+                    "Olá, Dr. Chaiane! Gostaria de agendar uma consulta sobre o meu caso com a Marquesini Advocacia."
                   )}
                   target="_blank"
                   size="md"
-                  variant="navy"
+                  variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar com o Escritório
+                  <WhatsAppIcon size={16} /> Falar com o Dr. Chaiane
                 </GlowingButton>
                 <a
                   href={`tel:+${WHATSAPP_NUMBER}`}
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#080f1d] transition-colors hover:text-[#9e6f2d]"
+                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white transition-colors hover:text-[#deb26a]"
                 >
                   <Phone size={15} /> {PHONE_DISPLAY}
                 </a>
@@ -923,10 +907,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Especialidades Jurídicas Paixão Advocacia - Warm Studio Tint with Crisp White Cards */}
+        {/* Especialidades Jurídicas Marquesini Advocacia - Deep Obsidian with Executive Carbon Cards */}
         <section
           id="atuacao"
-          className="scroll-mt-24 border-b border-[#e5dfd5] bg-[#f4f0ea] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-[#27272e] bg-[#09090b] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <motion.div
@@ -938,14 +922,14 @@ export default function Home() {
             >
               <Heading
                 eyebrow="SERVIÇOS JURÍDICOS & PILARES DE ATUAÇÃO"
-                description="Especialização técnica, rigor processual e acolhimento humano para resguardar seus filhos, sua família e seu patrimônio."
+                description="Especialização técnica, rigor processual e postura combativa para resguardar seus direitos, sua família e seu patrimônio."
               >
                 Atuação jurídica especializada em{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#080f1d] via-[#9e6f2d] to-[#d4a862]">
-                  Família, Sucessões, Cível e Trabalho.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f5dfad] to-[#deb26a]">
+                  Cível, Família, INSS, Trabalho e Consumidor.
                 </span>
               </Heading>
-              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#3e4d60]">
+              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#a1a1aa]">
                 Selecione uma especialidade abaixo para conferir as demandas atendidas e iniciar seu atendimento diretamente pelo WhatsApp.
               </p>
             </motion.div>
@@ -963,25 +947,25 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#e5dfd5] bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-[#d4a862] hover:shadow-card-hover sm:p-8"
+                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#27272e] bg-[#18181c] p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-[#deb26a]/60 hover:shadow-card-hover sm:p-8"
                   >
                     <div className="flex items-start justify-between">
-                      <span className="grid size-12 place-items-center rounded-lg border border-[#e5dfd5] bg-[#f9f7f4] text-[#080f1d] shadow-xs transition-colors group-hover:border-[#d4a862] group-hover:bg-[#060d18] group-hover:text-[#f7df9e]">
+                      <span className="grid size-12 place-items-center rounded-lg border border-[#27272e] bg-[#121215] text-[#deb26a] shadow-xs transition-colors group-hover:border-[#deb26a] group-hover:bg-[#deb26a] group-hover:text-[#09090b]">
                         <Icon size={22} strokeWidth={1.5} />
                       </span>
-                      <span className="font-serif text-2xl font-semibold text-[#d4a862]/60">
+                      <span className="font-serif text-2xl font-semibold text-[#deb26a]/40 transition-colors group-hover:text-[#deb26a]">
                         0{index + 1}
                       </span>
                     </div>
 
                     <div className="mt-6">
-                      <span className="inline-block rounded-md border border-[#e5dfd5] bg-[#f9f7f4] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#080f1d]">
+                      <span className="inline-block rounded-md border border-[#27272e] bg-[#121215] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#deb26a]">
                         {area.tag}
                       </span>
-                      <h3 className="mt-3 font-serif text-[1.45rem] leading-tight text-[#080f1d]">
+                      <h3 className="mt-3 font-serif text-[1.45rem] leading-tight text-white">
                         {area.title}
                       </h3>
-                      <p className="mt-3 text-[13px] leading-6 text-[#3e4d60]">
+                      <p className="mt-3 text-[13px] leading-6 text-[#a1a1aa]">
                         {area.summary}
                       </p>
                     </div>
@@ -989,7 +973,7 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => setActiveArea(area)}
-                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#9e6f2d] hover:text-[#080f1d]"
+                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#deb26a] hover:text-white"
                     >
                       Ver detalhes e demandas{" "}
                       <ArrowRight
@@ -1004,26 +988,26 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Por Que Escolher a Paixão Advocacia - Os 4 Pilares de Excelência (Navy Authority Section) */}
+        {/* Por Que Escolher a Marquesini Advocacia - Os 4 Pilares de Excelência (Carbon Authority Section) */}
         <section
           id="diferenciais"
-          className="scroll-mt-24 border-y border-[#dfb772]/20 bg-[#060d18] py-20 text-white sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-y border-[#27272e] bg-[#09090b] py-20 text-white sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
                 dark
                 eyebrow="REPUTAÇÃO COMPROVADA NO GOOGLE"
-                description="Os pilares de Rapidez, Ética, Eficiência e Humanidade reconhecidos em 147 avaliações 5 estrelas em Sarzedo."
+                description="Os pilares de Vitórias Processuais, Eficiência, Atendimento Dedicado e Confiança reconhecidos em 56 avaliações 5 estrelas no Google."
               >
                 Por que confiar sua causa à{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fbf7ee] via-[#f7df9e] to-[#dfb772]">
-                  Paixão Advocacia?
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f5dfad] to-[#deb26a]">
+                  Marquesini Advocacia?
                 </span>
               </Heading>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá! Gostaria de consultar sobre a minha situação jurídica com a Paixão Advocacia."
+                  "Olá, Dr. Chaiane! Gostaria de consultar sobre a minha situação jurídica com a Marquesini Advocacia."
                 )}
                 target="_blank"
                 size="md"
@@ -1036,118 +1020,118 @@ export default function Home() {
 
             {/* Grid 4 Pilares da Avaliação Google */}
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {/* Pilar 1: Rápida */}
-              <div className="flex flex-col rounded-xl border border-[#dfb772]/20 bg-[#0a1526] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#dfb772]/50">
-                <div className="flex size-12 items-center justify-center rounded-lg border border-[#dfb772]/30 bg-[#060d18] text-[#dfb772]">
-                  <Zap size={22} />
+              {/* Pilar 1: Vitórias Processuais */}
+              <div className="flex flex-col rounded-xl border border-[#27272e] bg-[#18181c] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#deb26a]/50">
+                <div className="flex size-12 items-center justify-center rounded-lg border border-[#27272e] bg-[#121215] text-[#deb26a]">
+                  <Award size={22} />
                 </div>
                 <h3 className="mt-4 font-serif text-xl font-bold text-white">
-                  Rápida (Agilidade)
+                  Vitórias Processuais
                 </h3>
-                <p className="mt-2 text-xs leading-6 text-[#c8d8ec]">
-                  Agilidade e celeridade nos pedidos, elaboração técnica tempestiva e respostas imediatas a cada dúvida do cliente.
+                <p className="mt-2 text-xs leading-6 text-[#a1a1aa]">
+                  Histórico comprovado de causas ganhas, assunção de processos arquivados e dedicação intransigente até a decisão favorável.
                 </p>
-                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#dfb772]">
-                  &ldquo;Rapidez impressionante no processo&rdquo;
+                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#deb26a]">
+                  &ldquo;Assumiu o caso e ainda ganhou o processo&rdquo;
                 </span>
               </div>
 
-              {/* Pilar 2: Ética */}
-              <div className="flex flex-col rounded-xl border border-[#dfb772]/20 bg-[#0a1526] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#dfb772]/50">
-                <div className="flex size-12 items-center justify-center rounded-lg border border-[#dfb772]/30 bg-[#060d18] text-[#dfb772]">
-                  <Shield size={22} />
-                </div>
-                <h3 className="mt-4 font-serif text-xl font-bold text-white">
-                  Ética (Integridade)
-                </h3>
-                <p className="mt-2 text-xs leading-6 text-[#c8d8ec]">
-                  Conduta profissional ilibada, sigilo estrito de dados e orientação sincera, transparente e sem falsas promessas.
-                </p>
-                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#dfb772]">
-                  &ldquo;Ética e transparência absolutas&rdquo;
-                </span>
-              </div>
-
-              {/* Pilar 3: Eficiente */}
-              <div className="flex flex-col rounded-xl border border-[#dfb772]/20 bg-[#0a1526] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#dfb772]/50">
-                <div className="flex size-12 items-center justify-center rounded-lg border border-[#dfb772]/30 bg-[#060d18] text-[#dfb772]">
-                  <Scale size={22} />
-                </div>
-                <h3 className="mt-4 font-serif text-xl font-bold text-white">
-                  Eficiente (Resultados)
-                </h3>
-                <p className="mt-2 text-xs leading-6 text-[#c8d8ec]">
-                  Estratégias jurídicas afiadas e fundamentadas nas mais recentes jurisprudências, focadas na máxima eficácia e economia.
-                </p>
-                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#dfb772]">
-                  &ldquo;Resultados concretos e seguros&rdquo;
-                </span>
-              </div>
-
-              {/* Pilar 4: Humana */}
-              <div className="flex flex-col rounded-xl border border-[#dfb772]/20 bg-[#0a1526] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#dfb772]/50">
-                <div className="flex size-12 items-center justify-center rounded-lg border border-[#dfb772]/30 bg-[#060d18] text-[#dfb772]">
+              {/* Pilar 2: Atendimento Dedicado */}
+              <div className="flex flex-col rounded-xl border border-[#27272e] bg-[#18181c] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#deb26a]/50">
+                <div className="flex size-12 items-center justify-center rounded-lg border border-[#27272e] bg-[#121215] text-[#deb26a]">
                   <HeartHandshake size={22} />
                 </div>
                 <h3 className="mt-4 font-serif text-xl font-bold text-white">
-                  Humana (Acolhimento)
+                  Atendimento Dedicado
                 </h3>
-                <p className="mt-2 text-xs leading-6 text-[#c8d8ec]">
-                  Escuta ativa e empática, entendendo que cada caso envolve pessoas reais, famílias e histórias que merecem respeito total.
+                <p className="mt-2 text-xs leading-6 text-[#a1a1aa]">
+                  Escuta atenciosa, cordialidade e acompanhamento direto pelo WhatsApp, explicando cada etapa com clareza e sem rodeios.
                 </p>
-                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#dfb772]">
-                  &ldquo;Acolhimento de verdade em cada etapa&rdquo;
+                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#deb26a]">
+                  &ldquo;Atendeu super bem, educado e atencioso&rdquo;
+                </span>
+              </div>
+
+              {/* Pilar 3: Eficiência & Competência */}
+              <div className="flex flex-col rounded-xl border border-[#27272e] bg-[#18181c] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#deb26a]/50">
+                <div className="flex size-12 items-center justify-center rounded-lg border border-[#27272e] bg-[#121215] text-[#deb26a]">
+                  <Zap size={22} />
+                </div>
+                <h3 className="mt-4 font-serif text-xl font-bold text-white">
+                  Eficiência & Competência
+                </h3>
+                <p className="mt-2 text-xs leading-6 text-[#a1a1aa]">
+                  Respostas rápidas, cumprimento rigoroso de prazos e fundamentação jurídica sólida para a máxima agilidade da sua demanda.
+                </p>
+                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#deb26a]">
+                  &ldquo;Muito eficiente e sucesso no serviço&rdquo;
+                </span>
+              </div>
+
+              {/* Pilar 4: Confiança & Justiça */}
+              <div className="flex flex-col rounded-xl border border-[#27272e] bg-[#18181c] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#deb26a]/50">
+                <div className="flex size-12 items-center justify-center rounded-lg border border-[#27272e] bg-[#121215] text-[#deb26a]">
+                  <Shield size={22} />
+                </div>
+                <h3 className="mt-4 font-serif text-xl font-bold text-white">
+                  Confiança & Justiça
+                </h3>
+                <p className="mt-2 text-xs leading-6 text-[#a1a1aa]">
+                  Conduta correta, justa e ética, cobrando honorários justos e trabalhando com verdadeiro amor e dedicação à profissão.
+                </p>
+                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#deb26a]">
+                  &ldquo;Correto e justo, pode confiar no trabalho&rdquo;
                 </span>
               </div>
             </div>
 
             <div className="mt-12 grid gap-8 lg:grid-cols-2">
-              {/* Card 1: Acolhimento Humanizado & Paciência */}
+              {/* Card 1: Acolhimento & Escuta Atenta */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#dfb772]/25 bg-[#0a1526] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#dfb772]/50 sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#27272e] bg-[#18181c] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#deb26a]/50 sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#dfb772]/30 bg-[#060d18] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#f7df9e]">
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#27272e] bg-[#121215] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#f5dfad]">
                       <HeartHandshake size={14} /> Atendimento Humanizado
                     </span>
-                    <span className="text-xs font-semibold text-[#dfb772]">
+                    <span className="text-xs font-semibold text-[#deb26a]">
                       Acolhimento Real
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-white sm:text-[1.75rem]">
-                    Paciência, Escuta Ativa & Verdade Acima de Tudo
+                    Paciência, Escuta Ativa & Transparência Total
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#c8d8ec]">
-                    Sabemos que momentos de conflito familiar, divórcio, disputa de guarda ou litígios patrimoniais trazem insegurança. Na Paixão Advocacia, você é ouvido com total respeito, sem pressa e com atenção aos mínimos detalhes.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#a1a1aa]">
+                    Sabemos que momentos de litígio cível, divórcio, disputa previdenciária com o INSS ou cobranças indevidas trazem aflição. Na Marquesini Advocacia, você é ouvido com total respeito, atenção e orientações claras sobre cada passo a tomar.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-stone-200">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#dfb772]" />
-                      <span>Contato direto pelo WhatsApp e acompanhamento próximo</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
+                      <span>Contato direto pelo WhatsApp e atualizações constantes</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#dfb772]" />
-                      <span>Prioridade absoluta aos direitos e à dignidade dos envolvidos</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
+                      <span>Prioridade absoluta aos seus direitos e à dignidade da sua família</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#dfb772]" />
-                      <span>Explicações claras em cada etapa, sem termos técnicos indecifráveis</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
+                      <span>Linguagem acessível, explicando seus direitos sem termos complicados</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#dfb772]/20 pt-4">
+                <div className="mt-7 border-t border-[#27272e] pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá! Gostaria de conversar diretamente com a Paixão Advocacia sobre minha situação."
+                      "Olá, Dr. Chaiane! Gostaria de conversar diretamente sobre minha situação com a Marquesini Advocacia."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dfb772]/30 bg-[#060d18] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#f7df9e] transition-all hover:border-[#dfb772] hover:bg-[#0e1e34] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#27272e] bg-[#121215] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#f5dfad] transition-all hover:border-[#deb26a] hover:bg-[#202026] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
                       <WhatsAppIcon size={15} /> Conversar Diretamente no WhatsApp
@@ -1163,46 +1147,46 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#dfb772]/25 bg-[#0a1526] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#dfb772]/50 sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#27272e] bg-[#18181c] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#deb26a]/50 sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#dfb772]/30 bg-[#060d18] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#f7df9e]">
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#27272e] bg-[#121215] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#f5dfad]">
                       <Scale size={14} /> Estratégia & Combate
                     </span>
-                    <span className="text-xs font-semibold text-[#dfb772]">
+                    <span className="text-xs font-semibold text-[#deb26a]">
                       Postura Firme
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-white sm:text-[1.75rem]">
                     Decisões Jurídicas Exigem Estratégia, Não Impulso
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#c8d8ec]">
-                    Agir por impulso pode custar a convivência com um filho ou a perda de um patrimônio conquistado com esforço. Traçamos planos de ação jurídicos consistentes, reunindo provas e fundamentação robusta para salvaguardar seus direitos.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#a1a1aa]">
+                    Um processo mal conduzido pode resultar em perda de bens ou no arquivamento de direitos legítimos. O Dr. Chaiane constrói estratégias processuais consistentes, unindo provas irrefutáveis e jurisprudência sólida para buscar a vitória.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-stone-200">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#dfb772]" />
-                      <span>Especialização técnica profunda em Família, Sucessões e Cível</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
+                      <span>Especialização técnica profunda e acompanhamento minucioso</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#dfb772]" />
-                      <span>Postura combativa e leal em audiências e negociações</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
+                      <span>Postura combativa, segura e respeitada em audiências e tribunais</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#dfb772]" />
-                      <span>Proteção patrimonial preventiva e combate à ocultação de bens</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
+                      <span>Capacidade comprovada de reverter processos complexos e arquivados</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#dfb772]/20 pt-4">
+                <div className="mt-7 border-t border-[#27272e] pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá! Preciso de ajuda jurídica para analisar meu caso com a Paixão Advocacia."
+                      "Olá, Dr. Chaiane! Preciso de ajuda jurídica para analisar meu caso com a Marquesini Advocacia."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dfb772]/30 bg-[#060d18] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#f7df9e] transition-all hover:border-[#dfb772] hover:bg-[#0e1e34] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#27272e] bg-[#121215] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#f5dfad] transition-all hover:border-[#deb26a] hover:bg-[#202026] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
                       <WhatsAppIcon size={15} /> Analisar Meu Caso no WhatsApp
@@ -1215,27 +1199,27 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Nosso Compromisso com Você - Warm Alabaster Canvas */}
-        <section className="relative overflow-hidden bg-[#f9f7f4] py-20 text-[#080f1d] sm:py-28 lg:py-32">
-          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#dfb772]/10 blur-3xl" />
-          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#d4a862]/10 blur-3xl" />
+        {/* Nosso Compromisso com Você - Executive Carbon Canvas */}
+        <section className="relative overflow-hidden border-b border-[#27272e] bg-[#121215] py-20 text-white sm:py-28 lg:py-32">
+          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#c69a4c]/8 blur-3xl" />
+          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#deb26a]/8 blur-3xl" />
 
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 eyebrow="NOSSO COMPROMISSO COM VOCÊ"
-                description="A nota máxima de 5,0 ★ com 147 avaliações no Google reflete a dedicação e o respeito incondicional a cada cliente que busca amparo em nosso escritório."
+                description="A nota máxima de 5,0 ★ com 56 avaliações no Google reflete a dedicação diária e o respeito incondicional a cada cliente que confia sua causa ao Dr. Chaiane Marquesini."
               >
                 Cuidamos da sua causa com{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#080f1d] via-[#9e6f2d] to-[#d4a862]">
-                  ética, transparência e acolhimento total.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f5dfad] to-[#deb26a]">
+                  ética, combatividade e dedicação total.
                 </span>
               </Heading>
 
-              <blockquote className="mt-8 rounded-xl border border-[#e5dfd5] bg-white p-6 font-serif text-base italic leading-7 text-[#080f1d] shadow-card">
-                &ldquo;Trabalho feito com maestria e ética. Nota máxima merecidíssima pelas 147 avaliações no Google. Transmitem total paz e segurança jurídica!&rdquo;
-                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#9e6f2d]">
-                  — Avaliação Verificada no Google Meu Negócio
+              <blockquote className="mt-8 rounded-xl border border-[#27272e] bg-[#18181c] p-6 font-serif text-base italic leading-7 text-white shadow-card">
+                &ldquo;Altamente recomendado! Posso dizer com toda a certeza que o Doutor Chaiane é excelente profissional da área da advocacia, ele é extremamente competente e atencioso para com seus clientes e suas causas.&rdquo;
+                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#deb26a]">
+                  — Fabio Souza · Avaliação Verificada no Google Meu Negócio
                 </footer>
               </blockquote>
             </div>
@@ -1245,13 +1229,13 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={stagger}
-              className="divide-y divide-[#e5dfd5]"
+              className="divide-y divide-[#27272e]"
             >
               {[
                 [
                   "01",
                   "Acolhimento Humanizado & Empatia",
-                  "Você é ouvido com atenção e sem julgamentos. Analisamos cada detalhe da sua história familiar para traçar a melhor rota jurídica.",
+                  "Você é ouvido com atenção e sem julgamentos. Analisamos cada detalhe da sua história para traçar a melhor rota jurídica.",
                 ],
                 [
                   "02",
@@ -1260,8 +1244,8 @@ export default function Home() {
                 ],
                 [
                   "03",
-                  "Segurança Técnica & Combatividade",
-                  "Lutamos incansavelmente pelo melhor resultado possível, garantindo a proteção dos seus filhos, seus direitos e seu patrimônio.",
+                  "Segurança Técnica & Combatividade por Vitórias",
+                  "Lutamos incansavelmente pelo melhor resultado possível, resguardando seus direitos, sua tranquilidade e seu patrimônio.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1269,12 +1253,12 @@ export default function Home() {
                   variants={reveal}
                   className="grid gap-3 py-6 first:pt-0 sm:grid-cols-[70px_1fr] sm:gap-6 sm:py-7"
                 >
-                  <span className="font-serif text-2xl font-bold text-[#d4a862]">
+                  <span className="font-serif text-2xl font-bold text-[#deb26a]">
                     {number}
                   </span>
                   <div>
-                    <h3 className="font-serif text-2xl text-[#080f1d]">{title}</h3>
-                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#3e4d60]">
+                    <h3 className="font-serif text-2xl text-white">{title}</h3>
+                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#a1a1aa]">
                       {description}
                     </p>
                   </div>
@@ -1284,53 +1268,53 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Avaliações no Google (Depoimentos Reais - 5,0 ★ · 147 avaliações) */}
+        {/* Avaliações no Google (Depoimentos Reais - 5,0 ★ · 56 avaliações) */}
         <section
           id="avaliacoes"
-          className="scroll-mt-24 border-t border-[#e5dfd5] bg-[#f4f0ea] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#27272e] bg-[#09090b] py-20 text-white sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
                 eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Confira avaliações de clientes que confiaram suas causas à Paixão Advocacia e Advogados Associados em Sarzedo."
+                description="Confira avaliações reais de clientes que confiaram suas causas ao Dr. Chaiane Marquesini — Marquesini Advocacia em Mantena e região."
               >
                 Avaliada com nota máxima 5,0 ★ pela{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#080f1d] via-[#9e6f2d] to-[#d4a862]">
-                  competência, empatia e ética comprovada.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f5dfad] to-[#deb26a]">
+                  competência, vitórias e dedicação comprovada.
                 </span>
               </Heading>
 
               {/* Verified Google Badge Card */}
-              <div className="flex flex-col gap-3 rounded-xl border border-[#e5dfd5] bg-white p-5 shadow-card sm:flex-row sm:items-center md:min-w-[340px]">
-                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#e5dfd5] bg-[#f9f7f4] shadow-xs">
+              <div className="flex flex-col gap-3 rounded-xl border border-[#27272e] bg-[#18181c] p-5 shadow-card sm:flex-row sm:items-center md:min-w-[340px]">
+                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#27272e] bg-[#121215] shadow-xs">
                   <GoogleIcon size={30} />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="font-serif text-3xl font-bold leading-none text-[#080f1d]">
+                    <span className="font-serif text-3xl font-bold leading-none text-white">
                       5,0
                     </span>
-                    <div className="flex gap-0.5 text-[#d4a862]">
+                    <div className="flex gap-0.5 text-[#deb26a]">
                       {Array.from({ length: 5 }, (_, i) => (
                         <Star
                           key={i}
                           size={14}
-                          className="fill-[#d4a862] text-[#d4a862]"
+                          className="fill-[#deb26a] text-[#deb26a]"
                         />
                       ))}
                     </div>
                   </div>
-                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-[#080f1d]">
-                    Paixão Advocacia e Advogados Associados
+                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-white">
+                    Dr. Chaiane Marquesini — Advogado
                   </p>
                   <a
                     href={GOOGLE_SEARCH_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#9e6f2d] transition-colors hover:text-[#080f1d]"
+                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#deb26a] transition-colors hover:text-white"
                   >
-                    147 avaliações no Google <ArrowUpRight size={13} />
+                    56 avaliações no Google <ArrowUpRight size={13} />
                   </a>
                 </div>
               </div>
@@ -1341,44 +1325,44 @@ export default function Home() {
               {clientReviews.map((review) => (
                 <article
                   key={review.name}
-                  className="group relative flex flex-col justify-between rounded-xl border border-[#e5dfd5] bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-[#d4a862] hover:shadow-card-hover sm:p-8"
+                  className="group relative flex flex-col justify-between rounded-xl border border-[#27272e] bg-[#18181c] p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-[#deb26a]/60 hover:shadow-card-hover sm:p-8"
                 >
                   <div>
                     {/* Header: Stars + Badge + Google icon */}
                     <div className="flex items-center justify-between gap-2">
-                      <div className="flex gap-1 text-[#d4a862]">
+                      <div className="flex gap-1 text-[#deb26a]">
                         {Array.from({ length: 5 }, (_, i) => (
                           <Star
                             key={i}
                             size={14}
-                            className="fill-[#d4a862] text-[#d4a862]"
+                            className="fill-[#deb26a] text-[#deb26a]"
                           />
                         ))}
                       </div>
-                      <div className="flex items-center gap-1.5 text-[11px] font-medium text-[#3e4d60]">
+                      <div className="flex items-center gap-1.5 text-[11px] font-medium text-[#a1a1aa]">
                         <GoogleIcon size={13} />
-                        <span className="rounded-md border border-[#e5dfd5] bg-[#f9f7f4] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#080f1d]">
+                        <span className="rounded-md border border-[#27272e] bg-[#121215] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#deb26a]">
                           {review.badge}
                         </span>
                       </div>
                     </div>
 
                     {/* Review content */}
-                    <p className="mt-5 text-[14px] italic leading-relaxed text-[#080f1d]">
+                    <p className="mt-5 text-[14px] italic leading-relaxed text-[#d4d4d8]">
                       &ldquo;{review.content}&rdquo;
                     </p>
                   </div>
 
                   {/* Reviewer info */}
-                  <div className="mt-6 flex items-center gap-3 border-t border-[#e5dfd5] pt-4">
-                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#e5dfd5] bg-[#f9f7f4] font-serif text-sm font-semibold text-[#080f1d]">
+                  <div className="mt-6 flex items-center gap-3 border-t border-[#27272e] pt-4">
+                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#27272e] bg-[#121215] font-serif text-sm font-semibold text-[#deb26a]">
                       {review.name.charAt(0)}
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="truncate font-serif text-base font-semibold text-[#080f1d]">
+                      <p className="truncate font-serif text-base font-semibold text-white">
                         {review.name}
                       </p>
-                      <p className="text-[10px] uppercase tracking-wider text-[#64748b]">
+                      <p className="text-[10px] uppercase tracking-wider text-[#a1a1aa]">
                         {review.reviewsCount}
                       </p>
                     </div>
@@ -1388,21 +1372,21 @@ export default function Home() {
             </div>
 
             {/* Bottom Actions and Trust Tags */}
-            <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#e5dfd5] pt-8 sm:flex-row">
+            <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#27272e] pt-8 sm:flex-row">
               <div className="flex flex-wrap items-center gap-2">
                 {[
-                  "Advocacia em Sarzedo - MG",
-                  "Especialista em Direito de Família",
-                  "Guarda e Pensão Alimentícia",
-                  "Divórcio Consensual e Litigioso",
-                  "Inventário em Cartório e Judicial",
-                  "Nota 5,0 no Google com 147 Avaliações",
+                  "Advocacia em Mantena - MG",
+                  "Especialista em Direito Cível e Litígios",
+                  "Direito de Família, Divórcio e Inventário",
+                  "Previdenciário e Benefícios do INSS",
+                  "Direito Trabalhista e Consumidor",
+                  "Nota 5,0 no Google com 56 Avaliações",
                 ].map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#e5dfd5] bg-white px-3.5 py-1.5 text-[11px] font-medium text-[#080f1d] shadow-xs"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#27272e] bg-[#18181c] px-3.5 py-1.5 text-[11px] font-medium text-[#d4d4d8] shadow-xs"
                   >
-                    <CheckCircle2 size={13} className="text-[#d4a862]" />
+                    <CheckCircle2 size={13} className="text-[#deb26a]" />
                     {tag}
                   </span>
                 ))}
@@ -1412,7 +1396,7 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#9e6f2d] transition-colors hover:text-[#080f1d]"
+                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#deb26a] transition-colors hover:text-white"
               >
                 Ver avaliações no Google{" "}
                 <ArrowUpRight
@@ -1424,20 +1408,20 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contato & Localização da Sede em Sarzedo (Deep Sovereign Navy Section) */}
+        {/* Contato & Localização da Sede em Mantena (Executive Carbon Section) */}
         <section
           id="contato"
-          className="scroll-mt-24 border-t border-[#dfb772]/20 bg-[#060d18] py-20 text-white sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#27272e] bg-[#09090b] py-20 text-white sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 dark
                 eyebrow="CONTATO & ATENDIMENTO"
-                description="Inicie seu atendimento diretamente pelo WhatsApp. Prestamos assistência ágil para clientes de Sarzedo, Betim, Ibirité, Contagem, Belo Horizonte e consultoria jurídica online para todo o Brasil."
+                description="Inicie seu atendimento diretamente pelo WhatsApp. Prestamos assistência ágil e resolutiva para clientes de Mantena, Barra de São Francisco, Leste de Minas Gerais, Noroeste Capixaba e consultoria jurídica online para todo o Brasil."
               >
                 Estamos prontos para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fbf7ee] via-[#f7df9e] to-[#dfb772]">
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f5dfad] to-[#deb26a]">
                   escutar e defender você.
                 </span>
               </Heading>
@@ -1445,7 +1429,7 @@ export default function Home() {
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá! Gostaria de agendar um atendimento com a Paixão Advocacia."
+                    "Olá, Dr. Chaiane! Gostaria de agendar um atendimento com a Marquesini Advocacia."
                   )}
                   target="_blank"
                   size="lg"
@@ -1454,24 +1438,24 @@ export default function Home() {
                 >
                   <WhatsAppIcon size={17} /> Iniciar Conversa no WhatsApp
                 </GlowingButton>
-                <p className="text-[11px] leading-5 text-[#c8d8ec]">
+                <p className="text-[11px] leading-5 text-[#a1a1aa]">
                   WhatsApp e Telefone do escritório:{" "}
                   <strong className="text-white">{PHONE_DISPLAY}</strong>
                 </p>
               </div>
 
-              <div className="mt-10 space-y-4 text-xs text-[#c8d8ec]">
+              <div className="mt-10 space-y-4 text-xs text-[#a1a1aa]">
                 <div className="flex items-start gap-3">
                   <Clock
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#dfb772]"
+                    className="mt-0.5 shrink-0 text-[#deb26a]"
                   />
                   <div>
                     <p className="font-semibold text-white">
                       Horário de Funcionamento
                     </p>
                     <p className="mt-0.5 text-stone-200">
-                      Segunda a Sexta-feira · das 09:00 às 18:00
+                      Segunda a Sexta-feira · das 08:00 às 18:00
                     </p>
                     <p className="text-[11px] text-stone-400">
                       Atendimento presencial no escritório e consultoria jurídica online
@@ -1480,32 +1464,32 @@ export default function Home() {
                 </div>
 
                 <div className="flex items-center gap-3 pt-1">
-                  <Phone size={16} className="shrink-0 text-[#dfb772]" />
+                  <Phone size={16} className="shrink-0 text-[#deb26a]" />
                   <a
                     href={`tel:+${WHATSAPP_NUMBER}`}
-                    className="font-medium text-white transition-colors hover:text-[#dfb772]"
+                    className="font-medium text-white transition-colors hover:text-[#deb26a]"
                   >
                     {PHONE_DISPLAY} (Ligações e WhatsApp)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <InstagramIcon size={16} className="shrink-0 text-[#dfb772]" />
+                  <InstagramIcon size={16} className="shrink-0 text-[#deb26a]" />
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="transition-colors hover:text-[#dfb772] text-stone-200"
+                    className="transition-colors hover:text-[#deb26a] text-stone-200"
                   >
                     {INSTAGRAM_HANDLE} (Instagram Oficial)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="shrink-0 text-[#dfb772]" />
+                  <Mail size={16} className="shrink-0 text-[#deb26a]" />
                   <a
                     href={`mailto:${EMAIL_CONTACT}`}
-                    className="transition-colors hover:text-[#dfb772] text-stone-200"
+                    className="transition-colors hover:text-[#deb26a] text-stone-200"
                   >
                     {EMAIL_CONTACT}
                   </a>
@@ -1514,7 +1498,7 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <MapPin
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#dfb772]"
+                    className="mt-0.5 shrink-0 text-[#deb26a]"
                   />
                   <span>{ADDRESS_TEXT}</span>
                 </div>
@@ -1522,67 +1506,67 @@ export default function Home() {
             </div>
 
             {/* Office & Schedule Card */}
-            <div className="relative overflow-hidden rounded-xl border border-[#dfb772]/25 bg-[#0a1526] p-7 shadow-card sm:p-10">
-              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#dfb772] to-[#f7df9e]" />
+            <div className="relative overflow-hidden rounded-xl border border-[#27272e] bg-[#18181c] p-7 shadow-card sm:p-10">
+              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#deb26a] to-[#f5dfad]" />
 
               <div className="flex items-center gap-4">
-                <div className="relative h-[85px] w-[240px] shrink-0 sm:h-[94px] sm:w-[280px]">
+                <div className="relative h-[88px] w-[280px] shrink-0 sm:h-[100px] sm:w-[330px]">
                   <Image
                     src={LOGO_WHITE_SRC}
-                    alt="Paixão Advocacia e Advogados Associados"
+                    alt="Dr. Chaiane Marquesini — Marquesini Advocacia"
                     fill
-                    sizes="(max-width: 640px) 240px, 280px"
-                    className="object-contain object-left"
+                    sizes="(max-width: 640px) 280px, 330px"
+                    className="object-contain object-left drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
                   />
                 </div>
               </div>
 
-              <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-[#c8d8ec]">
+              <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-[#a1a1aa]">
                 <strong className="font-semibold text-white">
-                  Paixão Advocacia e Advogados Associados
+                  Dr. Chaiane Marquesini — Advogado
                 </strong>
                 <br />
-                AR Paixão · Advocacia e Consultoria Jurídica
+                Marquesini Advocacia
                 <br />
                 {ADDRESS_TEXT}
               </address>
 
               {/* Weekly schedule table */}
-              <div className="mt-6 rounded-lg border border-[#dfb772]/20 bg-[#060d18] p-4 text-xs">
-                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#dfb772]">
+              <div className="mt-6 rounded-lg border border-[#27272e] bg-[#121215] p-4 text-xs">
+                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#deb26a]">
                   Atendimento & Disponibilidade
                 </p>
                 <div className="grid grid-cols-2 gap-y-1.5 text-stone-300">
                   <span>Horário Comercial</span>
                   <span className="text-right font-semibold text-white">
-                    09:00 às 18:00 (Seg a Sex)
+                    08:00 às 18:00 (Seg a Sex)
                   </span>
                   <span>Modalidade</span>
-                  <span className="text-right text-[#f7df9e]">
+                  <span className="text-right text-[#f5dfad]">
                     Presencial & Online
                   </span>
                   <span>Sede Física</span>
-                  <span className="text-right text-stone-200">Centro, Sarzedo - MG</span>
+                  <span className="text-right text-stone-200">Centro, Mantena - MG</span>
                   <span>Atendimento Online</span>
                   <span className="text-right text-stone-200">Todo o Brasil</span>
                 </div>
               </div>
 
-              <div className="my-7 h-px bg-[#dfb772]/20" />
+              <div className="my-7 h-px bg-[#27272e]" />
 
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <p className="text-xs text-stone-400">
-                  Atendimento humanizado, ético e resolutivo
+                  Atendimento resolutivo, combativo e leal
                 </p>
                 <a
                   href={getWhatsAppUrl(
-                    "Olá! Gostaria de agendar um atendimento no escritório com a Paixão Advocacia."
+                    "Olá, Dr. Chaiane! Gostaria de agendar um atendimento presencial ou online com a Marquesini Advocacia."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-[#dfb772]/30 bg-[#060d18] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#f7df9e] transition-colors hover:border-[#dfb772] hover:bg-[#0e1e34] hover:text-white"
+                  className="inline-flex items-center gap-2 rounded-lg border border-[#27272e] bg-[#121215] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#f5dfad] transition-colors hover:border-[#deb26a] hover:bg-[#202026] hover:text-white"
                 >
-                  <WhatsAppIcon size={14} /> Falar com o Escritório <ArrowUpRight size={14} />
+                  <WhatsAppIcon size={14} /> Falar com o Dr. Chaiane <ArrowUpRight size={14} />
                 </a>
               </div>
             </div>
@@ -1590,23 +1574,23 @@ export default function Home() {
         </section>
 
         {/* Pre-Footer CTA Strip */}
-        <section className="border-t border-[#dfb772]/20 bg-gradient-to-r from-[#060d18] via-[#0a1526] to-[#060d18] px-5 py-14 text-white shadow-inner sm:px-8 sm:py-16 lg:px-12">
+        <section className="border-t border-[#27272e] bg-gradient-to-r from-[#09090b] via-[#18181c] to-[#09090b] px-5 py-14 text-white shadow-inner sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
-              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#dfb772]">
-                <Sparkles size={13} /> PAIXÃO ADVOCACIA E ADVOGADOS ASSOCIADOS · SARZEDO - MG
+              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#deb26a]">
+                <Sparkles size={13} /> DR. CHAIANE MARQUESINI · MARQUESINI ADVOCACIA · MANTENA - MG
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl">
-                Decisões jurídicas exigem estratégia, não impulso.
+                Decisões jurídicas exigem estratégia, combatividade e resultados.
               </h2>
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá! Gostaria de consultar sobre meus direitos com a Paixão Advocacia."
+                "Olá, Dr. Chaiane! Gostaria de consultar sobre meus direitos com a Marquesini Advocacia."
               )}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#9e6f2d] via-[#d4a862] to-[#9e6f2d] px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-white shadow-md transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold"
+              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#c69a4c] via-[#deb26a] to-[#c69a4c] px-7 py-4 text-[11px] font-extrabold uppercase tracking-[0.14em] text-[#09090b] shadow-md transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold"
             >
               <WhatsAppIcon size={17} /> Falar no WhatsApp{" "}
               <ArrowUpRight size={15} />
@@ -1615,42 +1599,42 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="border-t border-[#dfb772]/20 bg-[#040912] px-5 py-14 text-white sm:px-8 lg:px-12">
+        <footer className="border-t border-[#27272e] bg-[#09090b] px-5 py-14 text-white sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
             <div>
               <a
                 href="#inicio"
-                aria-label="Paixão Advocacia e Advogados Associados"
+                aria-label="Dr. Chaiane Marquesini — Marquesini Advocacia"
                 className="inline-flex items-center gap-3.5 transition-transform hover:scale-[1.01]"
               >
-                <div className="relative h-[72px] w-[240px]">
+                <div className="relative h-[78px] w-[275px] sm:h-[88px] sm:w-[310px]">
                   <Image
                     src={LOGO_WHITE_SRC}
-                    alt="Paixão Advocacia e Advogados Associados - Logo Oficial"
+                    alt="Dr. Chaiane Marquesini — Marquesini Advocacia - Logo Oficial"
                     fill
-                    sizes="240px"
-                    className="object-contain object-left"
+                    sizes="(max-width: 640px) 275px, 310px"
+                    className="object-contain object-left drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
                   />
                 </div>
               </a>
-              <p className="mt-4 max-w-xs text-xs leading-6 text-[#c8d8ec]">
-                ⚖️ Defesa jurídica humanizada e estratégica para você e sua família. Nota máxima 5,0 ★ no Google com 147 avaliações em Sarzedo e assessoria para todo o Brasil.
+              <p className="mt-4 max-w-xs text-xs leading-6 text-[#a1a1aa]">
+                ⚖️ Advocacia combativa, estratégica e de excelência. Nota máxima 5,0 ★ no Google com 56 avaliações em Mantena - MG e assessoria jurídica para todo o Brasil.
               </p>
-              <p className="mt-3 text-[11px] font-semibold text-[#dfb772]">
-                AR Paixão · Advocacia e Consultoria Jurídica
+              <p className="mt-3 text-[11px] font-semibold text-[#deb26a]">
+                Marquesini Advocacia · OAB/MG
               </p>
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#dfb772]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#deb26a]">
                 Navegação
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#c8d8ec]">
+              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#a1a1aa]">
                 <a className="footer-link" href="#inicio">
                   Início
                 </a>
                 <a className="footer-link" href="#sobre">
-                  O Escritório
+                  O Advogado
                 </a>
                 <a className="footer-link" href="#atuacao">
                   Especialidades Jurídicas
@@ -1668,17 +1652,17 @@ export default function Home() {
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#dfb772]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#deb26a]">
                 Contato & Sede
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#c8d8ec]">
+              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#a1a1aa]">
                 <a
                   href={getWhatsAppUrl(
-                    "Olá! Gostaria de solicitar um atendimento com a Paixão Advocacia."
+                    "Olá, Dr. Chaiane! Gostaria de solicitar um atendimento com a Marquesini Advocacia."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="footer-link inline-flex items-center gap-2 font-medium text-[#f7df9e]"
+                  className="footer-link inline-flex items-center gap-2 font-medium text-[#f5dfad]"
                 >
                   <WhatsAppIcon size={15} /> WhatsApp: {PHONE_DISPLAY}
                 </a>
@@ -1706,16 +1690,16 @@ export default function Home() {
                   <MapPin size={15} className="mt-0.5 shrink-0" />
                   <span>{ADDRESS_TEXT}</span>
                 </div>
-                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#dfb772]">
-                  <Clock size={14} className="shrink-0" /> Seg a Sex · 09:00 às 18:00
+                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#deb26a]">
+                  <Clock size={14} className="shrink-0" /> Seg a Sex · 08:00 às 18:00
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#dfb772]/20 pt-6 text-[10px] text-stone-400 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#27272e] pt-6 text-[10px] text-stone-400 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} PAIXÃO ADVOCACIA E ADVOGADOS ASSOCIADOS · AR PAIXÃO. Todos os direitos reservados.
+              © {new Date().getFullYear()} DR. CHAIANE MARQUESINI · MARQUESINI ADVOCACIA. Todos os direitos reservados.
             </p>
             <p>
               Conteúdo informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
@@ -1730,15 +1714,15 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá! Gostaria de consultar sobre meus direitos com a Paixão Advocacia."
+              "Olá, Dr. Chaiane! Gostaria de consultar sobre meus direitos com a Marquesini Advocacia."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Paixão Advocacia"
+            aria-label="Falar agora pelo WhatsApp com o Dr. Chaiane Marquesini"
             className="group relative flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
           >
             <WhatsAppIcon size={28} />
-            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#060d18] border border-[#dfb772]/30 px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
+            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#18181c] border border-[#27272e] px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
               Falar no WhatsApp
             </span>
           </a>
@@ -1763,13 +1747,13 @@ export default function Home() {
                 exit={{ opacity: 0, y: 16, scale: 0.99 }}
                 transition={{ duration: 0.24 }}
                 onClick={(event) => event.stopPropagation()}
-                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-2xl border border-[#e5dfd5] bg-white p-7 shadow-2xl sm:max-w-xl sm:rounded-2xl sm:p-10 text-[#080f1d]"
+                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-2xl border border-[#27272e] bg-[#18181c] p-7 shadow-2xl sm:max-w-xl sm:rounded-2xl sm:p-10 text-white"
               >
                 <button
                   type="button"
                   aria-label="Fechar detalhes da especialidade"
                   onClick={() => setActiveArea(null)}
-                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#e5dfd5] bg-[#f9f7f4] text-[#080f1d] transition-colors hover:border-[#d4a862] hover:bg-[#fbf7ee]"
+                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#27272e] bg-[#121215] text-[#d4d4d8] transition-colors hover:border-[#deb26a] hover:bg-[#202026] hover:text-[#deb26a]"
                 >
                   <X size={18} />
                 </button>
@@ -1778,26 +1762,26 @@ export default function Home() {
 
                 <h2
                   id="area-dialog-title"
-                  className="mt-4 max-w-sm pr-10 font-serif text-3xl leading-tight text-[#080f1d] sm:text-4xl"
+                  className="mt-4 max-w-sm pr-10 font-serif text-3xl leading-tight text-white sm:text-4xl"
                 >
                   {activeArea.title}
                 </h2>
 
-                <p className="mt-5 text-sm leading-7 text-[#3e4d60]">
+                <p className="mt-5 text-sm leading-7 text-[#a1a1aa]">
                   {activeArea.details}
                 </p>
 
-                <div className="mt-6 border-t border-[#e5dfd5] pt-5">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#9e6f2d]">
+                <div className="mt-6 border-t border-[#27272e] pt-5">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#deb26a]">
                     Principais demandas atendidas pelo escritório:
                   </p>
                   <ul className="mt-4 space-y-3">
                     {activeArea.topics.map((topic) => (
                       <li
                         key={topic}
-                        className="flex items-center gap-3 text-sm text-[#080f1d]"
+                        className="flex items-center gap-3 text-sm text-[#f4f4f5]"
                       >
-                        <span className="size-2 shrink-0 rounded-full bg-[#d4a862]" />
+                        <span className="size-2 shrink-0 rounded-full bg-[#deb26a]" />
                         <span>{topic}</span>
                       </li>
                     ))}
@@ -1809,7 +1793,7 @@ export default function Home() {
                     href={getWhatsAppUrl(activeArea.whatsAppText)}
                     target="_blank"
                     size="md"
-                    variant="navy"
+                    variant="gold"
                     className="rounded-lg shadow-md"
                   >
                     <WhatsAppIcon size={16} /> Consultar sobre esta demanda
@@ -1817,7 +1801,7 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={() => setActiveArea(null)}
-                    className="px-5 py-3 text-xs font-semibold text-[#64748b] transition-colors hover:text-[#080f1d]"
+                    className="px-5 py-3 text-xs font-semibold text-[#a1a1aa] transition-colors hover:text-white"
                   >
                     Fechar
                   </button>
