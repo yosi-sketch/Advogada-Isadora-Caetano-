@@ -25,31 +25,34 @@ import {
   FileCheck2,
   CalendarCheck,
   Stethoscope,
+  Users,
+  HelpCircle,
+  Gem,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5531992938746";
-const PHONE_DISPLAY = "(31) 99293-8746";
-const EMAIL_CONTACT = "contato@ingridmarquesadvocacia.com.br";
-const INSTAGRAM_URL = "https://www.instagram.com/draingridmarques/";
-const INSTAGRAM_HANDLE = "@draingridmarques";
+const WHATSAPP_NUMBER = "5531997878257";
+const PHONE_DISPLAY = "(31) 99787-8257";
+const EMAIL_CONTACT = "contato@haynhandramartins.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/haymartinsadvocacia/";
+const INSTAGRAM_HANDLE = "@haymartinsadvocacia";
 
 const ADDRESS_TEXT =
-  "R. Seis, 147 - Alta de Gaya, Nova Lima - MG, 34012-856 · Atendimento Presencial & Online em Todo o Brasil";
+  "R. Alexandre Nunes, 157 - Centro, Igarapé - MG, 32900-000 · Atendimento Presencial & Online em Todo o Brasil";
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Ingrid+Marques+Advocacia+Previdenci%C3%A1ria%0ANova+Lima+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=Haynhandra+Martins+Advocacia%0AIgarap%C3%A9+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
 
-const LOGO_SRC = "/logo.png";
-const FOTO_HERO_SRC = "/dra-ingrid-marques.jpg";
-const FOTO_SOBRE_SRC = "/dra-ingrid-office.jpg";
-const FOTO_EDITORIAL_SRC = "/dra-ingrid-portrait-bw.jpg";
+const LOGO_SRC = "/logo-haynhandra.png";
+const FOTO_HERO_SRC = "/dra-haynhandra-martins.png";
+const FOTO_SOBRE_SRC = "/dra-haynhandra-martins.png";
+const FOTO_EDITORIAL_SRC = "/dra-haynhandra-portrait.png";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Ingrid Marques! Gostaria de consultar sobre meu benefício previdenciário e agendar um atendimento.";
+    "Olá, Dra. Haynhandra Martins! Gostaria de consultar sobre meu caso e agendar um atendimento.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -149,6 +152,7 @@ const stagger: Variants = {
 interface PracticeArea {
   id: string;
   title: string;
+  category: "Previdenciário (INSS)" | "Direito Cível & Família";
   icon: typeof Scale;
   tag: string;
   summary: string;
@@ -161,224 +165,293 @@ const practiceAreas: PracticeArea[] = [
   {
     id: "planejamento-aposentadorias",
     title: "Planejamento Previdenciário & Aposentadorias",
+    category: "Previdenciário (INSS)",
     icon: CalendarCheck,
     tag: "Aposentadoria Integral · 13º Salário · Regras de Transição",
     summary:
-      "Planejamento do momento exato e da regra mais vantajosa para você receber o maior valor de aposentadoria possível, com direito integral a 13º salário e retroativos.",
+      "Planejamento do momento exato e da regra mais vantajosa para você receber o maior valor de aposentadoria possível, com direito integral a 13º salário e recuperação de atrasados.",
     details:
-      "A Dra. Ingrid Marques realiza uma auditoria detalhada de todo o seu histórico contributivo (CNIS, carteiras antigas, tempo rural e especial), corrigindo falhas do INSS e evitando armadilhas que reduzem seu benefício. Nossa atuação garante a conquista da aposentadoria integral, orientando se o segurado se enquadra em regras definitivas ou de transição da Reforma.",
+      "A Dra. Haynhandra Martins realiza uma auditoria detalhada de todo o seu histórico contributivo (extrato CNIS, carteiras antigas, tempo rural e especial), corrigindo inconsistências do INSS e evitando armadilhas que diminuem o valor mensal do seu benefício. Orientamos de forma transparente e segura sobre as melhores regras de transição pós-Reforma da Previdência.",
     topics: [
       "Planejamento Previdenciário personalizado com simulação de cenários e cálculo de valor futuro",
       "Aposentadoria por Idade Urbana e Rural com cômputo de períodos não registrados",
-      "Aposentadoria por Tempo de Contribuição e aplicação das melhores regras de transição",
-      "Aposentadoria Especial para trabalhadores expostos a agentes insalubres ou periculosos (PPP/LTCAT)",
-      "Retificação e averbação de vínculos no CNIS, tempo de serviço militar e atividade rural",
-      "Cobrança integral de valores retroativos devidos desde o primeiro requerimento no INSS",
+      "Aposentadoria por Tempo de Contribuição com aplicação das melhores regras de transição",
+      "Aposentadoria Especial para trabalhadores com exposição a insalubridade ou periculosidade (PPP/LTCAT)",
+      "Retificação e averbação de vínculos no CNIS, tempo militar e atividade rural",
+      "Cobrança integral de parcelas retroativas desde o primeiro requerimento no INSS",
     ],
     whatsAppText:
-      "Olá, Dra. Ingrid Marques! Gostaria de fazer o meu Planejamento Previdenciário e consultar minha aposentadoria.",
+      "Olá, Dra. Haynhandra Martins! Gostaria de consultar sobre meu Planejamento Previdenciário e Aposentadoria no INSS.",
   },
   {
     id: "incapacidade-permanente-invalidez",
     title: "Aposentadoria por Incapacidade Permanente (Invalidez)",
+    category: "Previdenciário (INSS)",
     icon: HeartPulse,
-    tag: "Reversão de Pente-Fino · Laudos Médicos · Causas Complexas",
+    tag: "Reversão de Pente-Fino · Laudos Médicos · Adicional de 25%",
     summary:
-      "Restabelecimento e concessão judicial de aposentadoria por invalidez para segurados com doenças ou limitações definitivas, inclusive revertendo cortes indevidos do INSS.",
+      "Restabelecimento e concessão judicial de aposentadoria para segurados com enfermidades ou limitações definitivas, inclusive revertendo cortes arbitrários do INSS.",
     details:
-      "Muitos trabalhadores aposentados por invalidez há anos têm seus benefícios cortados arbitrariamente pelo 'pente-fino' do INSS sob a alegação infundada de que estão aptos. A Dra. Ingrid Marques possui histórico de êxito em casos complexos de reversão, preparando provas periciais consistentes e impugnando laudos médicos desfavoráveis na Justiça.",
+      "Muitos trabalhadores aposentados por incapacidade têm seus benefícios cortados injustamente em operações de 'pente-fino' do INSS. A Dra. Haynhandra Martins atua com firmeza na defesa de seus direitos, preparando provas periciais consistentes, elaborando quesitos técnicos direcionados e impugnando laudos médicos desfavoráveis na Justiça.",
     topics: [
-      "Ação de concessão e restabelecimento de Aposentadoria por Incapacidade Permanente",
-      "Reversão judicial de cancelamentos e cortes indevidos em pente-finos do INSS",
-      "Elaboração de quesitos periciais estratégicos e impugnação minuciosa de laudos desfavoráveis",
-      "Adicional de 25% para o aposentado por invalidez que necessita de assistência permanente de terceiros",
-      "Conversão de auxílio-doença em aposentadoria por invalidez definitiva",
-      "Defesa de segurados portadores de doenças graves, ortopédicas, cardíacas e psiquiátricas",
+      "Ação judicial de concessão e restabelecimento de Aposentadoria por Incapacidade Permanente",
+      "Reversão célere de cancelamentos indevidos em revisões e pente-finos do INSS",
+      "Elaboração de quesitos periciais estratégicos e impugnação de laudos periciais superficiais",
+      "Adicional de 25% para o aposentado que necessita de assistência permanente de cuidadores",
+      "Conversão de auxílio-doença em aposentadoria por incapacidade definitiva",
+      "Atuação em patologias ortopédicas, cardíacas, psiquiátricas, oncológicas e degenerativas",
     ],
     whatsAppText:
-      "Olá, Dra. Ingrid Marques! Preciso de ajuda urgente para restabelecer ou solicitar minha Aposentadoria por Invalidez.",
-  },
-  {
-    id: "auxilio-acidente-sequelas",
-    title: "Auxílio-Acidente & Indenizações do INSS",
-    icon: Activity,
-    tag: "Sequela Permanente · Acidente de Moto / Trabalho · Benefício Vitalício",
-    summary:
-      "Benefício mensal indenizatório pago pelo INSS para quem sofreu acidente de qualquer natureza (trânsito, moto, trabalho) que resultou em sequela permanente ou limitação motora.",
-    details:
-      "Poucos segurados sabem que têm direito ao Auxílio-Acidente mesmo voltando a trabalhar com carteira assinada. Esse benefício possui caráter indenizatório, não impede o trabalho formal e é pago até a aposentadoria para quem teve redução da capacidade de trabalho (como encurtamento de membro, fraturas ou lesões consolidadas).",
-    topics: [
-      "Concessão do Auxílio-Acidente decorrente de acidentes de moto, trânsito ou esportivos",
-      "Auxílio-Acidente por acidentes de trabalho típicos e doenças ocupacionais",
-      "Benefício que não impede o retorno ao trabalho e pode ser acumulado com o salário",
-      "Comprovação técnica de sequelas motoras permanentes e encurtamento de membros",
-      "Cobrança de parcelas retroativas desde a cessação do auxílio-doença original",
-      "Atuação contenciosa contra a recusa arbitrária da perícia médica do INSS",
-    ],
-    whatsAppText:
-      "Olá, Dra. Ingrid Marques! Gostaria de consultar se tenho direito ao Auxílio-Acidente por sequela de acidente.",
+      "Olá, Dra. Haynhandra Martins! Preciso de ajuda para restabelecer ou solicitar minha Aposentadoria por Invalidez no INSS.",
   },
   {
     id: "auxilio-incapacidade-temporaria",
     title: "Auxílio por Incapacidade Temporária (Auxílio-Doença)",
+    category: "Previdenciário (INSS)",
     icon: Stethoscope,
-    tag: "Perícia Médica · Benefício Negado · Prorrogação Urgente",
+    tag: "Perícia Médica · Benefício Negado · Restabelecimento Urgente",
     summary:
-      "Garantia rápida do pagamento do benefício para quem está impossibilitado de exercer sua atividade habitual por motivo de doença, acidente ou cirurgia.",
+      "Garantia rápida do benefício para quem está impossibilitado de trabalhar por motivo de doença, acidente ou cirurgia, combatendo negativas indevidas da perícia médica.",
     details:
-      "Se o médico perito do INSS indeferiu o seu pedido de auxílio-doença ou determinou uma 'alta programada' antes de sua recuperação real, ingressamos com recurso e ação judicial imediata para restabelecer o seu sustento enquanto você realiza seu tratamento de saúde.",
+      "Se o médico perito do INSS indeferiu o seu pedido sob alegação de 'ausência de incapacidade' ou determinou uma alta precipitada, ingressamos com recurso e ação judicial imediata para restabelecer o seu sustento enquanto você realiza seu tratamento de saúde de forma digna.",
     topics: [
-      "Pedido urgente de concessão judicial com pedido de liminar para restabelecimento imediato",
-      "Reversão de altas programadas injustas e indeferimentos por 'ausência de incapacidade'",
-      "Reconhecimento da qualidade de segurado e cômputo correto do período de carência",
-      "Reunir relatórios médicos, exames de imagem e atestados conclusivos com quesitação direcionada",
-      "Auxílio-doença comum (B31) versus auxílio-doença acidentário (B91) com estabilidade provisória",
-      "Acompanhamento direto pelo WhatsApp até o primeiro pagamento em conta",
+      "Pedido urgente de concessão com requerimento de tutela de urgência (liminar)",
+      "Reversão de altas programadas injustas e indeferimentos periciais sumários",
+      "Comprovação rigorosa da qualidade de segurado e cômputo correto do período de carência",
+      "Análise documental estratégica: atestados conclusivos, relatórios e exames de imagem",
+      "Auxílio-doença comum (B31) versus acidentário (B91) com direito a estabilidade provisória",
+      "Acompanhamento direto e acolhedor até a efetiva implantação do benefício em conta",
     ],
     whatsAppText:
-      "Olá, Dra. Ingrid Marques! Meu auxílio-doença foi indeferido pelo INSS e preciso de ajuda para reverter.",
+      "Olá, Dra. Haynhandra Martins! Meu auxílio-doença foi negado pelo INSS e preciso de ajuda para reverter.",
+  },
+  {
+    id: "auxilio-acidente-sequelas",
+    title: "Auxílio-Acidente & Indenizações do INSS",
+    category: "Previdenciário (INSS)",
+    icon: Activity,
+    tag: "Sequela Permanente · Acidente de Moto / Trabalho · Benefício Vitalício",
+    summary:
+      "Benefício mensal indenizatório pago pelo INSS para quem sofreu acidente de qualquer natureza que resultou em sequela permanente, podendo ser acumulado com o salário.",
+    details:
+      "Muitos segurados desconhecem que têm direito ao Auxílio-Acidente mesmo voltando a trabalhar normalmente de carteira assinada. Esse benefício tem natureza indenizatória, não impede o trabalho formal e é pago mensalmente até a sua aposentadoria para quem teve redução funcional ou limitação motora consolidada.",
+    topics: [
+      "Concessão do Auxílio-Acidente decorrente de acidentes de moto, trânsito ou domésticos",
+      "Auxílio-Acidente decorrente de acidentes de trabalho típicos e doenças ocupacionais",
+      "Benefício que não cancela o salário e pode ser recebido conjuntamente com o emprego",
+      "Comprovação pericial de sequelas motoras permanentes, fraturas ou limitações articulares",
+      "Cobrança de parcelas retroativas acumuladas desde o término do auxílio-doença original",
+      "Atuação contra a recusa da perícia administrativa em reconhecer a limitação consolidada",
+    ],
+    whatsAppText:
+      "Olá, Dra. Haynhandra Martins! Gostaria de consultar se tenho direito ao Auxílio-Acidente por sequela.",
   },
   {
     id: "bpc-loas-beneficio-assistencial",
     title: "BPC / LOAS & Benefício Assistencial",
+    category: "Previdenciário (INSS)",
     icon: HeartHandshake,
-    tag: "Idosos 65+ · Pessoa com Deficiência · Triagem de Direitos",
+    tag: "Idosos 65+ · Pessoa com Deficiência · Triagem Honesta",
     summary:
-      "Concessão de um salário mínimo mensal para idosos com 65 anos ou mais e pessoas com deficiência ou enfermidade incapacitante em situação de vulnerabilidade social.",
+      "Concessão de um salário mínimo mensal para idosos a partir de 65 anos e pessoas com deficiência ou enfermidade de longo prazo em situação de vulnerabilidade social.",
     details:
-      "O BPC/LOAS é um direito garantido por lei, mas exige extremo rigor no CadÚnico e nos critérios socioeconômicos. A Dra. Ingrid Marques realiza uma triagem honesta e detalhada para verificar se o segurado não possui direito a uma aposentadoria integral (com 13º salário) antes de requerer o LOAS, atuando com máxima transparência.",
+      "O BPC/LOAS é um direito garantido pela Lei Orgânica da Assistência Social. A Dra. Haynhandra Martins realiza uma triagem minuciosa e honesta para verificar se a família se enquadra nos critérios e se não há direito a uma aposentadoria com 13º antes de requerer o benefício assistencial, orientando cada passo com máxima sinceridade.",
     topics: [
-      "BPC do Idoso (a partir de 65 anos) que nunca contribuiu ou contribuiu pouco para o INSS",
-      "BPC para Pessoa com Deficiência (PcD) física, sensorial, intelectual ou mental de qualquer idade",
-      "Enquadramento de doenças crônicas ou incapacitantes (câncer, cardiopatias, TEA, ortopédicas)",
-      "Avaliação socioeconômica e comprovação da vulnerabilidade familiar com dedução de despesas médicas",
-      "Análise preliminar para verificar se não há possibilidade de concessão de aposentadoria com 13º",
-      "Ação judicial célere após indeferimento indevido na agência do INSS",
+      "BPC do Idoso (a partir de 65 anos) sem necessidade de ter contribuído para o INSS",
+      "BPC para Pessoa com Deficiência (PcD) física, sensorial, intelectual, mental ou TEA",
+      "Enquadramento de enfermidades graves e incapacitantes (câncer, cardiopatias, sequelas)",
+      "Avaliação socioeconômica e comprovação da vulnerabilidade com dedução de despesas médicas",
+      "Triagem prévia honesta para checar se não é viável aposentadoria integral com 13º salário",
+      "Ação judicial rápida após negativa arbitrária ou demora na fila do INSS",
     ],
     whatsAppText:
-      "Olá, Dra. Ingrid Marques! Gostaria de consultar sobre a concessão do BPC / LOAS para minha família.",
+      "Olá, Dra. Haynhandra Martins! Gostaria de consultar sobre a concessão do BPC / LOAS para minha família.",
   },
   {
-    id: "revisoes-destravamento-inss",
-    title: "Revisões, Destravamento de Processos & Retroativos",
+    id: "pensao-morte-dependentes",
+    title: "Pensão por Morte & Direitos dos Dependentes",
+    category: "Previdenciário (INSS)",
     icon: FileCheck2,
-    tag: "Processos Travados · Mandado de Segurança · Valores Atrasados",
+    tag: "Sustento da Família · União Estável · Valores Retroativos",
     summary:
-      "Destravar pedidos parados no INSS há meses, recorrer de decisões erradas no judiciário e receber boladas de atrasados acumulados corrigidos monetariamente.",
+      "Proteção e garantia do sustento dos dependentes de segurados falecidos, com comprovação sólida de união estável e destravamento de processos no INSS.",
     details:
-      "Muitos segurados enfrentam esperas abusivas de 6 meses, 1 ano ou mais sem nenhuma resposta do INSS. Entramos com Mandado de Segurança para forçar a agência a decidir seu processo com urgência, além de pleitear revisões de valor e cobrar todos os atrasados com juros e correção monetária.",
+      "O falecimento de um familiar provedor é um momento doloroso que não pode ser agravado por negativas burocráticas do INSS. Atuamos com acolhimento e agilidade para comprovar uniões estáveis, dependência econômica e garantir a concessão justa da pensão por morte aos dependentes legítimos.",
     topics: [
-      "Mandado de Segurança para cumprimento imediato de prazos legais pelo INSS",
-      "Desbloqueio de requerimentos paralisados ou esquecidos na fila administrativa",
-      "Revisão da vida toda, revisão das melhores contribuições e revisão do teto",
-      "Cobrança judicial de precatórios e RPVs (Requisições de Pequeno Valor) de parcelas atrasadas",
-      "Impugnação de descontos indevidos e fraudes em folha de pagamento de aposentados",
-      "Recursos em instâncias superiores contra decisões judiciais desfavoráveis",
+      "Concessão célere de Pensão por Morte para cônjuges, companheiros e filhos menores/incapazes",
+      "Comprovação consistente de união estável mediante conjunto probatório documental e testemunhal",
+      "Garantia de cota-parte proporcional e rateio correto entre dependentes legítimos",
+      "Reversão de alegações indevidas de perda da qualidade de segurado do falecido",
+      "Cobrança de todos os atrasados devidos desde o óbito ou do primeiro requerimento",
+      "Orientação jurídica segura sobre regras de acúmulo de pensão com aposentadoria própria",
     ],
     whatsAppText:
-      "Olá, Dra. Ingrid Marques! Meu processo está travado no INSS e gostaria de assistência jurídica.",
+      "Olá, Dra. Haynhandra Martins! Preciso de ajuda para dar entrada ou destravar uma Pensão por Morte.",
+  },
+  {
+    id: "direito-civel-indenizacoes",
+    title: "Direito Cível, Contratos & Indenizações",
+    category: "Direito Cível & Família",
+    icon: Scale,
+    tag: "Reparação de Danos · Contratos · Cobranças · Consumidor",
+    summary:
+      "Assessoria jurídica consultiva e contenciosa em Direito Cível: indenizações por danos morais e materiais, litígios contratuais, cobranças abusivas e defesa de direitos.",
+    details:
+      "Atuamos com visão estratégica e combativa na defesa dos interesses civis de pessoas físicas e empresas. Desde a elaboração de contratos seguros até ações judiciais indenizatórias por prejuízos morais e materiais, cobranças indevidas de bancos e conflitos possessórios, oferecendo soluções claras e eficazes.",
+    topics: [
+      "Ações indenizatórias por Danos Morais, Materiais e Lucros Cessantes",
+      "Defesa do Consumidor contra fraudes bancárias, juros abusivos e negativações indevidas no SPC/Serasa",
+      "Elaboração, análise minuciosa e revisão de contratos civis e comerciais",
+      "Cobranças judiciais e extrajudiciais, execuções de títulos e recuperação de crédito",
+      "Ações possessórias, usucapião, rescisões de contratos de compra e venda de imóveis",
+      "Resolução consensual e mediação para soluções rápidas e econômicas",
+    ],
+    whatsAppText:
+      "Olá, Dra. Haynhandra Martins! Gostaria de consultar uma questão de Direito Cível com seu escritório.",
+  },
+  {
+    id: "direito-familia-sucessoes",
+    title: "Direito de Família & Sucessões",
+    category: "Direito Cível & Família",
+    icon: Users,
+    tag: "Inventários Rápidos · Divórcios · Partilha · Pensão",
+    summary:
+      "Atuação humanizada e firme em momentos delicados da vida familiar: inventários em cartório e judiciais, partilha de bens, divórcios, pensão alimentícia e guarda.",
+    details:
+      "Conduzimos inventários com o máximo de celeridade para desembaraçar o patrimônio familiar com menor custo tributário e sem desgastes emocionais desnecessários. Oferecemos suporte completo e sensível em divórcios, fixação de pensão alimentícia e planejamento sucessório com ética inegociável.",
+    topics: [
+      "Inventários Judiciais e Extrajudiciais em Cartório com agilidade e redução de custos",
+      "Divórcio Consensual e Litigioso com partilha equilibrada de bens patrimoniais",
+      "Ações de Alimentos: fixação, revisão, exoneração e execução de pensão alimentícia",
+      "Regulamentação de guarda, visitas e alienação parental com foco no bem-estar dos filhos",
+      "Reconhecimento e dissolução de união estável com partilha de bens acumulados",
+      "Planejamento Sucessório preventivo para evitar litígios futuros entre herdeiros",
+    ],
+    whatsAppText:
+      "Olá, Dra. Haynhandra Martins! Gostaria de orientação jurídica sobre Inventários e Direito de Família.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Camila Gonçalves",
+    name: "Renata Custodia",
+    reviewsCount: "Local Guide · 61 avaliações no Google",
+    date: "Avaliação Verificada no Google Meu Negócio",
+    badge: "Acolhimento & Sinceridade Ímpar",
+    content:
+      "Além da excelente profissional, ela te ouve, se importa com seu caso, é extremamente sincera, a recepcionista é um amor de pessoa também!",
+    reply:
+      "Muito obrigada pelo seu feedback. Deus lhe abençoe sempre!",
+  },
+  {
+    name: "Jucimara Biju",
+    reviewsCount: "7 avaliações no Google",
+    date: "Avaliação Verificada no Google Meu Negócio",
+    badge: "Caso de 4 Anos Resolvido em 6 Meses",
+    content:
+      "Minha experiência foi a das melhores possíveis, pois eu estava com um problema a uns 4 anos e com uns 6 meses resolveu, e outra além da simplicidade, é bem esclarecida, não deixa nenhuma pendência eu super indico, é uma profissional de alta qualidade. Podem confiar!",
+    reply:
+      "Jucimara, muito obrigada pelo seu feedback! Deus abençoe grandemente!",
+  },
+  {
+    name: "Eduardo Maia",
     reviewsCount: "1 avaliação no Google",
     date: "Avaliação Verificada no Google Meu Negócio",
-    badge: "Aposentadoria Integral com 13º",
+    badge: "Advogada de Toda a Família",
     content:
-      "Fui até Ingrid através de uma indicação de uma amiga que conseguiu se aposentar com ela. Minha sogra estava tentando se aposentar, procurou um profissional de BH que sugeriu omitir coisas para tentar pelo LOAS. Mas como tudo que começa errado dá errado, não conseguiram. Sugeri procurar o profissional certo, que atue com honestidade e falei de Ingrid: foi o certo a fazer! Ingrid é competente ao extremo, super honesta, e se não me engano conseguiu a aposentadoria da minha sogra em menos de 2 meses. E aposentadoria integral sem ser pelo Loas, com direito a décimo terceiro! Indico de olhos fechados. Que Deus te abençoe Ingrid, minha sogra que já estava sem esperança de se aposentar está feliz demais graças a você.",
+      "Profissional excelente, super capacitada, educadíssima e atenciosa. Nos deixa muito à vontade. Amei o atendimento e a forma como ela explica o nosso direito para que possamos entender. Sem dúvida, virou a advogada de nossa família.",
     reply:
-      "Agradeço muito seu feedback e a confiança no meu trabalho. Deus abençoe!",
+      "Gratidão! Deus abençoe!",
   },
   {
-    name: "Karina Nogueira",
-    reviewsCount: "1 avaliação no Google",
+    name: "Nivia Alves Ferreira",
+    reviewsCount: "6 avaliações no Google",
     date: "Avaliação Verificada no Google Meu Negócio",
-    badge: "Invalidez Revertida Após Corte de 2019",
+    badge: "Humana, Justa & Altamente Competente",
     content:
-      "A Ingrid resolveu o caso do meu pai, que parecia impossível! Ele era aposentado por invalidez desde 2006, mas com a reforma da previdência em 2019 cortaram a aposentadoria, dizendo que ele não se encaixava mais como inválido. Já tínhamos tentado de tudo... Dra. Ingrid acolheu e reverteu a decisão. Uma bênção!",
+      "Dra. Haynhandra é perfeita! Advogada humana, justa e altamente competente! Muito feliz com o novo endereço pois é bem localizado e mais acessível por ser centralizado. Parabéns Dra. Sucesso!",
     reply:
-      "Atender seu pai foi um presente pra mim. Um dos casos mais complexos que eu já tive. Foi uma sensação inexplicável poder dar a notícia que ele tanto queria. Me lembro bem do primeiro atendimento, ele sem a menor esperança... quando veio a notícia foi uma bênção!",
+      "Gratidão pela sua avaliação, linda! Deus abençoe!",
   },
   {
-    name: "Jéssika Marina",
-    reviewsCount: "4 avaliações no Google",
+    name: "Felipe Cabral",
+    reviewsCount: "3 avaliações no Google",
     date: "Avaliação Verificada no Google Meu Negócio",
-    badge: "Auxílio-Acidente Concedido",
+    badge: "Resiliência & Cuidado com o Pai",
     content:
-      "Há cerca de um ano, procurei a Ingrid Marques Advocacia Previdenciária para dar início ao processo de solicitação de auxílio-acidente, após um acidente de moto que resultou em uma sequela permanente, com encurtamento de um dos meus membros. Trabalho de excelência e dedicação do início ao fim!",
+      "Estou passando aqui para expressar minha Gratidão a Haynhandra 🙏🏼 Sua resiliência e paciência em querer atender meu pai da melhor forma possível, com muito carinho e competência...",
     reply:
-      "Muito obrigada pelo seu depoimento. Ficamos muito felizes em contribuir com esse momento tão importante na sua vida!",
+      "Felipe, muito obrigada pelo seu feedback. Fico feliz pelo êxito de seu pai. Deus abençoe vocês!",
   },
   {
-    name: "Vanessa Ribeiro",
-    reviewsCount: "1 avaliação no Google",
+    name: "Sueli Quinup Meleiro",
+    reviewsCount: "Local Guide · 8 avaliações no Google",
     date: "Avaliação Verificada no Google Meu Negócio",
-    badge: "Acolhimento & Justiça",
+    badge: "Conhecimento a Fundo & Solícita",
     content:
-      "Hoje deixo aqui minha gratidão à advogada Ingrid. Quando cheguei até ela, já estava sem esperança e acreditando que minha situação não tinha mais solução. Mesmo assim, ela acolheu meu caso com profissionalismo, dedicação e muita competência. Fez justiça por mim!",
+      "Profissional atenciosa, muito educada e solícita... conseguiu encaixar um horário de última hora pra me atender. Se mostrou muito segura e conhecedora a fundo do assunto.",
     reply:
-      "Eu fico até emocionada. Muito obrigada pelo seu feedback, ele é muito importante pra mim. Fiquei imensamente feliz em poder fazer justiça por você!",
+      "Gratidão por sua avaliação! Sua opinião é muito importante para nós!",
   },
   {
-    name: "Marlene Teixeira",
-    reviewsCount: "1 avaliação no Google",
+    name: "Rejane Lima",
+    reviewsCount: "3 avaliações no Google",
     date: "Avaliação Verificada no Google Meu Negócio",
-    badge: "Aposentadoria Garantida",
+    badge: "Clareza & Atendimento Dedicado",
     content:
-      "Só tenho que agradecer a Deus e à advogada Ingrid. Consegui resolver meu caso, uma excelente advogada. Vencemos a guerra das perícias e hoje minha aposentadoria tá garantida!",
+      "Fiquei muito satisfeita com a forma clara e atenciosa com que conduziu o atendimento. Muito obrigada pela dedicação, atenção e profissionalismo.",
     reply:
-      "Obrigada Marlene, por confiar no nosso trabalho, mesmo com as demoras das impugnações de laudos médicos e as mazelas do judiciário. Agora sim, aposentadoria garantida e sua hora enfim chegou!",
+      "Agradecemos imensamente pela confiança depositada no nosso escritório!",
   },
   {
-    name: "Luciene Santos",
+    name: "ferreira ferreira",
+    reviewsCount: "Local Guide · 10 avaliações no Google",
+    date: "Avaliação Verificada no Google Meu Negócio",
+    badge: "Excelente Assessoria Jurídica",
+    content:
+      "O Escritório presta uma excelente assessoria jurídica, tem ótimos profissionais e um atendimento dedicado!",
+    reply:
+      "Muito obrigada pelo seu feedback. Fico lisonjeada com as palavras. Foi um prazer atuar em seu favor! Que Deus lhe abençoe grandemente!",
+  },
+  {
+    name: "gizelle rafaela",
     reviewsCount: "5 avaliações no Google",
     date: "Avaliação Verificada no Google Meu Negócio",
-    badge: "Dedicação & Educação",
+    badge: "Resolução Rápida & Confiável",
     content:
-      "Só tenho a agradecer à Dra. Ingrid pelo trabalho maravilhoso que ela prestou para meu pai. Toda dedicação, nunca deixou de atender, muita educação. E excelência no trabalho. Parabéns e gratidão Dra. Ingrid pelo excelente trabalho!",
+      "Foi excelente, resolveu meu problema super rápido. Trabalho de qualidade e confiável. Só tenho a agradecer!",
     reply:
-      "Fico feliz em ter feito parte desse processo que foi tão difícil pra nós, mas deu certo!",
+      "Obrigada pelo seu feedback! Deus abençoe grandemente!",
   },
   {
-    name: "Emmanuelle Crispim",
-    reviewsCount: "2 avaliações no Google",
+    name: "marcos vinicios",
+    reviewsCount: "3 avaliações no Google",
     date: "Avaliação Verificada no Google Meu Negócio",
-    badge: "Causa Conduzida à Vitória",
+    badge: "Esclarecimento com Clareza",
     content:
-      "Dra., quero expressar minha imensa gratidão pelo excelente trabalho realizado e pela dedicação em conduzir minha causa até a vitória. Sua competência, comprometimento e profissionalismo fizeram toda a diferença nesse processo.",
+      "Excelente atendimento, tirou todas as minhas dúvidas com muita clareza, sem dúvidas irei dar sequência do meu processo com ela.",
     reply:
-      "Muito obrigada querida. Fico imensamente feliz com esse resultado!",
+      "Obrigada pela sua avaliação! Conte conosco em cada etapa processual.",
   },
   {
-    name: "Lucimar Ramos",
-    reviewsCount: "1 avaliação no Google",
+    name: "Bell Borges",
+    reviewsCount: "Local Guide · 32 avaliações no Google",
     date: "Avaliação Verificada no Google Meu Negócio",
-    badge: "Sonho Realizado",
+    badge: "Atendimento Impecável",
     content:
-      "Quero agradecer à Dra. Ingrid pelo excelente trabalho. Em momento nenhum quis desistir do meu caso, mesmo sendo muito desafiador, e sempre muito prestativa. Enfim ela conseguiu realizar o meu grande sonho!",
+      "Ótimo atendimento, me explicaram super bem as dúvidas que eu tinha. Recomendo muito. Parabéns pelo atendimento.",
     reply:
-      "Ah que fofa. Eu que agradeço a confiança no meu trabalho! Seu caso era realmente muito difícil, mas conseguimos desembaraçar tudo. Grata por fazer parte desse momento!",
+      "Gratidão pela sua avaliação! Deus abençoe!",
   },
   {
-    name: "Leandro Freitas",
-    reviewsCount: "3 avaliações · 1 foto no Google",
+    name: "BRÍGIDA PALHARES",
+    reviewsCount: "Local Guide · 53 avaliações no Google",
     date: "Avaliação Verificada no Google Meu Negócio",
-    badge: "Clareza nos Processos",
+    badge: "Responsabilidade & Prontidão",
     content:
-      "Excelente recepção e um trabalho com muita dedicação. Excelente esclarecimento nos atos dos processos... esclareceu muito bem todas as minhas dúvidas!",
+      "Profissional responsável, nos atendeu prontamente no que precisávamos.",
     reply:
-      "Muito obrigada pela confiança depositada no nosso trabalho desde o primeiro contato!",
-  },
-  {
-    name: "Leidriene Alves",
-    reviewsCount: "1 avaliação no Google",
-    date: "Avaliação Verificada no Google Meu Negócio",
-    badge: "Agilidade & Atenção",
-    content:
-      "Super atenciosos, resolveu bem rápido o que a gente achou que ia demorar muito!",
-    reply: "Ficamos muito felizes em poder ajudar com rapidez e segurança!",
+      "Obrigada pelo seu retorno e avaliação! Ficamos sempre à disposição.",
   },
 ];
 
@@ -386,7 +459,6 @@ function Heading({
   eyebrow,
   children,
   description,
-  dark = true,
 }: {
   eyebrow: string;
   children: React.ReactNode;
@@ -395,12 +467,12 @@ function Heading({
 }) {
   return (
     <div className="max-w-2xl">
-      <p className={dark ? "eyebrow-dark" : "eyebrow"}>{eyebrow}</p>
-      <h2 className="mt-3.5 font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-white sm:text-4xl lg:text-[2.75rem]">
+      <p className="eyebrow">{eyebrow}</p>
+      <h2 className="mt-3.5 font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#38080f] sm:text-4xl lg:text-[2.75rem]">
         {children}
       </h2>
       {description && (
-        <p className="mt-4 text-[15px] leading-7 text-[#9eb1a3]">
+        <p className="mt-4 text-[15px] leading-7 text-[#5c494c]">
           {description}
         </p>
       )}
@@ -427,26 +499,26 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="relative min-h-screen overflow-hidden bg-[#0a110c] text-white">
-        {/* Top Header / Announcement Bar */}
-        <header className="sticky top-0 z-40 border-b border-[#233427] bg-[#0a110c]/95 backdrop-blur-md">
+      <main className="relative min-h-screen overflow-hidden bg-[#fbf9f5] text-[#2b1a1d]">
+        {/* Top Header / Announcement Bar - Deep Wine Accent Frame */}
+        <header className="sticky top-0 z-40 border-b border-[#eaddd0] bg-white/95 backdrop-blur-md">
           {/* Top Info Bar */}
-          <div className="border-b border-[#1b2b1e] bg-[#0d1610] px-4 py-2 text-[11px] text-[#9eb1a3]">
+          <div className="border-b border-[#3b0911] bg-[#4a0d17] px-4 py-2 text-[11px] text-[#f2dcba]">
             <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 sm:px-6">
               <div className="flex items-center gap-4">
                 <span className="inline-flex items-center gap-1.5 font-semibold text-white">
-                  <Star size={13} className="fill-[#deb26a] text-[#deb26a]" />
-                  5,0 ★ no Google (39 avaliações)
+                  <Star size={13} className="fill-[#e8c792] text-[#e8c792]" />
+                  5,0 ★ no Google (26 avaliações verificadas)
                 </span>
-                <span className="hidden sm:inline text-[#233427]">|</span>
-                <span className="hidden sm:inline">
-                  Nova Lima - MG · Atendimento Presencial & Online em Todo o Brasil
+                <span className="hidden sm:inline text-[#721b2a]">|</span>
+                <span className="hidden sm:inline text-stone-200">
+                  Igarapé - MG · R. Alexandre Nunes, 157 - Centro
                 </span>
               </div>
               <div className="flex items-center gap-4">
                 <a
                   href={`tel:+${WHATSAPP_NUMBER}`}
-                  className="hidden md:inline-flex items-center gap-1.5 transition-colors hover:text-[#deb26a]"
+                  className="hidden md:inline-flex items-center gap-1.5 transition-colors hover:text-white"
                 >
                   <Phone size={12} /> {PHONE_DISPLAY}
                 </a>
@@ -454,29 +526,29 @@ export default function Home() {
                   href={getWhatsAppUrl()}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1 font-bold text-[#deb26a] transition-colors hover:text-[#f5dfad]"
+                  className="inline-flex items-center gap-1.5 font-bold text-[#f5dfad] transition-colors hover:text-white"
                 >
-                  <WhatsAppIcon size={13} /> Plantão Previdenciário WhatsApp
+                  <WhatsAppIcon size={13} /> Plantão WhatsApp com a Dra. Haynhandra
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Main Navigation */}
-          <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 sm:px-8">
+          {/* Main Navigation - Pure White Canvas for Crystal Clear Logo */}
+          <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 sm:px-8 bg-white">
             <a
               href="#inicio"
               className="inline-flex items-center gap-3 transition-transform hover:scale-[1.01]"
-              aria-label="Ingrid Marques Advocacia Previdenciária"
+              aria-label="Haynhandra Martins Advocacia - Início"
             >
-              <div className="relative h-[65px] w-[230px] sm:h-[75px] sm:w-[280px]">
+              <div className="relative h-[68px] w-[250px] sm:h-[78px] sm:w-[300px]">
                 <Image
                   src={LOGO_SRC}
-                  alt="Ingrid Marques Advocacia Previdenciária - Logo Oficial"
+                  alt="Haynhandra Martins Advocacia - Logo Oficial"
                   fill
                   priority
-                  sizes="(max-width: 640px) 230px, 280px"
-                  className="object-contain object-left drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]"
+                  sizes="(max-width: 640px) 250px, 300px"
+                  className="object-contain object-left"
                 />
               </div>
             </a>
@@ -490,7 +562,7 @@ export default function Home() {
                 A Advogada
               </a>
               <a className="nav-link" href="#atuacao">
-                Especialidades
+                Áreas de Atuação
               </a>
               <a className="nav-link" href="#diferenciais">
                 Por Que Escolher
@@ -506,7 +578,7 @@ export default function Home() {
             <div className="hidden items-center gap-3 lg:flex">
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Ingrid Marques! Gostaria de uma consultoria sobre meu benefício no INSS."
+                  "Olá, Dra. Haynhandra Martins! Gostaria de consultar sobre meus direitos com seu escritório."
                 )}
                 target="_blank"
                 size="sm"
@@ -521,7 +593,7 @@ export default function Home() {
             <button
               type="button"
               onClick={() => setMenuOpen(!menuOpen)}
-              className="grid size-11 place-items-center rounded-lg border border-[#233427] bg-[#142017] text-white lg:hidden"
+              className="grid size-11 place-items-center rounded-lg border border-[#eaddd0] bg-[#faf6f0] text-[#4a363a] lg:hidden cursor-pointer"
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -535,31 +607,31 @@ export default function Home() {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                className="border-b border-[#233427] bg-[#0d1610] px-5 py-6 lg:hidden"
+                className="border-b border-[#eaddd0] bg-white px-5 py-6 lg:hidden"
               >
-                <div className="flex flex-col gap-4 text-sm font-semibold uppercase tracking-wider text-[#9eb1a3]">
-                  <a onClick={closeMenu} className="hover:text-white" href="#inicio">
+                <div className="flex flex-col gap-4 text-sm font-semibold uppercase tracking-wider text-[#4a363a]">
+                  <a onClick={closeMenu} className="hover:text-[#681724]" href="#inicio">
                     Início
                   </a>
-                  <a onClick={closeMenu} className="hover:text-white" href="#sobre">
+                  <a onClick={closeMenu} className="hover:text-[#681724]" href="#sobre">
                     A Advogada
                   </a>
-                  <a onClick={closeMenu} className="hover:text-white" href="#atuacao">
-                    Especialidades Previdenciárias
+                  <a onClick={closeMenu} className="hover:text-[#681724]" href="#atuacao">
+                    Áreas de Atuação (Previdenciário & Cível)
                   </a>
-                  <a onClick={closeMenu} className="hover:text-white" href="#diferenciais">
+                  <a onClick={closeMenu} className="hover:text-[#681724]" href="#diferenciais">
                     Por Que Escolher
                   </a>
-                  <a onClick={closeMenu} className="hover:text-white" href="#avaliacoes">
+                  <a onClick={closeMenu} className="hover:text-[#681724]" href="#avaliacoes">
                     Avaliações Google (5,0 ★)
                   </a>
-                  <a onClick={closeMenu} className="hover:text-white" href="#contato">
-                    Contato & Sede
+                  <a onClick={closeMenu} className="hover:text-[#681724]" href="#contato">
+                    Contato & Sede em Igarapé
                   </a>
                   <div className="pt-2">
                     <GlowingButton
                       href={getWhatsAppUrl(
-                        "Olá, Dra. Ingrid Marques! Gostaria de agendar uma consulta previdenciária."
+                        "Olá, Dra. Haynhandra Martins! Gostaria de agendar uma consulta jurídica."
                       )}
                       target="_blank"
                       size="md"
@@ -575,14 +647,14 @@ export default function Home() {
           </AnimatePresence>
         </header>
 
-        {/* Hero Section - Deep Emerald Green #222F25 Gradient & Polished Gold */}
+        {/* Hero Section - Luminous Light Mode: Warm Ivory & Champagne Canvas */}
         <section
           id="inicio"
-          className="relative isolate scroll-mt-24 border-b border-[#233427] bg-gradient-to-b from-[#0a110c] via-[#142017] to-[#0a110c]"
+          className="relative isolate scroll-mt-24 border-b border-[#e5d8cb] bg-gradient-to-b from-[#fdfbf7] via-[#f8f4ec] to-[#f2ecdf]"
         >
-          {/* Subtle Ambient Forest Green & Gold Glow Spheres */}
-          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[42rem] rounded-full bg-[#222f25]/40 blur-3xl" />
-          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[36rem] rounded-full bg-[#deb26a]/10 blur-3xl" />
+          {/* Subtle Ambient Light Warm Glows */}
+          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[42rem] rounded-full bg-[#c59860]/10 blur-3xl" />
+          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[36rem] rounded-full bg-[#721b2a]/06 blur-3xl" />
 
           <div className="mx-auto grid min-h-[660px] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:min-h-[720px] lg:grid-cols-[1.1fr_0.9fr] lg:gap-14 lg:px-12 lg:py-20">
             <motion.div
@@ -594,28 +666,44 @@ export default function Home() {
               {/* Authority badge */}
               <motion.div
                 variants={reveal}
-                className="mb-6 inline-flex items-center gap-2.5 rounded-lg border border-[#deb26a]/40 bg-[#142017] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#deb26a] shadow-sm"
+                className="mb-6 inline-flex items-center gap-2.5 rounded-lg border border-[#d9b882] bg-white px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#681724] shadow-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#deb26a] shadow-[0_0_8px_#deb26a]" />
-                <span>DRA. INGRID MARQUES · ADVOCACIA PREVIDENCIÁRIA · NOVA LIMA - MG</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#c59860] shadow-[0_0_8px_#c59860]" />
+                <span>DRA. HAYNHANDRA MARTINS · PREVIDENCIÁRIO (INSS) E CÍVEL · IGARAPÉ - MG</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
-                className="max-w-[760px] font-serif text-[2.65rem] leading-[1.08] tracking-[-0.02em] text-white sm:text-5xl lg:text-[3.85rem]"
+                className="max-w-[760px] font-serif text-[2.65rem] leading-[1.08] tracking-[-0.02em] text-[#38080f] sm:text-5xl lg:text-[3.85rem]"
               >
-                Defesa previdenciária de excelência para conquistar o benefício que é{" "}
-                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f5dfad] to-[#deb26a]">
+                Assessoria jurídica de excelência, humana e combativa para conquistar o que é{" "}
+                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#681724] via-[#9e733b] to-[#c59860]">
                   seu por direito.
                 </span>
               </motion.h1>
 
               <motion.p
                 variants={reveal}
-                className="mt-7 max-w-xl text-[15px] leading-7 text-[#9eb1a3] sm:text-base sm:leading-8"
+                className="mt-7 max-w-xl text-[15px] leading-7 text-[#524144] sm:text-base sm:leading-8 font-medium"
               >
-                ⚖️ <strong className="font-semibold text-white">Nota máxima 5,0 ★ com 39 avaliações no Google Meu Negócio.</strong> Atuação especializada liderada pela <span className="font-semibold text-white">Dra. Ingrid Marques</span>. Combate técnico para destravar pedidos no INSS, reverter cortes indevidos, impugnar laudos periciais e garantir <span className="text-[#deb26a] font-semibold">aposentadorias integrais com 13º, auxílio-acidente por sequelas, auxílio-doença e BPC/LOAS</span>.
+                ⚖️ <strong className="font-bold text-[#38080f]">Nota máxima 5,0 ★ com 26 avaliações verificadas no Google Meu Negócio.</strong> Liderada pela <span className="font-bold text-[#38080f]">Dra. Haynhandra Martins</span>, nossa atuação é reconhecida pelo acolhimento empático, extrema sinceridade e rigor técnico. Defesa firme em <span className="text-[#681724] font-bold">aposentadorias, BPC/LOAS, auxílio-doença, auxílio-acidente, pensão por morte, indenizações cíveis e direito de família/inventários</span>.
               </motion.p>
+
+              {/* Tags destacadas pelo Google */}
+              <motion.div
+                variants={reveal}
+                className="mt-6 flex flex-wrap items-center gap-2 text-[11px] font-semibold text-[#4a363a]"
+              >
+                <span className="inline-flex items-center gap-1.5 rounded-md border border-[#e5d9cc] bg-white px-3 py-1 shadow-xs text-[#541e26]">
+                  <HelpCircle size={13} className="text-[#c59860]" /> Esclarecimento de dúvidas sem juridiquês
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-md border border-[#e5d9cc] bg-white px-3 py-1 shadow-xs text-[#541e26]">
+                  <Gem size={13} className="text-[#c59860]" /> Trabalho de alta qualidade
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-md border border-[#e5d9cc] bg-white px-3 py-1 shadow-xs text-[#541e26]">
+                  <ShieldCheck size={13} className="text-[#c59860]" /> Resiliência & dedicação inabalável
+                </span>
+              </motion.div>
 
               <motion.div
                 variants={reveal}
@@ -623,22 +711,22 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Ingrid Marques! Gostaria de consultar sobre meus direitos previdenciários e agendar um atendimento."
+                    "Olá, Dra. Haynhandra Martins! Gostaria de consultar sobre meus direitos e agendar um atendimento."
                   )}
                   target="_blank"
                   size="lg"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar no WhatsApp com a Dra. Ingrid
+                  <WhatsAppIcon size={16} /> Falar no WhatsApp com a Dra. Haynhandra
                 </GlowingButton>
                 <GlowingButton
                   href="#atuacao"
                   size="lg"
-                  variant="forest"
+                  variant="wine"
                   className="rounded-lg shadow-xs"
                 >
-                  Especialidades Previdenciárias{" "}
+                  Conhecer Nossas Áreas{" "}
                   <ArrowRight
                     size={14}
                     className="transition-transform group-hover:translate-x-1"
@@ -648,27 +736,27 @@ export default function Home() {
 
               <motion.div
                 variants={reveal}
-                className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-[#233427] pt-6 text-xs text-[#9eb1a3]"
+                className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-[#e2d5c6] pt-6 text-xs text-[#5c494c]"
               >
                 <a
                   href={GOOGLE_SEARCH_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 font-semibold text-white transition-colors hover:text-[#deb26a]"
+                  className="inline-flex items-center gap-2 font-bold text-[#38080f] transition-colors hover:text-[#681724]"
                 >
-                  <Star size={15} className="fill-[#deb26a] text-[#deb26a]" />{" "}
-                  5,0 estrelas no Google (39 avaliações verificadas)
+                  <Star size={15} className="fill-[#c59860] text-[#c59860]" />{" "}
+                  5,0 estrelas no Google (26 avaliações verificadas)
                 </a>
-                <span className="inline-flex items-center gap-2 font-medium">
-                  <Clock size={15} className="text-[#deb26a]" /> Seg. a Sex. a partir das 09:00
+                <span className="inline-flex items-center gap-2 font-semibold text-[#4a363a]">
+                  <Clock size={15} className="text-[#681724]" /> Seg. a Sex. a partir das 09:00
                 </span>
-                <span className="inline-flex items-center gap-2 font-medium">
-                  <ShieldCheck size={15} className="text-[#deb26a]" /> Nova Lima - MG & Atendimento em Todo o Brasil
+                <span className="inline-flex items-center gap-2 font-semibold text-[#4a363a]">
+                  <MapPin size={15} className="text-[#681724]" /> R. Alexandre Nunes, 157 - Centro, Igarapé
                 </span>
               </motion.div>
             </motion.div>
 
-            {/* Hero Visual Presentation - Dra. Ingrid Marques */}
+            {/* Hero Visual Presentation - Dra. Haynhandra Martins */}
             <motion.div
               initial={{ opacity: 0, scale: 0.97, y: 18 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -679,34 +767,35 @@ export default function Home() {
               }}
               className="relative mx-auto w-full max-w-[490px] lg:ml-auto lg:mr-2"
             >
-              <div className="relative aspect-[4/5.2] overflow-hidden rounded-2xl border-2 border-[#233427] bg-[#142017] shadow-2xl ring-1 ring-[#deb26a]/30">
+              <div className="relative aspect-[4/5.2] overflow-hidden rounded-2xl border-2 border-[#d9c4af] bg-white shadow-2xl ring-1 ring-[#c59860]/40">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Dra. Ingrid Marques — Advogada Previdenciária em Nova Lima - MG"
+                  alt="Dra. Haynhandra Martins — Advogada Previdenciária e Cível em Igarapé - MG"
                   fill
                   priority
+                  loading="eager"
                   sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 45vw"
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0a110c] via-[#0a110c]/80 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#26070d] via-[#26070d]/75 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-3 text-white sm:bottom-8 sm:left-8 sm:right-8">
                   <div>
-                    <p className="font-serif text-2xl font-normal tracking-wide text-white">
-                      Dra. Ingrid Marques
+                    <p className="font-serif text-2xl font-normal tracking-wide text-white drop-shadow-sm">
+                      Dra. Haynhandra Martins
                     </p>
-                    <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-[#deb26a]">
-                      Advogada Previdenciária Titular
+                    <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-[#f2dcba] font-semibold">
+                      Advocacia Previdenciária & Cível
                     </p>
                   </div>
-                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#deb26a]/40 bg-[#142017]/90 text-[#deb26a] backdrop-blur-sm">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#c59860]/60 bg-[#38080f]/90 text-[#f2dcba] backdrop-blur-sm shadow-md">
                     <Scale size={18} />
                   </span>
                 </div>
               </div>
 
               {/* Authority badge */}
-              <div className="absolute -left-3 bottom-28 z-10 rounded-lg border border-[#233427] bg-[#142017]/95 backdrop-blur-md px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-white shadow-card sm:-left-5">
-                <span className="text-[#deb26a]">●</span> NOVA LIMA - MG · ATENDIMENTO BRASIL
+              <div className="absolute -left-3 bottom-28 z-10 rounded-lg border border-[#e5d8cb] bg-white/95 backdrop-blur-md px-4 py-2 text-[10px] font-bold tracking-[0.14em] text-[#38080f] shadow-lg sm:-left-5">
+                <span className="text-[#c59860]">●</span> CENTRO DE IGARAPÉ - MG · ATENDIMENTO BRASIL
               </div>
 
               {/* Floating Google rating badge */}
@@ -714,61 +803,61 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="absolute -bottom-5 -right-3 z-10 rounded-xl border border-[#233427] bg-[#142017]/95 backdrop-blur-md p-3.5 shadow-card transition-all hover:scale-105 hover:border-[#deb26a] sm:-right-5"
+                className="absolute -bottom-5 -right-3 z-10 rounded-xl border border-[#e5d8cb] bg-white/95 backdrop-blur-md p-3.5 shadow-xl transition-all hover:scale-105 hover:border-[#681724] sm:-right-5"
               >
                 <div className="flex items-center gap-2">
                   <GoogleIcon size={16} />
                   <div className="flex items-center gap-1">
-                    <Star size={13} className="fill-[#deb26a] text-[#deb26a]" />
-                    <span className="font-serif text-base font-bold text-white">
+                    <Star size={13} className="fill-[#c59860] text-[#c59860]" />
+                    <span className="font-serif text-base font-bold text-[#38080f]">
                       5,0 / 5,0
                     </span>
                   </div>
                 </div>
-                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#9eb1a3]">
-                  39 Avaliações no Google (100% 5★)
+                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#614e51]">
+                  26 Avaliações no Google (100% 5★)
                 </p>
               </a>
             </motion.div>
           </div>
         </section>
 
-        {/* Highlights Banner - High Contrast Deep Forest Band */}
+        {/* Highlights Banner - High Contrast Warm Champagne Velvet Band */}
         <section
           aria-label="Credenciais e Destaques"
-          className="border-y border-[#233427] bg-[#0e1711] text-white"
+          className="border-y border-[#dbcbbb] bg-[#eae2d3] text-[#38080f]"
         >
           <div className="mx-auto grid max-w-7xl gap-7 px-5 py-8 sm:grid-cols-4 sm:gap-4 sm:px-8 lg:px-12">
             {[
               [
                 "5,0 ★",
-                "nota máxima de excelência no Google com 39 avaliações",
+                "nota máxima de satisfação no Google com 26 avaliações",
               ],
               [
                 "100% 5★",
-                "reconhecimento por reverter causas complexas e dedicação",
+                "reconhecimento por transparência, resiliência e acolhimento",
               ],
               [
-                "Direito Previdenciário",
-                "especialização integral em INSS, aposentadorias, auxílios e BPC",
+                "Previdenciário & Cível",
+                "atuação técnica em INSS, Aposentadorias, Família e Contratos",
               ],
               [
-                "Nova Lima & Brasil",
-                "sede no Alta de Gaya e atendimento digital humanizado para todo o país",
+                "Igarapé & Brasil",
+                "sede no Centro de Igarapé e assessoria online para todo o país",
               ],
             ].map(([value, label], index) => (
               <div
                 key={label}
                 className={
                   index > 0
-                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#233427]"
+                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#d4c2b0]"
                     : "flex items-center gap-4 sm:justify-center"
                 }
               >
-                <span className="font-serif text-2xl font-semibold text-[#deb26a] sm:text-3xl">
+                <span className="font-serif text-2xl font-bold text-[#681724] sm:text-3xl">
                   {value}
                 </span>
-                <span className="max-w-[165px] text-[11px] leading-5 text-[#9eb1a3]">
+                <span className="max-w-[165px] text-[11px] leading-5 text-[#59474a] font-medium">
                   {label}
                 </span>
               </div>
@@ -776,13 +865,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sobre a Advogada - Executive Forest & Amber Gold Canvas */}
+        {/* Sobre a Advogada - Executive White & Warm Gold Canvas */}
         <section
           id="sobre"
-          className="scroll-mt-24 border-b border-[#233427] bg-[#0d1610] py-20 text-white sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-[#e5d8cb] bg-white py-20 text-[#2b1a1d] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
-            {/* Presentation portrait - Real Office Photo */}
+            {/* Presentation portrait */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -790,40 +879,40 @@ export default function Home() {
               variants={reveal}
               className="relative mx-auto w-full max-w-[480px]"
             >
-              <div className="relative aspect-[3/3.8] overflow-hidden rounded-2xl border-2 border-[#233427] bg-[#142017] shadow-xl">
+              <div className="relative aspect-[3/3.8] overflow-hidden rounded-2xl border-2 border-[#d9c4af] bg-[#faf6f0] shadow-xl">
                 <Image
                   src={FOTO_SOBRE_SRC}
-                  alt="Dra. Ingrid Marques em seu escritório de Advocacia Previdenciária"
+                  alt="Dra. Haynhandra Martins em seu escritório de Advocacia"
                   fill
                   sizes="(max-width: 1024px) 90vw, 45vw"
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0a110c]/90 via-[#0a110c]/30 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#26070d]/80 via-[#26070d]/20 to-transparent" />
               </div>
 
-              {/* Authority badge card - Deep Forest & Gold Contrast */}
-              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#deb26a]/40 bg-[#142017] px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
-                <div className="flex items-center gap-2 text-[#deb26a]">
+              {/* Authority badge card */}
+              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#d9b882] bg-white px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
+                <div className="flex items-center gap-2 text-[#681724]">
                   <Award size={16} />
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#deb26a]">
-                    Advocacia Previdenciária de Alto Padrão
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#681724]">
+                    Advocacia Especializada & Humana
                   </p>
                 </div>
-                <p className="mt-1 font-serif text-lg leading-snug text-white">
-                  Dra. Ingrid Marques
+                <p className="mt-1 font-serif text-lg leading-snug text-[#38080f] font-bold">
+                  Dra. Haynhandra Martins
                 </p>
-                <p className="mt-0.5 text-[11px] font-medium text-[#deb26a]">
-                  Especialista em Benefícios Previdenciários
+                <p className="mt-0.5 text-[11px] font-semibold text-[#681724]">
+                  Especialista em Direito Previdenciário (INSS) e Cível
                 </p>
-                <p className="mt-1 text-[11px] leading-4 text-[#9eb1a3]">
-                  Nova Lima - MG · R. Seis, 147 - Alta de Gaya
+                <p className="mt-1 text-[11px] leading-4 text-[#614e51]">
+                  Centro de Igarapé - MG · R. Alexandre Nunes, 157
                 </p>
               </div>
 
-              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#deb26a]/50 sm:-left-7 sm:-top-7 sm:size-32" />
+              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#c59860]/60 sm:-left-7 sm:-top-7 sm:size-32" />
             </motion.div>
 
-            {/* Story & Biography - Refined Typography */}
+            {/* Story & Biography */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -832,68 +921,68 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#deb26a]/30 bg-[#142017] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#deb26a] shadow-xs"
+                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#d9b882] bg-[#faf6f0] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#681724] shadow-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#deb26a]" />
-                <span>CONHEÇA A DRA. INGRID MARQUES</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#c59860]" />
+                <span>CONHEÇA A DRA. HAYNHANDRA MARTINS</span>
               </motion.div>
 
               <motion.h2
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-white sm:text-4xl lg:text-[3.25rem]"
+                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#38080f] sm:text-4xl lg:text-[3.25rem]"
               >
                 Mais do que um processo: o{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f5dfad] to-[#deb26a]">
-                  sustento, a dignidade e o futuro de quem trabalhou a vida toda.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#681724] via-[#9e733b] to-[#c59860]">
+                  cuidado com a sua história, o sustento da sua família e a sua paz.
                 </span>
               </motion.h2>
 
               <motion.p
                 variants={reveal}
-                className="mt-6 max-w-xl text-[15px] leading-7 text-[#9eb1a3]"
+                className="mt-6 max-w-xl text-[15px] leading-7 text-[#4e3d40] font-normal"
               >
-                Liderada pela <strong className="font-bold text-white">Dra. Ingrid Marques</strong>, a <strong className="font-bold text-white">Ingrid Marques Advocacia Previdenciária</strong> consolidou-se em Nova Lima, na Região Metropolitana de Belo Horizonte e em todo o Brasil como uma das principais referências em defesa combativa dos direitos dos segurados perante o INSS.
+                Liderado pela <strong className="font-bold text-[#38080f]">Dra. Haynhandra Martins</strong>, o escritório <strong className="font-bold text-[#38080f]">Haynhandra Martins Advocacia</strong> consolidou-se em Igarapé, na Região Metropolitana e em todo o Brasil como uma referência em atendimento ético, acolhedor e combativo na defesa de direitos fundamentais.
               </motion.p>
 
               <motion.p
                 variants={reveal}
-                className="mt-4 max-w-xl text-[15px] leading-7 text-[#9eb1a3]"
+                className="mt-4 max-w-xl text-[15px] leading-7 text-[#4e3d40] font-normal"
               >
-                Reconhecida pela capacidade de assumir e reverter causas consideradas &ldquo;impossíveis&rdquo; ou desacreditadas por outros profissionais — como cortes injustos de aposentadorias por invalidez, negativas de perícias médicas e benefícios travados há anos —, a Dra. Ingrid alia <strong className="font-bold text-white">acolhimento humanizado, transparência cristalina e combate incansável até a decisão vitoriosa</strong>.
+                Reconhecida pelos próprios clientes por sua <strong className="font-bold text-[#38080f]">sinceridade ímpar, resiliência para resolver problemas complexos que se arrastavam há anos</strong> e pela capacidade de explicar o direito de forma simples e transparente, a Dra. Haynhandra atua diretamente em cada causa com foco em resultados concretos e respeito absoluto à pessoa humana.
               </motion.p>
 
               {/* Authentic Client Quote Card */}
               <motion.div
                 variants={reveal}
-                className="mt-6 rounded-xl border border-[#deb26a]/30 bg-[#142017] p-5 shadow-xs"
+                className="mt-6 rounded-xl border border-[#d9b882]/70 bg-[#faf6f0] p-5 shadow-xs"
               >
-                <blockquote className="font-serif text-sm italic leading-relaxed text-[#f4f4f5]">
-                  &ldquo;Ingrid é competente ao extremo, super honesta. Conseguiu a aposentadoria da minha sogra em menos de 2 meses, integral e com direito a 13º salário, quando outro profissional havia sugerido o caminho errado. Indico de olhos fechados!&rdquo;
+                <blockquote className="font-serif text-sm italic leading-relaxed text-[#382629]">
+                  &ldquo;Além da excelente profissional, ela te ouve, se importa com seu caso, é extremamente sincera, a recepcionista é um amor de pessoa também!&rdquo;
                 </blockquote>
-                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#deb26a]">
-                  — Camila Gonçalves · Avaliação Verificada no Google (5,0 ★ · 39 Avaliações)
+                <p className="mt-2 text-[11px] font-bold uppercase tracking-wider text-[#681724]">
+                  — Renata Custodia · Local Guide no Google (5,0 ★ · 26 Avaliações Verificadas)
                 </p>
               </motion.div>
 
               <motion.div
                 variants={reveal}
-                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-white sm:grid-cols-2"
+                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#38080f] sm:grid-cols-2"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
-                  <span>Nota máxima 5,0 ★ com 39 avaliações no Google</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#681724]" />
+                  <span>Nota máxima 5,0 ★ com 26 avaliações no Google</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
-                  <span>Especialista em Aposentadorias, Invalidez, Auxílios e BPC</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#681724]" />
+                  <span>Especialista em Previdenciário (INSS), Cível e Família</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
-                  <span>Atendimento acolhedor, transparente e sem juridiquês</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#681724]" />
+                  <span>Atendimento atencioso, sincero e sem juridiquês</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
-                  <span>Sede no Alta de Gaya (Nova Lima - MG) & Online para todo o Brasil</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#681724]" />
+                  <span>Sede no Centro de Igarapé - MG & Online para todo o Brasil</span>
                 </div>
               </motion.div>
 
@@ -903,18 +992,18 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Ingrid! Gostaria de agendar uma consulta sobre o meu benefício com seu escritório."
+                    "Olá, Dra. Haynhandra! Gostaria de agendar uma consulta jurídica com seu escritório."
                   )}
                   target="_blank"
                   size="md"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar com a Dra. Ingrid
+                  <WhatsAppIcon size={16} /> Falar com a Dra. Haynhandra
                 </GlowingButton>
                 <a
                   href={`tel:+${WHATSAPP_NUMBER}`}
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white transition-colors hover:text-[#deb26a]"
+                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#38080f] transition-colors hover:text-[#681724]"
                 >
                   <Phone size={15} /> {PHONE_DISPLAY}
                 </a>
@@ -923,10 +1012,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Especialidades Previdenciárias - Deep Forest Canvas with Executive Cards */}
+        {/* Áreas de Atuação - Previdenciário (INSS) & Cível */}
         <section
           id="atuacao"
-          className="scroll-mt-24 border-b border-[#233427] bg-[#0a110c] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-[#e5d8cb] bg-[#f8f4ec] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <motion.div
@@ -937,16 +1026,16 @@ export default function Home() {
               className="flex flex-col justify-between gap-6 md:flex-row md:items-end"
             >
               <Heading
-                eyebrow="SERVIÇOS PREVIDENCIÁRIOS & PILARES DE ATUAÇÃO"
-                description="Especialização técnica profunda e combate rigoroso contra o INSS para resguardar sua renda, sua tranquilidade e seu direito legítimo."
+                eyebrow="PILARES DE ATUAÇÃO & ESPECIALIDADES"
+                description="Especialização jurídica rigorosa e combatividade incansável para resguardar seus benefícios do INSS, proteger seu patrimônio e resolver conflitos familiares com segurança."
               >
-                Atuação jurídica especializada em{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f5dfad] to-[#deb26a]">
-                  INSS, Aposentadorias, Auxílios e BPC.
+                Atuação especializada em{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#681724] via-[#9e733b] to-[#c59860]">
+                  Direito Previdenciário (INSS) e Cível.
                 </span>
               </Heading>
-              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#9eb1a3]">
-                Clique em uma especialidade abaixo para conferir os detalhes e iniciar sua consulta diretamente pelo WhatsApp.
+              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#5c494c]">
+                Clique em uma especialidade abaixo para conferir as principais demandas atendidas e iniciar seu atendimento direto pelo WhatsApp.
               </p>
             </motion.div>
 
@@ -955,7 +1044,7 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.12 }}
               variants={stagger}
-              className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3"
+              className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4"
             >
               {practiceAreas.map((area, index) => {
                 const Icon = area.icon;
@@ -963,25 +1052,25 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#233427] bg-[#142017] p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-[#deb26a]/60 hover:shadow-card-hover sm:p-8"
+                    className="group flex min-h-[360px] flex-col rounded-xl border border-[#e5d9cc] bg-white p-6 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-[#c59860] hover:shadow-card-hover sm:p-7"
                   >
                     <div className="flex items-start justify-between">
-                      <span className="grid size-12 place-items-center rounded-lg border border-[#233427] bg-[#0d1610] text-[#deb26a] shadow-xs transition-colors group-hover:border-[#deb26a] group-hover:bg-[#deb26a] group-hover:text-[#0a110c]">
+                      <span className="grid size-12 place-items-center rounded-lg border border-[#e8dacb] bg-[#faf6f0] text-[#681724] shadow-xs transition-colors group-hover:border-[#681724] group-hover:bg-[#681724] group-hover:text-white">
                         <Icon size={22} strokeWidth={1.5} />
                       </span>
-                      <span className="font-serif text-2xl font-semibold text-[#deb26a]/40 transition-colors group-hover:text-[#deb26a]">
+                      <span className="font-serif text-2xl font-bold text-[#c59860]/60 transition-colors group-hover:text-[#681724]">
                         0{index + 1}
                       </span>
                     </div>
 
-                    <div className="mt-6">
-                      <span className="inline-block rounded-md border border-[#233427] bg-[#0d1610] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#deb26a]">
+                    <div className="mt-5">
+                      <span className="inline-block rounded-md border border-[#e5d9cc] bg-[#faf6f0] px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-[#681724]">
                         {area.tag}
                       </span>
-                      <h3 className="mt-3 font-serif text-[1.45rem] leading-tight text-white">
+                      <h3 className="mt-3 font-serif text-[1.3rem] leading-tight text-[#38080f] font-bold">
                         {area.title}
                       </h3>
-                      <p className="mt-3 text-[13px] leading-6 text-[#9eb1a3]">
+                      <p className="mt-2.5 text-[12px] leading-5 text-[#574447]">
                         {area.summary}
                       </p>
                     </div>
@@ -989,7 +1078,7 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => setActiveArea(area)}
-                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#deb26a] hover:text-white"
+                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#681724] hover:text-[#c59860] cursor-pointer"
                     >
                       Ver detalhes e demandas{" "}
                       <ArrowRight
@@ -1004,26 +1093,25 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Por Que Escolher a Ingrid Marques Advocacia - 4 Pilares de Excelência */}
+        {/* Por Que Escolher a Haynhandra Martins Advocacia - 4 Pilares de Excelência */}
         <section
           id="diferenciais"
-          className="scroll-mt-24 border-y border-[#233427] bg-[#0d1610] py-20 text-white sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-y border-[#e5d8cb] bg-white py-20 text-[#2b1a1d] sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
-                dark
-                eyebrow="REPUTAÇÃO NOTA MÁXIMA NO GOOGLE"
-                description="Os pilares de Vitórias em Causas Complexas, Acolhimento Humano, Agilidade e Honestidade Extrema reconhecidos em 39 avaliações 5 estrelas no Google."
+                eyebrow="REPUTAÇÃO 5 ESTRELAS NO GOOGLE"
+                description="Os pilares de Resiliência Processual, Acolhimento Humano, Agilidade na Resolução e Extrema Sinceridade comprovados em 26 avaliações 5 estrelas no Google Meu Negócio."
               >
-                Por que confiar seu benefício à{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f5dfad] to-[#deb26a]">
-                  Ingrid Marques Advocacia?
+                Por que confiar sua causa à{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#681724] via-[#9e733b] to-[#c59860]">
+                  Haynhandra Martins Advocacia?
                 </span>
               </Heading>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Ingrid! Gostaria de consultar sobre a minha situação previdenciária com seu escritório."
+                  "Olá, Dra. Haynhandra! Gostaria de consultar sobre a minha situação jurídica com seu escritório."
                 )}
                 target="_blank"
                 size="md"
@@ -1034,69 +1122,69 @@ export default function Home() {
               </GlowingButton>
             </div>
 
-            {/* Grid 4 Pilares */}
+            {/* Grid 4 Pilares baseados nas avaliações reais */}
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {/* Pilar 1: Vitórias em Casos Complexos */}
-              <div className="flex flex-col rounded-xl border border-[#233427] bg-[#142017] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#deb26a]/50">
-                <div className="flex size-12 items-center justify-center rounded-lg border border-[#233427] bg-[#0a110c] text-[#deb26a]">
+              {/* Pilar 1: Resiliência em Casos Complexos */}
+              <div className="flex flex-col rounded-xl border border-[#e5d9cc] bg-[#faf6f0] p-6 shadow-xs transition-all hover:-translate-y-1 hover:border-[#c59860] hover:shadow-card">
+                <div className="flex size-12 items-center justify-center rounded-lg border border-[#e8dacb] bg-white text-[#681724]">
                   <Award size={22} />
                 </div>
-                <h3 className="mt-4 font-serif text-xl font-bold text-white">
-                  Causas Complexas
+                <h3 className="mt-4 font-serif text-xl font-bold text-[#38080f]">
+                  Resiliência Comprovada
                 </h3>
-                <p className="mt-2 text-xs leading-6 text-[#9eb1a3]">
-                  Histórico comprovado de reverter cortes de aposentadorias por invalidez, negativas médicas e destravar processos esquecidos pelo INSS.
+                <p className="mt-2 text-xs leading-6 text-[#574447]">
+                  Capacidade de assumir e resolver causas travadas há anos, como casos que se arrastavam há 4 anos destravados em poucos meses com combatividade técnica.
                 </p>
-                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#deb26a]">
-                  &ldquo;Resolveu o caso do meu pai que parecia impossível&rdquo;
+                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#681724]">
+                  &ldquo;Problema de 4 anos resolvido com uns 6 meses&rdquo;
                 </span>
               </div>
 
-              {/* Pilar 2: Acolhimento & Empatia */}
-              <div className="flex flex-col rounded-xl border border-[#233427] bg-[#142017] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#deb26a]/50">
-                <div className="flex size-12 items-center justify-center rounded-lg border border-[#233427] bg-[#0a110c] text-[#deb26a]">
+              {/* Pilar 2: Acolhimento & Escuta Atenta */}
+              <div className="flex flex-col rounded-xl border border-[#e5d9cc] bg-[#faf6f0] p-6 shadow-xs transition-all hover:-translate-y-1 hover:border-[#c59860] hover:shadow-card">
+                <div className="flex size-12 items-center justify-center rounded-lg border border-[#e8dacb] bg-white text-[#681724]">
                   <HeartHandshake size={22} />
                 </div>
-                <h3 className="mt-4 font-serif text-xl font-bold text-white">
-                  Acolhimento Humano
+                <h3 className="mt-4 font-serif text-xl font-bold text-[#38080f]">
+                  Acolhimento Real
                 </h3>
-                <p className="mt-2 text-xs leading-6 text-[#9eb1a3]">
-                  Escuta atenciosa, respeito incondicional e acolhimento de segurados que chegam desacreditados ou sem esperança de solução.
+                <p className="mt-2 text-xs leading-6 text-[#574447]">
+                  Escuta paciente, respeito à história do cliente e carinho no atendimento, acolhendo quem chega desacreditado ou desamparado perante a burocracia.
                 </p>
-                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#deb26a]">
-                  &ldquo;Estava sem esperança e ela acolheu meu caso com dedicação&rdquo;
+                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#681724]">
+                  &ldquo;Ela te ouve, se importa com seu caso, nos deixa muito à vontade&rdquo;
                 </span>
               </div>
 
-              {/* Pilar 3: Agilidade & Eficiência */}
-              <div className="flex flex-col rounded-xl border border-[#233427] bg-[#142017] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#deb26a]/50">
-                <div className="flex size-12 items-center justify-center rounded-lg border border-[#233427] bg-[#0a110c] text-[#deb26a]">
+              {/* Pilar 3: Clareza & Sem Juridiquês */}
+              <div className="flex flex-col rounded-xl border border-[#e5d9cc] bg-[#faf6f0] p-6 shadow-xs transition-all hover:-translate-y-1 hover:border-[#c59860] hover:shadow-card">
+                <div className="flex size-12 items-center justify-center rounded-lg border border-[#e8dacb] bg-white text-[#681724]">
                   <Sparkles size={22} />
                 </div>
-                <h3 className="mt-4 font-serif text-xl font-bold text-white">
-                  Agilidade com Êxito
+                <h3 className="mt-4 font-serif text-xl font-bold text-[#38080f]">
+                  Clareza nos Processos
                 </h3>
-                <p className="mt-2 text-xs leading-6 text-[#9eb1a3]">
-                  Concessão de aposentadorias integrais em tempo recorde, esclarecendo cada ato processual de forma transparente e clara.
+                <p className="mt-2 text-xs leading-6 text-[#574447]">
+                  Explicação do direito em linguagem humana e acessível, esclarecendo todas as dúvidas e mantendo o cliente seguro em cada etapa processual.
                 </p>
-                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#deb26a]">
-                  &ldquo;Aposentadoria integral em menos de 2 meses&rdquo;
+                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#681724]">
+                  &ldquo;Explica nosso direito para que possamos entender&rdquo;
                 </span>
               </div>
 
-              {/* Pilar 4: Honestidade & Ética */}
-              <div className="flex flex-col rounded-xl border border-[#233427] bg-[#142017] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#deb26a]/50">
-                <div className="flex size-12 items-center justify-center rounded-lg border border-[#233427] bg-[#0a110c] text-[#deb26a]">
+              {/* Pilar 4: Extrema Sinceridade & Ética */}
+              <div className="flex flex-col rounded-xl border border-[#e5d9cc] bg-[#faf6f0] p-6 shadow-xs transition-all hover:-translate-y-1 hover:border-[#c59860] hover:shadow-card">
+                <div className="flex size-12 items-center justify-center rounded-lg border border-[#e8dacb] bg-white text-[#681724]">
                   <Shield size={22} />
                 </div>
-                <h3 className="mt-4 font-serif text-xl font-bold text-white">
-                  Honestidade Extrema
+                <h3 className="mt-4 font-serif text-xl font-bold text-[#38080f]">
+                  Extrema Sinceridade
                 </h3>
-                <p className="mt-2 text-xs leading-6 text-[#9eb1a3]">
-                  Orientação honesta para que você não perca direitos (como 13º salário) aceitando benefícios menores por caminhos errados.
+                <p className="mt-2 text-xs leading-6 text-[#574447]">
+                  Transparência total desde o primeiro minuto sobre as reais possibilidades jurídicas do caso, sem falsas promessas e com ética inegociável.
                 </p>
-                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#deb26a]">
-                  &ldquo;Competente ao extremo e super honesta&rdquo;
+                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#681724]">
+                  &ldquo;Extremamente sincera e sem deixar nenhuma pendência&rdquo;
                 </span>
               </div>
             </div>
@@ -1108,49 +1196,49 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#233427] bg-[#142017] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#deb26a]/50 sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#e5d9cc] bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#c59860] hover:shadow-card-hover sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#233427] bg-[#0a110c] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#f5dfad]">
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#e8dacb] bg-[#faf6f0] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#681724]">
                       <HeartHandshake size={14} /> Atendimento Humanizado
                     </span>
-                    <span className="text-xs font-semibold text-[#deb26a]">
-                      Acolhimento Real
+                    <span className="text-xs font-bold text-[#c59860]">
+                      Igarapé - MG
                     </span>
                   </div>
-                  <h3 className="mt-4 font-serif text-2xl leading-tight text-white sm:text-[1.75rem]">
+                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#38080f] sm:text-[1.75rem] font-bold">
                     Paciência, Atenção & Clareza em Cada Detalhe
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#9eb1a3]">
-                    Sabemos a angústia de enfrentar filas no INSS, ter laudos recusados ou ficar meses sem salário após um acidente ou enfermidade. Na Ingrid Marques Advocacia, você é tratado com carinho, respeito e orientações claras sobre cada passo do seu benefício.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#574447]">
+                    Sabemos a angústia de enfrentar filas no INSS, ter laudos recusados ou lidar com disputas familiares e contratuais. Na Haynhandra Martins Advocacia, você é tratado com carinho, respeito e orientações claras sobre cada passo do seu direito.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs font-medium text-stone-200">
+                  <ul className="mt-5 space-y-2 text-xs font-semibold text-[#38080f]">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
+                      <CheckCircle2 size={15} className="shrink-0 text-[#681724]" />
                       <span>Contato direto pelo WhatsApp e atualizações periódicas</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
+                      <CheckCircle2 size={15} className="shrink-0 text-[#681724]" />
                       <span>Prioridade absoluta ao sustento e à dignidade da sua família</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
+                      <CheckCircle2 size={15} className="shrink-0 text-[#681724]" />
                       <span>Linguagem acessível, explicando seus direitos sem termos complicados</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#233427] pt-4">
+                <div className="mt-7 border-t border-[#f0e6dc] pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Ingrid! Gostaria de conversar diretamente sobre meu benefício do INSS."
+                      "Olá, Dra. Haynhandra! Gostaria de conversar diretamente sobre meu caso com seu escritório."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#233427] bg-[#0d1610] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#f5dfad] transition-all hover:border-[#deb26a] hover:bg-[#1a281f] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#e8dacb] bg-[#faf6f0] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#681724] transition-all hover:border-[#681724] hover:bg-[#f3ebe0] hover:text-[#38080f]"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Conversar com a Dra. Ingrid no WhatsApp
+                      <WhatsAppIcon size={15} /> Conversar com a Dra. Haynhandra no WhatsApp
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
@@ -1163,46 +1251,46 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#233427] bg-[#142017] p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#deb26a]/50 sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#e5d9cc] bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#c59860] hover:shadow-card-hover sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#233427] bg-[#0a110c] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#f5dfad]">
-                      <Scale size={14} /> Estratégia Previdenciária
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#e8dacb] bg-[#faf6f0] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#681724]">
+                      <Scale size={14} /> Estratégia & Resiliência
                     </span>
-                    <span className="text-xs font-semibold text-[#deb26a]">
+                    <span className="text-xs font-bold text-[#c59860]">
                       Rigor Técnico
                     </span>
                   </div>
-                  <h3 className="mt-4 font-serif text-2xl leading-tight text-white sm:text-[1.75rem]">
-                    Benefícios Previdenciários Exigem Estratégia, Não Improviso
+                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#38080f] sm:text-[1.75rem] font-bold">
+                    Causas Complexas Exigem Estratégia, Não Improviso
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#9eb1a3]">
-                    Um pedido mal formulado pode condenar você a anos sem receber ou a aceitar um benefício assistencial que não dá direito a 13º salário nem pensão por morte. A Dra. Ingrid Marques constrói teses processuais sólidas com provas periciais fundamentadas para assegurar a melhor concessão.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#574447]">
+                    Um pedido mal formulado pode custar anos de atraso ou a perda irremediável de direitos. A Dra. Haynhandra Martins constrói teses jurídicas robustas com provas periciais e documentais sólidas para buscar a decisão mais vantajosa para você.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs font-medium text-stone-200">
+                  <ul className="mt-5 space-y-2 text-xs font-semibold text-[#38080f]">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
-                      <span>Auditoria técnica do CNIS, vínculos e documentos médicos</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#681724]" />
+                      <span>Auditoria técnica de vínculos, documentos médicos e contratos</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
-                      <span>Postura firme em impugnações de laudos e perícias na Justiça</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#681724]" />
+                      <span>Postura firme em impugnações de laudos e perícias judiciais</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#deb26a]" />
-                      <span>Capacidade comprovada de reverter indeferimentos e processos travados</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#681724]" />
+                      <span>Histórico de reversão de indeferimentos e destravamento de processos</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#233427] pt-4">
+                <div className="mt-7 border-t border-[#f0e6dc] pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Ingrid! Preciso de ajuda jurídica para analisar minha situação no INSS."
+                      "Olá, Dra. Haynhandra! Preciso de ajuda jurídica para analisar minha situação."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#233427] bg-[#0d1610] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#f5dfad] transition-all hover:border-[#deb26a] hover:bg-[#1a281f] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#e8dacb] bg-[#faf6f0] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#681724] transition-all hover:border-[#681724] hover:bg-[#f3ebe0] hover:text-[#38080f]"
                   >
                     <span className="inline-flex items-center gap-2">
                       <WhatsAppIcon size={15} /> Analisar Meu Caso no WhatsApp
@@ -1215,39 +1303,39 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Citação em Destaque & Compromisso Real - Gradient #222F25 */}
-        <section className="relative overflow-hidden border-b border-[#233427] bg-gradient-to-r from-[#0a110c] via-[#222f25] to-[#0a110c] py-20 text-white sm:py-28 lg:py-32">
-          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#c69a4c]/10 blur-3xl" />
-          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#deb26a]/10 blur-3xl" />
+        {/* Citação em Destaque & Compromisso Real */}
+        <section className="relative overflow-hidden border-b border-[#e5d8cb] bg-gradient-to-r from-[#fbf8f2] via-[#f3ecdf] to-[#fbf8f2] py-20 text-[#2b1a1d] sm:py-28 lg:py-32">
+          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#c59860]/10 blur-3xl" />
+          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#681724]/06 blur-3xl" />
 
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 eyebrow="NOSSO COMPROMISSO COM VOCÊ"
-                description="A nota máxima de 5,0 ★ com 39 avaliações no Google reflete a dedicação diária e o respeito incondicional a cada cliente que confia seu sustento à Dra. Ingrid Marques."
+                description="A nota máxima de 5,0 ★ com 26 avaliações no Google reflete a dedicação diária, o acolhimento e o respeito incondicional a cada cliente que confia sua causa à Dra. Haynhandra Martins."
               >
-                Cuidamos do seu benefício com{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f5dfad] to-[#deb26a]">
-                  ética, empatia e combatividade total.
+                Cuidamos do seu direito com{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#681724] via-[#9e733b] to-[#c59860]">
+                  sinceridade, empatia e combatividade total.
                 </span>
               </Heading>
 
-              <div className="mt-8 flex flex-col gap-4 rounded-xl border border-[#233427] bg-[#142017] p-6 shadow-card sm:flex-row sm:items-start">
-                <div className="relative size-16 shrink-0 overflow-hidden rounded-full border-2 border-[#deb26a]/40 shadow-sm">
+              <div className="mt-8 flex flex-col gap-4 rounded-xl border border-[#d9b882]/70 bg-white p-6 shadow-card sm:flex-row sm:items-start">
+                <div className="relative size-16 shrink-0 overflow-hidden rounded-full border-2 border-[#c59860] shadow-sm">
                   <Image
                     src={FOTO_EDITORIAL_SRC}
-                    alt="Dra. Ingrid Marques — Advocacia Previdenciária"
+                    alt="Dra. Haynhandra Martins — Advocacia"
                     fill
                     sizes="64px"
                     className="object-cover object-top"
                   />
                 </div>
                 <div>
-                  <blockquote className="font-serif text-base italic leading-7 text-white">
-                    &ldquo;A Ingrid resolveu o caso do meu pai, que parecia impossível. Ele era aposentado por invalidez desde 2006, mas com a reforma cortaram o benefício. Dra. Ingrid acolheu o caso e garantiu a aposentadoria de volta. Foi uma bênção na nossa vida!&rdquo;
+                  <blockquote className="font-serif text-base italic leading-7 text-[#38080f]">
+                    &ldquo;Minha experiência foi a das melhores possíveis, pois eu estava com um problema a uns 4 anos e com uns 6 meses resolveu, e outra além da simplicidade, é bem esclarecida, não deixa nenhuma pendência eu super indico, é uma profissional de alta qualidade!&rdquo;
                   </blockquote>
-                  <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#deb26a]">
-                    — Karina Nogueira · Avaliação Verificada no Google Meu Negócio
+                  <footer className="mt-3 font-sans text-[11px] font-bold not-italic uppercase tracking-wider text-[#681724]">
+                    — Jucimara Biju · Avaliação Verificada no Google Meu Negócio
                   </footer>
                 </div>
               </div>
@@ -1258,23 +1346,23 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={stagger}
-              className="divide-y divide-[#233427]"
+              className="divide-y divide-[#e2d5c6]"
             >
               {[
                 [
                   "01",
                   "Acolhimento Humanizado & Empatia",
-                  "Você é ouvido com atenção e acolhimento. Entendemos a realidade da sua saúde, da sua família e do seu trabalho para traçar o caminho jurídico mais seguro.",
+                  "Você é ouvido com atenção e acolhimento. Entendemos a realidade da sua família, da sua saúde e do seu patrimônio para traçar o caminho jurídico mais seguro e humano.",
                 ],
                 [
                   "02",
                   "Transparência & Comunicação Clara",
-                  "Você nunca fica sem respostas. Mantemos você informado de cada andamento do seu processo no INSS ou na Justiça em linguagem simples e acolhedora.",
+                  "Você nunca fica sem respostas. Mantemos você informado de cada andamento do seu processo no INSS, na Justiça ou no Cartório, explicando tudo sem termos técnicos difíceis.",
                 ],
                 [
                   "03",
-                  "Combate Incansável por Resultados",
-                  "Lutamos até a última instância, impugnando laudos médicos desfavoráveis e cobrando cada centavo de retroativos que o INSS lhe deve.",
+                  "Resiliência & Combate por Resultados",
+                  "Lutamos com persistência inabalável, buscando resolver conflitos com rapidez e cobrando cada direito e retroativo que lhe pertence legitimamente.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1282,12 +1370,12 @@ export default function Home() {
                   variants={reveal}
                   className="grid gap-3 py-6 first:pt-0 sm:grid-cols-[70px_1fr] sm:gap-6 sm:py-7"
                 >
-                  <span className="font-serif text-2xl font-bold text-[#deb26a]">
+                  <span className="font-serif text-2xl font-bold text-[#681724]">
                     {number}
                   </span>
                   <div>
-                    <h3 className="font-serif text-2xl text-white">{title}</h3>
-                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#9eb1a3]">
+                    <h3 className="font-serif text-2xl text-[#38080f] font-bold">{title}</h3>
+                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#574447]">
                       {description}
                     </p>
                   </div>
@@ -1297,21 +1385,20 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Avaliações no Google (Depoimentos Reais - 5,0 ★ · 39 avaliações) */}
+        {/* Avaliações no Google (Depoimentos Reais - 5,0 ★ · 26 avaliações) */}
         <section
           id="avaliacoes"
-          className="scroll-mt-24 border-t border-[#233427] bg-[#0a110c] py-20 text-white sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#e5d8cb] bg-[#f8f4ec] py-20 text-[#2b1a1d] sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
-                dark
                 eyebrow="DEPOIMENTOS REAIS NO GOOGLE"
-                description="Nota máxima de 5,0 ★ com 39 avaliações verificadas. Histórias reais de quem teve sua aposentadoria garantida e seus direitos resguardados."
+                description="Nota máxima de 5,0 ★ com 26 avaliações verificadas. Histórias reais de quem teve seu caso resolvido com agilidade, acolhimento e dedicação."
               >
                 O que dizem os clientes da{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f5dfad] to-[#deb26a]">
-                  Dra. Ingrid Marques
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#681724] via-[#9e733b] to-[#c59860]">
+                  Dra. Haynhandra Martins
                 </span>
               </Heading>
 
@@ -1319,11 +1406,11 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-3 rounded-xl border border-[#233427] bg-[#142017] px-5 py-3 text-xs font-semibold text-white transition-all hover:border-[#deb26a] hover:bg-[#1a281f]"
+                className="inline-flex items-center gap-3 rounded-xl border border-[#e5d9cc] bg-white px-5 py-3 text-xs font-bold text-[#38080f] shadow-xs transition-all hover:border-[#681724] hover:bg-[#faf6f0]"
               >
                 <GoogleIcon size={18} />
-                <span>Ver todas as 39 avaliações no Google</span>
-                <ArrowUpRight size={15} className="text-[#deb26a]" />
+                <span>Ver avaliações no Google Meu Negócio</span>
+                <ArrowUpRight size={15} className="text-[#681724]" />
               </a>
             </div>
 
@@ -1332,43 +1419,43 @@ export default function Home() {
               {clientReviews.map((review) => (
                 <article
                   key={review.name}
-                  className="flex flex-col justify-between rounded-xl border border-[#233427] bg-[#142017] p-6 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#deb26a]/60"
+                  className="flex flex-col justify-between rounded-xl border border-[#e5d9cc] bg-white p-6 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-[#c59860] hover:shadow-card-hover"
                 >
                   <div>
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-1 text-[#deb26a]">
+                      <div className="flex items-center gap-1 text-[#d99b42]">
                         {[...Array(5)].map((_, i) => (
                           <Star
                             key={i}
                             size={14}
-                            className="fill-[#deb26a] text-[#deb26a]"
+                            className="fill-[#d99b42] text-[#d99b42]"
                           />
                         ))}
                       </div>
-                      <span className="rounded-md border border-[#233427] bg-[#0d1610] px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-[#deb26a]">
+                      <span className="rounded-md border border-[#e5d9cc] bg-[#faf6f0] px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-[#681724]">
                         {review.badge}
                       </span>
                     </div>
 
-                    <p className="mt-4 text-[13px] leading-6 text-stone-200">
+                    <p className="mt-4 text-[13px] leading-6 text-[#382629]">
                       &ldquo;{review.content}&rdquo;
                     </p>
 
                     {review.reply && (
-                      <div className="mt-4 rounded-lg border border-[#233427] bg-[#0d1610]/70 p-3 text-[11px] leading-5 text-[#9eb1a3]">
-                        <span className="font-semibold text-[#deb26a]">
-                          Resposta da Dra. Ingrid:{" "}
+                      <div className="mt-4 rounded-lg border border-[#eadbce] bg-[#faf6f0] p-3 text-[11px] leading-5 text-[#523e42]">
+                        <span className="font-bold text-[#681724]">
+                          Resposta do Escritório:{" "}
                         </span>
                         {review.reply}
                       </div>
                     )}
                   </div>
 
-                  <div className="mt-6 border-t border-[#233427] pt-4">
-                    <p className="font-serif text-sm font-semibold text-white">
+                  <div className="mt-6 border-t border-[#f0e6dc] pt-4">
+                    <p className="font-serif text-sm font-bold text-[#38080f]">
                       {review.name}
                     </p>
-                    <p className="text-[10px] text-[#9eb1a3]">{review.date}</p>
+                    <p className="text-[10px] text-[#6e5a5d]">{review.date}</p>
                   </div>
                 </article>
               ))}
@@ -1376,28 +1463,27 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contato & Localização da Sede em Nova Lima - MG */}
+        {/* Contato & Localização da Sede no Centro de Igarapé - MG */}
         <section
           id="contato"
-          className="scroll-mt-24 border-t border-[#233427] bg-[#0d1610] py-20 text-white sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#e5d8cb] bg-white py-20 text-[#2b1a1d] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
-                dark
-                eyebrow="CONTATO & ATENDIMENTO PREVIDENCIÁRIO"
-                description="Inicie seu atendimento diretamente pelo WhatsApp. Prestamos assistência ágil e resolutiva para clientes de Nova Lima, Belo Horizonte, Região Metropolitana e consultoria previdenciária online para todo o Brasil."
+                eyebrow="CONTATO & ATENDIMENTO JURÍDICO"
+                description="Inicie seu atendimento diretamente pelo WhatsApp. Prestamos assistência ágil e resolutiva para clientes de Igarapé, Betim, Brumadinho, São Joaquim de Bicas, Região Metropolitana de BH e consultoria jurídica online para todo o Brasil."
               >
                 Estamos prontos para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f5dfad] to-[#deb26a]">
-                  escutar sua história e lutar pelo seu benefício.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#681724] via-[#9e733b] to-[#c59860]">
+                  escutar sua história e defender seus direitos.
                 </span>
               </Heading>
 
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Ingrid! Gostaria de agendar um atendimento previdenciário com seu escritório."
+                    "Olá, Dra. Haynhandra! Gostaria de agendar um atendimento com a Haynhandra Martins Advocacia."
                   )}
                   target="_blank"
                   size="lg"
@@ -1406,58 +1492,58 @@ export default function Home() {
                 >
                   <WhatsAppIcon size={17} /> Iniciar Conversa no WhatsApp
                 </GlowingButton>
-                <p className="text-[11px] leading-5 text-[#9eb1a3]">
+                <p className="text-[11px] leading-5 text-[#5c494c]">
                   WhatsApp e Telefone do escritório:{" "}
-                  <strong className="text-white">{PHONE_DISPLAY}</strong>
+                  <strong className="text-[#38080f]">{PHONE_DISPLAY}</strong>
                 </p>
               </div>
 
-              <div className="mt-10 space-y-4 text-xs text-[#9eb1a3]">
+              <div className="mt-10 space-y-4 text-xs text-[#5c494c]">
                 <div className="flex items-start gap-3">
                   <Clock
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#deb26a]"
+                    className="mt-0.5 shrink-0 text-[#681724]"
                   />
                   <div>
-                    <p className="font-semibold text-white">
+                    <p className="font-bold text-[#38080f]">
                       Horário de Funcionamento
                     </p>
-                    <p className="mt-0.5 text-stone-200">
+                    <p className="mt-0.5 text-[#382629]">
                       Segunda a Sexta-feira · a partir das 09:00 até as 18:00
                     </p>
-                    <p className="text-[11px] text-stone-400">
-                      Atendimento presencial com hora marcada e consultoria online em todo o Brasil
+                    <p className="text-[11px] text-[#6e5a5d]">
+                      Atendimento presencial com hora marcada e consultoria online para todo o Brasil
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 pt-1">
-                  <Phone size={16} className="shrink-0 text-[#deb26a]" />
+                  <Phone size={16} className="shrink-0 text-[#681724]" />
                   <a
                     href={`tel:+${WHATSAPP_NUMBER}`}
-                    className="font-medium text-white transition-colors hover:text-[#deb26a]"
+                    className="font-bold text-[#38080f] transition-colors hover:text-[#681724]"
                   >
                     {PHONE_DISPLAY} (Ligações e WhatsApp)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <InstagramIcon size={16} className="shrink-0 text-[#deb26a]" />
+                  <InstagramIcon size={16} className="shrink-0 text-[#681724]" />
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="transition-colors hover:text-[#deb26a] text-stone-200"
+                    className="transition-colors hover:text-[#681724] text-[#382629] font-medium"
                   >
                     {INSTAGRAM_HANDLE} (Instagram Oficial)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="shrink-0 text-[#deb26a]" />
+                  <Mail size={16} className="shrink-0 text-[#681724]" />
                   <a
                     href={`mailto:${EMAIL_CONTACT}`}
-                    className="transition-colors hover:text-[#deb26a] text-stone-200"
+                    className="transition-colors hover:text-[#681724] text-[#382629] font-medium"
                   >
                     {EMAIL_CONTACT}
                   </a>
@@ -1466,99 +1552,101 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <MapPin
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#deb26a]"
+                    className="mt-0.5 shrink-0 text-[#681724]"
                   />
-                  <span>{ADDRESS_TEXT}</span>
+                  <span className="text-[#382629] font-medium">{ADDRESS_TEXT}</span>
                 </div>
               </div>
             </div>
 
             {/* Office & Schedule Card */}
-            <div className="relative overflow-hidden rounded-xl border border-[#233427] bg-[#142017] p-7 shadow-card sm:p-10">
-              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#deb26a] to-[#f5dfad]" />
+            <div className="relative overflow-hidden rounded-xl border border-[#e5d9cc] bg-[#faf6f0] p-7 shadow-card sm:p-10">
+              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#ba8847] to-[#d4a86f]" />
 
               <div className="flex items-center gap-4">
                 <div className="relative h-[88px] w-[280px] shrink-0 sm:h-[100px] sm:w-[330px]">
                   <Image
                     src={LOGO_SRC}
-                    alt="Ingrid Marques Advocacia Previdenciária"
+                    alt="Haynhandra Martins Advocacia"
                     fill
                     sizes="(max-width: 640px) 280px, 330px"
-                    className="object-contain object-left drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
+                    className="object-contain object-left"
                   />
                 </div>
               </div>
 
-              <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-[#9eb1a3]">
-                <strong className="font-semibold text-white">
-                  Ingrid Marques Advocacia Previdenciária
+              <address className="mt-7 max-w-md text-[14px] not-italic leading-7 text-[#574447]">
+                <strong className="font-bold text-[#38080f]">
+                  Haynhandra Martins Advocacia
                 </strong>
                 <br />
-                Dra. Ingrid Marques — Advogada Titular
+                Previdenciário (INSS) e Cível
+                <br />
+                Dra. Haynhandra Martins — Advogada Titular
                 <br />
                 {ADDRESS_TEXT}
               </address>
 
               {/* Weekly schedule table */}
-              <div className="mt-6 rounded-lg border border-[#233427] bg-[#0d1610] p-4 text-xs">
-                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#deb26a]">
+              <div className="mt-6 rounded-lg border border-[#eadbce] bg-white p-4 text-xs">
+                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#681724]">
                   Atendimento & Disponibilidade
                 </p>
-                <div className="grid grid-cols-2 gap-y-1.5 text-stone-300">
+                <div className="grid grid-cols-2 gap-y-1.5 text-[#4a383b]">
                   <span>Horário de Funcionamento</span>
-                  <span className="text-right font-semibold text-white">
+                  <span className="text-right font-bold text-[#38080f]">
                     Abre às 09:00 (Seg a Sex)
                   </span>
                   <span>Modalidade</span>
-                  <span className="text-right text-[#f5dfad]">
+                  <span className="text-right font-bold text-[#681724]">
                     Presencial & Online
                   </span>
                   <span>Sede Física</span>
-                  <span className="text-right text-stone-200">Alta de Gaya, Nova Lima - MG</span>
+                  <span className="text-right text-[#38080f]">Centro, Igarapé - MG</span>
                   <span>Atendimento Online</span>
-                  <span className="text-right text-stone-200">Todo o Brasil</span>
+                  <span className="text-right text-[#38080f]">Todo o Brasil</span>
                 </div>
               </div>
 
-              <div className="my-7 h-px bg-[#233427]" />
+              <div className="my-7 h-px bg-[#eadbce]" />
 
               <div className="flex flex-wrap items-center justify-between gap-4">
-                <p className="text-xs text-stone-400">
-                  Atendimento dedicado, ético e combativo
+                <p className="text-xs text-[#6e5a5d]">
+                  Atendimento dedicado, ético e resolutivo
                 </p>
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Ingrid! Gostaria de agendar um atendimento presencial ou online com a Ingrid Marques Advocacia."
+                    "Olá, Dra. Haynhandra! Gostaria de agendar um atendimento presencial em Igarapé ou online."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-[#233427] bg-[#0d1610] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#f5dfad] transition-colors hover:border-[#deb26a] hover:bg-[#1a281f] hover:text-white"
+                  className="inline-flex items-center gap-2 rounded-lg border border-[#d9c5b2] bg-white px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#681724] transition-colors hover:border-[#681724] hover:bg-[#faf6f0] hover:text-[#38080f]"
                 >
-                  <WhatsAppIcon size={14} /> Falar com a Dra. Ingrid <ArrowUpRight size={14} />
+                  <WhatsAppIcon size={14} /> Falar com a Dra. Haynhandra <ArrowUpRight size={14} />
                 </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Pre-Footer CTA Strip - Rich Forest Gradient #222F25 */}
-        <section className="border-t border-[#233427] bg-gradient-to-r from-[#0a110c] via-[#222f25] to-[#0a110c] px-5 py-14 text-white shadow-inner sm:px-8 sm:py-16 lg:px-12">
+        {/* Pre-Footer CTA Strip - Rich Marsala Accent Banner */}
+        <section className="border-t border-[#3b0911] bg-gradient-to-r from-[#420a13] via-[#681724] to-[#420a13] px-5 py-14 text-white shadow-inner sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
-              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#deb26a]">
-                <Sparkles size={13} /> DRA. INGRID MARQUES · INGRID MARQUES ADVOCACIA PREVIDENCIÁRIA
+              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#f2dcba]">
+                <Sparkles size={13} /> DRA. HAYNHANDRA MARTINS · HAYNHANDRA MARTINS ADVOCACIA
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl">
-                Não deixe seus direitos nas mãos do INSS. Garanta a consultoria certa.
+                Não deixe seus direitos desamparados. Garanta a assessoria certa.
               </h2>
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá, Dra. Ingrid! Gostaria de consultar sobre meus direitos com a Ingrid Marques Advocacia."
+                "Olá, Dra. Haynhandra! Gostaria de consultar sobre meus direitos com a Haynhandra Martins Advocacia."
               )}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#c69a4c] via-[#deb26a] to-[#c69a4c] px-7 py-4 text-[11px] font-extrabold uppercase tracking-[0.14em] text-[#0a110c] shadow-md transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold"
+              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#ba8847] via-[#cfa36b] to-[#ba8847] px-7 py-4 text-[11px] font-extrabold uppercase tracking-[0.14em] text-[#2b1218] shadow-md transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold"
             >
               <WhatsAppIcon size={17} /> Falar no WhatsApp{" "}
               <ArrowUpRight size={15} />
@@ -1566,77 +1654,77 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="border-t border-[#233427] bg-[#0a110c] px-5 py-14 text-white sm:px-8 lg:px-12">
+        {/* Footer - Elegant Light Warm Canvas */}
+        <footer className="border-t border-[#dbcbbb] bg-[#eae2d3] px-5 py-14 text-[#4d3d40] sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
             <div>
               <a
                 href="#inicio"
-                aria-label="Ingrid Marques Advocacia Previdenciária"
+                aria-label="Haynhandra Martins Advocacia"
                 className="inline-flex items-center gap-3.5 transition-transform hover:scale-[1.01]"
               >
-                <div className="relative h-[78px] w-[275px] sm:h-[88px] sm:w-[310px]">
+                <div className="relative h-[78px] w-[285px] sm:h-[88px] sm:w-[320px]">
                   <Image
                     src={LOGO_SRC}
-                    alt="Ingrid Marques Advocacia Previdenciária - Logo Oficial"
+                    alt="Haynhandra Martins Advocacia - Logo Oficial"
                     fill
-                    sizes="(max-width: 640px) 275px, 310px"
-                    className="object-contain object-left drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
+                    sizes="(max-width: 640px) 285px, 320px"
+                    className="object-contain object-left"
                   />
                 </div>
               </a>
-              <p className="mt-4 max-w-xs text-xs leading-6 text-[#9eb1a3]">
-                ⚖️ Advocacia Previdenciária combativa, acolhedora e de excelência. Nota máxima 5,0 ★ no Google com 39 avaliações em Nova Lima - MG e assessoria jurídica para todo o Brasil.
+              <p className="mt-4 max-w-xs text-xs leading-6 text-[#574447]">
+                ⚖️ Advocacia humanizada, ética e combativa. Especializada em Direito Previdenciário (INSS) e Cível. Nota máxima 5,0 ★ no Google com 26 avaliações em Igarapé - MG e assessoria jurídica para todo o Brasil.
               </p>
-              <p className="mt-3 text-[11px] font-semibold text-[#deb26a]">
-                Ingrid Marques Advocacia Previdenciária · OAB/MG
+              <p className="mt-3 text-[11px] font-bold text-[#681724]">
+                Haynhandra Martins Advocacia · Previdenciário (INSS) e Cível · OAB/MG
               </p>
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#deb26a]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#681724]">
                 Navegação
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#9eb1a3]">
-                <a className="footer-link" href="#inicio">
+              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#574447]">
+                <a className="footer-link font-medium" href="#inicio">
                   Início
                 </a>
-                <a className="footer-link" href="#sobre">
+                <a className="footer-link font-medium" href="#sobre">
                   A Advogada
                 </a>
-                <a className="footer-link" href="#atuacao">
-                  Especialidades Previdenciárias
+                <a className="footer-link font-medium" href="#atuacao">
+                  Áreas de Atuação
                 </a>
-                <a className="footer-link" href="#diferenciais">
+                <a className="footer-link font-medium" href="#diferenciais">
                   Por Que Escolher
                 </a>
-                <a className="footer-link" href="#avaliacoes">
+                <a className="footer-link font-medium" href="#avaliacoes">
                   Avaliações no Google (5,0 ★)
                 </a>
-                <a className="footer-link" href="#contato">
+                <a className="footer-link font-medium" href="#contato">
                   Contato & Sede
                 </a>
               </div>
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#deb26a]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#681724]">
                 Contato & Sede
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#9eb1a3]">
+              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#574447]">
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Ingrid! Gostaria de solicitar um atendimento com a Ingrid Marques Advocacia."
+                    "Olá, Dra. Haynhandra! Gostaria de solicitar um atendimento com a Haynhandra Martins Advocacia."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="footer-link inline-flex items-center gap-2 font-medium text-[#f5dfad]"
+                  className="footer-link inline-flex items-center gap-2 font-bold text-[#681724]"
                 >
                   <WhatsAppIcon size={15} /> WhatsApp: {PHONE_DISPLAY}
                 </a>
                 <a
                   href={`tel:+${WHATSAPP_NUMBER}`}
-                  className="footer-link inline-flex items-center gap-2"
+                  className="footer-link inline-flex items-center gap-2 font-medium"
                 >
                   <Phone size={15} className="shrink-0" /> Telefone: {PHONE_DISPLAY}
                 </a>
@@ -1644,30 +1732,30 @@ export default function Home() {
                   href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="footer-link inline-flex items-center gap-2"
+                  className="footer-link inline-flex items-center gap-2 font-medium"
                 >
                   <InstagramIcon size={15} className="shrink-0" /> Instagram: {INSTAGRAM_HANDLE}
                 </a>
                 <a
                   href={`mailto:${EMAIL_CONTACT}`}
-                  className="footer-link inline-flex items-center gap-2"
+                  className="footer-link inline-flex items-center gap-2 font-medium"
                 >
                   <Mail size={15} className="shrink-0" /> {EMAIL_CONTACT}
                 </a>
-                <div className="footer-link inline-flex items-start gap-2">
+                <div className="footer-link inline-flex items-start gap-2 font-medium">
                   <MapPin size={15} className="mt-0.5 shrink-0" />
                   <span>{ADDRESS_TEXT}</span>
                 </div>
-                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#deb26a]">
+                <p className="inline-flex items-center gap-2 pt-1 text-[11px] font-bold text-[#681724]">
                   <Clock size={14} className="shrink-0" /> Seg a Sex · Abre às 09:00
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#233427] pt-6 text-[10px] text-stone-400 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#d4c2b0] pt-6 text-[10px] text-[#6b5a5d] sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} DRA. INGRID MARQUES · INGRID MARQUES ADVOCACIA PREVIDENCIÁRIA. Todos os direitos reservados.
+              © {new Date().getFullYear()} HAYNHANDRA MARTINS ADVOCACIA · PREVIDENCIÁRIO (INSS) E CÍVEL. Todos os direitos reservados.
             </p>
             <p>
               Conteúdo informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
@@ -1682,25 +1770,25 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá, Dra. Ingrid! Gostaria de consultar sobre meus direitos previdenciários."
+              "Olá, Dra. Haynhandra! Gostaria de consultar sobre meus direitos."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Dra. Ingrid Marques"
-            className="group relative flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
+            aria-label="Falar agora pelo WhatsApp com a Dra. Haynhandra Martins"
+            className="group relative flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#25D366]/40 cursor-pointer"
           >
             <WhatsAppIcon size={28} />
-            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#142017] border border-[#233427] px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity group-hover:block">
-              Falar com a Dra. Ingrid
+            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-white border border-[#e5d9cc] px-3.5 py-1.5 text-xs font-bold text-[#38080f] shadow-lg transition-opacity group-hover:block">
+              Falar com a Dra. Haynhandra
             </span>
           </a>
         </aside>
 
-        {/* Modal de Detalhes da Especialidade Previdenciária */}
+        {/* Modal de Detalhes da Especialidade */}
         <AnimatePresence>
           {activeArea && (
             <motion.div
-              className="fixed inset-0 z-50 flex items-end justify-center bg-black/80 p-0 backdrop-blur-md sm:items-center sm:p-6"
+              className="fixed inset-0 z-50 flex items-end justify-center bg-black/60 p-0 backdrop-blur-sm sm:items-center sm:p-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -1715,41 +1803,41 @@ export default function Home() {
                 exit={{ opacity: 0, y: 16, scale: 0.99 }}
                 transition={{ duration: 0.24 }}
                 onClick={(event) => event.stopPropagation()}
-                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-2xl border border-[#233427] bg-[#142017] p-7 shadow-2xl sm:max-w-xl sm:rounded-2xl sm:p-10 text-white"
+                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-2xl border border-[#e5d9cc] bg-white p-7 shadow-2xl sm:max-w-xl sm:rounded-2xl sm:p-10 text-[#2b1a1d]"
               >
                 <button
                   type="button"
                   aria-label="Fechar detalhes da especialidade"
                   onClick={() => setActiveArea(null)}
-                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#233427] bg-[#0d1610] text-[#d4d4d8] transition-colors hover:border-[#deb26a] hover:bg-[#1a281f] hover:text-[#deb26a]"
+                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#e5d9cc] bg-[#faf6f0] text-[#4a363a] transition-colors hover:border-[#681724] hover:bg-[#681724] hover:text-white cursor-pointer"
                 >
                   <X size={18} />
                 </button>
 
-                <p className="eyebrow">ESPECIALIDADE PREVIDENCIÁRIA</p>
+                <p className="eyebrow">{activeArea.category.toUpperCase()}</p>
 
                 <h2
                   id="area-dialog-title"
-                  className="mt-4 max-w-sm pr-10 font-serif text-3xl leading-tight text-white sm:text-4xl"
+                  className="mt-4 max-w-sm pr-10 font-serif text-3xl leading-tight text-[#38080f] font-bold sm:text-4xl"
                 >
                   {activeArea.title}
                 </h2>
 
-                <p className="mt-5 text-sm leading-7 text-[#9eb1a3]">
+                <p className="mt-5 text-sm leading-7 text-[#574447]">
                   {activeArea.details}
                 </p>
 
-                <div className="mt-6 border-t border-[#233427] pt-5">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#deb26a]">
+                <div className="mt-6 border-t border-[#f0e6dc] pt-5">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#681724]">
                     Principais demandas atendidas pelo escritório:
                   </p>
                   <ul className="mt-4 space-y-3">
                     {activeArea.topics.map((topic) => (
                       <li
                         key={topic}
-                        className="flex items-center gap-3 text-sm text-[#f4f4f5]"
+                        className="flex items-center gap-3 text-sm text-[#2b1a1d]"
                       >
-                        <span className="size-2 shrink-0 rounded-full bg-[#deb26a]" />
+                        <span className="size-2 shrink-0 rounded-full bg-[#c59860]" />
                         <span>{topic}</span>
                       </li>
                     ))}
@@ -1769,7 +1857,7 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={() => setActiveArea(null)}
-                    className="px-5 py-3 text-xs font-semibold text-[#9eb1a3] transition-colors hover:text-white"
+                    className="px-5 py-3 text-xs font-bold text-[#6e5a5d] transition-colors hover:text-[#38080f] cursor-pointer"
                   >
                     Fechar
                   </button>
