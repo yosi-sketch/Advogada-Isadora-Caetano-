@@ -11,14 +11,10 @@ interface GlowingButtonProps {
   size?: "sm" | "md" | "lg";
   variant?:
     | "gold"
-    | "wine"
-    | "forest"
-    | "navy"
-    | "rosegold"
-    | "champagne"
-    | "bronze"
     | "dark"
     | "outline"
+    | "emerald"
+    | "champagne"
     | "white";
 }
 
@@ -37,32 +33,24 @@ export default function GlowingButton({
     lg: "px-7 py-4 text-xs tracking-[0.14em]",
   }[size];
 
-  // Visual identity based on Haynhandra Martins Advocacia (Deep Marsala Wine #681724 & Brushed Gold #C59860) in Light Mode
+  // Visual identity based on Lívia Torres — Advogada (Imperial Gold & Deep Obsidian Noir)
   const variantClasses = {
     gold:
-      "border border-[#ba8847] bg-gradient-to-r from-[#ba8847] via-[#d4a86f] to-[#ba8847] text-[#2b1218] font-extrabold shadow-md shadow-[#c59860]/25 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
-    wine:
-      "border border-[#4d0e19] bg-gradient-to-r from-[#5a121f] via-[#721b2a] to-[#5a121f] text-white font-bold shadow-md shadow-[#5a121f]/20 hover:-translate-y-0.5 hover:border-[#c59860] hover:shadow-wine",
-    forest:
-      "border border-[#4d0e19] bg-gradient-to-r from-[#5a121f] via-[#721b2a] to-[#5a121f] text-white font-bold shadow-md shadow-[#5a121f]/20 hover:-translate-y-0.5 hover:border-[#c59860]",
-    navy:
-      "border border-[#4d0e19] bg-gradient-to-r from-[#5a121f] via-[#721b2a] to-[#5a121f] text-white font-bold shadow-md shadow-[#5a121f]/20 hover:-translate-y-0.5 hover:border-[#c59860]",
-    champagne:
-      "border border-[#c59860] bg-[#fffaf2] text-[#681724] font-bold shadow-xs hover:-translate-y-0.5 hover:bg-[#f5ecde] hover:border-[#ba8847]",
-    rosegold:
-      "border border-[#ba8847] bg-gradient-to-r from-[#ba8847] via-[#c59860] to-[#ba8847] text-[#2b1218] font-bold shadow-md hover:-translate-y-0.5 hover:brightness-105",
-    bronze:
-      "border border-[#eadbce] bg-[#faf6f0] text-[#5a121f] font-bold shadow-xs hover:-translate-y-0.5 hover:border-[#c59860]",
+      "border border-[#e5b650] bg-gradient-to-r from-[#b88526] via-[#dcae42] to-[#b88526] text-[#090b10] font-extrabold shadow-md shadow-[#c6922c]/30 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
     dark:
-      "border border-[#4d0e19] bg-[#3b0911] text-[#f2dcba] shadow-md hover:-translate-y-0.5 hover:border-[#c59860] hover:bg-[#5a121f] hover:text-white",
+      "border border-[#c6922c]/40 bg-[#0e1118] text-[#f5de9c] font-bold shadow-md hover:-translate-y-0.5 hover:border-[#e5b650] hover:bg-[#151a24] hover:text-white",
     outline:
-      "border border-[#d9c5b2] bg-white text-[#4a363a] hover:-translate-y-0.5 hover:border-[#681724] hover:text-[#681724] hover:bg-[#fffcf7]",
+      "border border-[#c6922c]/60 bg-transparent text-[#e5b650] font-bold hover:-translate-y-0.5 hover:border-[#e5b650] hover:bg-[#c6922c]/10 hover:text-white",
+    emerald:
+      "border border-[#25D366] bg-gradient-to-r from-[#1fa851] to-[#25D366] text-white font-bold shadow-md shadow-[#25D366]/25 hover:-translate-y-0.5 hover:brightness-105",
+    champagne:
+      "border border-[#dcae42] bg-[#fdf7e7] text-[#8f641b] font-bold shadow-xs hover:-translate-y-0.5 hover:bg-[#f6ebd4] hover:border-[#c6922c]",
     white:
-      "border border-[#eadbce] bg-white text-[#2b1a1d] shadow-xs hover:-translate-y-0.5 hover:border-[#c59860]",
+      "border border-[#e6ded4] bg-white text-[#12151d] font-bold shadow-xs hover:-translate-y-0.5 hover:border-[#c6922c] hover:text-[#8f641b]",
   }[variant];
 
   const classes =
-    "inline-flex items-center justify-center gap-2 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#681724] select-none text-center cursor-pointer " +
+    "inline-flex items-center justify-center gap-2 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#c6922c] select-none text-center cursor-pointer " +
     sizeClasses +
     " " +
     variantClasses +

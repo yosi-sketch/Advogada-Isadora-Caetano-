@@ -1,36 +1,34 @@
-# DRA. HAYNHANDRA MARTINS — ADVOCACIA PREVIDENCIÁRIO (INSS) E CÍVEL
-## Haynhandra Martins Advocacia · Centro, Igarapé - MG
+# DRA. LÍVIA TORRES — ADVOCACIA CRIMINAL & FAMÍLIA
+## Lívia Torres — Advogada · Edifício Paquetá · Centro, Três Pontas - MG
 
 ## Plataforma
-Landing page institucional de altíssimo padrão desenvolvida em Next.js 16 (App Router) e Tailwind CSS v4, projetada para transmitir autoridade jurídica, acolhimento humanizado, combatividade técnica e máxima transparência, com navegação fluida, modais interativos para detalhamento das especialidades em Direito Previdenciário (INSS) e Cível/Família, e integração direta com WhatsApp.
+Landing page institucional de altíssimo padrão desenvolvida em Next.js 16 (App Router) e Tailwind CSS v4, projetada para transmitir autoridade jurídica inabalável, combatividade técnica, sigilo absoluto e acolhimento humano, com navegação fluida, modais interativos para detalhamento das especialidades em Direito Penal / Flagrantes 24h e Direito de Família, e integração direta com WhatsApp.
 
 ## Público
-Trabalhadores, aposentados, pensionistas, pessoas que necessitam de benefícios por incapacidade ou BPC/LOAS, bem como famílias e indivíduos que necessitam de assessoria jurídica segura em Direito Cível, Família, Inventários e Contratos no Centro de Igarapé - MG, Betim, São Joaquim de Bicas, Brumadinho, Mateus Leme, Juatuba, Região Metropolitana de Belo Horizonte e em todo o Brasil (via atendimento online).
+Pessoas que necessitam de defesa técnica urgente em ocorrências criminais, prisões em flagrante e audiências de custódia, bem como indivíduos e famílias que buscam soluções jurídicas seguras, céleres e humanizadas em divórcios, partilha de bens, guarda de filhos, pensão alimentícia e inventários em Três Pontas - MG, Varginha, Santana da Vargem, Boa Esperança, Campos Gerais, Elói Mendes, todo o Sul de Minas e atendimento digital para clientes em todo o Brasil.
 
 ## Objetivo
-Apresentar a advocacia de excelência liderada pela Dra. Haynhandra Martins, destacando a nota máxima de **5,0 estrelas com 26 avaliações no Google Meu Negócio** (100% 5 estrelas), histórico de vitórias, agilidade no destravamento de causas e atendimento atencioso, viabilizando o contato direto via WhatsApp (31) 99787-8257.
+Apresentar a advocacia combativa e de excelência liderada pela Dra. Lívia Torres, destacando a nota máxima de **5,0 estrelas com 12 avaliações no Google Meu Negócio** (100% 5 estrelas), o plantão criminal 24h para flagrantes e a sensibilidade no trato de causas familiares delicadas, viabilizando o contato direto e imediato via WhatsApp (35) 99983-6587.
 
 ## Identidade Visual & Cores (Extraída Diretamente do Novo Logo)
-- **Marca:** Haynhandra Martins Advocacia - Previdenciário (INSS) e Cível
-- **Estilo:** Architectural Prestige & Marsala Gold — Monograma "HM" estruturado em colunata arquitetônica e frontão clássico em ouro nobre acetinado/escovado; tipografia nobre de alto contraste romano em Marsala Wine / Vermelho Bordô Profundo e "ADVOCACIA" em caixa-alta com amplo espaçamento em ouro.
+- **Marca:** Lívia Torres — Advogada
+- **Estilo:** Imperial 3D Gold & Deep Obsidian Noir — Monograma entrelaçado "LT" com balança da justiça em ouro escultural 3D nobre; tipografia clássica romana lapidária "LÍVIA TORRES" e "ADVOGADA" com amplo espaçamento.
 - **Paleta de Cores:**
-  - **Marsala Wine / Vermelho Bordô Profundo (Base & Acentos da Marca):** `#721B2A`, `#8A2234`, `#A32B40`, `#4D0E19`, `#3B0911` (extraído diretamente do texto nobre do logo).
-  - **Ouro Escovado / Brushed Architectural Gold (Acentos, Monograma e Tipografia Secundária):** `#C59860`, `#DBB375`, `#F2DCBA`, `#9E733B`, `#755020` (extraído do brilho metálico do monograma do logo).
-  - **Superfícies & Cartões:** `#0D0608` (fundo principal obsidian aveludado), `#1A0C10` (cartões), `#241016` (superfícies elevadas) com bordas `#35151c` e destaques sutis em ouro `rgba(197, 152, 96, 0.35)`.
-  - **Textos:** Branco `#FFFFFF`, Marfim-Rosa Suave `#F4EAEB`, e `#B8A2A6` para legibilidade sem cansaço visual.
+  - **Ouro Imperial / Champagne Nobre (Base de Destaque & Logotipo):** `#C6922C`, `#E5B650`, `#F5DE9C`, `#FDF7E7`, `#8F641B`, `#542400` (extraído diretamente das luzes especulares e sombras de chanfro metálico do logo).
+  - **Obsidian Noir & Midnight Velvet (Fundos & Superfícies de Autoridade):** `#090B10`, `#0D1017`, `#121622`, `#161C2B` com bordas metálicas em ouro translúcido `rgba(198, 146, 44, 0.3)`.
+  - **Alabaster & Warm Ivory (Superfícies de Leitura & Equilíbrio Editorial):** `#FBF9F5`, `#F4EFE6`, `#FFFFFF` com bordas `#E6DED4` e texto em grafite profundo `#0E1118` / `#12151D`.
+  - **Textos:** Branco puro `#FFFFFF`, Marfim dourado `#F5DE9C`, e `#9CA7B8` para leitura confortável e sem fadiga visual.
 - **Tipografia:**
-  - Cinzel / Playfair Display para títulos nobres e marca clássica alinhada ao logotipo
-  - Cormorant Garamond para elegância editorial
-  - Plus Jakarta Sans para leitura confortável, limpa e moderna no corpo de texto
-- **Tom de voz:** Acolhedor, combativo, sincero, humano, empático, seguro, transparente, ágil e resolutivo ("ela te ouve, se importa com seu caso, é extremamente sincera").
+  - Cinzel / Playfair Display para títulos nobres e cabeçalhos imponentes alinhados ao logotipo clássico
+  - Plus Jakarta Sans para leitura confortável, moderna e limpa no corpo de texto
+- **Tom de voz:** Firme, combativo, ético, seguro, acolhedor, transparente e ágil ("transmite confiança e segurança em todas as orientações", "me ajudou muito no pior momento da minha vida").
 
 ## Conteúdo e Mídia
-- Logotipo oficial com monograma arquitetônico dourado e tipografia bordô marsala (`public/logo.png`).
-- Foto hero & sobre: Dra. Haynhandra Martins com blazer camel/areia, blusa estampada de seda e brincos dourados (`public/dra-haynhandra-martins.png`).
-- Foto close-up editorial: Dra. Haynhandra Martins (`public/dra-haynhandra-portrait.png`).
-- Telefone / WhatsApp: (31) 99787-8257 (`5531997878257`).
-- E-mail: `contato@haynhandramartins.adv.br`.
-- Redes Sociais: Instagram @haymartinsadvocacia (`https://www.instagram.com/haymartinsadvocacia/`).
-- Localização: R. Alexandre Nunes, 157 - Centro, Igarapé - MG, 32900-000, Brasil (atendimento presencial no centro da cidade e online em todo o Brasil).
-- Horário de funcionamento: Segunda a Sexta a partir das 09:00 até as 18:00.
-- Prova social: 5,0 estrelas com 26 avaliações no Google Meu Negócio (100% 5★).
+- Logotipo oficial com monograma escultural 3D e balança da justiça em ouro metálico (`public/logo.png`).
+- Foto oficial da Dra. Lívia Torres com postura confiante, acolhedora e impecável (`public/dra-livia-torres.jpg`).
+- Telefone / WhatsApp: (35) 99983-6587 (`5535999836587`).
+- E-mail: `contato@liviatorres.adv.br`.
+- Redes Sociais: Instagram @liviatorres.adv (`https://www.instagram.com/liviatorres.adv/`).
+- Localização: Edifício Paquetá - R. Américo Miari, 27 - Sl 201 - Centro, Três Pontas - MG, 37185-068, Brasil (atendimento presencial no centro da cidade e suporte digital para a região).
+- Horário de funcionamento: Segunda a Sexta a partir das 08:00 com **Plantão Criminal 24h para Flagrantes e Audiências de Custódia**.
+- Prova social: 5,0 estrelas com 12 avaliações no Google Meu Negócio (100% 5★).
