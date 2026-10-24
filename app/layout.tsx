@@ -32,30 +32,30 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.liviatorres.adv.br"),
+  metadataBase: new URL("https://www.oliveiraemegda.adv.br"),
   title:
-    "Lívia Torres — Advogada | Criminal & Família · Três Pontas - MG",
+    "Jeisiele Oliveira — Advogada | Direito Previdenciário · Campos Gerais - MG",
   description:
-    "Lívia Torres — Advogada. Atuação especializada em Direito Criminal (Flagrantes 24h, Audiências de Custódia, Habeas Corpus) e Direito de Família (Divórcios, Guarda, Pensão Alimentícia e Partilha). Nota máxima 5,0 ★ com 12 avaliações no Google. Atendimento acolhedor, transparente e combativo na sede no Edifício Paquetá, Centro de Três Pontas - MG, e online.",
+    "Dra. Jeisiele Oliveira — Advogada Especialista em Direito Previdenciário (Aposentadorias, Benefício Cessado ou Negado pelo INSS, BPC/LOAS, Auxílio-Doença, Pensão por Morte e Planejamento). Membro da Comissão de Direito Previdenciário da 21ª Subseção OAB/MG. Nota máxima 5,0 ★ com 11 avaliações no Google. Atendimento presencial em Campos Gerais - MG e online para todo o Brasil.",
   keywords: [
-    "Lívia Torres Advogada",
-    "Dra. Lívia Torres",
-    "Advogado Criminal Três Pontas MG",
-    "Advocacia Criminal Três Pontas",
-    "Flagrantes 24h Três Pontas",
-    "Audiência de Custódia Três Pontas",
-    "Habeas Corpus MG",
-    "Advogado Criminalista Sul de Minas",
-    "Advogado de Família Três Pontas",
-    "Divórcio Três Pontas MG",
-    "Pensão Alimentícia Três Pontas",
-    "Guarda de Filhos Três Pontas",
-    "Edifício Paquetá Três Pontas",
-    "Advogada Lívia Torres",
+    "Jeisiele Oliveira Advogada",
+    "Dra. Jeisiele Oliveira",
+    "Oliveira e Megda Advocacia",
+    "Oliveira e Megda Advocacia e Consultoria Previdenciária",
+    "Advogado Previdenciário Campos Gerais MG",
+    "Advogado INSS Campos Gerais",
+    "Benefício Cessado INSS",
+    "Benefício Negado INSS",
+    "Aposentadoria por Idade Campos Gerais",
+    "Aposentadoria Especial Sul de Minas",
+    "BPC LOAS Campos Gerais",
+    "Auxílio Doença INSS",
+    "Planejamento Previdenciário MG",
+    "Advogada Jeisiele Oliveira",
   ],
-  authors: [{ name: "Lívia Torres — Advogada" }],
-  creator: "Lívia Torres — Advogada",
-  publisher: "Lívia Torres — Advogada",
+  authors: [{ name: "Jeisiele Oliveira — Advogada" }],
+  creator: "Jeisiele Oliveira — Advogada",
+  publisher: "Oliveira e Megda Advocacia e Consultoria Previdenciária",
   formatDetection: {
     telephone: true,
     address: true,
@@ -72,18 +72,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.liviatorres.adv.br",
+    url: "https://www.oliveiraemegda.adv.br",
     title:
-      "Lívia Torres — Advogada | Criminal & Família · Três Pontas - MG",
+      "Jeisiele Oliveira — Advogada | Direito Previdenciário · Campos Gerais - MG",
     description:
-      "Protegendo sua liberdade e sua família com combate técnico e acolhimento humano. Nota máxima 5,0 ★ no Google. Flagrantes 24h. Edifício Paquetá - Centro, Três Pontas - MG.",
-    siteName: "Lívia Torres — Advogada",
+      "Ajudo você a conquistar aposentadorias e benefícios do INSS sem complicação. Atuação combativa contra benefícios cessados e negados. Nota máxima 5,0 ★ no Google. Campos Gerais - MG e atendimento online.",
+    siteName: "Jeisiele Oliveira — Advogada | Oliveira e Megda",
     images: [
       {
         url: "/logo.png",
-        width: 1024,
-        height: 409,
-        alt: "Lívia Torres — Advogada - Logotipo Oficial",
+        width: 968,
+        height: 472,
+        alt: "Oliveira e Megda Advocacia e Consultoria Previdenciária - Logotipo Oficial",
       },
     ],
   },
@@ -97,39 +97,40 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Lívia Torres — Advogada",
-    alternateName: "Dra. Lívia Torres Advocacia",
+    name: "Jeisiele Oliveira — Advogada",
+    alternateName: "Oliveira e Megda Advocacia e Consultoria Previdenciária",
     founder: [
       {
         "@type": "Person",
-        name: "Dra. Lívia Torres",
-        jobTitle: "Advogada Titular · Especialista em Criminal e Família",
+        name: "Dra. Jeisiele Oliveira",
+        jobTitle:
+          "Advogada Associada · Especialista em Direito Previdenciário · Membro da Comissão da 21ª Subseção OAB/MG",
       },
     ],
-    telephone: "+55-35-99983-6587",
-    url: "https://www.liviatorres.adv.br",
-    image: "https://www.liviatorres.adv.br/logo.png",
+    telephone: "+55-35-98467-0985",
+    url: "https://www.oliveiraemegda.adv.br",
+    image: "https://www.oliveiraemegda.adv.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Edifício Paquetá - R. Américo Miari, 27 - Sl 201 - Centro",
-      addressLocality: "Três Pontas",
+      streetAddress: "R. Tomé Soares de Oliveira",
+      addressLocality: "Campos Gerais",
       addressRegion: "MG",
-      postalCode: "37185-068",
+      postalCode: "37160-000",
       addressCountry: "BR",
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "12",
+      reviewCount: "11",
     },
     areaServed: [
+      "Campos Gerais",
+      "Alfenas",
+      "Boa Esperança",
+      "Campo do Meio",
       "Três Pontas",
       "Varginha",
-      "Santana da Vargem",
-      "Boa Esperança",
-      "Campos Gerais",
-      "Elói Mendes",
       "Sul de Minas",
       "Minas Gerais",
       "Brasil",
@@ -149,9 +150,9 @@ export default function RootLayout({
       },
     ],
     sameAs: [
-      "https://wa.me/5535999836587",
-      "https://www.instagram.com/liviatorres.adv/",
-      "https://www.google.com/search?q=L%C3%ADvia+Torres+%E2%80%94+Advogada%0ATr%C3%AAs+Pontas+%C2%B7+MG&sourceid=chrome&ie=UTF-8#",
+      "https://wa.me/5535984670985",
+      "https://www.instagram.com/jeisiele.advogada/",
+      "https://www.google.com/search?q=Jeisiele+Oliveira+%E2%80%94+Advogada%0ACampos+Gerais+%C2%B7+MG&sourceid=chrome&ie=UTF-8#",
     ],
   };
 
@@ -169,7 +170,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#090b10] font-sans text-[#e1e7f0] antialiased selection:bg-[#c6922c] selection:text-[#090b10]">
+      <body className="min-h-screen overflow-x-clip bg-[#090a0f] font-sans text-[#e1e7f0] antialiased selection:bg-[#d09040] selection:text-[#090a0f]">
         {children}
       </body>
     </html>

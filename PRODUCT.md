@@ -1,34 +1,35 @@
-# DRA. LÍVIA TORRES — ADVOCACIA CRIMINAL & FAMÍLIA
-## Lívia Torres — Advogada · Edifício Paquetá · Centro, Três Pontas - MG
+# DRA. JEISIELE OLIVEIRA — ADVOCACIA E CONSULTORIA PREVIDENCIÁRIA
+## Oliveira e Megda Advocacia · Campos Gerais - MG
 
 ## Plataforma
-Landing page institucional de altíssimo padrão desenvolvida em Next.js 16 (App Router) e Tailwind CSS v4, projetada para transmitir autoridade jurídica inabalável, combatividade técnica, sigilo absoluto e acolhimento humano, com navegação fluida, modais interativos para detalhamento das especialidades em Direito Penal / Flagrantes 24h e Direito de Família, e integração direta com WhatsApp.
+Landing page institucional de altíssimo padrão desenvolvida em Next.js 16 (App Router) e Tailwind CSS v4, projetada para transmitir autoridade jurídica inabalável, combatividade técnica contra as negativas do INSS, sigilo absoluto e acolhimento humano, com navegação fluida, modais interativos para detalhamento das especialidades em Direito Previdenciário (Aposentadorias, Benefício Cessado/Negado pelo INSS, Auxílio-Doença, BPC/LOAS, Pensão por Morte e Planejamento Previdenciário) e integração direta com WhatsApp.
 
 ## Público
-Pessoas que necessitam de defesa técnica urgente em ocorrências criminais, prisões em flagrante e audiências de custódia, bem como indivíduos e famílias que buscam soluções jurídicas seguras, céleres e humanizadas em divórcios, partilha de bens, guarda de filhos, pensão alimentícia e inventários em Três Pontas - MG, Varginha, Santana da Vargem, Boa Esperança, Campos Gerais, Elói Mendes, todo o Sul de Minas e atendimento digital para clientes em todo o Brasil.
+Trabalhadores e segurados da Previdência Social que tiveram seus benefícios cancelados, cessados ou indeferidos pelo INSS, segurados que buscam a concessão ou planejamento da aposentadoria no valor máximo, idosos e pessoas com deficiência que necessitam do BPC/LOAS, e dependentes que buscam pensão por morte em Campos Gerais - MG, Alfenas, Boa Esperança, Campo do Meio, Três Pontas, Varginha, todo o Sul de Minas e atendimento digital para clientes em todo o Brasil.
 
 ## Objetivo
-Apresentar a advocacia combativa e de excelência liderada pela Dra. Lívia Torres, destacando a nota máxima de **5,0 estrelas com 12 avaliações no Google Meu Negócio** (100% 5 estrelas), o plantão criminal 24h para flagrantes e a sensibilidade no trato de causas familiares delicadas, viabilizando o contato direto e imediato via WhatsApp (35) 99983-6587.
+Apresentar a advocacia combativa e de excelência liderada pela Dra. Jeisiele Oliveira (Advogada Associada na Oliveira e Megda Advocacia e Membro da Comissão de Direito Previdenciário da 21ª Subseção OAB/MG), destacando a nota máxima de **5,0 estrelas com 11 avaliações no Google Meu Negócio** (100% 5 estrelas), o atendimento sem complicação e o combate aos indeferimentos do INSS, viabilizando o contato direto e imediato via WhatsApp (35) 98467-0985.
 
 ## Identidade Visual & Cores (Extraída Diretamente do Novo Logo)
-- **Marca:** Lívia Torres — Advogada
-- **Estilo:** Imperial 3D Gold & Deep Obsidian Noir — Monograma entrelaçado "LT" com balança da justiça em ouro escultural 3D nobre; tipografia clássica romana lapidária "LÍVIA TORRES" e "ADVOGADA" com amplo espaçamento.
+- **Marca:** Oliveira e Megda Advocacia e Consultoria Previdenciária / Dra. Jeisiele Oliveira
+- **Estilo:** Imperial 3D Gold & Deep Obsidian Noir — Emblema central escultural 3D com espada e pratos/balança da justiça em ouro metálico nobre; tipografia clássica lapidária com amplo tracking "OLIVEIRA E MEGDA" e "ADVOCACIA E CONSULTORIA PREVIDENCIÁRIA".
 - **Paleta de Cores:**
-  - **Ouro Imperial / Champagne Nobre (Base de Destaque & Logotipo):** `#C6922C`, `#E5B650`, `#F5DE9C`, `#FDF7E7`, `#8F641B`, `#542400` (extraído diretamente das luzes especulares e sombras de chanfro metálico do logo).
-  - **Obsidian Noir & Midnight Velvet (Fundos & Superfícies de Autoridade):** `#090B10`, `#0D1017`, `#121622`, `#161C2B` com bordas metálicas em ouro translúcido `rgba(198, 146, 44, 0.3)`.
-  - **Alabaster & Warm Ivory (Superfícies de Leitura & Equilíbrio Editorial):** `#FBF9F5`, `#F4EFE6`, `#FFFFFF` com bordas `#E6DED4` e texto em grafite profundo `#0E1118` / `#12151D`.
-  - **Textos:** Branco puro `#FFFFFF`, Marfim dourado `#F5DE9C`, e `#9CA7B8` para leitura confortável e sem fadiga visual.
+  - **Ouro Nobre / Luminous Gold (Destaques, Bordas & Logotipo):** `#D09040`, `#E0A050`, `#F0C070`, `#FFE090`, `#8C5A1C`, `#503010` (extraído diretamente do degradê e brilhos especulares do logo).
+  - **Deep Noir & Onyx (Fundos & Superfícies de Autoridade):** `#090A0F`, `#0D1017`, `#121622`, `#161C2B` com bordas metálicas translúcidas `rgba(208, 144, 64, 0.25)`.
+  - **Warm Ivory & Pearl (Superfícies de Leitura & Equilíbrio Editorial):** `#FBF9F5`, `#F4EFE6`, `#FFFFFF` com bordas `#E6DED4` e texto em grafite profundo `#0E1118` / `#12151D`.
+  - **Textos:** Branco puro `#FFFFFF`, Marfim dourado `#FFE090`, e `#9CA7B8` para leitura confortável e sem fadiga visual.
 - **Tipografia:**
   - Cinzel / Playfair Display para títulos nobres e cabeçalhos imponentes alinhados ao logotipo clássico
   - Plus Jakarta Sans para leitura confortável, moderna e limpa no corpo de texto
-- **Tom de voz:** Firme, combativo, ético, seguro, acolhedor, transparente e ágil ("transmite confiança e segurança em todas as orientações", "me ajudou muito no pior momento da minha vida").
+- **Tom de voz:** Firme, combativo, ético, seguro, acolhedor, transparente e ágil ("ajudo você a conquistar aposentadorias e benefícios sem complicação").
 
 ## Conteúdo e Mídia
-- Logotipo oficial com monograma escultural 3D e balança da justiça em ouro metálico (`public/logo.png`).
-- Foto oficial da Dra. Lívia Torres com postura confiante, acolhedora e impecável (`public/dra-livia-torres.jpg`).
-- Telefone / WhatsApp: (35) 99983-6587 (`5535999836587`).
-- E-mail: `contato@liviatorres.adv.br`.
-- Redes Sociais: Instagram @liviatorres.adv (`https://www.instagram.com/liviatorres.adv/`).
-- Localização: Edifício Paquetá - R. Américo Miari, 27 - Sl 201 - Centro, Três Pontas - MG, 37185-068, Brasil (atendimento presencial no centro da cidade e suporte digital para a região).
-- Horário de funcionamento: Segunda a Sexta a partir das 08:00 com **Plantão Criminal 24h para Flagrantes e Audiências de Custódia**.
-- Prova social: 5,0 estrelas com 12 avaliações no Google Meu Negócio (100% 5★).
+- Logotipo oficial com emblema escultural 3D de espada e balança em ouro metálico (`public/logo.png`, `public/logo-emblem.png`, `public/logo-seal.png`).
+- Foto de atuação da Dra. Jeisiele Oliveira em seu escritório com pasta de atendimento e logo oficial (`public/hero.jpg`).
+- Foto de perfil/sobre da Dra. Jeisiele Oliveira com sorriso acolhedor e fundo floral (`public/about.jpg`).
+- Telefone / WhatsApp: (35) 98467-0985 (`5535984670985`).
+- E-mail: `contato@oliveiraemegda.adv.br`.
+- Redes Sociais: Instagram @jeisiele.advogada (`https://www.instagram.com/jeisiele.advogada/`).
+- Localização: R. Tomé Soares de Oliveira - Campos Gerais, MG, 37160-000, Brasil (atendimento presencial e suporte digital para todo o país).
+- Horário de funcionamento: Segunda a Sexta a partir das 08:00.
+- Prova social: 5,0 estrelas com 11 avaliações no Google Meu Negócio (100% 5★).
