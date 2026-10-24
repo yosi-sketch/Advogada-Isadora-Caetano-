@@ -28,34 +28,35 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#090b10",
+  themeColor: "#0c0a09",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.oliveiraemegda.adv.br"),
+  metadataBase: new URL("https://www.isadoracaetano.adv.br"),
   title:
-    "Jeisiele Oliveira — Advogada | Direito Previdenciário · Campos Gerais - MG",
+    "Isadora Caetano — Escritório de Advocacia | Família, Sucessões e Regularização de Imóveis · Conselheiro Pena - MG",
   description:
-    "Dra. Jeisiele Oliveira — Advogada Especialista em Direito Previdenciário (Aposentadorias, Benefício Cessado ou Negado pelo INSS, BPC/LOAS, Auxílio-Doença, Pensão por Morte e Planejamento). Membro da Comissão de Direito Previdenciário da 21ª Subseção OAB/MG. Nota máxima 5,0 ★ com 11 avaliações no Google. Atendimento presencial em Campos Gerais - MG e online para todo o Brasil.",
+    "Dra. Isadora Caetano — Escritório de Advocacia e Consultoria. Especialistas em Direito de Família (Divórcio, Guarda, Pensão), Sucessões (Inventários, Herança, Partilha) e Regularização de Imóveis (Usucapião, Escrituras, Contratos). Nota 4,9 ★ com mais de 166 avaliações no Google. Atendimento presencial em Conselheiro Pena - MG e digital para todo o Brasil e exterior.",
   keywords: [
-    "Jeisiele Oliveira Advogada",
-    "Dra. Jeisiele Oliveira",
-    "Oliveira e Megda Advocacia",
-    "Oliveira e Megda Advocacia e Consultoria Previdenciária",
-    "Advogado Previdenciário Campos Gerais MG",
-    "Advogado INSS Campos Gerais",
-    "Benefício Cessado INSS",
-    "Benefício Negado INSS",
-    "Aposentadoria por Idade Campos Gerais",
-    "Aposentadoria Especial Sul de Minas",
-    "BPC LOAS Campos Gerais",
-    "Auxílio Doença INSS",
-    "Planejamento Previdenciário MG",
-    "Advogada Jeisiele Oliveira",
+    "Isadora Caetano Advocacia",
+    "Dra. Isadora Caetano",
+    "Isadora Caetano Escritório de Advocacia",
+    "Advogado Conselheiro Pena MG",
+    "Advocacia Conselheiro Pena",
+    "Direito de Família Conselheiro Pena",
+    "Advogado Divórcio Conselheiro Pena",
+    "Inventário Conselheiro Pena",
+    "Partilha de Bens MG",
+    "Herança e Sucessões MG",
+    "Regularização de Imóveis Conselheiro Pena",
+    "Usucapião Judicial e Extrajudicial MG",
+    "Escritura de Imóveis Conselheiro Pena",
+    "Bernardo Haussmann Advogado",
+    "Advogado Leste de Minas Gerais",
   ],
-  authors: [{ name: "Jeisiele Oliveira — Advogada" }],
-  creator: "Jeisiele Oliveira — Advogada",
-  publisher: "Oliveira e Megda Advocacia e Consultoria Previdenciária",
+  authors: [{ name: "Isadora Caetano — Escritório de Advocacia" }],
+  creator: "Isadora Caetano — Escritório de Advocacia",
+  publisher: "Isadora Caetano — Advocacia e Consultoria",
   formatDetection: {
     telephone: true,
     address: true,
@@ -72,18 +73,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.oliveiraemegda.adv.br",
+    url: "https://www.isadoracaetano.adv.br",
     title:
-      "Jeisiele Oliveira — Advogada | Direito Previdenciário · Campos Gerais - MG",
+      "Isadora Caetano — Escritório de Advocacia | Família, Sucessões e Imóveis · Conselheiro Pena - MG",
     description:
-      "Ajudo você a conquistar aposentadorias e benefícios do INSS sem complicação. Atuação combativa contra benefícios cessados e negados. Nota máxima 5,0 ★ no Google. Campos Gerais - MG e atendimento online.",
-    siteName: "Jeisiele Oliveira — Advogada | Oliveira e Megda",
+      "Segurança jurídica, ética e atendimento acolhedor. Especialistas em Direito de Família, Inventários, Sucessões e Regularização Imobiliária. Avaliação 4,9 ★ com mais de 166 avaliações reais no Google. Conselheiro Pena - MG e atendimento online.",
+    siteName: "Isadora Caetano — Escritório de Advocacia",
     images: [
       {
         url: "/logo.png",
-        width: 968,
-        height: 472,
-        alt: "Oliveira e Megda Advocacia e Consultoria Previdenciária - Logotipo Oficial",
+        width: 971,
+        height: 242,
+        alt: "Isadora Caetano Advocacia e Consultoria - Logotipo Oficial",
       },
     ],
   },
@@ -97,43 +98,47 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Jeisiele Oliveira — Advogada",
-    alternateName: "Oliveira e Megda Advocacia e Consultoria Previdenciária",
+    name: "Isadora Caetano — Escritório de Advocacia",
+    alternateName: "Isadora Caetano Advocacia e Consultoria",
     founder: [
       {
         "@type": "Person",
-        name: "Dra. Jeisiele Oliveira",
-        jobTitle:
-          "Advogada Associada · Especialista em Direito Previdenciário · Membro da Comissão da 21ª Subseção OAB/MG",
+        name: "Dra. Isadora Caetano",
+        jobTitle: "Advogada Fundadora · Especialista em Família, Sucessões e Imóveis",
+      },
+      {
+        "@type": "Person",
+        name: "Dr. Bernardo Haussmann",
+        jobTitle: "Advogado Associado",
       },
     ],
-    telephone: "+55-35-98467-0985",
-    url: "https://www.oliveiraemegda.adv.br",
-    image: "https://www.oliveiraemegda.adv.br/logo.png",
+    telephone: "+55-33-98763-4386",
+    url: "https://www.isadoracaetano.adv.br",
+    image: "https://www.isadoracaetano.adv.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. Tomé Soares de Oliveira",
-      addressLocality: "Campos Gerais",
+      streetAddress: "R. Feliciano Ferraz, 272 - Lj 2 - Centro",
+      addressLocality: "Conselheiro Pena",
       addressRegion: "MG",
-      postalCode: "37160-000",
+      postalCode: "35240-000",
       addressCountry: "BR",
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: "11",
+      ratingValue: "4.9",
+      reviewCount: "166",
     },
     areaServed: [
-      "Campos Gerais",
-      "Alfenas",
-      "Boa Esperança",
-      "Campo do Meio",
-      "Três Pontas",
-      "Varginha",
-      "Sul de Minas",
+      "Conselheiro Pena",
+      "Resplendor",
+      "Aimorés",
+      "Governador Valadares",
+      "Vale do Rio Doce",
+      "Leste de Minas",
       "Minas Gerais",
       "Brasil",
+      "Exterior (EUA e Europa)",
     ],
     openingHoursSpecification: [
       {
@@ -150,9 +155,11 @@ export default function RootLayout({
       },
     ],
     sameAs: [
-      "https://wa.me/5535984670985",
-      "https://www.instagram.com/jeisiele.advogada/",
-      "https://www.google.com/search?q=Jeisiele+Oliveira+%E2%80%94+Advogada%0ACampos+Gerais+%C2%B7+MG&sourceid=chrome&ie=UTF-8#",
+      "https://wa.me/5533987634386",
+      "https://wa.me/message/TGX7Q5QBI25JI1",
+      "https://www.instagram.com/isadoracaetano.adv/",
+      "https://www.instagram.com/caetanoisadora/",
+      "https://www.google.com/search?q=Isadora+Caetano+%E2%80%94+Escrit%C3%B3rio+de+Advocacia%0AConselheiro+Pena+%C2%B7+MG&sourceid=chrome&ie=UTF-8#",
     ],
   };
 
@@ -170,7 +177,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#090a0f] font-sans text-[#e1e7f0] antialiased selection:bg-[#d09040] selection:text-[#090a0f]">
+      <body className="min-h-screen overflow-x-clip bg-[#0c0a09] font-sans text-[#ede5dc] antialiased selection:bg-[#ba7852] selection:text-white">
         {children}
       </body>
     </html>

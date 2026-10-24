@@ -18,42 +18,44 @@ import {
   Menu,
   X,
   Sparkles,
-  ShieldAlert,
   Gavel,
   Users,
   Compass,
-  Lock,
   FileCheck2,
   CalendarCheck2,
-  AlertCircle,
-  HelpCircle,
+  Home as HomeIcon,
+  Globe2,
+  Building2,
   CheckCircle2,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5535984670985";
-const PHONE_DISPLAY = "(35) 98467-0985";
-const EMAIL_CONTACT = "contato@oliveiraemegda.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/jeisiele.advogada/";
-const INSTAGRAM_HANDLE = "@jeisiele.advogada";
+const WHATSAPP_NUMBER = "5533987634386";
+const PHONE_DISPLAY = "(33) 98763-4386";
+const EMAIL_CONTACT = "contato@isadoracaetano.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/isadoracaetano.adv/";
+const INSTAGRAM_HANDLE = "@isadoracaetano.adv";
+const INSTAGRAM_PERSONAL_URL = "https://www.instagram.com/caetanoisadora/";
+const INSTAGRAM_PERSONAL_HANDLE = "@caetanoisadora";
 
 const ADDRESS_TEXT =
-  "R. Tomé Soares de Oliveira - Campos Gerais, MG, 37160-000";
+  "R. Feliciano Ferraz, 272 - Lj 2 - Centro, Conselheiro Pena - MG, 35240-000";
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Jeisiele+Oliveira+%E2%80%94+Advogada%0ACampos+Gerais+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=Isadora+Caetano+%E2%80%94+Escrit%C3%B3rio+de+Advocacia%0AConselheiro+Pena+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+const WA_DIRECT_URL = "https://wa.me/message/TGX7Q5QBI25JI1";
 
-const LOGO_SRC = "/logo.png";
+const LOGO_SRC = "/logo-isadora-caetano.png";
 const LOGO_EMBLEM_SRC = "/logo-emblem.png";
-const FOTO_HERO_SRC = "/hero.jpg";
-const FOTO_SOBRE_SRC = "/about.jpg";
-const FOTO_CREDENTIAL_SRC = "/credential-card.jpg";
+const FOTO_HERO_SRC = "/dra-isadora-caetano.jpg";
+const FOTO_EQUIPE_WALK = "/equipe-walking.jpg";
+const FOTO_EQUIPE_SOFA = "/equipe-sofa.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Jeisiele Oliveira! Gostaria de consultar sobre meu benefício / aposentadoria no INSS e tirar algumas dúvidas.";
+    "Olá, Dra. Isadora Caetano! Gostaria de uma consultoria jurídica com seu escritório.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -153,7 +155,7 @@ const stagger: Variants = {
 interface PracticeArea {
   id: string;
   title: string;
-  category: "Direito Previdenciário & Benefícios INSS";
+  category: "Direito de Família · Sucessões · Imobiliário · Cível";
   icon: typeof Scale;
   tag: string;
   summary: string;
@@ -164,130 +166,88 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "beneficio-cessado-negado",
-    title: "Benefício Cessado ou Negado pelo INSS",
-    category: "Direito Previdenciário & Benefícios INSS",
-    icon: ShieldAlert,
-    tag: "Urgência · Pente-Fino · Reversão Judicial · Atrasados",
-    summary:
-      "Atuação rápida e combativa para restabelecer benefícios cortados indevidamente no pente-fino e reverter negativas injustas da perícia do INSS.",
-    details:
-      "Receber a notícia de que seu benefício foi cessado ou indeferido pelo INSS causa grande desespero, pois é dele que vem o sustento da sua família. A Dra. Jeisiele Oliveira ingressa com ações judiciais urgentes com pedido liminar e formula quesitos médicos detalhados para perícia judicial imparcial, cobrando todos os valores retroativos desde a data em que o benefício foi cortado.",
-    topics: [
-      "Ação judicial imediata para restabelecimento de auxílio-doença cortado no pente-fino",
-      "Reversão de indeferimento de aposentadorias por falta de documentos ou erro do INSS",
-      "Mandado de Segurança para destravar pedidos em análise há meses sem resposta",
-      "Elaboração de quesitos periciais específicos para comprovar a incapacidade real perante o juiz",
-      "Cobrança integral de todos os atrasados e retroativos devidos desde a data do cancelamento",
-      "Correção e saneamento de pendências cadastrais no extrato do CNIS",
-    ],
-    whatsAppText:
-      "Olá, Dra. Jeisiele Oliveira! Meu benefício do INSS foi cessado/negado e preciso de ajuda para reverter.",
-  },
-  {
-    id: "beneficios-por-incapacidade",
-    title: "Benefícios por Incapacidade (Auxílio & Invalidez)",
-    category: "Direito Previdenciário & Benefícios INSS",
-    icon: Shield,
-    tag: "Auxílio-Doença · Invalidez Permanente · Auxílio-Acidente",
-    summary:
-      "Defesa dos trabalhadores que não conseguem exercer suas atividades por motivo de doença ou acidente, assegurando renda digna e estabilidade.",
-    details:
-      "Se você sofre de problemas de saúde físicos ou psicológicos que impedem o seu trabalho, a lei garante o direito a um benefício previdenciário. Conduzimos a análise técnica dos seus laudos, receitas e exames para requerer o Auxílio por Incapacidade Temporária ou a conversão em Aposentadoria por Incapacidade Permanente, além do adicional de 25% para quem precisa de cuidador.",
-    topics: [
-      "Concessão de Auxílio por Incapacidade Temporária (antigo Auxílio-Doença) para CLT e autônomos",
-      "Aposentadoria por Incapacidade Permanente (Invalidez) em casos de incapacidade total e definitiva",
-      "Acréscimo de 25% na aposentadoria por invalidez para segurados que necessitam de assistência diária",
-      "Auxílio-Acidente: indenização mensal vitalícia para quem teve sequelas sem perder o emprego",
-      "Acidentes de trabalho e doenças ocupacionais com garantia de estabilidade provisória",
-      "Acompanhamento pericial e contestação técnica de laudos do médico do INSS",
-    ],
-    whatsAppText:
-      "Olá, Dra. Jeisiele Oliveira! Gostaria de consultar sobre um benefício por incapacidade / auxílio-doença no INSS.",
-  },
-  {
-    id: "aposentadorias-inss",
-    title: "Aposentadorias do INSS (Idade, Tempo, Especial & Rural)",
-    category: "Direito Previdenciário & Benefícios INSS",
-    icon: Award,
-    tag: "Regras de Transição · Aposentadoria Rural · Insalubridade (PPP)",
-    summary:
-      "Conquista da aposentadoria vantajosa e justa, computando tempo rural, insalubridade e escolhendo a melhor regra de transição pós-Reforma da Previdência.",
-    details:
-      "Muitos trabalhadores perdem anos de contribuição ou aceitam um valor mensal menor por desconhecerem as regras de transição e os períodos especiais. Analisamos minuciosamente o histórico de cada segurado para computar trabalho rural na infância/juventude, períodos insalubres com PPP e vínculos sem anotação em carteira para obter o benefício máximo.",
-    topics: [
-      "Aposentadoria por Idade Urbana e Híbrida (somando tempo rural e urbano)",
-      "Aposentadoria por Tempo de Contribuição aplicando os pedágios favoráveis de 50% ou 100%",
-      "Aposentadoria Especial para trabalhadores expostos a ruído, químicos ou agentes biológicos (saúde, indústria)",
-      "Aposentadoria do Trabalhador Rural e Segurado Especial (agricultores, meeiros e boias-frias)",
-      "Reconhecimento de vínculos trabalhistas sem registro em carteira e tempo informal",
-      "Averbação de tempo de serviço militar e períodos como aluno-aprendiz",
-    ],
-    whatsAppText:
-      "Olá, Dra. Jeisiele Oliveira! Gostaria de uma análise para planejar e dar entrada na minha aposentadoria.",
-  },
-  {
-    id: "bpc-loas",
-    title: "BPC / LOAS (Idosos & Pessoas com Deficiência)",
-    category: "Direito Previdenciário & Benefícios INSS",
+    id: "direito-de-familia",
+    title: "Direito de Família & Proteção Parental",
+    category: "Direito de Família · Sucessões · Imobiliário · Cível",
     icon: HeartHandshake,
-    tag: "1 Salário Mínimo Mensal · Sem Contribuição · Idosos 65+ · PcD",
+    tag: "Divórcio · Guarda · Pensão Alimentícia · Partilha de Bens · União Estável",
     summary:
-      "Benefício assistencial de 1 salário mínimo por mês pago a idosos a partir de 65 anos e pessoas com deficiência ou autismo em famílias de baixa renda.",
+      "Condução humanizada, estratégica e segura para momentos delicados de transição familiar, preservando o patrimônio e os laços afetivos.",
     details:
-      "O BPC/LOAS é um direito garantido por lei que NÃO exige ter pago o INSS. O INSS frequentemente indefere o pedido alegando que a renda familiar ultrapassa o limite da lei. Na Justiça, demonstramos os gastos reais com medicamentos, fraldas, alimentação especial e tratamentos para comprovar a necessidade e garantir a concessão do benefício com retroativos.",
+      "Questões de família exigem sensibilidade, discrição absoluta e firmeza jurídica. O escritório Isadora Caetano atua tanto na mediação e divórcios consensuais ágeis em cartório quanto no contencioso judicial com partilhas complexas, garantia de guarda dos filhos e pensão alimentícia justa, evitando desgastes emocionais desnecessários.",
     topics: [
-      "Concessão do BPC/LOAS para Idosos a partir de 65 anos de idade sem histórico de contribuição",
-      "Concessão do BPC/LOAS para Crianças, Jovens e Adultos com deficiência física, mental ou Autismo (TEA)",
-      "Superação da regra de renda per capita de 1/4 do salário mínimo através de dedução de despesas médicas",
-      "Reversão de bloqueio ou cancelamento de BPC em revisões cadastrais do CadÚnico",
-      "Acompanhamento social e pericial especializado para perícias biomédicas da Justiça Federal",
-      "Recebimento de todos os atrasados acumulados desde o protocolo inicial no INSS",
+      "Divórcio consensual em cartório (rápido e sem burocracia) e divórcio judicial contencioso",
+      "Fixação, revisão, exoneração e execução de débitos de pensão alimentícia",
+      "Guarda compartilhada, convivência familiar equilibrada e autorização de viagens",
+      "Partilha equilibrada de bens, empresas familiares e investimentos do casal",
+      "Reconhecimento e dissolução de união estável com proteção patrimonial",
+      "Pactos antenupciais, consultoria patrimonial pré-matrimonial e alienação parental",
     ],
     whatsAppText:
-      "Olá, Dra. Jeisiele Oliveira! Gostaria de consultar sobre o direito ao BPC / LOAS para mim ou um familiar.",
+      "Olá, Dra. Isadora Caetano! Gostaria de orientações sobre uma questão de Direito de Família (Divórcio / Guarda / Pensão / Partilha).",
   },
   {
-    id: "pensao-por-morte",
-    title: "Pensão por Morte & Direitos dos Dependentes",
-    category: "Direito Previdenciário & Benefícios INSS",
-    icon: Users,
-    tag: "Cônjuges · Filhos · União Estável · Salário-Maternidade",
+    id: "sucessoes-e-inventarios",
+    title: "Sucessões, Inventários & Partilha de Herança",
+    category: "Direito de Família · Sucessões · Imobiliário · Cível",
+    icon: Scale,
+    tag: "Inventário Extrajudicial em Cartório · Inventário Judicial · ITCMD · Testamentos",
     summary:
-      "Proteção financeira imediata para a família após a perda do segurado, garantindo o benefício mesmo na ausência de certidão de casamento formal.",
+      "Resolução célere e estratégica da transmissão hereditária, protegendo o patrimônio familiar e evitando conflitos desgastantes entre herdeiros.",
     details:
-      "A perda de um familiar é um momento doloroso que não pode ser agravado pela falta de sustento. A Dra. Jeisiele atua na comprovação judicial de união estável, dependência econômica de pais ou filhos inválidos e na garantia do direito adquirido à pensão, além de auxiliar trabalhadoras no recebimento do Salário-Maternidade urbano e rural.",
+      "A perda de um ente querido não deve ser acompanhada pelo bloqueio de bens e disputas familiares. Conduzimos inventários extrajudiciais em cartório de forma rápida e com economia tributária (ITCMD), além de atuarmos com combatividade em inventários judiciais complexos, alvarás e planejamento sucessório patrimonial.",
     topics: [
-      "Pensão por Morte para viúvo(a), companheiro(a) em união estável e filhos menores ou com deficiência",
-      "Comprovação judicial de união estável sem certidão formal (fotos, testemunhas e contas conjuntas)",
-      "Pensão por Morte quando o falecido não estava contribuindo recentemente (período de graça / direito adquirido)",
-      "Salário-Maternidade para trabalhadoras CLT, rurais, MEI e contribuintes individuais (inclusive desempregadas)",
-      "Auxílio-Reclusão para os dependentes do segurado de baixa renda recolhido à prisão",
-      "Divisão e partilha justa de cotas da pensão entre múltiplos dependentes",
+      "Inventário extrajudicial em cartório: transmissão rápida de bens com consenso entre herdeiros",
+      "Inventário judicial para casos com testamento, menores envolvidos ou litígio familiar",
+      "Partilha amigável de imóveis, veículos, contas bancárias e cotas empresariais",
+      "Planejamento sucessório preventivo: doações em vida com reserva de usufruto e redução de tributos",
+      "Elaboração, registro e validação jurídica de testamentos públicos e particulares",
+      "Alvarás judiciais para levantamento de valores, FGTS e contas bancárias do falecido",
     ],
     whatsAppText:
-      "Olá, Dra. Jeisiele Oliveira! Preciso de orientações sobre Pensão por Morte ou Salário-Maternidade.",
+      "Olá, Dra. Isadora Caetano! Preciso de assessoria jurídica para dar entrada em um inventário / partilha de herança.",
   },
   {
-    id: "planejamento-e-revisao",
-    title: "Planejamento Previdenciário & Revisão de Benefícios",
-    category: "Direito Previdenciário & Benefícios INSS",
-    icon: CalendarCheck2,
-    tag: "Cálculos Precisos · Aumento de Renda · Retificação de CNIS",
+    id: "regularizacao-de-imoveis",
+    title: "Regularização de Imóveis & Direito Imobiliário",
+    category: "Direito de Família · Sucessões · Imobiliário · Cível",
+    icon: HomeIcon,
+    tag: "Usucapião · Escrituras · Contratos · Registro de Imóveis (RGI) · Posse Rural & Urbana",
     summary:
-      "Estudo detalhado de todo o histórico contributivo para antecipar a aposentadoria, investir o valor correto no INSS e aumentar o valor mensal do benefício.",
+      "Transformamos posses informais e 'contratos de gaveta' em propriedades legalmente registradas, valorizando e protegendo o seu patrimônio.",
     details:
-      "Aposentar-se sem planejamento pode custar dezenas ou centenas de milhares de reais ao longo da vida. Com o Planejamento Previdenciário, realizamos simulações matemáticas precisas de todas as regras de transição, corrigimos erros no CNIS e identificamos se o INSS calculou o seu benefício a menor, requerendo a revisão dos valores.",
+      "Um imóvel sem escritura definitiva não pode ser financiado, sofre desvalorização no mercado e deixa o proprietário em constante insegurança. O escritório Isadora Caetano é especialista em regularização fundiária urbana e rural, usucapião judicial e extrajudicial em cartório, averbações de construções e elaboração de contratos imobiliários blindados.",
     topics: [
-      "Diagnóstico completo do CNIS para identificar períodos faltantes, extemporâneos e recolhimentos abaixo do piso",
-      "Simulação de cenários: saber exatamente quando se aposentar e com qual valor de benefício mensal",
-      "Cálculo de retorno sobre investimento (ROI): orientar sobre o melhor valor para recolher ao INSS como autônomo/facultativo",
-      "Revisão de aposentadorias concedidas com erro no cálculo da média salarial ou períodos ignorados",
-      "Descarte estratégico de contribuições menores para elevar o valor da aposentadoria",
-      "Entrega de parecer jurídico detalhado com plano de ação passo a passo para a aposentadoria",
+      "Ações de usucapião judicial e procedimento de usucapião extrajudicial direto no cartório de registro (RGI)",
+      "Regularização de escrituras públicas pendentes, desdobros e retificação de áreas",
+      "Regularização de imóveis herdados sem escritura ou que ficaram fora do inventário",
+      "Elaboração e revisão minuciosa de contratos de compra, venda, locação e permuta",
+      "Defesa possessória: reintegração de posse, manutenção e interdito proibitório para áreas rurais e urbanas",
+      "Assessoria jurídica completa para transações imobiliárias seguras e sem risco de golpe",
     ],
     whatsAppText:
-      "Olá, Dra. Jeisiele Oliveira! Gostaria de contratar um Planejamento Previdenciário ou revisar meu benefício.",
+      "Olá, Dra. Isadora Caetano! Tenho um imóvel para regularizar (usucapião / escritura / contrato) e gostaria de uma avaliação.",
+  },
+  {
+    id: "civel-e-clientes-exterior",
+    title: "Advocacia Cível Estratégica & Atendimento no Exterior",
+    category: "Direito de Família · Sucessões · Imobiliário · Cível",
+    icon: Globe2,
+    tag: "Contratos · Indenizações · Cobranças · Atendimento a Brasileiros nos EUA",
+    summary:
+      "Soluções patrimoniais e contratuais com suporte 100% digital e seguro para clientes locais e brasileiros residentes no exterior (EUA e outros países).",
+    details:
+      "Atendemos com grande destaque brasileiros que vivem no exterior (como comprovado pelas avaliações de clientes nos EUA) e precisam resolver divórcios, inventários, venda e regularização de bens no Brasil sem precisar viajar. Oferecemos também advocacia cível e contratual preventiva e contenciosa de alto padrão.",
+    topics: [
+      "Atendimento exclusivo e seguro para brasileiros residentes nos Estados Unidos e Europa",
+      "Inventários, divórcios e regularização de patrimônio no Brasil realizados de forma 100% digital",
+      "Consultoria contratual personalizada e representação perante cartórios e órgãos públicos",
+      "Ações de cobrança, recuperação de créditos e rescisões contratuais",
+      "Ações indenizatórias por danos morais, materiais e prejuízos patrimoniais",
+      "Acompanhamento processual transparente com reuniões virtuais em horários flexíveis",
+    ],
+    whatsAppText:
+      "Olá, Dra. Isadora Caetano! Gostaria de consultar sobre atendimento cível / assessoria jurídica para brasileiros no exterior.",
   },
 ];
 
@@ -297,93 +257,129 @@ interface Review {
   date: string;
   content: string;
   reply?: string;
+  highlight?: string;
 }
 
 const clientReviews: Review[] = [
   {
-    name: "Caroline Francieli",
-    badge: "Avaliação Verificada · 4 avaliações",
-    date: "5 meses atrás",
+    name: "Claudia Levina Aquino",
+    badge: "Avaliação Verificada no Google · 4 avaliações",
+    date: "um ano atrás",
+    highlight: "Resolvido em menos de 16 meses o que estava há 3 anos travado",
     content:
-      "Excelente profissional, esperava por muito tempo um auxílio acidente e com ela tive o benefício concedido com sucesso",
+      "A melhor possível! Estava desesperançada com uma causa (que estava em outro escritório há mais de três anos) e essa competente empresa desenrolou e resolveu minha causa em menos de 16 meses! Só agradecer!!!",
     reply:
-      "Fico imensamente feliz pela sua conquista, Caroline! O auxílio-acidente é um direito fundamental e conseguir essa concessão para você é muito gratificante. Conte sempre comigo!",
+      "Obrigada pela avaliação! Será sempre um prazer atendê-la da melhor forma possível! Além de cliente, se tornou uma grande amiga! Abraços.",
   },
   {
-    name: "Cristialma Oliveira",
-    badge: "Avaliação Verificada no Google",
-    date: "5 meses atrás",
+    name: "Gilziane Philemond",
+    badge: "Cliente nos Estados Unidos · 5 avaliações",
+    date: "5 anos atrás",
+    highlight: "Atendimento de excelência mesmo à distância nos EUA",
     content:
-      "Excelente profissional ouve e sabe orientar parabéns Dr jeisiele Deus continue te abençoando 🙏❤️",
+      "Estou nos Estados Unidos e mesmo de longe o doutor Samuel e a equipe trabalharam para meu esposo e eu, um atendimento excelente, sempre que tínhamos perguntas eles estavam sempre prontos a responder! Recomendo o trabalho deles sempre, ótimos advogados.",
     reply:
-      "Muito obrigada pelo carinho e pelas bênçãos, Cristialma! Saber ouvir com sensibilidade e orientar com clareza é a nossa maior missão.",
+      "Ficamos imensamente felizes em poder representar vocês com excelência e segurança, encurtando distâncias!",
   },
   {
-    name: "Francis Soares",
-    badge: "Avaliação Verificada · 6 avaliações",
-    date: "5 meses atrás",
+    name: "Josi de Freitas",
+    badge: "Avaliação Verificada no Google · 1 avaliação",
+    date: "um ano atrás",
+    highlight: "Clareza, paciência e segurança em cada etapa",
     content:
-      "Experiência e competência sem igual muito obrigado pela acessória",
+      "A Dra. Isadora Caetano é uma profissional de excelência! Seu atendimento é marcado por clareza, paciência e dedicação, sempre transmitindo segurança em cada orientação. Explica o processo de forma simples e acessível, o que traz muita tranquilidade.",
     reply:
-      "Agradeço imensamente pelas palavras e pela confiança em nossa assessoria, Francis. Conte sempre com o escritório Oliveira e Megda!",
+      "Josi, muitíssimo obrigada! Estarei sempre pronta para atendê-la! Agradeço de coração todos os elogios.",
   },
   {
-    name: "Kassia Evellym",
-    badge: "Avaliação Verificada · 2 avaliações",
+    name: "Sandra Nunes",
+    badge: "Avaliação Verificada no Google · 2 avaliações",
     date: "5 meses atrás",
+    highlight: "Companheirismo e acolhimento humano",
     content:
-      "Muito atenciosa, inteligente e uma profissional maravilhosa. Recomendo",
+      "São pessoas confiáveis e profissionais que sempre atendem minhas necessidades com companheirismo e profissionalismo. Obrigada por atender sempre com esse carinho e acolhimento. Eu recomendo: se precisar de uma advogada experiente procure Doutora Isadora Caetano.",
     reply:
-      "Muito obrigada pelo carinho e pela recomendação, Kassia! É uma alegria poder atender com dedicação e excelência.",
+      "Obrigada pela avaliação, Sandra! Estamos sempre prontos para atender com todo o nosso cuidado!",
   },
   {
-    name: "Sandra Do Carmo Flávio",
-    badge: "Avaliação Verificada no Google",
-    date: "5 meses atrás",
+    name: "Isa Medeiros",
+    badge: "Avaliação Verificada no Google · 2 avaliações",
+    date: "10 meses atrás",
+    highlight: "Equipe prestativa e acompanhamento constante",
     content:
-      "Excelente, maravilhoso o atendimento e principalmente a assistência e atenção",
+      "Excelente atendimento! A advogada que me acompanha é sempre atenciosa, clara nas orientações e muito comprometida. A equipe é prestativa e transmite segurança em cada etapa. Sinto que estou bem representada e cuidada. Recomendo! 👏🏻",
     reply:
-      "Obrigada de coração, Sandra! Oferecer uma assistência atenta e humana em cada etapa do processo é a nossa prioridade.",
+      "Muito obrigada pela avaliação, Isa! Ficamos muito gratos pelo reconhecimento e estamos sempre dando nosso melhor para você.",
   },
   {
-    name: "Antoniel Nunes",
-    badge: "Avaliação Verificada no Google",
+    name: "dieny teixeira",
+    badge: "Avaliação Verificada no Google · 2 avaliações",
     date: "5 meses atrás",
-    content: "Melhor atendimento que já vi",
+    highlight: "Caso resolvido super rápido",
+    content:
+      "Excelente profissional, resolveu meu caso super rápido, super indico!",
     reply:
-      "Que honra receber esse feedback, Antoniel! Trabalhamos com muita dedicação para oferecer o melhor suporte jurídico aos nossos clientes.",
+      "Obrigada pela avaliação, Dieny! Estamos sempre à sua total disposição.",
   },
   {
-    name: "Edu Oliveira",
-    badge: "Avaliação Verificada · 7 fotos",
-    date: "5 meses atrás",
-    content: "A melhor que nós temos 🏆",
+    name: "Walmir Carreiro",
+    badge: "Avaliação Verificada no Google · 1 avaliação",
+    date: "um ano atrás",
+    highlight: "Agilidade e clareza nas informações",
+    content:
+      "Sou cliente e estou muito satisfeito com os atendimentos, agilidade e clareza nas informações. Recomendo a todos que estiverem à procura de ótimos profissionais.",
     reply:
-      "Muito obrigada pelo prestígio e reconhecimento, Edu! Uma grande honra representar nossa comarca com compromisso e seriedade.",
+      "Obrigada, Walmir, pela avaliação! De cliente para um amigo de confiança. Conte sempre conosco!",
   },
   {
-    name: "Antony Oliveira Flávio",
-    badge: "Avaliação Verificada · 2 avaliações",
-    date: "5 meses atrás",
-    content: "Excelente, atendimento de primeira qualidade",
+    name: "Franciely Rosa",
+    badge: "Avaliação Verificada no Google · 4 avaliações",
+    date: "um ano atrás",
+    highlight: "Apoio no momento mais difícil e vitória alcançada",
+    content:
+      "A melhor do mundo, me ajudaram no momento mais difícil da minha vida, e conseguimos a vitória! Gratidão a toda a equipe! 🙏❤️",
     reply:
-      "Agradeço pela confiança e por destacar o nosso padrão de qualidade, Antony!",
+      "Obrigada, Franciely! A sua vitória será sempre lembrada e celebrada por nós com muito carinho.",
   },
   {
-    name: "Lais Novais",
-    badge: "Avaliação Verificada no Google",
-    date: "5 meses atrás",
-    content: "Excelente profissional. Recomendo muito",
+    name: "SPR Conselheiro Pena (Sindicato)",
+    badge: "Parceria Institucional · Conselheiro Pena",
+    date: "um ano atrás",
+    highlight: "Agilidade e resposta rápida para causas coletivas",
+    content:
+      "O Sindicato só tem a agradecer o serviço prestado a nossa entidade. Somos muito bem atendidos por todos da equipe. Isto sem falar na agilidade e resposta para nossas causas. Obrigado pelo atendimento.",
     reply:
-      "Muito obrigada pela confiança no meu trabalho e pela recomendação, Lais!",
+      "Obrigada pela avaliação! Nossa parceria com o Sindicato é construída com respeito mútuo e trabalho sério.",
   },
   {
-    name: "Jady Oliveira",
-    badge: "Avaliação Verificada · 3 avaliações",
-    date: "5 meses atrás",
-    content: "Profissional demais! Recomendo.",
+    name: "Maciel Alves",
+    badge: "Avaliação Verificada no Google · 1 avaliação",
+    date: "3 anos atrás",
+    highlight: "Total segurança nas mãos da Isadora e equipe",
+    content:
+      "Me sinto totalmente segura nas mãos da Isadora e equipe. Profissionais super comprometidos e responsáveis. Experiência incrível que estou tendo.",
     reply:
-      "Fico muito feliz com seu retorno positivo e recomendação, Jady! Um grande abraço.",
+      "Muito obrigada pela confiança depositada em nossa equipe, Maciel!",
+  },
+  {
+    name: "Izabela Venancio",
+    badge: "Avaliação Verificada no Google · 7 avaliações",
+    date: "9 meses atrás",
+    highlight: "Respeito e profissionalismo desde o primeiro contato",
+    content:
+      "Excelente atendimento!! Senti respeito e profissionalismo desde o primeiro contato, tive uma ótima experiência, super recomendo o escritório. Estou muito grata pela ajuda e pelo suporte!",
+    reply:
+      "Obrigada pela avaliação, Izabela! Estamos sempre à disposição para apoiar da melhor forma.",
+  },
+  {
+    name: "Bárbara Protásio",
+    badge: "Avaliação Verificada no Google · 1 avaliação",
+    date: "5 meses atrás",
+    highlight: "Uma profissional maravilhosa e de respeito",
+    content:
+      "Ótimo atendimento! Uma profissional maravilhosa e de respeito!",
+    reply:
+      "Obrigada pela avaliação! Estamos sempre prontos para atender com toda dedicação.",
   },
 ];
 
@@ -407,7 +403,7 @@ function Heading({
       )}
       <h2
         className={`font-serif text-3xl leading-[1.12] tracking-[-0.02em] font-bold sm:text-4xl lg:text-[2.75rem] ${
-          dark ? "text-white" : "text-[#0e1118]"
+          dark ? "text-white" : "text-[#14100e]"
         }`}
       >
         {children}
@@ -415,7 +411,7 @@ function Heading({
       {description && (
         <p
           className={`mt-4 text-sm leading-7 ${
-            dark ? "text-[#a0abbd]" : "text-[#4b5565]"
+            dark ? "text-[#c2b5aa]" : "text-[#5c524c]"
           }`}
         >
           {description}
@@ -450,29 +446,31 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="relative min-h-screen bg-[#090a0f] text-[#e1e7f0]">
+      <main className="relative min-h-screen bg-[#0c0a09] text-[#ede5dc]">
         {/* Top Notification Strip */}
-        <div className="relative z-50 border-b border-[#d09040]/25 bg-[#0d1017] px-4 py-2.5 text-xs text-[#d1d7e2]">
+        <div className="relative z-50 border-b border-[#ba7852]/25 bg-[#14100e] px-4 py-2.5 text-xs text-[#d6cbc2]">
           <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-2 sm:px-6">
             <div className="flex items-center gap-2 font-medium">
               <span className="relative flex size-2">
-                <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#f0c070] opacity-75" />
-                <span className="relative inline-flex size-2 rounded-full bg-[#d09040]" />
+                <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#df9f77] opacity-75" />
+                <span className="relative inline-flex size-2 rounded-full bg-[#ba7852]" />
               </span>
-              <span className="text-[11px] sm:text-xs text-[#ffe090] font-semibold">
-                Advocacia Previdenciária Especializada · Concessão & Restabelecimento de Benefícios
+              <span className="text-[11px] sm:text-xs text-[#f3cca8] font-semibold">
+                Isadora Caetano · Advocacia & Consultoria · 4,9 ★ no Google (166+ avaliações)
               </span>
             </div>
             <div className="flex items-center gap-4 text-[11px] sm:text-xs">
               <a
-                href={`tel:+${WHATSAPP_NUMBER}`}
-                className="font-bold text-[#f0c070] transition-colors hover:text-white"
+                href={getWhatsAppUrl("Olá, Dra. Isadora Caetano! Gostaria de falar com o escritório.")}
+                target="_blank"
+                rel="noreferrer"
+                className="font-bold text-[#df9f77] transition-colors hover:text-white"
               >
                 WhatsApp: {PHONE_DISPLAY}
               </a>
-              <span className="hidden text-[#4b5565] sm:inline">|</span>
-              <span className="hidden text-[#a0abbd] sm:inline">
-                Campos Gerais - MG & Atendimento Online para Todo o Brasil
+              <span className="hidden text-[#4a4039] sm:inline">|</span>
+              <span className="hidden text-[#c2b5aa] sm:inline">
+                Conselheiro Pena - MG · Atendimento Presencial & Online Global
               </span>
             </div>
           </div>
@@ -482,46 +480,46 @@ export default function Home() {
         <header
           className={`sticky top-0 z-40 transition-all duration-300 ${
             scrolled
-              ? "border-b border-[#d09040]/20 bg-[#090a0f]/95 backdrop-blur-md shadow-lg shadow-black/50"
-              : "border-b border-[#1c2230] bg-[#090a0f]/90 backdrop-blur-xs"
+              ? "border-b border-[#ba7852]/20 bg-[#0c0a09]/95 backdrop-blur-md shadow-lg shadow-black/60"
+              : "border-b border-[#241e1b] bg-[#0c0a09]/90 backdrop-blur-xs"
           }`}
         >
-          <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 sm:px-8 lg:px-12">
-            {/* Logo */}
+          <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-2.5 sm:px-8 lg:px-12">
+            {/* Logo (Aumentado em 25% com margem fixa à direita garantindo espaço de respiro) */}
             <a
               href="#inicio"
-              aria-label="Oliveira e Megda Advocacia Previdenciária - Dra. Jeisiele Oliveira"
-              className="group flex shrink-0 items-center transition-transform hover:scale-[1.02]"
+              aria-label="Isadora Caetano Advocacia e Consultoria"
+              className="group flex shrink-0 items-center mr-6 lg:mr-10 xl:mr-14 transition-transform hover:scale-[1.02]"
             >
               <Image
                 src={LOGO_SRC}
-                alt="Oliveira e Megda Advocacia e Consultoria Previdenciária"
-                width={320}
-                height={156}
+                alt="Isadora Caetano - Advocacia e Consultoria"
+                width={475}
+                height={120}
                 priority
-                className="h-12 w-auto object-contain sm:h-14 lg:h-16"
+                className="h-[45px] w-auto object-contain drop-shadow-[0_2px_10px_rgba(186,120,82,0.18)] sm:h-[50px] lg:h-[55px] xl:h-[60px]"
               />
             </a>
 
             {/* Desktop Navigation */}
             <nav
               aria-label="Navegação principal"
-              className="hidden items-center gap-7 lg:flex"
+              className="hidden items-center gap-4 xl:gap-6 lg:flex shrink-0 text-[11px] xl:text-xs"
             >
               <a className="nav-link-dark" href="#inicio">
                 Início
               </a>
               <a className="nav-link-dark" href="#sobre">
-                A Advogada
+                O Escritório & Equipe
               </a>
               <a className="nav-link-dark" href="#atuacao">
-                Serviços & Benefícios
+                Áreas de Atuação
               </a>
               <a className="nav-link-dark" href="#diferenciais">
                 Diferenciais
               </a>
               <a className="nav-link-dark" href="#avaliacoes">
-                Avaliações (5,0 ★)
+                Avaliações (4,9 ★)
               </a>
               <a className="nav-link-dark" href="#contato">
                 Contato & Sede
@@ -529,10 +527,10 @@ export default function Home() {
             </nav>
 
             {/* Header CTA & Mobile Button */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 shrink-0 ml-4 lg:ml-6">
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Jeisiele Oliveira! Gostaria de consultar sobre meu caso com o INSS."
+                  "Olá, Dra. Isadora Caetano! Gostaria de consultar sobre o meu caso com o escritório."
                 )}
                 target="_blank"
                 size="sm"
@@ -546,7 +544,7 @@ export default function Home() {
                 type="button"
                 aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="grid size-10 place-items-center rounded-lg border border-[#d09040]/30 bg-[#121622] text-[#ffe090] transition-colors hover:border-[#f0c070] hover:text-white lg:hidden cursor-pointer"
+                className="grid size-10 place-items-center rounded-lg border border-[#ba7852]/30 bg-[#1a1614] text-[#f3cca8] transition-colors hover:border-[#df9f77] hover:text-white lg:hidden cursor-pointer"
               >
                 {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
               </button>
@@ -560,31 +558,31 @@ export default function Home() {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                className="overflow-hidden border-b border-[#d09040]/20 bg-[#0e1119] px-5 py-6 lg:hidden"
+                className="overflow-hidden border-b border-[#ba7852]/20 bg-[#14100e] px-5 py-6 lg:hidden"
               >
                 <div className="flex flex-col gap-4">
-                  <div className="border-b border-[#d09040]/20 pb-3">
+                  <div className="border-b border-[#ba7852]/20 pb-3">
                     <Image
                       src={LOGO_SRC}
-                      alt="Oliveira e Megda Advocacia"
-                      width={240}
-                      height={116}
-                      className="h-11 w-auto object-contain"
+                      alt="Isadora Caetano Advocacia e Consultoria"
+                      width={280}
+                      height={70}
+                      className="h-10 w-auto object-contain"
                     />
                   </div>
                   {[
                     ["Início", "#inicio"],
-                    ["A Advogada", "#sobre"],
-                    ["Serviços & Benefícios", "#atuacao"],
+                    ["O Escritório & Equipe", "#sobre"],
+                    ["Áreas de Atuação", "#atuacao"],
                     ["Diferenciais", "#diferenciais"],
-                    ["Avaliações no Google (5,0 ★)", "#avaliacoes"],
+                    ["Avaliações no Google (4,9 ★)", "#avaliacoes"],
                     ["Contato & Sede", "#contato"],
                   ].map(([label, href]) => (
                     <a
                       key={href}
                       href={href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="text-sm font-semibold tracking-wide text-[#d1d7e2] transition-colors hover:text-[#f0c070]"
+                      className="text-sm font-semibold tracking-wide text-[#d6cbc2] transition-colors hover:text-[#df9f77]"
                     >
                       {label}
                     </a>
@@ -592,14 +590,14 @@ export default function Home() {
                   <div className="pt-3">
                     <GlowingButton
                       href={getWhatsAppUrl(
-                        "Olá, Dra. Jeisiele Oliveira! Gostaria de consultar sobre meu caso no INSS."
+                        "Olá, Dra. Isadora Caetano! Gostaria de consultar sobre meu caso no escritório."
                       )}
                       target="_blank"
                       size="md"
                       variant="gold"
                       className="w-full justify-center"
                     >
-                      <WhatsAppIcon size={16} /> Falar com a Dra. Jeisiele
+                      <WhatsAppIcon size={16} /> Falar com a Dra. Isadora
                     </GlowingButton>
                   </div>
                 </div>
@@ -611,11 +609,11 @@ export default function Home() {
         {/* Hero Section */}
         <section
           id="inicio"
-          className="relative isolate overflow-hidden border-b border-[#d09040]/20 bg-gradient-to-b from-[#090a0f] via-[#0d1017] to-[#121622] py-16 sm:py-24 lg:py-28"
+          className="relative isolate overflow-hidden border-b border-[#ba7852]/20 bg-gradient-to-b from-[#0c0a09] via-[#14100e] to-[#1c1613] py-16 sm:py-24 lg:py-28"
         >
-          {/* Ambient Lighting & Metallic Gold Glows */}
-          <div className="pointer-events-none absolute -right-20 -top-20 -z-10 size-[38rem] rounded-full bg-[#d09040]/12 blur-[100px]" />
-          <div className="pointer-events-none absolute -left-20 bottom-0 -z-10 size-[32rem] rounded-full bg-[#8c5a1c]/10 blur-[90px]" />
+          {/* Ambient Lighting & Metallic Bronze Glows */}
+          <div className="pointer-events-none absolute -right-20 -top-20 -z-10 size-[38rem] rounded-full bg-[#ba7852]/12 blur-[100px]" />
+          <div className="pointer-events-none absolute -left-20 bottom-0 -z-10 size-[32rem] rounded-full bg-[#874828]/10 blur-[90px]" />
 
           <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14 lg:px-12">
             <motion.div
@@ -627,49 +625,51 @@ export default function Home() {
               {/* Authority Badge */}
               <motion.div
                 variants={reveal}
-                className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-[#d09040]/40 bg-[#141824]/85 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#ffe090] shadow-xs backdrop-blur-xs"
+                className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-[#ba7852]/40 bg-[#1c1613]/85 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#f3cca8] shadow-xs backdrop-blur-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#f0c070] shadow-[0_0_8px_#f0c070]" />
-                <span>DRA. JEISIELE OLIVEIRA · ADVOCACIA PREVIDENCIÁRIA · OAB/MG</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#df9f77] shadow-[0_0_8px_#df9f77]" />
+                <span>ISADORA CAETANO · ADVOCACIA E CONSULTORIA · OAB/MG</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
-                className="font-serif text-3xl font-bold leading-[1.08] tracking-[-0.02em] text-white sm:text-5xl lg:text-[3.4rem]"
+                className="font-serif text-3xl font-bold leading-[1.08] tracking-[-0.02em] text-white sm:text-5xl lg:text-[3.35rem]"
               >
-                O seu benefício foi{" "}
-                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#f0c070] via-[#ffe090] to-[#d09040]">
-                  cessado ou negado
+                Segurança jurídica e sensibilidade para defender{" "}
+                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#df9f77] via-[#f3cca8] to-[#ba7852]">
+                  sua família, seu patrimônio
                 </span>{" "}
-                pelo INSS? Conquiste sua aposentadoria{" "}
-                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#f0c070] via-[#ffe090] to-[#d09040]">
-                  sem complicação.
-                </span>
+                e os seus direitos.
               </motion.h1>
 
               <motion.p
                 variants={reveal}
-                className="mt-6 max-w-xl text-[15px] leading-7 text-[#b5c0d0] sm:text-base sm:leading-8"
+                className="mt-6 max-w-xl text-[15px] leading-7 text-[#c2b5aa] sm:text-base sm:leading-8"
               >
-                ⚖️ Ajudo você a <strong className="text-white">destravar pedidos no INSS</strong>, reverter cortes indevidos em auxílios e aposentadorias, e conquistar o <strong className="text-white">valor máximo do seu benefício</strong>. Atuação técnica, humanizada e combativa na Justiça e na via administrativa.
+                ⚖️ Especialistas em <strong className="text-white">Direito de Família</strong>, <strong className="text-white">Inventários & Sucessões</strong> e <strong className="text-white">Regularização de Imóveis</strong>. Unimos combatividade técnica, velocidade na solução de causas e um acolhimento próximo e transparente para clientes no Brasil e no exterior.
               </motion.p>
 
               {/* Fast Trust Indicators */}
               <motion.div
                 variants={reveal}
-                className="mt-7 flex flex-wrap items-center gap-2.5 text-[11px] font-semibold text-[#d1d7e2]"
+                className="mt-7 flex flex-wrap items-center gap-2.5 text-[11px] font-semibold text-[#d6cbc2]"
               >
-                <span className="inline-flex items-center gap-1.5 rounded-lg border border-[#d09040]/30 bg-[#121622]/90 px-3.5 py-1.5 shadow-xs text-[#ffe090]">
-                  <Star size={13} className="fill-[#f0c070] text-[#f0c070]" />
-                  Nota 5,0 ★ no Google (11 avaliações)
+                <a
+                  href={GOOGLE_SEARCH_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-[#ba7852]/30 bg-[#1a1614]/90 px-3.5 py-1.5 shadow-xs text-[#f3cca8] hover:border-[#df9f77] hover:text-white transition-colors"
+                >
+                  <Star size={13} className="fill-[#df9f77] text-[#df9f77]" />
+                  Nota 4,9 ★ no Google (166 avaliações)
+                </a>
+                <span className="inline-flex items-center gap-1.5 rounded-lg border border-[#ba7852]/30 bg-[#1a1614]/90 px-3.5 py-1.5 shadow-xs text-[#f3cca8]">
+                  <Scale size={13} className="text-[#df9f77]" />
+                  Família · Inventários · Imóveis
                 </span>
-                <span className="inline-flex items-center gap-1.5 rounded-lg border border-[#d09040]/30 bg-[#121622]/90 px-3.5 py-1.5 shadow-xs text-[#ffe090]">
-                  <Scale size={13} className="text-[#f0c070]" />
-                  Comissão de Direito Previdenciário OAB/MG
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-lg border border-[#d09040]/30 bg-[#121622]/90 px-3.5 py-1.5 shadow-xs text-[#ffe090]">
-                  <MapPin size={13} className="text-[#f0c070]" />
-                  Campos Gerais - MG & Online para Todo o Brasil
+                <span className="inline-flex items-center gap-1.5 rounded-lg border border-[#ba7852]/30 bg-[#1a1614]/90 px-3.5 py-1.5 shadow-xs text-[#f3cca8]">
+                  <MapPin size={13} className="text-[#df9f77]" />
+                  Conselheiro Pena - MG & Online Global
                 </span>
               </motion.div>
 
@@ -680,14 +680,14 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Jeisiele Oliveira! Meu benefício foi negado/cessado no INSS e gostaria de uma orientação."
+                    "Olá, Dra. Isadora Caetano! Gostaria de agendar uma consulta com seu escritório."
                   )}
                   target="_blank"
                   size="lg"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={17} /> Restabelecer Meu Benefício
+                  <WhatsAppIcon size={17} /> Falar com a Dra. Isadora
                 </GlowingButton>
 
                 <GlowingButton
@@ -702,9 +702,9 @@ export default function Home() {
 
               <motion.p
                 variants={reveal}
-                className="mt-4 text-xs text-[#8a96a8]"
+                className="mt-4 text-xs text-[#9c8e82]"
               >
-                Atendimento presencial no escritório em Campos Gerais - MG ou atendimento digital seguro para todo o Brasil.
+                Atendimento presencial no Centro de Conselheiro Pena - MG ou suporte jurídico digital seguro para todo o Brasil e clientes no exterior (EUA).
               </motion.p>
             </motion.div>
 
@@ -715,146 +715,146 @@ export default function Home() {
               transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
               className="relative mx-auto w-full max-w-[460px]"
             >
-              {/* Outer Golden Halo Frame */}
-              <div className="relative aspect-[3/3.8] overflow-hidden rounded-2xl border-2 border-[#d09040]/50 bg-[#141824] shadow-2xl shadow-black/80">
+              {/* Outer Bronze Halo Frame */}
+              <div className="relative aspect-[3/3.85] overflow-hidden rounded-2xl border-2 border-[#ba7852]/50 bg-[#1c1613] shadow-2xl shadow-black/80">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Dra. Jeisiele Oliveira — Advogada Previdenciária em atendimento"
+                  alt="Dra. Isadora Caetano — Escritório de Advocacia"
                   fill
                   priority
                   sizes="(max-width: 1024px) 90vw, 45vw"
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#090a0f] via-[#090a0f]/60 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0c0a09] via-[#0c0a09]/60 to-transparent" />
               </div>
 
               {/* Authority Floating Card */}
-              <div className="absolute -bottom-6 -left-3 max-w-[320px] rounded-xl border border-[#d09040]/50 bg-[#0f131c]/95 p-4 shadow-2xl backdrop-blur-md sm:-left-6 sm:p-5">
-                <div className="flex items-center gap-1 text-[#f0c070]">
+              <div className="absolute -bottom-6 -left-3 max-w-[320px] rounded-xl border border-[#ba7852]/50 bg-[#14100e]/95 p-4 shadow-2xl backdrop-blur-md sm:-left-6 sm:p-5">
+                <div className="flex items-center gap-1 text-[#df9f77]">
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
                       size={14}
-                      className="fill-[#f0c070] text-[#f0c070]"
+                      className="fill-[#df9f77] text-[#df9f77]"
                     />
                   ))}
-                  <span className="ml-1 text-xs font-bold text-white">5,0 ★</span>
+                  <span className="ml-1 text-xs font-bold text-white">4,9 ★</span>
                 </div>
                 <p className="mt-1 font-serif text-sm font-bold text-white">
-                  Dra. Jeisiele Oliveira
+                  Dra. Isadora Caetano
                 </p>
-                <p className="text-[11px] font-medium text-[#ffe090]">
-                  Oliveira e Megda Advocacia Previdenciária
+                <p className="text-[11px] font-medium text-[#f3cca8]">
+                  Advocacia e Consultoria Jurídica
                 </p>
-                <p className="mt-1 text-[10px] leading-4 text-[#8a96a8]">
-                  &ldquo;Excelente profissional, com ela tive o benefício concedido com sucesso.&rdquo;
+                <p className="mt-1 text-[10px] leading-4 text-[#c2b5aa]">
+                  &ldquo;A Dra. Isadora Caetano é uma profissional de excelência! Clareza, paciência e dedicação em cada orientação.&rdquo;
                 </p>
               </div>
 
               {/* Floating Top Badge */}
-              <div className="absolute -right-3 top-6 rounded-lg border border-[#d09040]/40 bg-[#0c0f16]/95 px-3 py-2 text-right shadow-xl backdrop-blur-md sm:-right-5">
-                <div className="flex items-center gap-1.5 text-[#f0c070]">
-                  <AlertCircle size={14} />
+              <div className="absolute -right-3 top-6 rounded-lg border border-[#ba7852]/40 bg-[#14100e]/95 px-3 py-2 text-right shadow-xl backdrop-blur-md sm:-right-5">
+                <div className="flex items-center gap-1.5 text-[#df9f77]">
+                  <Sparkles size={14} />
                   <span className="text-[10px] font-bold uppercase tracking-wider text-white">
-                    Benefício Cortado?
+                    166+ Avaliações Reais
                   </span>
                 </div>
-                <p className="text-[10px] text-[#8a96a8]">Atendimento Prioritário</p>
+                <p className="text-[10px] text-[#9c8e82]">Google 4,9 Estrelas</p>
               </div>
             </motion.div>
           </div>
         </section>
 
         {/* 4 Pillars Strip (Barra de Destaques) */}
-        <section className="border-b border-[#d09040]/20 bg-[#0d1017] px-5 py-8 text-white sm:px-8 lg:px-12">
+        <section className="border-b border-[#ba7852]/20 bg-[#14100e] px-5 py-8 text-white sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 md:grid-cols-4">
             <div className="flex items-start gap-3.5">
-              <span className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#d09040]/30 bg-[#141824] text-[#f0c070]">
-                <Star size={18} className="fill-[#f0c070]" />
+              <span className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#ba7852]/30 bg-[#1c1613] text-[#df9f77]">
+                <Star size={18} className="fill-[#df9f77]" />
               </span>
               <div>
-                <p className="font-serif text-sm font-bold text-white">Nota 5,0 no Google</p>
-                <p className="text-[11px] text-[#8a96a8]">11 avaliações 5 estrelas</p>
+                <p className="font-serif text-sm font-bold text-white">Nota 4,9 no Google</p>
+                <p className="text-[11px] text-[#c2b5aa]">166 avaliações verificadas</p>
               </div>
             </div>
 
             <div className="flex items-start gap-3.5">
-              <span className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#d09040]/30 bg-[#141824] text-[#f0c070]">
-                <Scale size={18} />
+              <span className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#ba7852]/30 bg-[#1c1613] text-[#df9f77]">
+                <HeartHandshake size={18} />
               </span>
               <div>
-                <p className="font-serif text-sm font-bold text-white">Foco Previdenciário</p>
-                <p className="text-[11px] text-[#8a96a8]">Especialista em INSS & BPC</p>
+                <p className="font-serif text-sm font-bold text-white">Família & Sucessões</p>
+                <p className="text-[11px] text-[#c2b5aa]">Divórcios, Partilhas & Herança</p>
               </div>
             </div>
 
             <div className="flex items-start gap-3.5">
-              <span className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#d09040]/30 bg-[#141824] text-[#f0c070]">
-                <MapPin size={18} />
+              <span className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#ba7852]/30 bg-[#1c1613] text-[#df9f77]">
+                <HomeIcon size={18} />
               </span>
               <div>
-                <p className="font-serif text-sm font-bold text-white">Campos Gerais - MG</p>
-                <p className="text-[11px] text-[#8a96a8]">Presencial e Online para todo o Brasil</p>
+                <p className="font-serif text-sm font-bold text-white">Imóveis & Usucapião</p>
+                <p className="text-[11px] text-[#c2b5aa]">Escrituras, Posse e Registro RGI</p>
               </div>
             </div>
 
             <div className="flex items-start gap-3.5">
-              <span className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#d09040]/30 bg-[#141824] text-[#f0c070]">
-                <CheckCircle2 size={18} />
+              <span className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#ba7852]/30 bg-[#1c1613] text-[#df9f77]">
+                <Globe2 size={18} />
               </span>
               <div>
-                <p className="font-serif text-sm font-bold text-white">Celeridade & Ética</p>
-                <p className="text-[11px] text-[#8a96a8]">Transparência em cada etapa</p>
+                <p className="font-serif text-sm font-bold text-white">Conselheiro Pena & EUA</p>
+                <p className="text-[11px] text-[#c2b5aa]">Presencial e Suporte no Exterior</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Sobre a Dra. Jeisiele Oliveira */}
+        {/* Sobre o Escritório & Equipe */}
         <section
           id="sobre"
-          className="scroll-mt-24 border-b border-[#e6ded4] bg-[#fbf9f5] py-20 text-[#12151d] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-[#e8ded3] bg-[#faf7f2] py-20 text-[#171311] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
-            {/* Presentation portrait */}
+            {/* Team Portrait */}
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={reveal}
-              className="relative mx-auto w-full max-w-[460px]"
+              className="relative mx-auto w-full max-w-[480px]"
             >
-              <div className="relative aspect-[3/3.8] overflow-hidden rounded-2xl border-2 border-[#d09040]/40 bg-[#f4efe6] shadow-xl">
+              <div className="relative aspect-[3/3.8] overflow-hidden rounded-2xl border-2 border-[#ba7852]/40 bg-[#f3ece3] shadow-xl">
                 <Image
-                  src={FOTO_SOBRE_SRC}
-                  alt="Dra. Jeisiele Oliveira — Advogada Previdenciária"
+                  src={FOTO_EQUIPE_WALK}
+                  alt="Equipe Isadora Caetano Advocacia e Consultoria"
                   fill
                   sizes="(max-width: 1024px) 90vw, 45vw"
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#12151d]/70 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#14100e]/75 to-transparent" />
               </div>
 
               {/* Authority badge card */}
-              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#d09040]/50 bg-white p-5 shadow-xl sm:-right-6">
-                <div className="flex items-center gap-2 text-[#d09040]">
+              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#ba7852]/50 bg-white p-5 shadow-xl sm:-right-6">
+                <div className="flex items-center gap-2 text-[#ba7852]">
                   <Award size={18} />
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#8c5a1c]">
-                    Advocacia e Consultoria Previdenciária
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#874828]">
+                    Corpo Jurídico Especializado
                   </p>
                 </div>
-                <p className="mt-1 font-serif text-lg font-bold leading-snug text-[#0e1118]">
-                  Dra. Jeisiele Oliveira
+                <p className="mt-1 font-serif text-lg font-bold leading-snug text-[#14100e]">
+                  Dra. Isadora Caetano & Equipe
                 </p>
-                <p className="mt-0.5 text-xs font-semibold text-[#d09040]">
-                  Membro da Comissão de Direito Previdenciário da 21ª Subseção OAB/MG
+                <p className="mt-0.5 text-xs font-semibold text-[#ba7852]">
+                  Advogados atuantes em Família, Sucessões e Regularização de Imóveis
                 </p>
-                <p className="mt-1 text-[11px] leading-4 text-[#5a6475]">
-                  Oliveira e Megda Advocacia · Campos Gerais - MG
+                <p className="mt-1 text-[11px] leading-4 text-[#5c524c]">
+                  Conselheiro Pena - MG · Atendimento Presencial e Digital Global
                 </p>
               </div>
 
-              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#d09040]/50 sm:-left-7 sm:-top-7 sm:size-32" />
+              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#ba7852]/50 sm:-left-7 sm:-top-7 sm:size-32" />
             </motion.div>
 
             {/* Story & Biography */}
@@ -866,34 +866,34 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#d09040]/40 bg-[#fdf7ea] px-3.5 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#8c5a1c] shadow-xs"
+                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#ba7852]/40 bg-[#fbf5ee] px-3.5 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#874828] shadow-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#d09040]" />
-                <span>CONHEÇA A DRA. JEISIELE OLIVEIRA</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#ba7852]" />
+                <span>CONHEÇA O ESCRITÓRIO ISADORA CAETANO</span>
               </motion.div>
 
               <motion.h2
                 variants={reveal}
-                className="font-serif text-3xl font-bold leading-[1.14] tracking-[-0.02em] text-[#0e1118] sm:text-4xl lg:text-[2.85rem]"
+                className="font-serif text-3xl font-bold leading-[1.14] tracking-[-0.02em] text-[#14100e] sm:text-4xl lg:text-[2.85rem]"
               >
-                Dedicação incansável e atendimento humano para garantir o seu{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#8c5a1c] via-[#d09040] to-[#f0c070]">
-                  direito previdenciário no INSS.
+                Atendimento humanizado, agilidade comprovada e dedicação incansável para{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#874828] via-[#ba7852] to-[#df9f77]">
+                  proteger o que é seu por direito.
                 </span>
               </motion.h2>
 
               <motion.p
                 variants={reveal}
-                className="mt-6 max-w-xl text-[15px] leading-7 text-[#4b5565]"
+                className="mt-6 max-w-xl text-[15px] leading-7 text-[#5c524c]"
               >
-                A <strong className="font-bold text-[#0e1118]">Dra. Jeisiele Oliveira</strong> é Advogada Associada na <strong className="font-bold text-[#0e1118]">Oliveira e Megda Advocacia e Consultoria Previdenciária</strong> e Membro da Comissão de Direito Previdenciário da 21ª Subseção da OAB/MG. Com uma atuação combativa, ética e profundamente acolhedora, ela é especialista em transformar a complexidade do INSS em conquistas reais e dignidade financeira para cada segurado.
+                O escritório <strong className="font-bold text-[#14100e]">Isadora Caetano — Advocacia e Consultoria</strong> nasceu com o propósito de transformar a advocacia em um ambiente de acolhimento, transparência e segurança inabalável. Liderado pela <strong className="font-bold text-[#14100e]">Dra. Isadora Caetano</strong> e integrado por profissionais como o <strong className="font-bold text-[#14100e]">Dr. Bernardo Haussmann</strong>, o escritório combina rigor técnico apurado com uma comunicação clara, descomplicada e empática.
               </motion.p>
 
               <motion.p
                 variants={reveal}
-                className="mt-4 max-w-xl text-[15px] leading-7 text-[#4b5565]"
+                className="mt-4 max-w-xl text-[15px] leading-7 text-[#5c524c]"
               >
-                Seja para restabelecer um benefício por incapacidade cortado no pente-fino, reverter negativas indevidas de aposentadoria ou conceder o BPC/LOAS para quem mais necessita, o atendimento é pautado pela escuta atenta, transparência total e acompanhamento minucioso de cada prova documental e pericial.
+                Seja para realizar um divórcio ou partilha com serenidade, agilizar a transmissão de um inventário em cartório, regularizar a posse e escritura de um imóvel ou representar clientes residentes no exterior (como nos EUA), nossa prioridade é oferecer respostas rápidas e conduzir cada processo com dedicação de quem cuida de amigos da família.
               </motion.p>
 
               {/* 3 Value Pillars */}
@@ -901,39 +901,39 @@ export default function Home() {
                 variants={reveal}
                 className="mt-8 grid gap-4 sm:grid-cols-3"
               >
-                <div className="rounded-xl border border-[#e6ded4] bg-white p-4 shadow-xs">
-                  <span className="text-[#d09040]">
-                    <Shield size={20} />
-                  </span>
-                  <h3 className="mt-2 text-xs font-bold uppercase tracking-wider text-[#0e1118]">
-                    Combatividade Técnica
-                  </h3>
-                  <p className="mt-1 text-[11px] leading-5 text-[#5a6475]">
-                    Ações judiciais fundamentadas e quesitos periciais detalhados contra os erros do INSS.
-                  </p>
-                </div>
-
-                <div className="rounded-xl border border-[#e6ded4] bg-white p-4 shadow-xs">
-                  <span className="text-[#d09040]">
+                <div className="rounded-xl border border-[#e8ded3] bg-white p-4 shadow-xs">
+                  <span className="text-[#ba7852]">
                     <HeartHandshake size={20} />
                   </span>
-                  <h3 className="mt-2 text-xs font-bold uppercase tracking-wider text-[#0e1118]">
+                  <h3 className="mt-2 text-xs font-bold uppercase tracking-wider text-[#14100e]">
                     Acolhimento Real
                   </h3>
-                  <p className="mt-1 text-[11px] leading-5 text-[#5a6475]">
-                    Atendimento humanizado, paciente e sem termos difíceis para tranquilizar você e sua família.
+                  <p className="mt-1 text-[11px] leading-5 text-[#5c524c]">
+                    Escuta atenta e paciente para compreender as necessidades reais da sua família sem complicação.
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-[#e6ded4] bg-white p-4 shadow-xs">
-                  <span className="text-[#d09040]">
+                <div className="rounded-xl border border-[#e8ded3] bg-white p-4 shadow-xs">
+                  <span className="text-[#ba7852]">
                     <Clock size={20} />
                   </span>
-                  <h3 className="mt-2 text-xs font-bold uppercase tracking-wider text-[#0e1118]">
-                    Agilidade nos Pedidos
+                  <h3 className="mt-2 text-xs font-bold uppercase tracking-wider text-[#14100e]">
+                    Agilidade Comprovada
                   </h3>
-                  <p className="mt-1 text-[11px] leading-5 text-[#5a6475]">
-                    Respostas rápidas no WhatsApp e celeridade para destravar processos que estavam parados.
+                  <p className="mt-1 text-[11px] leading-5 text-[#5c524c]">
+                    Resolução rápida e diligente de causas travadas há anos, como atestado por centenas de clientes.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-[#e8ded3] bg-white p-4 shadow-xs">
+                  <span className="text-[#ba7852]">
+                    <Shield size={20} />
+                  </span>
+                  <h3 className="mt-2 text-xs font-bold uppercase tracking-wider text-[#14100e]">
+                    Blindagem Patrimonial
+                  </h3>
+                  <p className="mt-1 text-[11px] leading-5 text-[#5c524c]">
+                    Segurança total para inventários, imóveis, empresas familiares e contratos patrimoniais.
                   </p>
                 </div>
               </motion.div>
@@ -941,24 +941,24 @@ export default function Home() {
               <motion.div variants={reveal} className="mt-9 flex items-center gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Jeisiele Oliveira! Gostaria de conversar com a senhora sobre o meu caso com o INSS."
+                    "Olá, Dra. Isadora Caetano! Gostaria de conversar com a senhora sobre o meu caso."
                   )}
                   target="_blank"
                   size="md"
                   variant="gold"
                   className="rounded-lg shadow-sm"
                 >
-                  <WhatsAppIcon size={16} /> Falar com a Dra. Jeisiele
+                  <WhatsAppIcon size={16} /> Falar com a Dra. Isadora
                 </GlowingButton>
               </motion.div>
             </motion.div>
           </div>
         </section>
 
-        {/* Pilares de Atuação & Especialidades Previdenciárias */}
+        {/* Pilares de Atuação & Especialidades */}
         <section
           id="atuacao"
-          className="scroll-mt-24 border-b border-[#d09040]/20 bg-[#0d1017] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-[#ba7852]/20 bg-[#14100e] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <motion.div
@@ -970,15 +970,15 @@ export default function Home() {
             >
               <Heading
                 dark
-                eyebrow="SERVIÇOS & PILARES DE ATUAÇÃO PREVIDENCIÁRIA"
-                description="Expertise técnica focada na concessão, restabelecimento e revisão de benefícios do Regime Geral de Previdência Social (INSS)."
+                eyebrow="ÁREAS DE ATUAÇÃO & ESPECIALIDADES"
+                description="Expertise jurídica multidisciplinar com foco absoluto na proteção da família, agilização de inventários e segurança de imóveis urbanos e rurais."
               >
                 Soluções especializadas em{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#f0c070] via-[#ffe090] to-[#d09040]">
-                  Benefícios do INSS e Aposentadorias.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#df9f77] via-[#f3cca8] to-[#ba7852]">
+                  Família, Sucessões e Imóveis.
                 </span>
               </Heading>
-              <p className="max-w-[280px] pb-1 text-xs leading-6 text-[#8a96a8]">
+              <p className="max-w-[280px] pb-1 text-xs leading-6 text-[#c2b5aa]">
                 Clique em um dos serviços abaixo para conferir as demandas atendidas e iniciar seu atendimento direto pelo WhatsApp.
               </p>
             </motion.div>
@@ -988,7 +988,7 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.12 }}
               variants={stagger}
-              className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+              className="mt-12 grid gap-6 md:grid-cols-2"
             >
               {practiceAreas.map((area, index) => {
                 const Icon = area.icon;
@@ -996,25 +996,25 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group flex min-h-[360px] flex-col rounded-2xl border border-[#d09040]/25 bg-[#121622] p-6 shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-[#f0c070] hover:shadow-2xl hover:shadow-[#d09040]/15 sm:p-7"
+                    className="group flex min-h-[340px] flex-col rounded-2xl border border-[#ba7852]/25 bg-[#1a1614] p-6 shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-[#df9f77] hover:shadow-2xl hover:shadow-[#ba7852]/15 sm:p-8"
                   >
                     <div className="flex items-start justify-between">
-                      <span className="grid size-12 place-items-center rounded-xl border border-[#d09040]/30 bg-[#181e2e] text-[#f0c070] shadow-xs transition-colors group-hover:border-[#f0c070] group-hover:bg-[#d09040] group-hover:text-[#090a0f]">
+                      <span className="grid size-12 place-items-center rounded-xl border border-[#ba7852]/30 bg-[#241e1b] text-[#df9f77] shadow-xs transition-colors group-hover:border-[#df9f77] group-hover:bg-[#ba7852] group-hover:text-white">
                         <Icon size={22} strokeWidth={1.75} />
                       </span>
-                      <span className="font-serif text-2xl font-bold text-[#d09040]/40 transition-colors group-hover:text-[#f0c070]">
+                      <span className="font-serif text-2xl font-bold text-[#ba7852]/40 transition-colors group-hover:text-[#df9f77]">
                         0{index + 1}
                       </span>
                     </div>
 
                     <div className="mt-5">
-                      <span className="inline-block rounded-md border border-[#d09040]/30 bg-[#161c2b] px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-[#ffe090]">
+                      <span className="inline-block rounded-md border border-[#ba7852]/30 bg-[#241e1b] px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-[#f3cca8]">
                         {area.tag}
                       </span>
-                      <h3 className="mt-3 font-serif text-[1.22rem] font-bold leading-snug text-white">
+                      <h3 className="mt-3 font-serif text-[1.28rem] font-bold leading-snug text-white">
                         {area.title}
                       </h3>
-                      <p className="mt-2.5 text-xs leading-6 text-[#9ca7b8]">
+                      <p className="mt-2.5 text-xs leading-6 text-[#c2b5aa]">
                         {area.summary}
                       </p>
                     </div>
@@ -1022,7 +1022,7 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => setActiveArea(area)}
-                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[11px] font-bold uppercase tracking-[0.16em] text-[#f0c070] hover:text-white cursor-pointer"
+                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[11px] font-bold uppercase tracking-[0.16em] text-[#df9f77] hover:text-white cursor-pointer"
                     >
                       Ver detalhes e demandas{" "}
                       <ArrowRight
@@ -1037,25 +1037,25 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Por Que Escolher a Dra. Jeisiele Oliveira - 4 Diferenciais */}
+        {/* Por Que Escolher o Escritório Isadora Caetano - 4 Diferenciais Reais */}
         <section
           id="diferenciais"
-          className="scroll-mt-24 border-y border-[#e6ded4] bg-white py-20 text-[#12151d] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-y border-[#e8ded3] bg-white py-20 text-[#171311] sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
-                eyebrow="REPUTAÇÃO MÁXIMA 5 ESTRELAS NO GOOGLE"
-                description="Segurança jurídica, clareza nas orientações, empatia com os segurados e compromisso inegociável em defender os seus direitos contra as negativas do INSS."
+                eyebrow="REPUTAÇÃO MÁXIMA 4,9 ★ NO GOOGLE (166 AVALIAÇÕES)"
+                description="Clareza nas orientações, respeito inegociável, atendimento ágil e segurança para o seu patrimônio em Conselheiro Pena e no mundo."
               >
-                Por que confiar seu benefício à{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#8c5a1c] via-[#d09040] to-[#f0c070]">
-                  Dra. Jeisiele Oliveira?
+                Por que confiar a sua causa ao{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#874828] via-[#ba7852] to-[#df9f77]">
+                  Escritório Isadora Caetano?
                 </span>
               </Heading>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Jeisiele Oliveira! Gostaria de consultar sobre a minha situação com o INSS."
+                  "Olá, Dra. Isadora Caetano! Gostaria de consultar sobre a minha situação jurídica."
                 )}
                 target="_blank"
                 size="md"
@@ -1069,118 +1069,118 @@ export default function Home() {
             {/* Grid 4 Pilares baseados nas avaliações reais */}
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {/* Pilar 1 */}
-              <div className="flex flex-col rounded-2xl border border-[#e6ded4] bg-[#fbf9f5] p-6 shadow-xs transition-all hover:-translate-y-1 hover:border-[#d09040] hover:shadow-md">
-                <div className="flex size-12 items-center justify-center rounded-xl border border-[#d09040]/30 bg-white text-[#d09040] shadow-xs">
-                  <Shield size={22} />
+              <div className="flex flex-col rounded-2xl border border-[#e8ded3] bg-[#faf7f2] p-6 shadow-xs transition-all hover:-translate-y-1 hover:border-[#ba7852] hover:shadow-md">
+                <div className="flex size-12 items-center justify-center rounded-xl border border-[#ba7852]/30 bg-white text-[#ba7852] shadow-xs">
+                  <Clock size={22} />
                 </div>
-                <h3 className="mt-4 font-serif text-lg font-bold text-[#0e1118]">
-                  Experiência & Competência
+                <h3 className="mt-4 font-serif text-lg font-bold text-[#14100e]">
+                  Agilidade Comprovada
                 </h3>
-                <p className="mt-2 text-xs leading-6 text-[#5a6475]">
-                  Foco aprofundado na legislação previdenciária, regras de transição da Reforma e jurisprudência dos Tribunais para reverter negativas do INSS.
+                <p className="mt-2 text-xs leading-6 text-[#5c524c]">
+                  Resolução rápida e desburocratizada. Destravamos causas que estavam paradas há anos com ações céleres e diligência direta.
                 </p>
-                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#8c5a1c]">
-                  &ldquo;Experiência e competência sem igual&rdquo;
+                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#874828]">
+                  &ldquo;Resolveu em menos de 16 meses o que estava há 3 anos travado&rdquo;
                 </span>
               </div>
 
               {/* Pilar 2 */}
-              <div className="flex flex-col rounded-2xl border border-[#e6ded4] bg-[#fbf9f5] p-6 shadow-xs transition-all hover:-translate-y-1 hover:border-[#d09040] hover:shadow-md">
-                <div className="flex size-12 items-center justify-center rounded-xl border border-[#d09040]/30 bg-white text-[#d09040] shadow-xs">
+              <div className="flex flex-col rounded-2xl border border-[#e8ded3] bg-[#faf7f2] p-6 shadow-xs transition-all hover:-translate-y-1 hover:border-[#ba7852] hover:shadow-md">
+                <div className="flex size-12 items-center justify-center rounded-xl border border-[#ba7852]/30 bg-white text-[#ba7852] shadow-xs">
                   <HeartHandshake size={22} />
                 </div>
-                <h3 className="mt-4 font-serif text-lg font-bold text-[#0e1118]">
-                  Ouvir & Saber Orientar
+                <h3 className="mt-4 font-serif text-lg font-bold text-[#14100e]">
+                  Clareza & Paciência
                 </h3>
-                <p className="mt-2 text-xs leading-6 text-[#5a6475]">
-                  Acolhimento humano de verdade. A Dra. Jeisiele ouve com sensibilidade e paciência para encontrar o melhor caminho para cada segurado.
+                <p className="mt-2 text-xs leading-6 text-[#5c524c]">
+                  Explicamos cada fase do processo em linguagem simples e acessível, trazendo paz, previsibilidade e confiança para sua decisão.
                 </p>
-                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#8c5a1c]">
-                  &ldquo;Ouve e sabe orientar com atenção&rdquo;
+                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#874828]">
+                  &ldquo;Atendimento com clareza, paciência e dedicação&rdquo;
                 </span>
               </div>
 
               {/* Pilar 3 */}
-              <div className="flex flex-col rounded-2xl border border-[#e6ded4] bg-[#fbf9f5] p-6 shadow-xs transition-all hover:-translate-y-1 hover:border-[#d09040] hover:shadow-md">
-                <div className="flex size-12 items-center justify-center rounded-xl border border-[#d09040]/30 bg-white text-[#d09040] shadow-xs">
-                  <Award size={22} />
+              <div className="flex flex-col rounded-2xl border border-[#e8ded3] bg-[#faf7f2] p-6 shadow-xs transition-all hover:-translate-y-1 hover:border-[#ba7852] hover:shadow-md">
+                <div className="flex size-12 items-center justify-center rounded-xl border border-[#ba7852]/30 bg-white text-[#ba7852] shadow-xs">
+                  <Globe2 size={22} />
                 </div>
-                <h3 className="mt-4 font-serif text-lg font-bold text-[#0e1118]">
-                  Benefício Concedido
+                <h3 className="mt-4 font-serif text-lg font-bold text-[#14100e]">
+                  Sem Distâncias (EUA & Brasil)
                 </h3>
-                <p className="mt-2 text-xs leading-6 text-[#5a6475]">
-                  Resultados concretos e defesa firme para quem esperava por muito tempo a concessão do auxílio, aposentadoria ou BPC/LOAS.
+                <p className="mt-2 text-xs leading-6 text-[#5c524c]">
+                  Tecnologia e atendimento próximo para brasileiros no exterior e em todo o país resolverem imóveis e inventários sem deslocamento.
                 </p>
-                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#8c5a1c]">
-                  &ldquo;Com ela tive o benefício concedido&rdquo;
+                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#874828]">
+                  &ldquo;Estou nos EUA e mesmo de longe o atendimento foi excelente&rdquo;
                 </span>
               </div>
 
               {/* Pilar 4 */}
-              <div className="flex flex-col rounded-2xl border border-[#e6ded4] bg-[#fbf9f5] p-6 shadow-xs transition-all hover:-translate-y-1 hover:border-[#d09040] hover:shadow-md">
-                <div className="flex size-12 items-center justify-center rounded-xl border border-[#d09040]/30 bg-white text-[#d09040] shadow-xs">
-                  <Compass size={22} />
+              <div className="flex flex-col rounded-2xl border border-[#e8ded3] bg-[#faf7f2] p-6 shadow-xs transition-all hover:-translate-y-1 hover:border-[#ba7852] hover:shadow-md">
+                <div className="flex size-12 items-center justify-center rounded-xl border border-[#ba7852]/30 bg-white text-[#ba7852] shadow-xs">
+                  <Award size={22} />
                 </div>
-                <h3 className="mt-4 font-serif text-lg font-bold text-[#0e1118]">
-                  Atendimento de 1ª Qualidade
+                <h3 className="mt-4 font-serif text-lg font-bold text-[#14100e]">
+                  Confiança & Companheirismo
                 </h3>
-                <p className="mt-2 text-xs leading-6 text-[#5a6475]">
-                  Assistência próxima, transparência e respostas sem demora. Você conversa diretamente com quem cuida do seu processo.
+                <p className="mt-2 text-xs leading-6 text-[#5c524c]">
+                  Mais de 166 avaliações 5 estrelas no Google refletem nosso compromisso ético e o carinho com que tratamos cada cliente e sua história.
                 </p>
-                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#8c5a1c]">
-                  &ldquo;Melhor atendimento que já vi&rdquo;
+                <span className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#874828]">
+                  &ldquo;Pessoas confiáveis que atendem com companheirismo&rdquo;
                 </span>
               </div>
             </div>
 
             {/* Como Funciona o Atendimento */}
-            <div className="mt-16 rounded-2xl border border-[#e6ded4] bg-[#f4efe6] p-8 sm:p-12">
+            <div className="mt-16 rounded-2xl border border-[#e8ded3] bg-[#f3ece3] p-8 sm:p-12">
               <div className="max-w-xl">
-                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8c5a1c]">
-                  PASSO A PASSO SIMPLES & SEGURO
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#874828]">
+                  PASSO A PASSO TRANSPARENTE & RESOLUTIVO
                 </p>
-                <h3 className="mt-2 font-serif text-2xl font-bold text-[#0e1118] sm:text-3xl">
+                <h3 className="mt-2 font-serif text-2xl font-bold text-[#14100e] sm:text-3xl">
                   Como funciona o nosso atendimento
                 </h3>
-                <p className="mt-2 text-xs leading-6 text-[#5a6475]">
-                  Sem surpresas e sem complicação. Cuidamos de toda a parte burocrática para você ter tranquilidade.
+                <p className="mt-2 text-xs leading-6 text-[#5c524c]">
+                  Sem burocracias confusas. Orientamos você com clareza desde o primeiro contato até a conclusão do seu processo.
                 </p>
               </div>
 
               <div className="mt-8 grid gap-6 sm:grid-cols-3">
-                <div className="rounded-xl border border-[#e6ded4] bg-white p-6">
-                  <span className="font-serif text-2xl font-bold text-[#d09040]">
+                <div className="rounded-xl border border-[#e8ded3] bg-white p-6">
+                  <span className="font-serif text-2xl font-bold text-[#ba7852]">
                     01
                   </span>
-                  <h4 className="mt-2 text-sm font-bold text-[#0e1118]">
+                  <h4 className="mt-2 text-sm font-bold text-[#14100e]">
                     Contato Inicial no WhatsApp
                   </h4>
-                  <p className="mt-2 text-xs leading-5 text-[#5a6475]">
-                    Você envia uma mensagem explicando sua situação, se teve benefício cortado ou se deseja se aposentar. Respondemos com agilidade.
+                  <p className="mt-2 text-xs leading-5 text-[#5c524c]">
+                    Você envia uma mensagem contando sua situação, seja um inventário, divórcio ou regularização de imóvel. Nossa equipe responde prontamente.
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-[#e6ded4] bg-white p-6">
-                  <span className="font-serif text-2xl font-bold text-[#d09040]">
+                <div className="rounded-xl border border-[#e8ded3] bg-white p-6">
+                  <span className="font-serif text-2xl font-bold text-[#ba7852]">
                     02
                   </span>
-                  <h4 className="mt-2 text-sm font-bold text-[#0e1118]">
-                    Análise do CNIS e Documentos
+                  <h4 className="mt-2 text-sm font-bold text-[#14100e]">
+                    Diagnóstico Jurídico & Estratégia
                   </h4>
-                  <p className="mt-2 text-xs leading-5 text-[#5a6475]">
-                    A Dra. Jeisiele analisa detalhadamente seu extrato do INSS, laudos médicos ou documentos rurais para identificar a melhor estratégia jurídica.
+                  <p className="mt-2 text-xs leading-5 text-[#5c524c]">
+                    A Dra. Isadora e equipe avaliam escrituras, certidões ou históricos familiares para desenhar o caminho mais rápido, seguro e econômico.
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-[#e6ded4] bg-white p-6">
-                  <span className="font-serif text-2xl font-bold text-[#d09040]">
+                <div className="rounded-xl border border-[#e8ded3] bg-white p-6">
+                  <span className="font-serif text-2xl font-bold text-[#ba7852]">
                     03
                   </span>
-                  <h4 className="mt-2 text-sm font-bold text-[#0e1118]">
-                    Ação Firme & Conquista do Benefício
+                  <h4 className="mt-2 text-sm font-bold text-[#14100e]">
+                    Ação Ágil & Acompanhamento Próximo
                   </h4>
-                  <p className="mt-2 text-xs leading-5 text-[#5a6475]">
-                    Ingresso com o requerimento ou ação judicial competente, acompanhamento das perícias e cobrança de todos os retroativos atrasados.
+                  <p className="mt-2 text-xs leading-5 text-[#5c524c]">
+                    Condução imediata perante cartórios e juizados, com atualizações periódicas para você acompanhar cada vitória com tranquilidade.
                   </p>
                 </div>
               </div>
@@ -1188,21 +1188,21 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Avaliações no Google (Depoimentos Reais - 5,0 ★ · 11 avaliações) */}
+        {/* Avaliações no Google (Depoimentos Reais - 4,9 ★ · 166 avaliações) */}
         <section
           id="avaliacoes"
-          className="scroll-mt-24 border-b border-[#d09040]/20 bg-[#0d1017] py-20 text-white sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-[#ba7852]/20 bg-[#14100e] py-20 text-white sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
                 dark
-                eyebrow="DEPOIMENTOS & AVALIAÇÕES NO GOOGLE"
-                description="Nota máxima de 5,0 ★ no Google Meu Negócio em Campos Gerais · MG. Conheça a opinião de quem teve seus direitos previdenciários resguardados."
+                eyebrow="PROVA SOCIAL & DEPOIMENTOS NO GOOGLE"
+                description="Nota 4,9 ★ no Google Meu Negócio em Conselheiro Pena · MG, com mais de 166 avaliações reais de clientes atendidos no Brasil e no exterior."
               >
-                O que dizem os clientes da{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#f0c070] via-[#ffe090] to-[#d09040]">
-                  Dra. Jeisiele Oliveira
+                O que dizem os clientes do{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#df9f77] via-[#f3cca8] to-[#ba7852]">
+                  Escritório Isadora Caetano
                 </span>
               </Heading>
 
@@ -1210,11 +1210,11 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-3 rounded-xl border border-[#d09040]/30 bg-[#121622] px-5 py-3 text-xs font-bold text-white shadow-xs transition-all hover:border-[#f0c070] hover:bg-[#181e2e]"
+                className="inline-flex items-center gap-3 rounded-xl border border-[#ba7852]/30 bg-[#1c1613] px-5 py-3 text-xs font-bold text-white shadow-xs transition-all hover:border-[#df9f77] hover:bg-[#241e1b]"
               >
                 <GoogleIcon size={18} />
-                <span>Ver avaliações no Google</span>
-                <ArrowUpRight size={15} className="text-[#f0c070]" />
+                <span>Ver 166 avaliações no Google</span>
+                <ArrowUpRight size={15} className="text-[#df9f77]" />
               </a>
             </div>
 
@@ -1223,43 +1223,49 @@ export default function Home() {
               {clientReviews.map((review) => (
                 <article
                   key={review.name}
-                  className="flex flex-col justify-between rounded-2xl border border-[#d09040]/20 bg-[#121622] p-6 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#f0c070] hover:shadow-2xl hover:shadow-[#d09040]/10"
+                  className="flex flex-col justify-between rounded-2xl border border-[#ba7852]/20 bg-[#1a1614] p-6 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#df9f77] hover:shadow-2xl hover:shadow-[#ba7852]/10"
                 >
                   <div>
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-1 text-[#f0c070]">
+                      <div className="flex items-center gap-1 text-[#df9f77]">
                         {[...Array(5)].map((_, i) => (
                           <Star
                             key={i}
                             size={14}
-                            className="fill-[#f0c070] text-[#f0c070]"
+                            className="fill-[#df9f77] text-[#df9f77]"
                           />
                         ))}
                       </div>
-                      <span className="rounded-md border border-[#d09040]/25 bg-[#171d2b] px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-[#ffe090]">
+                      <span className="rounded-md border border-[#ba7852]/25 bg-[#241e1b] px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-[#f3cca8]">
                         {review.badge}
                       </span>
                     </div>
 
-                    <p className="mt-4 text-xs leading-6 text-[#d1d7e2]">
+                    {review.highlight && (
+                      <p className="mt-3 text-xs font-bold text-[#df9f77]">
+                        {review.highlight}
+                      </p>
+                    )}
+
+                    <p className="mt-3 text-xs leading-6 text-[#ede5dc]">
                       &ldquo;{review.content}&rdquo;
                     </p>
 
                     {review.reply && (
-                      <div className="mt-4 rounded-xl border border-[#d09040]/20 bg-[#161b28] p-3 text-[11px] leading-5 text-[#a0abbd]">
-                        <span className="font-bold text-[#f0c070]">
-                          Resposta da Dra. Jeisiele:{" "}
+                      <div className="mt-4 rounded-xl border border-[#ba7852]/20 bg-[#211a17] p-3 text-[11px] leading-5 text-[#c2b5aa]">
+                        <span className="font-bold text-[#df9f77]">
+                          Resposta do Escritório:{" "}
                         </span>
                         {review.reply}
                       </div>
                     )}
                   </div>
 
-                  <div className="mt-6 border-t border-[#1c2230] pt-4">
+                  <div className="mt-6 border-t border-[#2b221e] pt-4">
                     <p className="font-serif text-sm font-bold text-white">
                       {review.name}
                     </p>
-                    <p className="text-[10px] text-[#8a96a8]">{review.date}</p>
+                    <p className="text-[10px] text-[#9c8e82]">{review.date}</p>
                   </div>
                 </article>
               ))}
@@ -1267,27 +1273,27 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contato & Localização da Sede em Campos Gerais - MG */}
+        {/* Contato & Localização da Sede em Conselheiro Pena - MG */}
         <section
           id="contato"
-          className="scroll-mt-24 border-t border-[#e6ded4] bg-white py-20 text-[#12151d] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#e8ded3] bg-white py-20 text-[#171311] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
-                eyebrow="CONTATO & ATENDIMENTO PREVIDENCIÁRIO"
-                description="Converse diretamente com a equipe da Dra. Jeisiele Oliveira. Oferecemos atendimento presencial acolhedor em Campos Gerais e suporte online em todo o Sul de Minas e Brasil."
+                eyebrow="CONTATO & ATENDIMENTO JURÍDICO"
+                description="Converse diretamente com a equipe do Escritório Isadora Caetano. Oferecemos atendimento presencial acolhedor no Centro de Conselheiro Pena e suporte online em todo o Brasil e no exterior."
               >
                 Estamos prontos para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#8c5a1c] via-[#d09040] to-[#f0c070]">
-                  destravar o seu benefício e garantir seus direitos.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#874828] via-[#ba7852] to-[#df9f77]">
+                  orientar você e proteger o seu patrimônio.
                 </span>
               </Heading>
 
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Jeisiele Oliveira! Gostaria de agendar um atendimento no escritório em Campos Gerais."
+                    "Olá, Dra. Isadora Caetano! Gostaria de agendar um atendimento no escritório."
                   )}
                   target="_blank"
                   size="lg"
@@ -1296,153 +1302,153 @@ export default function Home() {
                 >
                   <WhatsAppIcon size={17} /> Iniciar Conversa no WhatsApp
                 </GlowingButton>
-                <p className="text-xs text-[#5a6475]">
-                  WhatsApp do escritório:{" "}
-                  <strong className="text-[#0e1118]">{PHONE_DISPLAY}</strong>
+                <p className="text-xs text-[#5c524c]">
+                  WhatsApp oficial:{" "}
+                  <strong className="text-[#14100e]">{PHONE_DISPLAY}</strong>
                 </p>
               </div>
 
-              <div className="mt-10 space-y-4 text-xs text-[#5a6475]">
+              <div className="mt-10 space-y-4 text-xs text-[#5c524c]">
                 <div className="flex items-start gap-3">
-                  <Clock size={16} className="mt-0.5 shrink-0 text-[#d09040]" />
+                  <Clock size={16} className="mt-0.5 shrink-0 text-[#ba7852]" />
                   <div>
-                    <p className="font-bold text-[#0e1118]">
+                    <p className="font-bold text-[#14100e]">
                       Horário de Funcionamento
                     </p>
-                    <p className="mt-0.5 text-[#3a4252]">
-                      Segunda a Sexta-feira · a partir das 08:00
+                    <p className="mt-0.5 text-[#3d342f]">
+                      Segunda a Sexta-feira · Abre às 08:00
                     </p>
-                    <p className="text-[11px] font-semibold text-[#8c5a1c]">
-                      Atendimento Presencial com hora marcada & Atendimento Digital
+                    <p className="text-[11px] font-semibold text-[#874828]">
+                      Atendimento Presencial & Atendimento Digital Global
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 pt-1">
-                  <Phone size={16} className="shrink-0 text-[#d09040]" />
+                  <Phone size={16} className="shrink-0 text-[#ba7852]" />
                   <a
                     href={`tel:+${WHATSAPP_NUMBER}`}
-                    className="font-bold text-[#0e1118] transition-colors hover:text-[#d09040]"
+                    className="font-bold text-[#14100e] transition-colors hover:text-[#ba7852]"
                   >
                     {PHONE_DISPLAY} (WhatsApp e Ligações)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <InstagramIcon size={16} className="shrink-0 text-[#d09040]" />
+                  <InstagramIcon size={16} className="shrink-0 text-[#ba7852]" />
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="font-medium text-[#3a4252] transition-colors hover:text-[#d09040]"
+                    className="font-medium text-[#3d342f] transition-colors hover:text-[#ba7852]"
                   >
                     {INSTAGRAM_HANDLE} (Instagram Oficial)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="shrink-0 text-[#d09040]" />
+                  <Mail size={16} className="shrink-0 text-[#ba7852]" />
                   <a
                     href={`mailto:${EMAIL_CONTACT}`}
-                    className="font-medium text-[#3a4252] transition-colors hover:text-[#d09040]"
+                    className="font-medium text-[#3d342f] transition-colors hover:text-[#ba7852]"
                   >
                     {EMAIL_CONTACT}
                   </a>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <MapPin size={16} className="mt-0.5 shrink-0 text-[#d09040]" />
-                  <span className="font-medium text-[#3a4252]">{ADDRESS_TEXT}</span>
+                  <MapPin size={16} className="mt-0.5 shrink-0 text-[#ba7852]" />
+                  <span className="font-medium text-[#3d342f]">{ADDRESS_TEXT}</span>
                 </div>
               </div>
             </div>
 
             {/* Office & Schedule Card */}
-            <div className="relative overflow-hidden rounded-2xl border border-[#d09040]/35 bg-[#fbf9f5] p-7 shadow-lg sm:p-10">
-              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#d09040] to-[#f0c070]" />
+            <div className="relative overflow-hidden rounded-2xl border border-[#ba7852]/35 bg-[#faf7f2] p-7 shadow-lg sm:p-10">
+              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#ba7852] to-[#df9f77]" />
 
               <div className="flex items-center gap-4">
                 <Image
                   src={LOGO_SRC}
-                  alt="Oliveira e Megda Advocacia e Consultoria Previdenciária"
-                  width={340}
-                  height={156}
+                  alt="Isadora Caetano Advocacia e Consultoria"
+                  width={380}
+                  height={95}
                   className="h-16 w-auto object-contain sm:h-20"
                 />
               </div>
 
-              <address className="mt-7 max-w-md text-sm not-italic leading-7 text-[#4b5565]">
-                <strong className="font-bold text-[#0e1118]">
-                  Oliveira e Megda Advocacia e Consultoria Previdenciária
+              <address className="mt-7 max-w-md text-sm not-italic leading-7 text-[#5c524c]">
+                <strong className="font-bold text-[#14100e]">
+                  Isadora Caetano — Escritório de Advocacia e Consultoria
                 </strong>
                 <br />
-                Dra. Jeisiele Oliveira — Advogada Associada · OAB/MG
+                Dra. Isadora Caetano · OAB/MG
                 <br />
-                Membro da Comissão de Direito Previdenciário da 21ª Subseção OAB/MG
+                Dr. Bernardo Haussmann & Equipe Jurídica
                 <br />
                 {ADDRESS_TEXT}
               </address>
 
               {/* Weekly schedule table */}
-              <div className="mt-6 rounded-xl border border-[#e6ded4] bg-white p-4 text-xs">
-                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#8c5a1c]">
+              <div className="mt-6 rounded-xl border border-[#e8ded3] bg-white p-4 text-xs">
+                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#874828]">
                   Disponibilidade & Modalidades
                 </p>
-                <div className="grid grid-cols-2 gap-y-2 text-[#4b5565]">
+                <div className="grid grid-cols-2 gap-y-2 text-[#5c524c]">
                   <span>Atendimento Presencial</span>
-                  <span className="text-right font-bold text-[#0e1118]">
+                  <span className="text-right font-bold text-[#14100e]">
                     Abre às 08:00 (Seg a Sex)
                   </span>
                   <span>Atendimento Online</span>
-                  <span className="text-right font-bold text-[#d09040]">
-                    Todo o Brasil via WhatsApp
+                  <span className="text-right font-bold text-[#ba7852]">
+                    Brasil & Exterior via WhatsApp
                   </span>
                   <span>Sede Física</span>
-                  <span className="text-right text-[#0e1118]">Campos Gerais - MG</span>
-                  <span>Área de Atuação</span>
-                  <span className="text-right text-[#0e1118]">Direito Previdenciário</span>
+                  <span className="text-right text-[#14100e]">Conselheiro Pena - MG</span>
+                  <span>Áreas de Foco</span>
+                  <span className="text-right text-[#14100e]">Família, Sucessões & Imóveis</span>
                 </div>
               </div>
 
-              <div className="my-7 h-px bg-[#e6ded4]" />
+              <div className="my-7 h-px bg-[#e8ded3]" />
 
               <div className="flex flex-wrap items-center justify-between gap-4">
-                <p className="text-xs text-[#6a7587]">
+                <p className="text-xs text-[#756961]">
                   Atendimento ético, confidencial e resolutivo
                 </p>
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Jeisiele Oliveira! Gostaria de agendar um atendimento no escritório em Campos Gerais."
+                    "Olá, Dra. Isadora Caetano! Gostaria de agendar um atendimento no escritório."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-[#d09040]/50 bg-white px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#8c5a1c] transition-colors hover:border-[#d09040] hover:bg-[#fdf7ea] hover:text-[#0e1118]"
+                  className="inline-flex items-center gap-2 rounded-lg border border-[#ba7852]/50 bg-white px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#874828] transition-colors hover:border-[#ba7852] hover:bg-[#fbf5ee] hover:text-[#14100e]"
                 >
-                  <WhatsAppIcon size={14} /> Falar com a Dra. Jeisiele <ArrowUpRight size={14} />
+                  <WhatsAppIcon size={14} /> Falar com a Dra. Isadora <ArrowUpRight size={14} />
                 </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Pre-Footer CTA Strip - Deep Noir & Gold Metallic Banner */}
-        <section className="border-t border-[#d09040]/30 bg-gradient-to-r from-[#090a0f] via-[#141824] to-[#090a0f] px-5 py-14 text-white sm:px-8 sm:py-16 lg:px-12">
+        {/* Pre-Footer CTA Strip - Deep Espresso & Bronze Metallic Banner */}
+        <section className="border-t border-[#ba7852]/30 bg-gradient-to-r from-[#0c0a09] via-[#1c1613] to-[#0c0a09] px-5 py-14 text-white sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
-              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#ffe090]">
-                <Sparkles size={13} /> DRA. JEISIELE OLIVEIRA · OLIVEIRA E MEGDA ADVOCACIA
+              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#f3cca8]">
+                <Sparkles size={13} /> ISADORA CAETANO · ADVOCACIA E CONSULTORIA
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-2xl font-bold leading-tight text-white sm:text-4xl">
-                O INSS negou ou cortou seu benefício? Seus direitos podem ser garantidos na Justiça.
+                Precisa de segurança jurídica para sua família, herança ou regularização de imóvel?
               </h2>
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá, Dra. Jeisiele Oliveira! Preciso de ajuda para reverter a negativa do INSS no meu caso."
+                "Olá, Dra. Isadora Caetano! Gostaria de conversar sobre uma demanda jurídica com seu escritório."
               )}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#b88526] via-[#e0a050] to-[#b88526] px-7 py-4 text-[11px] font-extrabold uppercase tracking-[0.14em] text-[#090a0f] shadow-md transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold"
+              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg bg-gradient-to-r from-[#a8643c] via-[#c9875f] to-[#a8643c] px-7 py-4 text-[11px] font-extrabold uppercase tracking-[0.14em] text-white shadow-md transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-gold"
             >
               <WhatsAppIcon size={17} /> Falar no WhatsApp{" "}
               <ArrowUpRight size={15} />
@@ -1451,68 +1457,68 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="border-t border-[#1c2230] bg-[#07080c] px-5 py-14 text-[#9ca7b8] sm:px-8 lg:px-12">
+        <footer className="border-t border-[#241e1b] bg-[#080706] px-5 py-14 text-[#c2b5aa] sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
             <div>
               <a
                 href="#inicio"
-                aria-label="Oliveira e Megda Advocacia - Dra. Jeisiele Oliveira"
+                aria-label="Isadora Caetano Advocacia e Consultoria"
                 className="inline-flex items-center transition-transform hover:scale-[1.02]"
               >
                 <Image
                   src={LOGO_SRC}
-                  alt="Oliveira e Megda Advocacia Previdenciária"
-                  width={300}
-                  height={140}
-                  className="h-14 w-auto object-contain sm:h-16"
+                  alt="Isadora Caetano Advocacia e Consultoria"
+                  width={320}
+                  height={80}
+                  className="h-12 w-auto object-contain sm:h-14"
                 />
               </a>
-              <p className="mt-4 max-w-xs text-xs leading-6 text-[#9ca7b8]">
-                ⚖️ Ajudo você a conquistar aposentadorias e benefícios do INSS sem complicação. Atuação especializada em Benefícios Cessados ou Negados, Auxílio-Doença, BPC/LOAS, Pensão por Morte e Planejamento Previdenciário. Nota máxima 5,0 ★ no Google em Campos Gerais - MG.
+              <p className="mt-4 max-w-xs text-xs leading-6 text-[#c2b5aa]">
+                ⚖️ Advocacia de alto padrão pautada no rigor técnico, acolhimento humano e agilidade. Atuação especializada em Direito de Família, Sucessões (Inventários e Herança) e Regularização de Imóveis. Nota 4,9 ★ no Google com mais de 166 avaliações em Conselheiro Pena - MG.
               </p>
-              <p className="mt-3 text-[11px] font-bold text-[#f0c070]">
-                Dra. Jeisiele Oliveira · OAB/MG · Campos Gerais - MG
+              <p className="mt-3 text-[11px] font-bold text-[#df9f77]">
+                Dra. Isadora Caetano · OAB/MG · Conselheiro Pena - MG
               </p>
             </div>
 
             <div>
-              <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f0c070]">
+              <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#df9f77]">
                 Navegação
               </h3>
-              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#9ca7b8]">
-                <a className="footer-link font-medium hover:text-[#f0c070]" href="#inicio">
+              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#c2b5aa]">
+                <a className="footer-link font-medium hover:text-[#df9f77]" href="#inicio">
                   Início
                 </a>
-                <a className="footer-link font-medium hover:text-[#f0c070]" href="#sobre">
-                  A Advogada
+                <a className="footer-link font-medium hover:text-[#df9f77]" href="#sobre">
+                  O Escritório & Equipe
                 </a>
-                <a className="footer-link font-medium hover:text-[#f0c070]" href="#atuacao">
-                  Serviços Previdenciários
+                <a className="footer-link font-medium hover:text-[#df9f77]" href="#atuacao">
+                  Áreas de Atuação
                 </a>
-                <a className="footer-link font-medium hover:text-[#f0c070]" href="#diferenciais">
-                  Por Que Escolher
+                <a className="footer-link font-medium hover:text-[#df9f77]" href="#diferenciais">
+                  Diferenciais
                 </a>
-                <a className="footer-link font-medium hover:text-[#f0c070]" href="#avaliacoes">
-                  Avaliações no Google (5,0 ★)
+                <a className="footer-link font-medium hover:text-[#df9f77]" href="#avaliacoes">
+                  Avaliações no Google (4,9 ★)
                 </a>
-                <a className="footer-link font-medium hover:text-[#f0c070]" href="#contato">
+                <a className="footer-link font-medium hover:text-[#df9f77]" href="#contato">
                   Contato & Sede
                 </a>
               </div>
             </div>
 
             <div>
-              <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f0c070]">
+              <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#df9f77]">
                 Contato & Atendimento
               </h3>
-              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#9ca7b8]">
+              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#c2b5aa]">
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Jeisiele Oliveira! Gostaria de falar com o escritório."
+                    "Olá, Dra. Isadora Caetano! Gostaria de falar com o escritório."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="footer-link inline-flex items-center gap-2 font-bold text-[#f0c070]"
+                  className="footer-link inline-flex items-center gap-2 font-bold text-[#df9f77]"
                 >
                   <WhatsAppIcon size={15} /> WhatsApp: {PHONE_DISPLAY}
                 </a>
@@ -1520,7 +1526,7 @@ export default function Home() {
                   href={`tel:+${WHATSAPP_NUMBER}`}
                   className="footer-link inline-flex items-center gap-2 font-medium"
                 >
-                  <Phone size={15} className="shrink-0 text-[#f0c070]" /> Telefone: {PHONE_DISPLAY}
+                  <Phone size={15} className="shrink-0 text-[#df9f77]" /> Telefone: {PHONE_DISPLAY}
                 </a>
                 <a
                   href={INSTAGRAM_URL}
@@ -1528,28 +1534,28 @@ export default function Home() {
                   rel="noreferrer"
                   className="footer-link inline-flex items-center gap-2 font-medium"
                 >
-                  <InstagramIcon size={15} className="shrink-0 text-[#f0c070]" /> Instagram: {INSTAGRAM_HANDLE}
+                  <InstagramIcon size={15} className="shrink-0 text-[#df9f77]" /> Instagram: {INSTAGRAM_HANDLE}
                 </a>
                 <a
                   href={`mailto:${EMAIL_CONTACT}`}
                   className="footer-link inline-flex items-center gap-2 font-medium"
                 >
-                  <Mail size={15} className="shrink-0 text-[#f0c070]" /> {EMAIL_CONTACT}
+                  <Mail size={15} className="shrink-0 text-[#df9f77]" /> {EMAIL_CONTACT}
                 </a>
                 <div className="footer-link inline-flex items-start gap-2 font-medium">
-                  <MapPin size={15} className="mt-0.5 shrink-0 text-[#f0c070]" />
+                  <MapPin size={15} className="mt-0.5 shrink-0 text-[#df9f77]" />
                   <span>{ADDRESS_TEXT}</span>
                 </div>
-                <p className="inline-flex items-center gap-2 pt-1 text-[11px] font-bold text-[#f0c070]">
+                <p className="inline-flex items-center gap-2 pt-1 text-[11px] font-bold text-[#df9f77]">
                   <Clock size={14} className="shrink-0" /> Seg a Sex · Abre às 08:00
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#1c2230] pt-6 text-[10px] text-[#6b7688] sm:flex-row sm:items-center sm:justify-between">
+          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#241e1b] pt-6 text-[10px] text-[#756961] sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} OLIVEIRA E MEGDA ADVOCACIA E CONSULTORIA PREVIDENCIÁRIA · DRA. JEISIELE OLIVEIRA. Todos os direitos reservados.
+              © {new Date().getFullYear()} ISADORA CAETANO — ESCRITÓRIO DE ADVOCACIA E CONSULTORIA. Todos os direitos reservados.
             </p>
             <p>
               Conteúdo de caráter exclusivamente informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
@@ -1564,16 +1570,16 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá, Dra. Jeisiele Oliveira! Gostaria de consultar sobre meus direitos no INSS."
+              "Olá, Dra. Isadora Caetano! Gostaria de consultar sobre meus direitos com o escritório."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Dra. Jeisiele Oliveira"
+            aria-label="Falar agora pelo WhatsApp com a Dra. Isadora Caetano"
             className="group relative flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#25D366]/40 cursor-pointer"
           >
             <WhatsAppIcon size={28} />
-            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#0e1119] border border-[#d09040]/40 px-3.5 py-1.5 text-xs font-bold text-white shadow-lg transition-opacity group-hover:block">
-              Falar com a Dra. Jeisiele Oliveira
+            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg bg-[#14100e] border border-[#ba7852]/40 px-3.5 py-1.5 text-xs font-bold text-white shadow-lg transition-opacity group-hover:block">
+              Falar com a Dra. Isadora Caetano
             </span>
           </a>
         </aside>
@@ -1597,13 +1603,13 @@ export default function Home() {
                 exit={{ opacity: 0, y: 16, scale: 0.99 }}
                 transition={{ duration: 0.24 }}
                 onClick={(event) => event.stopPropagation()}
-                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-2xl border border-[#d09040]/40 bg-[#0e1119] p-7 text-[#e1e7f0] shadow-2xl sm:max-w-xl sm:rounded-2xl sm:p-10"
+                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-2xl border border-[#ba7852]/40 bg-[#14100e] p-7 text-[#ede5dc] shadow-2xl sm:max-w-xl sm:rounded-2xl sm:p-10"
               >
                 <button
                   type="button"
                   aria-label="Fechar detalhes da especialidade"
                   onClick={() => setActiveArea(null)}
-                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#d09040]/30 bg-[#161c28] text-[#ffe090] transition-colors hover:border-[#f0c070] hover:bg-[#d09040] hover:text-[#090a0f] cursor-pointer"
+                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#ba7852]/30 bg-[#1c1613] text-[#f3cca8] transition-colors hover:border-[#df9f77] hover:bg-[#ba7852] hover:text-white cursor-pointer"
                 >
                   <X size={18} />
                 </button>
@@ -1617,21 +1623,21 @@ export default function Home() {
                   {activeArea.title}
                 </h2>
 
-                <p className="mt-5 text-sm leading-7 text-[#b5c0d0]">
+                <p className="mt-5 text-sm leading-7 text-[#c2b5aa]">
                   {activeArea.details}
                 </p>
 
-                <div className="mt-6 border-t border-[#1c2230] pt-5">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#f0c070]">
+                <div className="mt-6 border-t border-[#241e1b] pt-5">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#df9f77]">
                     Principais demandas atendidas pelo escritório:
                   </p>
                   <ul className="mt-4 space-y-3">
                     {activeArea.topics.map((topic) => (
                       <li
                         key={topic}
-                        className="flex items-start gap-3 text-xs leading-5 text-[#d1d7e2]"
+                        className="flex items-start gap-3 text-xs leading-5 text-[#ede5dc]"
                       >
-                        <span className="mt-1.5 size-2 shrink-0 rounded-full bg-[#d09040]" />
+                        <span className="mt-1.5 size-2 shrink-0 rounded-full bg-[#ba7852]" />
                         <span>{topic}</span>
                       </li>
                     ))}
@@ -1651,7 +1657,7 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={() => setActiveArea(null)}
-                    className="px-5 py-3 text-xs font-bold text-[#8a96a8] transition-colors hover:text-white cursor-pointer"
+                    className="px-5 py-3 text-xs font-bold text-[#9c8e82] transition-colors hover:text-white cursor-pointer"
                   >
                     Fechar
                   </button>

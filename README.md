@@ -1,15 +1,15 @@
-# JEISIELE OLIVEIRA — ADVOGADA | DIREITO PREVIDENCIÁRIO
-## Oliveira e Megda Advocacia e Consultoria Previdenciária · Campos Gerais - MG
+# ISADORA CAETANO — ESCRITÓRIO DE ADVOCACIA E CONSULTORIA
+## Família · Sucessões & Inventários · Regularização de Imóveis · Conselheiro Pena - MG & Atendimento Global
 
-Site institucional e landing page responsiva de altíssimo padrão da **Dra. Jeisiele Oliveira**, advogada associada na **Oliveira e Megda Advocacia e Consultoria Previdenciária** e membro da comissão de Direito Previdenciário da 21ª subseção da OAB/MG, com nota máxima de 5,0 estrelas e 11 avaliações no Google Meu Negócio. Atuação jurídica especializada, ágil e combativa contra as negativas do INSS (Benefício Cessado ou Negado, Benefícios por Incapacidade / Auxílio-Doença, Aposentadorias por Idade, Tempo, Especial e Rural, BPC/LOAS para Idosos e PcD, Pensão por Morte e Planejamento Previdenciário) em Campos Gerais - MG, Sul de Minas e atendimento online para todo o Brasil.
+Site institucional e landing page responsiva de altíssimo padrão do **Escritório Isadora Caetano — Advocacia e Consultoria**, liderado pela **Dra. Isadora Caetano** e pelo **Dr. Bernardo Haussmann**, com nota de 4,9 estrelas e mais de 166 avaliações verificadas no Google Meu Negócio. Atuação jurídica especializada, ágil e humanizada em Direito de Família (Divórcio consensual e litigioso, Guarda, Pensão Alimentícia, Partilha de Bens e União Estável), Sucessões & Herança (Inventário extrajudicial em cartório, Inventário judicial, Planejamento Sucessório e Testamentos), Regularização de Imóveis (Usucapião judicial e extrajudicial, Escrituras, Contratos e Posse) e Advocacia Cível Estratégica (com atendimento exclusivo e 100% digital para brasileiros residentes nos EUA e exterior) em Conselheiro Pena - MG, Leste de Minas Gerais e atendimento online global.
 
 ## Destaques
-- **Identidade Visual Nobre em Ouro Imperial Escultural 3D & Deep Obsidian Noir:** Paleta extraída diretamente do novo logotipo oficial, harmonizando o emblema de espada e balança da justiça em ouro escultural 3D metálico com superfícies de autoridade em obsidian noir (`#090A0F`, `#0D1017`, `#121622`), bordas em ouro nobre translúcido (`#D09040`, `#E0A050`, `#F0C070`, `#8C5A1C`) e equilíbrio com cartões em alabaster warm ivory (`#FBF9F5`, `#F4EFE6`), transmitindo imponência, credibilidade e acolhimento humano.
+- **Identidade Visual Sofisticada em Bronze Metálico Nobre & Warm Espresso Noir:** Paleta extraída diretamente do novo logotipo oficial, harmonizando o monograma entrelaçado "IC" em bronze/rose gold e marfim perolado com superfícies de autoridade em espresso noir (`#0C0A09`, `#14100E`, `#1A1614`), bordas em bronze nobre translúcido (`#BA7852`, `#DF9F77`, `#F3CCA8`, `#874828`) e equilíbrio editorial com cartões em cashmere e alabaster warm ivory (`#FAF7F2`, `#F3ECE3`), transmitindo elegância, credibilidade e acolhimento humano.
 - **Tipografia Equilibrada e de Alto Padrão:** Cabeçalhos e títulos nobres com Cinzel e Playfair Display, complementados por Plus Jakarta Sans no corpo de texto para legibilidade e clareza absoluta.
-- **Prova Social Impecável no Google Meu Negócio:** Nota máxima de 5,0 estrelas com 11 avaliações no Google Meu Negócio em Campos Gerais · MG, comprovando a competência técnica, paciência e segurança nas orientações.
-- **Contato Imediato e Sem Complicação:** WhatsApp (35) 98467-0985 com mensagens pré-configuradas e contextualizadas por benefício previdenciário e botão flutuante de ação rápida.
-- **Atendimento Presencial e Online:** Sede na R. Tomé Soares de Oliveira - Campos Gerais, MG, 37160-000, com atendimento presencial e suporte digital para todo o país.
-- **Instagram Oficial:** [@jeisiele.advogada](https://www.instagram.com/jeisiele.advogada/).
+- **Prova Social Impecável no Google Meu Negócio:** Nota de 4,9 estrelas com mais de 166 avaliações reais no Google Meu Negócio em Conselheiro Pena · MG, comprovando a agilidade na resolução de processos parados há anos, paciência e segurança nas orientações.
+- **Contato Imediato e Sem Complicação:** WhatsApp (33) 98763-4386 com mensagens pré-configuradas e contextualizadas por especialidade jurídica e botão flutuante de ação rápida.
+- **Atendimento Presencial e Online:** Sede na R. Feliciano Ferraz, 272 - Lj 2 - Centro, Conselheiro Pena - MG, 35240-000, com atendimento presencial e suporte digital seguro para todo o país e exterior.
+- **Instagram Oficial:** [@isadoracaetano.adv](https://www.instagram.com/isadoracaetano.adv/) e [@caetanoisadora](https://www.instagram.com/caetanoisadora/).
 
 ## Tecnologias
 - Next.js 16 (App Router)

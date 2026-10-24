@@ -33,24 +33,24 @@ export default function GlowingButton({
     lg: "px-7 py-4 text-xs tracking-[0.14em]",
   }[size];
 
-  // Visual identity based on Oliveira e Megda — Advogada (Imperial Gold & Deep Obsidian Noir)
+  // Visual identity based on Isadora Caetano — Advocacia e Consultoria (Metallic Warm Bronze & Warm Espresso Noir)
   const variantClasses = {
     gold:
-      "border border-[#f0c070] bg-gradient-to-r from-[#b88526] via-[#e0a050] to-[#b88526] text-[#090a0f] font-extrabold shadow-md shadow-[#d09040]/30 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
+      "border border-[#df9f77] bg-gradient-to-r from-[#a8643c] via-[#c9875f] to-[#a8643c] text-white font-extrabold shadow-md shadow-[#ba7852]/35 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold",
     dark:
-      "border border-[#d09040]/40 bg-[#0e1119] text-[#ffe090] font-bold shadow-md hover:-translate-y-0.5 hover:border-[#f0c070] hover:bg-[#151a24] hover:text-white",
+      "border border-[#ba7852]/40 bg-[#14100e] text-[#f3cca8] font-bold shadow-md hover:-translate-y-0.5 hover:border-[#df9f77] hover:bg-[#1f1916] hover:text-white",
     outline:
-      "border border-[#d09040]/60 bg-transparent text-[#f0c070] font-bold hover:-translate-y-0.5 hover:border-[#f0c070] hover:bg-[#d09040]/10 hover:text-white",
+      "border border-[#ba7852]/60 bg-transparent text-[#df9f77] font-bold hover:-translate-y-0.5 hover:border-[#df9f77] hover:bg-[#ba7852]/10 hover:text-white",
     emerald:
       "border border-[#25D366] bg-gradient-to-r from-[#1fa851] to-[#25D366] text-white font-bold shadow-md shadow-[#25D366]/25 hover:-translate-y-0.5 hover:brightness-105",
     champagne:
-      "border border-[#e0a050] bg-[#fdf7ea] text-[#8c5a1c] font-bold shadow-xs hover:-translate-y-0.5 hover:bg-[#f6ebd4] hover:border-[#d09040]",
+      "border border-[#df9f77] bg-[#fbf5ee] text-[#874828] font-bold shadow-xs hover:-translate-y-0.5 hover:bg-[#f5eade] hover:border-[#ba7852]",
     white:
-      "border border-[#e6ded4] bg-white text-[#12151d] font-bold shadow-xs hover:-translate-y-0.5 hover:border-[#d09040] hover:text-[#8c5a1c]",
+      "border border-[#e8ded3] bg-white text-[#171311] font-bold shadow-xs hover:-translate-y-0.5 hover:border-[#ba7852] hover:text-[#874828]",
   }[variant];
 
   const classes =
-    "inline-flex items-center justify-center gap-2 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#d09040] select-none text-center cursor-pointer " +
+    "inline-flex items-center justify-center gap-2 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#df9f77] select-none text-center cursor-pointer " +
     sizeClasses +
     " " +
     variantClasses +
